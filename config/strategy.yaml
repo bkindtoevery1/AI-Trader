@@ -1,0 +1,35 @@
+strategy:
+  name: ma-rsi-core
+  symbols:
+    - "005930"
+    - "AAPL"
+  interval: "1d"
+  candle_count: 120
+  short_window: 5
+  long_window: 20
+  rsi_period: 14
+  rsi_buy_below: 62
+  rsi_sell_above: 72
+
+risk:
+  initial_cash: "10000000"
+  currency: "KRW"
+  max_position_pct: "0.30"
+  reserve_cash_pct: "0.15"
+  max_order_value: "1000000"
+  max_daily_orders: 3
+  fee_bps: "1.5"
+  slippage_bps: "5"
+  allow_live_trading: false
+
+execution:
+  mode: dry-run
+  order_type: LIMIT
+  price_offset_bps: "10"
+
+toss:
+  base_url: "https://openapi.tossinvest.com"
+  client_id_env: "TOSSINVEST_CLIENT_ID"
+  client_secret_env: "TOSSINVEST_CLIENT_SECRET"
+  account_seq_env: "TOSSINVEST_ACCOUNT_SEQ"
+

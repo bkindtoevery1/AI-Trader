@@ -1,0 +1,444 @@
+{
+  "generatedAt": "2026-06-22T00:50:00.552941+09:00",
+  "mode": "dry-run",
+  "status": "ready",
+  "summary": {
+    "symbols": [
+      "005930",
+      "AAPL"
+    ],
+    "bestSymbol": "AAPL",
+    "bestReturnPct": "0.3882",
+    "tradeCount": 4,
+    "maxDrawdownPct": "0.0212"
+  },
+  "results": [
+    {
+      "symbol": "005930",
+      "start": "2026-04-01",
+      "end": "2026-05-22",
+      "initialCash": "10000000",
+      "finalEquity": "10000000",
+      "totalReturnPct": "0",
+      "maxDrawdownPct": "0",
+      "sharpe": "0",
+      "tradeCount": 0,
+      "trades": [],
+      "equityCurve": [
+        {
+          "date": "2026-04-01",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-02",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-03",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-06",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-07",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-08",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-09",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-10",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-13",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-14",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-15",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-16",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-17",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-20",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-21",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-22",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-23",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-24",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-27",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-28",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-29",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-30",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-04",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-06",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-07",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-08",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-11",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-12",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-13",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-14",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-15",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-18",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-19",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-20",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-21",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-22",
+          "equity": "10000000"
+        }
+      ],
+      "parameters": {
+        "shortWindow": 5,
+        "longWindow": 20,
+        "rsiPeriod": 14,
+        "feeBps": "1.5",
+        "slippageBps": "5"
+      }
+    },
+    {
+      "symbol": "AAPL",
+      "start": "2026-04-01",
+      "end": "2026-05-22",
+      "initialCash": "10000000",
+      "finalEquity": "10038821.11",
+      "totalReturnPct": "0.3882",
+      "maxDrawdownPct": "0.0212",
+      "sharpe": "5.0854",
+      "tradeCount": 4,
+      "trades": [
+        {
+          "symbol": "AAPL",
+          "side": "BUY",
+          "timestamp": "2026-04-29T00:00:00+09:00",
+          "price": "200.6002",
+          "quantity": "4985.038652",
+          "fee": "149.9999",
+          "cashAfter": "8999850.0001",
+          "reason": "short SMA remains above long SMA; RSI=67.24"
+        },
+        {
+          "symbol": "AAPL",
+          "side": "SELL",
+          "timestamp": "2026-04-30T00:00:00+09:00",
+          "price": "202.0989",
+          "quantity": "4985.038652",
+          "fee": "151.1206",
+          "cashAfter": "10007169.7075",
+          "reason": "RSI overheated at 75.88"
+        },
+        {
+          "symbol": "AAPL",
+          "side": "BUY",
+          "timestamp": "2026-05-11T00:00:00+09:00",
+          "price": "203.2015",
+          "quantity": "4921.222303",
+          "fee": "149.9999",
+          "cashAfter": "9007019.7076",
+          "reason": "short SMA remains above long SMA; RSI=68.64"
+        },
+        {
+          "symbol": "AAPL",
+          "side": "SELL",
+          "timestamp": "2026-05-15T00:00:00+09:00",
+          "price": "209.6951",
+          "quantity": "4921.222303",
+          "fee": "154.7934",
+          "cashAfter": "10038821.1172",
+          "reason": "RSI overheated at 75.83"
+        }
+      ],
+      "equityCurve": [
+        {
+          "date": "2026-04-01",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-02",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-03",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-06",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-07",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-08",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-09",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-10",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-13",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-14",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-15",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-16",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-17",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-20",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-21",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-22",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-23",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-24",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-27",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-28",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-29",
+          "equity": "9999350.24"
+        },
+        {
+          "date": "2026-04-30",
+          "equity": "10007169.7"
+        },
+        {
+          "date": "2026-05-04",
+          "equity": "10007169.7"
+        },
+        {
+          "date": "2026-05-06",
+          "equity": "10007169.7"
+        },
+        {
+          "date": "2026-05-07",
+          "equity": "10007169.7"
+        },
+        {
+          "date": "2026-05-08",
+          "equity": "10007169.7"
+        },
+        {
+          "date": "2026-05-11",
+          "equity": "10006519.95"
+        },
+        {
+          "date": "2026-05-12",
+          "equity": "10005043.59"
+        },
+        {
+          "date": "2026-05-13",
+          "equity": "10015378.15"
+        },
+        {
+          "date": "2026-05-14",
+          "equity": "10028665.45"
+        },
+        {
+          "date": "2026-05-15",
+          "equity": "10038821.11"
+        },
+        {
+          "date": "2026-05-18",
+          "equity": "10038821.11"
+        },
+        {
+          "date": "2026-05-19",
+          "equity": "10038821.11"
+        },
+        {
+          "date": "2026-05-20",
+          "equity": "10038821.11"
+        },
+        {
+          "date": "2026-05-21",
+          "equity": "10038821.11"
+        },
+        {
+          "date": "2026-05-22",
+          "equity": "10038821.11"
+        }
+      ],
+      "parameters": {
+        "shortWindow": 5,
+        "longWindow": 20,
+        "rsiPeriod": 14,
+        "feeBps": "1.5",
+        "slippageBps": "5"
+      }
+    }
+  ],
+  "signals": [
+    {
+      "symbol": "005930",
+      "side": "SELL",
+      "score": 0.75,
+      "price": "77900",
+      "timestamp": "2026-05-22T00:00:00+09:00",
+      "reason": "RSI overheated at 79.66"
+    },
+    {
+      "symbol": "AAPL",
+      "side": "SELL",
+      "score": 0.75,
+      "price": "216.2",
+      "timestamp": "2026-05-22T00:00:00+09:00",
+      "reason": "RSI overheated at 78.93"
+    }
+  ],
+  "improvements": [
+    {
+      "title": "005930: 현 파라미터 유지",
+      "rationale": "그리드 탐색에서 기준 전략을 명확히 이긴 조합이 없어 운영 파라미터 변경을 보류합니다.",
+      "expectedDeltaPct": "0",
+      "parameters": {
+        "shortWindow": 5,
+        "longWindow": 20,
+        "rsiPeriod": 14,
+        "feeBps": "1.5",
+        "slippageBps": "5"
+      }
+    },
+    {
+      "title": "AAPL: SMA 3/15 검증",
+      "rationale": "동일 데이터에서 기준 전략 대비 수익률이 0.25%p 높았고 최대 낙폭은 0.02%였습니다.",
+      "expectedDeltaPct": "0.2523",
+      "parameters": {
+        "shortWindow": 3,
+        "longWindow": 15,
+        "rsiPeriod": 14,
+        "feeBps": "1.5",
+        "slippageBps": "5"
+      }
+    },
+    {
+      "title": "AAPL: SMA 5/15 검증",
+      "rationale": "동일 데이터에서 기준 전략 대비 수익률이 0.25%p 높았고 최대 낙폭은 0.02%였습니다.",
+      "expectedDeltaPct": "0.2523",
+      "parameters": {
+        "shortWindow": 5,
+        "longWindow": 15,
+        "rsiPeriod": 14,
+        "feeBps": "1.5",
+        "slippageBps": "5"
+      }
+    }
+  ]
+}
