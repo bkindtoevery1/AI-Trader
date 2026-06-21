@@ -2,6 +2,7 @@ import json
 from datetime import datetime, timezone
 
 from aitrader.backtest import find_improvements, run_backtest
+from aitrader.broker import build_trade_decisions
 from aitrader.config import load_config
 from aitrader.data import load_candles_csv, write_candles_csv
 from aitrader.reporting import write_dashboard_json, write_markdown_report
@@ -35,6 +36,7 @@ def test_report_writers_create_markdown_and_dashboard_json(tmp_path):
     result = run_backtest("AAPL", candles_by_symbol["AAPL"], config)
     signal = MovingAverageRsiStrategy(config.strategy).signal("AAPL", candles_by_symbol["AAPL"])
     improvements = find_improvements("AAPL", candles_by_symbol["AAPL"], config)
+    decisions = build_trade_decisions([signal], config=config, available_cash=config.risk.initial_cash)
     generated_at = datetime.now(timezone.utc)
     md_path = tmp_path / "daily.md"
     json_path = tmp_path / "dashboard.json"
@@ -45,6 +47,7 @@ def test_report_writers_create_markdown_and_dashboard_json(tmp_path):
         results=[result],
         improvements=improvements,
         signals=[signal],
+        decisions=decisions,
     )
     write_dashboard_json(
         json_path,
@@ -52,11 +55,15 @@ def test_report_writers_create_markdown_and_dashboard_json(tmp_path):
         results=[result],
         improvements=improvements,
         signals=[signal],
+        decisions=decisions,
+        config=config,
     )
 
     assert "Backtest Summary" in md_path.read_text(encoding="utf-8")
     payload = json.loads(json_path.read_text(encoding="utf-8"))
     assert payload["results"][0]["symbol"] == "AAPL"
+    assert payload["decisions"][0]["symbol"] == "AAPL"
+    assert payload["risk"]["allowLiveTrading"] is False
 
 
 def test_candle_csv_round_trip(tmp_path):

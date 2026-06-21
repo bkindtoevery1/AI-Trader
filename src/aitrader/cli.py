@@ -7,7 +7,7 @@ from datetime import datetime
 from pathlib import Path
 
 from .backtest import find_improvements, run_backtest
-from .broker import TradingBroker, build_order_intent
+from .broker import TradingBroker, build_trade_decisions
 from .config import load_config
 from .data import load_candles_csv, write_candles_csv
 from .models import Candle
@@ -66,6 +66,12 @@ def cmd_daily(args: argparse.Namespace) -> int:
     config = _load_config(args)
     candles_by_symbol = load_candles_csv(args.data)
     results, improvements, signals = _collect_results(config, candles_by_symbol)
+    decisions = build_trade_decisions(
+        signals,
+        config=config,
+        available_cash=config.risk.initial_cash,
+        dry_run=True,
+    )
     generated_at = datetime.now().astimezone()
     report_dir = Path(args.report_dir)
     report_name = f"daily-{generated_at.date().isoformat()}.md"
@@ -75,6 +81,7 @@ def cmd_daily(args: argparse.Namespace) -> int:
         results=results,
         improvements=improvements,
         signals=signals,
+        decisions=decisions,
     )
     write_dashboard_json(
         args.dashboard,
@@ -82,6 +89,8 @@ def cmd_daily(args: argparse.Namespace) -> int:
         results=results,
         improvements=improvements,
         signals=signals,
+        decisions=decisions,
+        config=config,
     )
     print(f"wrote {report_dir / report_name}")
     print(f"wrote {args.dashboard}")
@@ -97,23 +106,28 @@ def cmd_trade(args: argparse.Namespace) -> int:
         candles_by_symbol = load_candles_csv(args.data)
     strategy = MovingAverageRsiStrategy(config.strategy)
     signals = [strategy.signal(symbol, candles_by_symbol[symbol]) for symbol in config.strategy.symbols]
-    intents = []
-    for signal in signals:
-        intent = build_order_intent(
-            signal,
-            config=config,
-            available_cash=config.risk.initial_cash,
-            held_quantity=config.risk.initial_cash * 0,
-            dry_run=not args.execute,
-        )
-        if intent is not None:
-            intents.append(intent)
+    decisions = build_trade_decisions(
+        signals,
+        config=config,
+        available_cash=config.risk.initial_cash,
+        dry_run=not args.execute,
+    )
+    intents = [decision.intent for decision in decisions if decision.accepted and decision.intent is not None]
 
     client = None
     if args.execute:
         client = _client_from_env(config)
     previews = TradingBroker(client, config).submit(intents, execute=args.execute)
-    print(json.dumps([preview.to_dict() for preview in previews], ensure_ascii=False, indent=2))
+    print(
+        json.dumps(
+            {
+                "decisions": [decision.to_dict() for decision in decisions],
+                "submissions": [preview.to_dict() for preview in previews],
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+    )
     return 0
 
 

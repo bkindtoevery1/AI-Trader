@@ -42,6 +42,52 @@ type Improvement = {
   parameters: Record<string, string | number>;
 };
 
+type TradeDecision = {
+  symbol: string;
+  signal: "BUY" | "SELL" | "HOLD";
+  action: "BUY" | "SELL" | "SKIP";
+  score: number;
+  price: string;
+  quantity: string;
+  notional: string;
+  orderType: string | null;
+  limitPrice: string | null;
+  clientOrderId: string | null;
+  accepted: boolean;
+  reason: string;
+  dryRun: boolean;
+};
+
+type RiskData = {
+  initialCash: string;
+  currency: string;
+  maxPositionPct: string;
+  reserveCashPct: string;
+  maxOrderValue: string;
+  maxDailyOrders: number;
+  feeBps: string;
+  slippageBps: string;
+  allowLiveTrading: boolean;
+};
+
+type StrategyData = {
+  name: string;
+  symbols: string[];
+  interval: string;
+  candleCount: number;
+  shortWindow: number;
+  longWindow: number;
+  rsiPeriod: number;
+  rsiBuyBelow: string;
+  rsiSellAbove: string;
+};
+
+type ExecutionData = {
+  mode: string;
+  orderType: string;
+  priceOffsetBps: string;
+};
+
 type DashboardData = {
   generatedAt: string;
   mode: string;
@@ -56,6 +102,10 @@ type DashboardData = {
   results: BacktestResult[];
   signals: Signal[];
   improvements: Improvement[];
+  decisions?: TradeDecision[];
+  risk?: RiskData;
+  strategy?: StrategyData;
+  execution?: ExecutionData;
 };
 
 type ViewMode = "overview" | "risk" | "reports";
@@ -127,6 +177,65 @@ const fallbackData: DashboardData = {
       parameters: { shortWindow: 8, longWindow: 30, rsiPeriod: 14 },
     },
   ],
+  decisions: [
+    {
+      symbol: "005930",
+      signal: "HOLD",
+      action: "SKIP",
+      score: 0.32,
+      price: "77900",
+      quantity: "0",
+      notional: "0",
+      orderType: null,
+      limitPrice: null,
+      clientOrderId: null,
+      accepted: true,
+      reason: "hold signal",
+      dryRun: true,
+    },
+    {
+      symbol: "AAPL",
+      signal: "HOLD",
+      action: "SKIP",
+      score: 0.41,
+      price: "216.2",
+      quantity: "0",
+      notional: "0",
+      orderType: null,
+      limitPrice: null,
+      clientOrderId: null,
+      accepted: true,
+      reason: "hold signal",
+      dryRun: true,
+    },
+  ],
+  risk: {
+    initialCash: "10000000",
+    currency: "KRW",
+    maxPositionPct: "30",
+    reserveCashPct: "15",
+    maxOrderValue: "1000000",
+    maxDailyOrders: 3,
+    feeBps: "1.5",
+    slippageBps: "5",
+    allowLiveTrading: false,
+  },
+  strategy: {
+    name: "ma-rsi-core",
+    symbols: ["005930", "AAPL"],
+    interval: "1d",
+    candleCount: 120,
+    shortWindow: 5,
+    longWindow: 20,
+    rsiPeriod: 14,
+    rsiBuyBelow: "62",
+    rsiSellAbove: "72",
+  },
+  execution: {
+    mode: "dry-run",
+    orderType: "LIMIT",
+    priceOffsetBps: "10",
+  },
 };
 
 function App() {
@@ -156,6 +265,26 @@ function App() {
     () => num(portfolio.totalReturnPct).toFixed(2),
     [portfolio.totalReturnPct],
   );
+  const decisions = useMemo(() => {
+    if (data.decisions?.length) {
+      return data.decisions;
+    }
+    return data.signals.map<TradeDecision>((signal) => ({
+      symbol: signal.symbol,
+      signal: signal.side,
+      action: "SKIP",
+      score: signal.score,
+      price: signal.price,
+      quantity: "0",
+      notional: "0",
+      orderType: null,
+      limitPrice: null,
+      clientOrderId: null,
+      accepted: signal.side === "HOLD",
+      reason: signal.reason,
+      dryRun: true,
+    }));
+  }, [data.decisions, data.signals]);
 
   const refreshReport = async () => {
     setRefreshing(true);
@@ -307,19 +436,19 @@ function App() {
           <section className="panel">
             <div className="panelHeader">
               <div>
-                <p className="eyebrow">Latest Signals</p>
-                <h2>Orders</h2>
+                <p className="eyebrow">Order Preview</p>
+                <h2>Trade Plan</h2>
               </div>
               <span className="badge safe">Guarded</span>
             </div>
             <div className="signalList">
-              {data.signals.map((signal) => (
-                <article className="signalRow" key={signal.symbol}>
+              {decisions.map((decision) => (
+                <article className="signalRow" key={decision.symbol}>
                   <div>
-                    <strong>{signal.symbol}</strong>
-                    <span>{signal.reason}</span>
+                    <strong>{decision.symbol}</strong>
+                    <span>{decision.reason} · {formatMoney(decision.notional)}</span>
                   </div>
-                  <SideBadge side={signal.side} />
+                  <DecisionBadge decision={decision} />
                 </article>
               ))}
             </div>
@@ -399,19 +528,27 @@ function App() {
               <div className="ruleList">
                 <article>
                   <strong>Dry-run first</strong>
-                  <span>Dashboard actions do not submit Toss orders.</span>
+                  <span>Execution mode is `{data.execution?.mode ?? data.mode}`. Dashboard actions do not submit Toss orders.</span>
                 </article>
                 <article>
                   <strong>Two-key live trading</strong>
-                  <span>`risk.allow_live_trading` and CLI `--execute` must both be enabled.</span>
+                  <span>
+                    Config is {data.risk?.allowLiveTrading ? "live-enabled" : "live-blocked"}; CLI `--execute`
+                    is still required for real orders.
+                  </span>
                 </article>
                 <article>
                   <strong>Order caps</strong>
-                  <span>Config limits daily orders, max order value, reserve cash, fees, and slippage.</span>
+                  <span>
+                    {data.risk?.maxDailyOrders ?? 0} orders/day · max {formatMoney(data.risk?.maxOrderValue ?? "0", data.risk?.currency ?? "KRW")} · reserve {data.risk?.reserveCashPct ?? "0"}%
+                  </span>
                 </article>
                 <article>
-                  <strong>Account header</strong>
-                  <span>Order and account APIs require `X-Tossinvest-Account`.</span>
+                  <strong>Strategy</strong>
+                  <span>
+                    {data.strategy?.name ?? "strategy"} · SMA {data.strategy?.shortWindow ?? "-"}
+                    /{data.strategy?.longWindow ?? "-"} · RSI {data.strategy?.rsiPeriod ?? "-"}
+                  </span>
                 </article>
               </div>
             </section>
@@ -423,13 +560,15 @@ function App() {
                 </div>
               </div>
               <div className="signalList">
-                {data.signals.map((signal) => (
-                  <article className="signalRow" key={signal.symbol}>
+                {decisions.map((decision) => (
+                  <article className="signalRow" key={decision.symbol}>
                     <div>
-                      <strong>{signal.symbol}</strong>
-                      <span>{signal.price} at {formatDate(signal.timestamp)}</span>
+                      <strong>{decision.symbol}</strong>
+                      <span>
+                        {decision.quantity} shares · {formatMoney(decision.notional)}
+                      </span>
                     </div>
-                    <SideBadge side={signal.side} />
+                    <DecisionBadge decision={decision} />
                   </article>
                 ))}
               </div>
@@ -601,6 +740,16 @@ function SideBadge({ side }: { side: Signal["side"] }) {
   return <span className={`sideBadge ${side.toLowerCase()}`}>{side}</span>;
 }
 
+function DecisionBadge({ decision }: { decision: TradeDecision }) {
+  const label = decision.action === "SKIP" ? decision.signal : decision.action;
+  const state = decision.action === "SKIP" ? "hold" : decision.action.toLowerCase();
+  return (
+    <span className={`sideBadge ${state}`} title={decision.accepted ? "accepted" : "blocked"}>
+      {label}
+    </span>
+  );
+}
+
 function parameterText(parameters: Record<string, string | number>) {
   const shortWindow = parameters.shortWindow ?? "-";
   const longWindow = parameters.longWindow ?? "-";
@@ -615,6 +764,15 @@ function formatDate(value: string) {
     hour: "2-digit",
     minute: "2-digit",
   }).format(new Date(value));
+}
+
+function formatMoney(value: string | number, currency = "") {
+  const amount = num(value);
+  const suffix = currency ? ` ${currency}` : "";
+  if (amount === 0) {
+    return `0${suffix}`;
+  }
+  return `${Math.round(amount).toLocaleString()}${suffix}`;
 }
 
 function num(value: string | number) {

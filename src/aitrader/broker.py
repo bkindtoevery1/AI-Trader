@@ -33,6 +33,32 @@ class OrderPreview:
         }
 
 
+@dataclass(frozen=True)
+class TradeDecision:
+    signal: Signal
+    intent: OrderIntent | None
+    accepted: bool
+    reason: str
+    dry_run: bool
+
+    def to_dict(self) -> dict:
+        return {
+            "symbol": self.signal.symbol,
+            "signal": self.signal.side,
+            "action": self.intent.side if self.intent else "SKIP",
+            "score": self.signal.score,
+            "price": decimal_str(self.signal.price, 4),
+            "quantity": decimal_str(self.intent.quantity, 6) if self.intent else "0",
+            "notional": decimal_str(self.intent.notional, 2) if self.intent else "0",
+            "orderType": self.intent.order_type if self.intent else None,
+            "limitPrice": decimal_str(self.intent.limit_price, 4) if self.intent and self.intent.limit_price else None,
+            "clientOrderId": self.intent.client_order_id if self.intent else None,
+            "accepted": self.accepted,
+            "reason": self.reason,
+            "dryRun": self.dry_run,
+        }
+
+
 class RiskManager:
     def __init__(self, config: AppConfig) -> None:
         self.config = config
@@ -47,6 +73,45 @@ class RiskManager:
         if intent.quantity <= 0:
             return False, "quantity must be positive"
         return True, "accepted"
+
+
+def build_trade_decisions(
+    signals: list[Signal],
+    *,
+    config: AppConfig,
+    available_cash: Decimal,
+    held_quantities: dict[str, Decimal] | None = None,
+    dry_run: bool = True,
+) -> list[TradeDecision]:
+    held_quantities = held_quantities or {}
+    risk = RiskManager(config)
+    decisions: list[TradeDecision] = []
+    accepted_orders = 0
+
+    for signal in signals:
+        if signal.side == "HOLD":
+            decisions.append(TradeDecision(signal, None, True, "hold signal", dry_run))
+            continue
+
+        held_quantity = held_quantities.get(signal.symbol, Decimal("0"))
+        intent = build_order_intent(
+            signal,
+            config=config,
+            available_cash=available_cash,
+            held_quantity=held_quantity,
+            dry_run=dry_run,
+        )
+        if intent is None:
+            reason = "no sellable quantity" if signal.side == "SELL" else "insufficient buying budget"
+            decisions.append(TradeDecision(signal, None, False, reason, dry_run))
+            continue
+
+        accepted, reason = risk.validate(intent, accepted_orders)
+        if accepted:
+            accepted_orders += 1
+        decisions.append(TradeDecision(signal, intent, accepted, reason, dry_run))
+
+    return decisions
 
 
 def build_order_intent(
@@ -131,4 +196,3 @@ class TradingBroker:
             response = self.client.create_order(live_intent.to_toss_payload())
             previews.append(OrderPreview(live_intent, True, "submitted", response))
         return previews
-

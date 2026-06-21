@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T00:50:00.552941+09:00",
+  "generatedAt": "2026-06-22T08:43:19.145709+09:00",
   "mode": "dry-run",
   "status": "ready",
   "summary": {
@@ -440,5 +440,67 @@
         "slippageBps": "5"
       }
     }
-  ]
+  ],
+  "decisions": [
+    {
+      "symbol": "005930",
+      "signal": "SELL",
+      "action": "SKIP",
+      "score": 0.75,
+      "price": "77900",
+      "quantity": "0",
+      "notional": "0",
+      "orderType": null,
+      "limitPrice": null,
+      "clientOrderId": null,
+      "accepted": false,
+      "reason": "no sellable quantity",
+      "dryRun": true
+    },
+    {
+      "symbol": "AAPL",
+      "signal": "SELL",
+      "action": "SKIP",
+      "score": 0.75,
+      "price": "216.2",
+      "quantity": "0",
+      "notional": "0",
+      "orderType": null,
+      "limitPrice": null,
+      "clientOrderId": null,
+      "accepted": false,
+      "reason": "no sellable quantity",
+      "dryRun": true
+    }
+  ],
+  "strategy": {
+    "name": "ma-rsi-core",
+    "symbols": [
+      "005930",
+      "AAPL"
+    ],
+    "interval": "1d",
+    "candleCount": 120,
+    "shortWindow": 5,
+    "longWindow": 20,
+    "rsiPeriod": 14,
+    "rsiBuyBelow": "62",
+    "rsiSellAbove": "72"
+  },
+  "risk": {
+    "initialCash": "10000000",
+    "currency": "KRW",
+    "maxPositionPct": "30",
+    "reserveCashPct": "15",
+    "maxOrderValue": "1000000",
+    "maxDailyOrders": 3,
+    "feeBps": "1.5",
+    "slippageBps": "5",
+    "allowLiveTrading": false
+  },
+  "execution": {
+    "mode": "dry-run",
+    "orderType": "LIMIT",
+    "priceOffsetBps": "10"
+  }
 }
