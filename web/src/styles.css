@@ -106,6 +106,14 @@ button {
   color: #17324d;
 }
 
+.navItem:active,
+.iconButton:active,
+.runButton:active,
+.segmented button:active,
+.tableButton:active {
+  transform: translateY(1px);
+}
+
 .sidebarStatus {
   display: flex;
   align-items: center;
@@ -197,6 +205,37 @@ h2 {
   color: #ffffff;
 }
 
+.spin {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.statusStrip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 42px;
+  margin-bottom: 14px;
+  padding: 0 14px;
+  border: 1px solid #d5dde8;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #5a6475;
+  font-size: 13px;
+}
+
+.statusStrip strong {
+  color: #17324d;
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+
 .metricGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -236,6 +275,7 @@ h2 {
   color: #18212f;
   font-size: 28px;
   line-height: 1.1;
+  overflow-wrap: anywhere;
 }
 
 .metric small {
@@ -301,6 +341,43 @@ h2 {
 .chartWrap {
   display: grid;
   gap: 12px;
+}
+
+.segmented {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.segmented button,
+.tableButton {
+  border: 1px solid #d5dde8;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #17324d;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.segmented button {
+  min-height: 34px;
+  padding: 0 12px;
+}
+
+.segmented button.selected {
+  border-color: #126463;
+  background: #e6f4f1;
+  color: #126463;
+}
+
+.chartNote {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 38px;
+  color: #5a6475;
+  font-size: 13px;
 }
 
 .chartWrap svg {
@@ -418,6 +495,11 @@ h2 {
   overflow-wrap: anywhere;
 }
 
+.tableButton {
+  min-height: 30px;
+  padding: 0 9px;
+}
+
 .positive {
   color: #2f855a !important;
   font-weight: 700;
@@ -451,6 +533,33 @@ h2 {
   color: #126463;
   font-size: 13px;
   font-weight: 700;
+}
+
+.ruleList {
+  display: grid;
+  gap: 0;
+}
+
+.ruleList article {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.32fr) minmax(0, 1fr);
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid #edf1f6;
+}
+
+.ruleList article:last-child {
+  border-bottom: 0;
+}
+
+.ruleList strong {
+  color: #18212f;
+}
+
+.ruleList span {
+  color: #5a6475;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 
 @media (max-width: 980px) {
@@ -530,5 +639,24 @@ h2 {
     overflow-x: auto;
     white-space: nowrap;
   }
-}
 
+  .statusStrip {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 12px 14px;
+  }
+
+  .statusStrip strong {
+    text-align: left;
+  }
+
+  .chartNote {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ruleList article {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}

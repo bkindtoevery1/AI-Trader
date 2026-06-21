@@ -58,6 +58,8 @@ type DashboardData = {
   improvements: Improvement[];
 };
 
+type ViewMode = "overview" | "risk" | "reports";
+
 const fallbackData: DashboardData = {
   generatedAt: "2026-06-22T00:00:00+09:00",
   mode: "dry-run",
@@ -129,17 +131,66 @@ const fallbackData: DashboardData = {
 
 function App() {
   const [data, setData] = useState<DashboardData>(fallbackData);
+  const [activeView, setActiveView] = useState<ViewMode>("overview");
+  const [selectedSymbol, setSelectedSymbol] = useState("PORTFOLIO");
+  const [statusMessage, setStatusMessage] = useState("Report loaded");
+  const [refreshing, setRefreshing] = useState(false);
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}dashboard-data.json`)
-      .then((response) => (response.ok ? response.json() : fallbackData))
-      .then((payload: DashboardData) => setData(payload))
-      .catch(() => setData(fallbackData));
+    loadDashboardData().then((payload) => {
+      setData(payload);
+      setStatusMessage(`Updated ${formatDate(payload.generatedAt)}`);
+    });
   }, []);
 
-  const best = useMemo(
-    () => data.results.find((item) => item.symbol === data.summary.bestSymbol) ?? data.results[0],
-    [data],
+  const portfolio = useMemo(() => buildPortfolioResult(data.results), [data.results]);
+  const chartOptions = useMemo(() => [portfolio, ...data.results], [portfolio, data.results]);
+  const selectedChart = useMemo(
+    () =>
+      selectedSymbol === "PORTFOLIO"
+        ? portfolio
+        : data.results.find((item) => item.symbol === selectedSymbol) ?? portfolio,
+    [data.results, portfolio, selectedSymbol],
+  );
+  const portfolioReturn = useMemo(
+    () => num(portfolio.totalReturnPct).toFixed(2),
+    [portfolio.totalReturnPct],
+  );
+
+  const refreshReport = async () => {
+    setRefreshing(true);
+    try {
+      const payload = await loadDashboardData(true);
+      setData(payload);
+      setStatusMessage(`Refreshed ${formatTime(new Date())}`);
+    } finally {
+      setRefreshing(false);
+    }
+  };
+
+  const switchView = (view: ViewMode) => {
+    setActiveView(view);
+    setStatusMessage(`${view[0].toUpperCase()}${view.slice(1)} view selected`);
+  };
+
+  const openRiskGuard = () => {
+    setActiveView("risk");
+    setStatusMessage("Live orders remain blocked unless config and CLI both allow execution");
+  };
+
+  const inspectDryRun = () => {
+    setActiveView("risk");
+    setStatusMessage("Dry-run mode previews orders without submitting them");
+  };
+
+  const selectChart = (symbol: string) => {
+    setSelectedSymbol(symbol);
+    setStatusMessage(`${displaySymbol(symbol)} chart selected`);
+  };
+
+  const selectedSignal = useMemo(
+    () => data.signals.find((signal) => signal.symbol === selectedSymbol),
+    [data.signals, selectedSymbol],
   );
 
   return (
@@ -155,15 +206,27 @@ function App() {
           </div>
         </div>
         <nav className="nav">
-          <button className="navItem active" title="Overview">
+          <button
+            className={`navItem ${activeView === "overview" ? "active" : ""}`}
+            title="Overview"
+            onClick={() => switchView("overview")}
+          >
             <BarChart3 size={18} />
             <span>Overview</span>
           </button>
-          <button className="navItem" title="Risk">
+          <button
+            className={`navItem ${activeView === "risk" ? "active" : ""}`}
+            title="Risk"
+            onClick={() => switchView("risk")}
+          >
             <ShieldCheck size={18} />
             <span>Risk</span>
           </button>
-          <button className="navItem" title="Reports">
+          <button
+            className={`navItem ${activeView === "reports" ? "active" : ""}`}
+            title="Reports"
+            onClick={() => switchView("reports")}
+          >
             <FileText size={18} />
             <span>Reports</span>
           </button>
@@ -181,36 +244,64 @@ function App() {
             <h1>Daily Strategy Desk</h1>
           </div>
           <div className="toolbar">
-            <button className="iconButton" title="Refresh report" aria-label="Refresh report">
-              <RefreshCw size={18} />
+            <button className="iconButton" title="Refresh report" aria-label="Refresh report" onClick={refreshReport}>
+              <RefreshCw className={refreshing ? "spin" : ""} size={18} />
             </button>
-            <button className="iconButton" title="Risk guard" aria-label="Risk guard">
+            <button className="iconButton" title="Risk guard" aria-label="Risk guard" onClick={openRiskGuard}>
               <ShieldCheck size={18} />
             </button>
-            <button className="runButton" title="Dry-run mode">
+            <button className="runButton" title="Dry-run mode" onClick={inspectDryRun}>
               <Activity size={18} />
               <span>Dry Run</span>
             </button>
           </div>
         </header>
 
+        <div className="statusStrip" role="status">
+          <span>{statusMessage}</span>
+          <strong>{data.summary.symbols.join(" / ")}</strong>
+        </div>
+
         <section className="metricGrid" aria-label="summary">
-          <Metric icon={<Gauge />} label="Best Symbol" value={data.summary.bestSymbol} note="walk-forward target" />
-          <Metric icon={<TrendingUp />} label="Return" value={`${num(data.summary.bestReturnPct).toFixed(2)}%`} note="sample backtest" />
+          <Metric icon={<Gauge />} label="Universe" value={data.summary.symbols.join(" / ")} note="tracked symbols" />
+          <Metric icon={<TrendingUp />} label="Portfolio" value={`${portfolioReturn}%`} note="combined backtest" />
           <Metric icon={<ShieldCheck />} label="Max DD" value={`${num(data.summary.maxDrawdownPct).toFixed(2)}%`} note="risk budget" />
           <Metric icon={<GitBranch />} label="Trades" value={String(data.summary.tradeCount)} note="daily review set" />
         </section>
 
-        <section className="mainGrid">
+        {activeView === "overview" ? (
+          <section className="mainGrid">
           <section className="panel chartPanel">
             <div className="panelHeader">
               <div>
                 <p className="eyebrow">Equity Curve</p>
-                <h2>{best?.symbol ?? "Portfolio"}</h2>
+                <h2>{displaySymbol(selectedChart.symbol)}</h2>
               </div>
               <span className="timestamp">{formatDate(data.generatedAt)}</span>
             </div>
-            {best ? <Sparkline points={best.equityCurve} /> : null}
+            <div className="segmented" aria-label="chart symbol selector">
+              {chartOptions.map((result) => (
+                <button
+                  key={result.symbol}
+                  className={result.symbol === selectedChart.symbol ? "selected" : ""}
+                  onClick={() => selectChart(result.symbol)}
+                >
+                  {result.symbol === "PORTFOLIO" ? "Portfolio" : result.symbol}
+                </button>
+              ))}
+            </div>
+            <Sparkline points={selectedChart.equityCurve} />
+            {selectedSignal ? (
+              <div className="chartNote">
+                <SideBadge side={selectedSignal.side} />
+                <span>{selectedSignal.reason}</span>
+              </div>
+            ) : (
+              <div className="chartNote">
+                <span className="badge safe">Portfolio</span>
+                <span>Combined curve across tracked symbols</span>
+              </div>
+            )}
           </section>
 
           <section className="panel">
@@ -256,7 +347,11 @@ function App() {
               <tbody>
                 {data.results.map((result) => (
                   <tr key={result.symbol}>
-                    <td>{result.symbol}</td>
+                    <td>
+                      <button className="tableButton" onClick={() => selectChart(result.symbol)}>
+                        {result.symbol}
+                      </button>
+                    </td>
                     <td className={num(result.totalReturnPct) >= 0 ? "positive" : "negative"}>
                       {num(result.totalReturnPct).toFixed(2)}%
                     </td>
@@ -289,9 +384,162 @@ function App() {
             </div>
           </section>
         </section>
+        ) : null}
+
+        {activeView === "risk" ? (
+          <section className="mainGrid">
+            <section className="panel wide">
+              <div className="panelHeader">
+                <div>
+                  <p className="eyebrow">Risk Guard</p>
+                  <h2>Execution Controls</h2>
+                </div>
+                <span className="badge safe">Live Blocked</span>
+              </div>
+              <div className="ruleList">
+                <article>
+                  <strong>Dry-run first</strong>
+                  <span>Dashboard actions do not submit Toss orders.</span>
+                </article>
+                <article>
+                  <strong>Two-key live trading</strong>
+                  <span>`risk.allow_live_trading` and CLI `--execute` must both be enabled.</span>
+                </article>
+                <article>
+                  <strong>Order caps</strong>
+                  <span>Config limits daily orders, max order value, reserve cash, fees, and slippage.</span>
+                </article>
+                <article>
+                  <strong>Account header</strong>
+                  <span>Order and account APIs require `X-Tossinvest-Account`.</span>
+                </article>
+              </div>
+            </section>
+            <section className="panel">
+              <div className="panelHeader">
+                <div>
+                  <p className="eyebrow">Order Preview</p>
+                  <h2>Current Signals</h2>
+                </div>
+              </div>
+              <div className="signalList">
+                {data.signals.map((signal) => (
+                  <article className="signalRow" key={signal.symbol}>
+                    <div>
+                      <strong>{signal.symbol}</strong>
+                      <span>{signal.price} at {formatDate(signal.timestamp)}</span>
+                    </div>
+                    <SideBadge side={signal.side} />
+                  </article>
+                ))}
+              </div>
+            </section>
+          </section>
+        ) : null}
+
+        {activeView === "reports" ? (
+          <section className="mainGrid">
+            <section className="panel wide">
+              <div className="panelHeader">
+                <div>
+                  <p className="eyebrow">Backtest Matrix</p>
+                  <h2>All Symbols</h2>
+                </div>
+                <CalendarClock size={18} />
+              </div>
+              <table className="dataTable">
+                <thead>
+                  <tr>
+                    <th>Symbol</th>
+                    <th>Return</th>
+                    <th>Max DD</th>
+                    <th>Sharpe</th>
+                    <th>Trades</th>
+                    <th>Parameters</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {data.results.map((result) => (
+                    <tr key={result.symbol}>
+                      <td>{result.symbol}</td>
+                      <td className={num(result.totalReturnPct) >= 0 ? "positive" : "negative"}>
+                        {num(result.totalReturnPct).toFixed(2)}%
+                      </td>
+                      <td>{num(result.maxDrawdownPct).toFixed(2)}%</td>
+                      <td>{num(result.sharpe).toFixed(2)}</td>
+                      <td>{result.tradeCount}</td>
+                      <td>{parameterText(result.parameters)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </section>
+            <section className="panel">
+              <div className="panelHeader">
+                <div>
+                  <p className="eyebrow">Daily Improve</p>
+                  <h2>Next Tests</h2>
+                </div>
+                <span className="badge amber">Review</span>
+              </div>
+              <div className="improvementList">
+                {data.improvements.map((item) => (
+                  <article className="improvement" key={item.title}>
+                    <strong>{item.title}</strong>
+                    <p>{item.rationale}</p>
+                    <span>+{num(item.expectedDeltaPct).toFixed(2)}%p</span>
+                  </article>
+                ))}
+              </div>
+            </section>
+          </section>
+        ) : null}
       </section>
     </main>
   );
+}
+
+async function loadDashboardData(cacheBust = false): Promise<DashboardData> {
+  const suffix = cacheBust ? `?t=${Date.now()}` : "";
+  try {
+    const response = await fetch(`${import.meta.env.BASE_URL}dashboard-data.json${suffix}`);
+    return response.ok ? await response.json() : fallbackData;
+  } catch {
+    return fallbackData;
+  }
+}
+
+function buildPortfolioResult(results: BacktestResult[]): BacktestResult {
+  if (!results.length) {
+    return {
+      symbol: "PORTFOLIO",
+      totalReturnPct: "0",
+      maxDrawdownPct: "0",
+      sharpe: "0",
+      tradeCount: 0,
+      equityCurve: [],
+      parameters: {},
+    };
+  }
+  const baseCurve = results.reduce((longest, result) =>
+    result.equityCurve.length > longest.length ? result.equityCurve : longest,
+  results[0].equityCurve);
+  const equityCurve = baseCurve.map((point, index) => {
+    const total = results.reduce((sum, result) => sum + num(result.equityCurve[index]?.equity ?? 0), 0);
+    return { date: point.date, equity: String(total) };
+  });
+  const initial = num(equityCurve[0]?.equity ?? 0);
+  const final = num(equityCurve[equityCurve.length - 1]?.equity ?? 0);
+  const totalReturnPct = initial ? ((final - initial) / initial) * 100 : 0;
+  return {
+    symbol: "PORTFOLIO",
+    totalReturnPct: String(totalReturnPct),
+    maxDrawdownPct: String(maxDrawdown(equityCurve)),
+    sharpe: String(average(results.map((result) => num(result.sharpe)))),
+    tradeCount: results.reduce((sum, result) => sum + result.tradeCount, 0),
+    equityCurve,
+    parameters: {},
+  };
 }
 
 function Metric({
@@ -374,5 +622,36 @@ function num(value: string | number) {
   return Number.isFinite(parsed) ? parsed : 0;
 }
 
-export default App;
+function displaySymbol(symbol: string) {
+  return symbol === "PORTFOLIO" ? "Portfolio" : symbol;
+}
 
+function maxDrawdown(points: EquityPoint[]) {
+  let peak = num(points[0]?.equity ?? 0);
+  let worst = 0;
+  points.forEach((point) => {
+    const equity = num(point.equity);
+    peak = Math.max(peak, equity);
+    if (peak > 0) {
+      worst = Math.min(worst, (equity - peak) / peak);
+    }
+  });
+  return Math.abs(worst) * 100;
+}
+
+function average(values: number[]) {
+  if (!values.length) {
+    return 0;
+  }
+  return values.reduce((sum, value) => sum + value, 0) / values.length;
+}
+
+function formatTime(value: Date) {
+  return new Intl.DateTimeFormat("ko-KR", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  }).format(value);
+}
+
+export default App;
