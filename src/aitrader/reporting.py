@@ -4,6 +4,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 
+from .account import AccountSnapshot, simulated_account_snapshot
 from .broker import TradeDecision
 from .config import AppConfig
 from .models import BacktestResult, Improvement, Signal, decimal_str
@@ -17,6 +18,7 @@ def write_markdown_report(
     improvements: list[Improvement],
     signals: list[Signal],
     decisions: list[TradeDecision] | None = None,
+    account: AccountSnapshot | None = None,
 ) -> None:
     lines = [
         "# AI Trader Daily Report",
@@ -56,6 +58,18 @@ def write_markdown_report(
                 f"{payload['quantity']} | {payload['notional']} | {payload['accepted']} | {payload['reason']} |"
             )
 
+    if account is not None:
+        lines.extend(["", "## Account Snapshot", ""])
+        lines.append(f"- Source: `{account.source}`")
+        lines.append(
+            "- Buying power: "
+            + ", ".join(f"{currency} {value}" for currency, value in account.to_dict()["buyingPower"].items())
+        )
+        lines.append(
+            "- Holdings: "
+            + (", ".join(f"{symbol} {qty}" for symbol, qty in account.to_dict()["holdings"].items()) or "none")
+        )
+
     lines.extend(["", "## Improvement Candidates", ""])
     for item in improvements:
         lines.append(f"- **{item.title}**: {item.rationale} (`delta={item.expected_delta_pct:.2f}%p`)")
@@ -74,6 +88,7 @@ def write_dashboard_json(
     signals: list[Signal],
     decisions: list[TradeDecision] | None = None,
     config: AppConfig | None = None,
+    account: AccountSnapshot | None = None,
 ) -> None:
     best_result = max(results, key=lambda item: item.total_return_pct)
     payload = {
@@ -103,6 +118,7 @@ def write_dashboard_json(
         "decisions": [item.to_dict() for item in decisions or []],
     }
     if config is not None:
+        account = account or simulated_account_snapshot(config)
         payload["strategy"] = {
             "name": config.strategy.name,
             "symbols": list(config.strategy.symbols),
@@ -130,6 +146,7 @@ def write_dashboard_json(
             "orderType": config.execution.order_type,
             "priceOffsetBps": decimal_str(config.execution.price_offset_bps, 2),
         }
+        payload["account"] = account.to_dict()
     target = Path(path)
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")

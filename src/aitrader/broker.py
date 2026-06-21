@@ -80,10 +80,12 @@ def build_trade_decisions(
     *,
     config: AppConfig,
     available_cash: Decimal,
+    available_cash_by_symbol: dict[str, Decimal] | None = None,
     held_quantities: dict[str, Decimal] | None = None,
     dry_run: bool = True,
 ) -> list[TradeDecision]:
     held_quantities = held_quantities or {}
+    available_cash_by_symbol = available_cash_by_symbol or {}
     risk = RiskManager(config)
     decisions: list[TradeDecision] = []
     accepted_orders = 0
@@ -97,7 +99,7 @@ def build_trade_decisions(
         intent = build_order_intent(
             signal,
             config=config,
-            available_cash=available_cash,
+            available_cash=available_cash_by_symbol.get(signal.symbol, available_cash),
             held_quantity=held_quantity,
             dry_run=dry_run,
         )

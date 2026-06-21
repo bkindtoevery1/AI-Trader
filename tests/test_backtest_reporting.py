@@ -64,6 +64,7 @@ def test_report_writers_create_markdown_and_dashboard_json(tmp_path):
     assert payload["results"][0]["symbol"] == "AAPL"
     assert payload["decisions"][0]["symbol"] == "AAPL"
     assert payload["risk"]["allowLiveTrading"] is False
+    assert payload["account"]["source"] == "simulated"
 
 
 def test_candle_csv_round_trip(tmp_path):

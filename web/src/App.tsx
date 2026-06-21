@@ -88,6 +88,15 @@ type ExecutionData = {
   priceOffsetBps: string;
 };
 
+type AccountData = {
+  generatedAt: string;
+  source: string;
+  buyingPower: Record<string, string>;
+  holdings: Record<string, string>;
+  sellableQuantities: Record<string, string>;
+  errors: string[];
+};
+
 type DashboardData = {
   generatedAt: string;
   mode: string;
@@ -106,6 +115,7 @@ type DashboardData = {
   risk?: RiskData;
   strategy?: StrategyData;
   execution?: ExecutionData;
+  account?: AccountData;
 };
 
 type ViewMode = "overview" | "risk" | "reports";
@@ -235,6 +245,14 @@ const fallbackData: DashboardData = {
     mode: "dry-run",
     orderType: "LIMIT",
     priceOffsetBps: "10",
+  },
+  account: {
+    generatedAt: "2026-06-22T00:00:00+09:00",
+    source: "simulated",
+    buyingPower: { KRW: "10000000" },
+    holdings: {},
+    sellableQuantities: {},
+    errors: [],
   },
 };
 
@@ -550,6 +568,16 @@ function App() {
                     /{data.strategy?.longWindow ?? "-"} · RSI {data.strategy?.rsiPeriod ?? "-"}
                   </span>
                 </article>
+                <article>
+                  <strong>Account</strong>
+                  <span>
+                    {data.account?.source ?? "simulated"} · buying power {formatEntries(data.account?.buyingPower)}
+                  </span>
+                </article>
+                <article>
+                  <strong>Holdings</strong>
+                  <span>{formatEntries(data.account?.holdings) || "none"}</span>
+                </article>
               </div>
             </section>
             <section className="panel">
@@ -773,6 +801,15 @@ function formatMoney(value: string | number, currency = "") {
     return `0${suffix}`;
   }
   return `${Math.round(amount).toLocaleString()}${suffix}`;
+}
+
+function formatEntries(entries?: Record<string, string>) {
+  if (!entries || Object.keys(entries).length === 0) {
+    return "";
+  }
+  return Object.entries(entries)
+    .map(([key, value]) => `${key} ${value}`)
+    .join(", ");
 }
 
 function num(value: string | number) {

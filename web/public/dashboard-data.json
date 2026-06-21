@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T08:43:19.145709+09:00",
+  "generatedAt": "2026-06-22T08:51:58.092169+09:00",
   "mode": "dry-run",
   "status": "ready",
   "summary": {
@@ -502,5 +502,15 @@
     "mode": "dry-run",
     "orderType": "LIMIT",
     "priceOffsetBps": "10"
+  },
+  "account": {
+    "generatedAt": "2026-06-22T08:51:58.092135+09:00",
+    "source": "simulated",
+    "buyingPower": {
+      "KRW": "10000000"
+    },
+    "holdings": {},
+    "sellableQuantities": {},
+    "errors": []
   }
 }

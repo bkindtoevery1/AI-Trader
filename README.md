@@ -50,6 +50,19 @@ ai-trader daily --data data/live_candles.csv --report-dir reports --dashboard we
 ai-trader trade --live-data
 ```
 
+실제 계좌 기준으로 buying power, holdings, sellable quantity를 반영하려면:
+
+```bash
+ai-trader account
+ai-trader daily --live-data --account-snapshot --save-data data/live_candles.csv
+ai-trader trade --live-data --account-snapshot
+```
+
+실주문은 여전히 아래 두 조건이 동시에 필요합니다.
+
+- `config/strategy.yaml`의 `risk.allow_live_trading: true`
+- CLI의 `ai-trader trade --execute`
+
 ## Environment
 
 ```bash
