@@ -328,6 +328,7 @@ def cmd_env_check(args: argparse.Namespace) -> int:
                     config.toss.client_id_env,
                     config.toss.client_secret_env,
                     config.toss.account_seq_env,
+                    config.toss.account_no_env,
                     "AI_TRADER_CONFIG",
                 ],
                 dotenv_path=args.env_file,
@@ -364,7 +365,7 @@ def _payload(args: argparse.Namespace) -> dict:
     return parsed
 
 
-def _print_json(payload: dict) -> None:
+def _print_json(payload) -> None:
     print(json.dumps(payload, ensure_ascii=False, indent=2))
 
 
@@ -408,6 +409,7 @@ def _market_client_from_env(config) -> TossInvestClient:
         client_id=str(client_id),
         client_secret=str(client_secret),
         account_seq=os.environ.get(config.toss.account_seq_env),
+        account_no=os.environ.get(config.toss.account_no_env),
     )
 
 
@@ -416,12 +418,12 @@ def _client_from_env(config) -> TossInvestClient:
     client_id = os.environ.get(config.toss.client_id_env)
     client_secret = os.environ.get(config.toss.client_secret_env)
     account_seq = os.environ.get(config.toss.account_seq_env)
+    account_no = os.environ.get(config.toss.account_no_env)
     missing = [
         name
         for name, value in {
             config.toss.client_id_env: client_id,
             config.toss.client_secret_env: client_secret,
-            config.toss.account_seq_env: account_seq,
         }.items()
         if not value
     ]
@@ -431,7 +433,8 @@ def _client_from_env(config) -> TossInvestClient:
         base_url=config.toss.base_url,
         client_id=str(client_id),
         client_secret=str(client_secret),
-        account_seq=str(account_seq),
+        account_seq=str(account_seq) if account_seq else None,
+        account_no=str(account_no) if account_no else None,
     )
 
 

@@ -49,6 +49,7 @@ class TossConfig:
     client_id_env: str
     client_secret_env: str
     account_seq_env: str
+    account_no_env: str
 
 
 @dataclass(frozen=True)
@@ -125,6 +126,6 @@ def load_config(path: str | Path) -> AppConfig:
         client_id_env=str(toss.get("client_id_env", "TOSSINVEST_CLIENT_ID")),
         client_secret_env=str(toss.get("client_secret_env", "TOSSINVEST_CLIENT_SECRET")),
         account_seq_env=str(toss.get("account_seq_env", "TOSSINVEST_ACCOUNT_SEQ")),
+        account_no_env=str(toss.get("account_no_env", "TOSSINVEST_ACCOUNT_NO")),
     )
     return AppConfig(strategy_config, risk_config, execution_config, toss_config)
-

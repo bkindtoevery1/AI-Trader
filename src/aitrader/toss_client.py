@@ -28,12 +28,14 @@ class TossInvestClient:
         client_id: str,
         client_secret: str,
         account_seq: str | None = None,
+        account_no: str | None = None,
         session: requests.Session | None = None,
     ) -> None:
         self.base_url = base_url.rstrip("/")
         self.client_id = client_id
         self.client_secret = client_secret
         self.account_seq = account_seq
+        self.account_no = account_no
         self.session = session or requests.Session()
         self._token: TokenState | None = None
 
@@ -72,12 +74,10 @@ class TossInvestClient:
         json: dict[str, Any] | None = None,
         account_required: bool = False,
         retries: int = 2,
-    ) -> dict[str, Any]:
+    ) -> Any:
         headers = {"Authorization": f"Bearer {self.access_token()}"}
         if account_required:
-            if not self.account_seq:
-                raise TossApiError("X-Tossinvest-Account is required for this endpoint")
-            headers["X-Tossinvest-Account"] = str(self.account_seq)
+            headers["X-Tossinvest-Account"] = self.resolve_account_seq()
 
         attempt = 0
         while True:
@@ -157,8 +157,50 @@ class TossInvestClient:
         params = {"date": date} if date else None
         return self.request("GET", "/api/v1/market-calendar/US", params=params)
 
-    def get_accounts(self) -> dict[str, Any]:
+    def get_accounts(self) -> Any:
         return self.request("GET", "/api/v1/accounts")
+
+    def resolve_account_seq(self) -> str:
+        if self.account_seq:
+            return str(self.account_seq)
+
+        accounts = _extract_accounts(self.get_accounts())
+        if not accounts:
+            raise TossApiError(
+                "Could not resolve Toss accountSeq: GET /api/v1/accounts returned no accounts"
+            )
+
+        selected: dict[str, Any] | None = None
+        if self.account_no:
+            selected = next(
+                (account for account in accounts if str(account.get("accountNo", "")) == str(self.account_no)),
+                None,
+            )
+            if selected is None:
+                raise TossApiError(
+                    "Could not resolve Toss accountSeq: no account matched configured accountNo"
+                )
+        elif len(accounts) == 1:
+            selected = accounts[0]
+        else:
+            brokerage_accounts = [
+                account
+                for account in accounts
+                if str(account.get("accountType", "")).upper() == "BROKERAGE"
+            ]
+            if len(brokerage_accounts) == 1:
+                selected = brokerage_accounts[0]
+
+        if selected is None:
+            raise TossApiError(
+                "Could not resolve Toss accountSeq: set TOSSINVEST_ACCOUNT_SEQ or TOSSINVEST_ACCOUNT_NO"
+            )
+
+        account_seq = selected.get("accountSeq")
+        if account_seq is None or str(account_seq) == "":
+            raise TossApiError("Could not resolve Toss accountSeq: selected account did not include accountSeq")
+        self.account_seq = str(account_seq)
+        return self.account_seq
 
     def get_holdings(self, symbol: str | None = None) -> dict[str, Any]:
         params = {"symbol": symbol} if symbol else None
@@ -227,3 +269,22 @@ def _json_or_error(response: requests.Response) -> dict[str, Any]:
     if not isinstance(payload, dict):
         raise TossApiError("Toss Invest API returned an unexpected JSON payload", response.status_code)
     return payload
+
+
+def _extract_accounts(payload: Any) -> list[dict[str, Any]]:
+    if isinstance(payload, list):
+        return [item for item in payload if isinstance(item, dict)]
+    if not isinstance(payload, dict):
+        return []
+
+    for key in ("accounts", "items"):
+        value = payload.get(key)
+        if isinstance(value, list):
+            return [item for item in value if isinstance(item, dict)]
+
+    result = payload.get("result")
+    if isinstance(result, list):
+        return [item for item in result if isinstance(item, dict)]
+    if isinstance(result, dict):
+        return _extract_accounts(result)
+    return []

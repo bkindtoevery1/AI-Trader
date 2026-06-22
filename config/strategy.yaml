@@ -32,4 +32,4 @@ toss:
   client_id_env: "TOSSINVEST_CLIENT_ID"
   client_secret_env: "TOSSINVEST_CLIENT_SECRET"
   account_seq_env: "TOSSINVEST_ACCOUNT_SEQ"
-
+  account_no_env: "TOSSINVEST_ACCOUNT_NO"

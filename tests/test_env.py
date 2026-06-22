@@ -13,6 +13,7 @@ def test_load_dotenv_sets_values_without_overriding_existing(monkeypatch, tmp_pa
                 "TOSSINVEST_CLIENT_ID=from_file",
                 "TOSSINVEST_CLIENT_SECRET='secret from file'",
                 "TOSSINVEST_ACCOUNT_SEQ=3",
+                "TOSSINVEST_ACCOUNT_NO=00000000000",
             ]
         ),
         encoding="utf-8",
@@ -20,6 +21,7 @@ def test_load_dotenv_sets_values_without_overriding_existing(monkeypatch, tmp_pa
     monkeypatch.setenv("TOSSINVEST_CLIENT_ID", "from_shell")
     monkeypatch.delenv("TOSSINVEST_CLIENT_SECRET", raising=False)
     monkeypatch.delenv("TOSSINVEST_ACCOUNT_SEQ", raising=False)
+    monkeypatch.delenv("TOSSINVEST_ACCOUNT_NO", raising=False)
 
     result = load_dotenv(env_file)
 
@@ -27,10 +29,12 @@ def test_load_dotenv_sets_values_without_overriding_existing(monkeypatch, tmp_pa
     assert "TOSSINVEST_CLIENT_ID" in result.skipped
     assert "TOSSINVEST_CLIENT_SECRET" in result.loaded
     assert "TOSSINVEST_ACCOUNT_SEQ" in result.loaded
+    assert "TOSSINVEST_ACCOUNT_NO" in result.loaded
     assert result.path == env_file
     assert __import__("os").environ["TOSSINVEST_CLIENT_ID"] == "from_shell"
     assert __import__("os").environ["TOSSINVEST_CLIENT_SECRET"] == "secret from file"
     assert __import__("os").environ["TOSSINVEST_ACCOUNT_SEQ"] == "3"
+    assert __import__("os").environ["TOSSINVEST_ACCOUNT_NO"] == "00000000000"
 
 
 def test_env_check_loads_env_file_and_masks_values(monkeypatch, tmp_path, capsys):
@@ -42,6 +46,7 @@ def test_env_check_loads_env_file_and_masks_values(monkeypatch, tmp_path, capsys
                 "TOSSINVEST_CLIENT_ID=tsck_test_123456789",
                 "TOSSINVEST_CLIENT_SECRET=tssk_test_987654321",
                 "TOSSINVEST_ACCOUNT_SEQ=42",
+                "TOSSINVEST_ACCOUNT_NO=00000000000",
                 "AI_TRADER_CONFIG=config/strategy.yaml",
             ]
         ),
@@ -51,6 +56,7 @@ def test_env_check_loads_env_file_and_masks_values(monkeypatch, tmp_path, capsys
         "TOSSINVEST_CLIENT_ID",
         "TOSSINVEST_CLIENT_SECRET",
         "TOSSINVEST_ACCOUNT_SEQ",
+        "TOSSINVEST_ACCOUNT_NO",
         "AI_TRADER_CONFIG",
     ]:
         monkeypatch.delenv(key, raising=False)
@@ -74,9 +80,9 @@ def test_env_check_loads_env_file_and_masks_values(monkeypatch, tmp_path, capsys
     assert payload["variables"]["TOSSINVEST_CLIENT_ID"]["masked"] == "tsck...6789"
     assert "tsck_test_123456789" not in output
     assert "tssk_test_987654321" not in output
+    assert "00000000000" not in output
 
 
 def test_mask_secret_never_exposes_short_values():
     assert mask_secret("42") == "**"
     assert mask_secret("") == ""
-

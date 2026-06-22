@@ -119,7 +119,16 @@ ai-trader env-check
 
 출력은 보안상 값을 전체로 보여주지 않고 마스킹된 값과 존재 여부만 보여줍니다.
 
-계좌, 자산, 주문 관련 Toss API는 `Authorization: Bearer ...` 외에 `X-Tossinvest-Account` 헤더가 필요합니다.
+계좌, 자산, 주문 관련 Toss API는 `Authorization: Bearer ...` 외에
+`X-Tossinvest-Account` 헤더가 필요합니다. 이 값은 계좌번호가 아니라
+`GET /api/v1/accounts` 응답의 `accountSeq`입니다.
+
+기본 동작은 다음과 같습니다.
+
+- `TOSSINVEST_ACCOUNT_SEQ`가 있으면 그 값을 바로 헤더에 사용합니다.
+- 없으면 `/api/v1/accounts`를 호출해 계좌를 자동 선택합니다.
+- 계좌가 여러 개면 `TOSSINVEST_ACCOUNT_NO`로 선택할 수 있습니다.
+- 계좌가 하나뿐이면 `.env`에 계좌값을 쓰지 않아도 됩니다.
 
 ## Deployment
 
