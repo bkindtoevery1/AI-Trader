@@ -11,6 +11,7 @@ from .backtest import find_improvements, run_backtest
 from .broker import TradingBroker, build_trade_decisions
 from .config import load_config
 from .data import load_candles_csv, write_candles_csv
+from .env import env_status, load_dotenv
 from .models import Candle
 from .reporting import write_dashboard_json, write_markdown_report
 from .strategy import MovingAverageRsiStrategy
@@ -311,6 +312,31 @@ def cmd_cancel_order(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_env_check(args: argparse.Namespace) -> int:
+    dotenv = load_dotenv(args.env_file)
+    config = _load_config(args)
+    _print_json(
+        {
+            "dotenvLoaded": {
+                "path": str(dotenv.path),
+                "exists": dotenv.exists,
+                "loadedKeys": list(dotenv.loaded),
+                "skippedKeys": list(dotenv.skipped),
+            },
+            **env_status(
+                [
+                    config.toss.client_id_env,
+                    config.toss.client_secret_env,
+                    config.toss.account_seq_env,
+                    "AI_TRADER_CONFIG",
+                ],
+                dotenv_path=args.env_file,
+            ),
+        }
+    )
+    return 0
+
+
 def cmd_fetch_candles(args: argparse.Namespace) -> int:
     config = _load_config(args)
     symbols = tuple(args.symbols or config.strategy.symbols)
@@ -364,6 +390,7 @@ def _fetch_candles(
 
 
 def _market_client_from_env(config) -> TossInvestClient:
+    load_dotenv()
     client_id = os.environ.get(config.toss.client_id_env)
     client_secret = os.environ.get(config.toss.client_secret_env)
     missing = [
@@ -385,6 +412,7 @@ def _market_client_from_env(config) -> TossInvestClient:
 
 
 def _client_from_env(config) -> TossInvestClient:
+    load_dotenv()
     client_id = os.environ.get(config.toss.client_id_env)
     client_secret = os.environ.get(config.toss.client_secret_env)
     account_seq = os.environ.get(config.toss.account_seq_env)
@@ -528,6 +556,10 @@ def build_parser() -> argparse.ArgumentParser:
     cancel_order.add_argument("--order-id", required=True)
     cancel_order.set_defaults(func=cmd_cancel_order)
 
+    env_check = subparsers.add_parser("env-check")
+    env_check.add_argument("--env-file", default=".env")
+    env_check.set_defaults(func=cmd_env_check)
+
     fetch = subparsers.add_parser("fetch-candles")
     fetch.add_argument("--symbols", nargs="*")
     fetch.add_argument("--out", default="data/live_candles.csv")
@@ -537,6 +569,7 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: list[str] | None = None) -> int:
+    load_dotenv()
     parser = build_parser()
     args = parser.parse_args(argv)
     return int(args.func(args))

@@ -109,10 +109,15 @@ ai-trader cancel-order --order-id <order-id>
 
 ```bash
 cp .env.example .env
-export TOSSINVEST_CLIENT_ID=...
-export TOSSINVEST_CLIENT_SECRET=...
-export TOSSINVEST_ACCOUNT_SEQ=...
 ```
+
+`.env`에 값을 넣으면 CLI가 자동으로 읽습니다. 제대로 읽히는지 확인하려면:
+
+```bash
+ai-trader env-check
+```
+
+출력은 보안상 값을 전체로 보여주지 않고 마스킹된 값과 존재 여부만 보여줍니다.
 
 계좌, 자산, 주문 관련 Toss API는 `Authorization: Bearer ...` 외에 `X-Tossinvest-Account` 헤더가 필요합니다.
 
