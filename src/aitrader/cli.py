@@ -171,6 +171,146 @@ def cmd_account(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_prices(args: argparse.Namespace) -> int:
+    client = _market_client_from_env(_load_config(args))
+    _print_json(client.get_prices(_symbols(args.symbols)))
+    return 0
+
+
+def cmd_orderbook(args: argparse.Namespace) -> int:
+    client = _market_client_from_env(_load_config(args))
+    _print_json(client.get_orderbook(args.symbol))
+    return 0
+
+
+def cmd_trades(args: argparse.Namespace) -> int:
+    client = _market_client_from_env(_load_config(args))
+    _print_json(client.get_trades(args.symbol, count=args.count))
+    return 0
+
+
+def cmd_price_limits(args: argparse.Namespace) -> int:
+    client = _market_client_from_env(_load_config(args))
+    _print_json(client.get_price_limits(args.symbol))
+    return 0
+
+
+def cmd_candles(args: argparse.Namespace) -> int:
+    client = _market_client_from_env(_load_config(args))
+    _print_json(
+        client.get_candles(
+            args.symbol,
+            interval=args.interval,
+            count=args.count,
+            before=args.before,
+            adjusted=not args.unadjusted,
+        )
+    )
+    return 0
+
+
+def cmd_stocks(args: argparse.Namespace) -> int:
+    client = _market_client_from_env(_load_config(args))
+    _print_json(client.get_stocks(_symbols(args.symbols)))
+    return 0
+
+
+def cmd_warnings(args: argparse.Namespace) -> int:
+    client = _market_client_from_env(_load_config(args))
+    _print_json(client.get_stock_warnings(args.symbol))
+    return 0
+
+
+def cmd_exchange_rate(args: argparse.Namespace) -> int:
+    client = _market_client_from_env(_load_config(args))
+    _print_json(
+        client.get_exchange_rate(
+            base_currency=args.base_currency,
+            quote_currency=args.quote_currency,
+            date_time=args.date_time,
+        )
+    )
+    return 0
+
+
+def cmd_calendar(args: argparse.Namespace) -> int:
+    client = _market_client_from_env(_load_config(args))
+    if args.market == "KR":
+        _print_json(client.get_kr_market_calendar(args.date))
+    else:
+        _print_json(client.get_us_market_calendar(args.date))
+    return 0
+
+
+def cmd_accounts(args: argparse.Namespace) -> int:
+    client = _market_client_from_env(_load_config(args))
+    _print_json(client.get_accounts())
+    return 0
+
+
+def cmd_holdings(args: argparse.Namespace) -> int:
+    client = _client_from_env(_load_config(args))
+    _print_json(client.get_holdings(args.symbol))
+    return 0
+
+
+def cmd_buying_power(args: argparse.Namespace) -> int:
+    client = _client_from_env(_load_config(args))
+    _print_json(client.get_buying_power(args.currency))
+    return 0
+
+
+def cmd_sellable_quantity(args: argparse.Namespace) -> int:
+    client = _client_from_env(_load_config(args))
+    _print_json(client.get_sellable_quantity(args.symbol))
+    return 0
+
+
+def cmd_commissions(args: argparse.Namespace) -> int:
+    client = _client_from_env(_load_config(args))
+    _print_json(client.get_commissions())
+    return 0
+
+
+def cmd_orders(args: argparse.Namespace) -> int:
+    client = _client_from_env(_load_config(args))
+    _print_json(
+        client.get_orders(
+            status=args.status,
+            symbol=args.symbol,
+            from_date=args.from_date,
+            to_date=args.to_date,
+            cursor=args.cursor,
+            limit=args.limit,
+        )
+    )
+    return 0
+
+
+def cmd_order(args: argparse.Namespace) -> int:
+    client = _client_from_env(_load_config(args))
+    _print_json(client.get_order(args.order_id))
+    return 0
+
+
+def cmd_create_order(args: argparse.Namespace) -> int:
+    client = _client_from_env(_load_config(args))
+    _print_json(client.create_order(_payload(args)))
+    return 0
+
+
+def cmd_modify_order(args: argparse.Namespace) -> int:
+    client = _client_from_env(_load_config(args))
+    _print_json(client.modify_order(args.order_id, _payload(args)))
+    return 0
+
+
+def cmd_cancel_order(args: argparse.Namespace) -> int:
+    client = _client_from_env(_load_config(args))
+    _print_json(client.cancel_order(args.order_id))
+    return 0
+
+
 def cmd_fetch_candles(args: argparse.Namespace) -> int:
     config = _load_config(args)
     symbols = tuple(args.symbols or config.strategy.symbols)
@@ -179,6 +319,27 @@ def cmd_fetch_candles(args: argparse.Namespace) -> int:
     write_candles_csv(args.out, candles_by_symbol)
     print(f"wrote {args.out}")
     return 0
+
+
+def _symbols(value: list[str]) -> list[str]:
+    return [symbol.upper() for item in value for symbol in item.split(",") if symbol]
+
+
+def _payload(args: argparse.Namespace) -> dict:
+    if args.payload_file:
+        raw = Path(args.payload_file).read_text(encoding="utf-8")
+    elif args.payload:
+        raw = args.payload
+    else:
+        raise SystemExit("--payload or --payload-file is required")
+    parsed = json.loads(raw)
+    if not isinstance(parsed, dict):
+        raise SystemExit("payload must be a JSON object")
+    return parsed
+
+
+def _print_json(payload: dict) -> None:
+    print(json.dumps(payload, ensure_ascii=False, indent=2))
 
 
 def _fetch_candles(
@@ -276,6 +437,96 @@ def build_parser() -> argparse.ArgumentParser:
     account = subparsers.add_parser("account")
     account.add_argument("--symbols", nargs="*")
     account.set_defaults(func=cmd_account)
+
+    prices = subparsers.add_parser("prices")
+    prices.add_argument("--symbols", nargs="+", required=True)
+    prices.set_defaults(func=cmd_prices)
+
+    orderbook = subparsers.add_parser("orderbook")
+    orderbook.add_argument("--symbol", required=True)
+    orderbook.set_defaults(func=cmd_orderbook)
+
+    trades = subparsers.add_parser("trades")
+    trades.add_argument("--symbol", required=True)
+    trades.add_argument("--count", type=int, default=50)
+    trades.set_defaults(func=cmd_trades)
+
+    price_limits = subparsers.add_parser("price-limits")
+    price_limits.add_argument("--symbol", required=True)
+    price_limits.set_defaults(func=cmd_price_limits)
+
+    candles = subparsers.add_parser("candles")
+    candles.add_argument("--symbol", required=True)
+    candles.add_argument("--interval", choices=["1m", "1d"], default="1d")
+    candles.add_argument("--count", type=int, default=100)
+    candles.add_argument("--before")
+    candles.add_argument("--unadjusted", action="store_true")
+    candles.set_defaults(func=cmd_candles)
+
+    stocks = subparsers.add_parser("stocks")
+    stocks.add_argument("--symbols", nargs="+", required=True)
+    stocks.set_defaults(func=cmd_stocks)
+
+    warnings = subparsers.add_parser("warnings")
+    warnings.add_argument("--symbol", required=True)
+    warnings.set_defaults(func=cmd_warnings)
+
+    exchange_rate = subparsers.add_parser("exchange-rate")
+    exchange_rate.add_argument("--base-currency", default="USD")
+    exchange_rate.add_argument("--quote-currency", default="KRW")
+    exchange_rate.add_argument("--date-time")
+    exchange_rate.set_defaults(func=cmd_exchange_rate)
+
+    calendar = subparsers.add_parser("calendar")
+    calendar.add_argument("--market", choices=["KR", "US"], required=True)
+    calendar.add_argument("--date")
+    calendar.set_defaults(func=cmd_calendar)
+
+    accounts = subparsers.add_parser("accounts")
+    accounts.set_defaults(func=cmd_accounts)
+
+    holdings = subparsers.add_parser("holdings")
+    holdings.add_argument("--symbol")
+    holdings.set_defaults(func=cmd_holdings)
+
+    buying_power = subparsers.add_parser("buying-power")
+    buying_power.add_argument("--currency", choices=["KRW", "USD"], required=True)
+    buying_power.set_defaults(func=cmd_buying_power)
+
+    sellable_quantity = subparsers.add_parser("sellable-quantity")
+    sellable_quantity.add_argument("--symbol", required=True)
+    sellable_quantity.set_defaults(func=cmd_sellable_quantity)
+
+    commissions = subparsers.add_parser("commissions")
+    commissions.set_defaults(func=cmd_commissions)
+
+    orders = subparsers.add_parser("orders")
+    orders.add_argument("--status", choices=["OPEN", "CLOSED"], required=True)
+    orders.add_argument("--symbol")
+    orders.add_argument("--from", dest="from_date")
+    orders.add_argument("--to", dest="to_date")
+    orders.add_argument("--cursor")
+    orders.add_argument("--limit", type=int)
+    orders.set_defaults(func=cmd_orders)
+
+    order = subparsers.add_parser("order")
+    order.add_argument("--order-id", required=True)
+    order.set_defaults(func=cmd_order)
+
+    create_order = subparsers.add_parser("create-order")
+    create_order.add_argument("--payload")
+    create_order.add_argument("--payload-file")
+    create_order.set_defaults(func=cmd_create_order)
+
+    modify_order = subparsers.add_parser("modify-order")
+    modify_order.add_argument("--order-id", required=True)
+    modify_order.add_argument("--payload")
+    modify_order.add_argument("--payload-file")
+    modify_order.set_defaults(func=cmd_modify_order)
+
+    cancel_order = subparsers.add_parser("cancel-order")
+    cancel_order.add_argument("--order-id", required=True)
+    cancel_order.set_defaults(func=cmd_cancel_order)
 
     fetch = subparsers.add_parser("fetch-candles")
     fetch.add_argument("--symbols", nargs="*")

@@ -103,6 +103,15 @@ class TossInvestClient:
     def get_prices(self, symbols: list[str]) -> dict[str, Any]:
         return self.request("GET", "/api/v1/prices", params={"symbols": ",".join(symbols)})
 
+    def get_orderbook(self, symbol: str) -> dict[str, Any]:
+        return self.request("GET", "/api/v1/orderbook", params={"symbol": symbol})
+
+    def get_trades(self, symbol: str, *, count: int = 50) -> dict[str, Any]:
+        return self.request("GET", "/api/v1/trades", params={"symbol": symbol, "count": count})
+
+    def get_price_limits(self, symbol: str) -> dict[str, Any]:
+        return self.request("GET", "/api/v1/price-limits", params={"symbol": symbol})
+
     def get_candles(
         self,
         symbol: str,
@@ -121,6 +130,32 @@ class TossInvestClient:
         if before:
             params["before"] = before
         return self.request("GET", "/api/v1/candles", params=params)
+
+    def get_stocks(self, symbols: list[str]) -> dict[str, Any]:
+        return self.request("GET", "/api/v1/stocks", params={"symbols": ",".join(symbols)})
+
+    def get_stock_warnings(self, symbol: str) -> dict[str, Any]:
+        return self.request("GET", f"/api/v1/stocks/{symbol}/warnings")
+
+    def get_exchange_rate(
+        self,
+        *,
+        base_currency: str,
+        quote_currency: str,
+        date_time: str | None = None,
+    ) -> dict[str, Any]:
+        params = {"baseCurrency": base_currency, "quoteCurrency": quote_currency}
+        if date_time:
+            params["dateTime"] = date_time
+        return self.request("GET", "/api/v1/exchange-rate", params=params)
+
+    def get_kr_market_calendar(self, date: str | None = None) -> dict[str, Any]:
+        params = {"date": date} if date else None
+        return self.request("GET", "/api/v1/market-calendar/KR", params=params)
+
+    def get_us_market_calendar(self, date: str | None = None) -> dict[str, Any]:
+        params = {"date": date} if date else None
+        return self.request("GET", "/api/v1/market-calendar/US", params=params)
 
     def get_accounts(self) -> dict[str, Any]:
         return self.request("GET", "/api/v1/accounts")
@@ -145,8 +180,43 @@ class TossInvestClient:
             account_required=True,
         )
 
+    def get_commissions(self) -> dict[str, Any]:
+        return self.request("GET", "/api/v1/commissions", account_required=True)
+
     def create_order(self, payload: dict[str, Any]) -> dict[str, Any]:
         return self.request("POST", "/api/v1/orders", json=payload, account_required=True)
+
+    def modify_order(self, order_id: str, payload: dict[str, Any]) -> dict[str, Any]:
+        return self.request("POST", f"/api/v1/orders/{order_id}/modify", json=payload, account_required=True)
+
+    def cancel_order(self, order_id: str) -> dict[str, Any]:
+        return self.request("POST", f"/api/v1/orders/{order_id}/cancel", json={}, account_required=True)
+
+    def get_orders(
+        self,
+        *,
+        status: str,
+        symbol: str | None = None,
+        from_date: str | None = None,
+        to_date: str | None = None,
+        cursor: str | None = None,
+        limit: int | None = None,
+    ) -> dict[str, Any]:
+        params: dict[str, Any] = {"status": status}
+        if symbol:
+            params["symbol"] = symbol
+        if from_date:
+            params["from"] = from_date
+        if to_date:
+            params["to"] = to_date
+        if cursor:
+            params["cursor"] = cursor
+        if limit is not None:
+            params["limit"] = limit
+        return self.request("GET", "/api/v1/orders", params=params, account_required=True)
+
+    def get_order(self, order_id: str) -> dict[str, Any]:
+        return self.request("GET", f"/api/v1/orders/{order_id}", account_required=True)
 
 
 def _json_or_error(response: requests.Response) -> dict[str, Any]:
@@ -157,4 +227,3 @@ def _json_or_error(response: requests.Response) -> dict[str, Any]:
     if not isinstance(payload, dict):
         raise TossApiError("Toss Invest API returned an unexpected JSON payload", response.status_code)
     return payload
-

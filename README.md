@@ -63,6 +63,48 @@ ai-trader trade --live-data --account-snapshot
 - `config/strategy.yaml`의 `risk.allow_live_trading: true`
 - CLI의 `ai-trader trade --execute`
 
+## Toss API Commands
+
+Market data:
+
+```bash
+ai-trader prices --symbols 005930 AAPL
+ai-trader orderbook --symbol 005930
+ai-trader trades --symbol AAPL --count 20
+ai-trader price-limits --symbol 005930
+ai-trader candles --symbol 005930 --interval 1d --count 100
+```
+
+Stock and market info:
+
+```bash
+ai-trader stocks --symbols 005930 AAPL
+ai-trader warnings --symbol 005930
+ai-trader exchange-rate --base-currency USD --quote-currency KRW
+ai-trader calendar --market KR
+ai-trader calendar --market US
+```
+
+Account and order info:
+
+```bash
+ai-trader accounts
+ai-trader holdings
+ai-trader buying-power --currency KRW
+ai-trader sellable-quantity --symbol 005930
+ai-trader commissions
+ai-trader orders --status OPEN
+ai-trader order --order-id <order-id>
+```
+
+Order operations:
+
+```bash
+ai-trader create-order --payload '{"symbol":"005930","side":"BUY","orderType":"LIMIT","quantity":"1","price":"70000"}'
+ai-trader modify-order --order-id <order-id> --payload '{"orderType":"LIMIT","quantity":"1","price":"71000"}'
+ai-trader cancel-order --order-id <order-id>
+```
+
 ## Environment
 
 ```bash

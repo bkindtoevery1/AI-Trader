@@ -61,3 +61,82 @@ def test_client_requires_account_header_before_account_endpoint_call():
     else:
         raise AssertionError("expected TossApiError")
 
+
+def test_market_data_and_info_methods_use_expected_paths_and_params():
+    session = FakeSession()
+    client = TossInvestClient(
+        base_url="https://example.test",
+        client_id="id",
+        client_secret="secret",
+        session=session,  # type: ignore[arg-type]
+    )
+
+    client.get_orderbook("005930")
+    assert session.calls[-1][1].endswith("/api/v1/orderbook")
+    assert session.calls[-1][2] == {"symbol": "005930"}
+
+    client.get_trades("AAPL", count=10)
+    assert session.calls[-1][1].endswith("/api/v1/trades")
+    assert session.calls[-1][2] == {"symbol": "AAPL", "count": 10}
+
+    client.get_price_limits("005930")
+    assert session.calls[-1][1].endswith("/api/v1/price-limits")
+
+    client.get_stocks(["005930", "AAPL"])
+    assert session.calls[-1][1].endswith("/api/v1/stocks")
+    assert session.calls[-1][2] == {"symbols": "005930,AAPL"}
+
+    client.get_stock_warnings("005930")
+    assert session.calls[-1][1].endswith("/api/v1/stocks/005930/warnings")
+
+    client.get_exchange_rate(base_currency="USD", quote_currency="KRW", date_time="2026-03-25T09:30:00+09:00")
+    assert session.calls[-1][1].endswith("/api/v1/exchange-rate")
+    assert session.calls[-1][2] == {
+        "baseCurrency": "USD",
+        "quoteCurrency": "KRW",
+        "dateTime": "2026-03-25T09:30:00+09:00",
+    }
+
+    client.get_kr_market_calendar("2026-03-25")
+    assert session.calls[-1][1].endswith("/api/v1/market-calendar/KR")
+    assert session.calls[-1][2] == {"date": "2026-03-25"}
+
+    client.get_us_market_calendar()
+    assert session.calls[-1][1].endswith("/api/v1/market-calendar/US")
+    assert session.calls[-1][2] is None
+
+
+def test_order_and_account_methods_use_account_header():
+    session = FakeSession()
+    client = TossInvestClient(
+        base_url="https://example.test",
+        client_id="id",
+        client_secret="secret",
+        account_seq="7",
+        session=session,  # type: ignore[arg-type]
+    )
+
+    client.get_commissions()
+    assert session.calls[-1][1].endswith("/api/v1/commissions")
+    assert session.calls[-1][3]["X-Tossinvest-Account"] == "7"
+
+    client.get_orders(status="CLOSED", symbol="AAPL", from_date="2026-03-01", to_date="2026-03-31", limit=50)
+    assert session.calls[-1][1].endswith("/api/v1/orders")
+    assert session.calls[-1][2] == {
+        "status": "CLOSED",
+        "symbol": "AAPL",
+        "from": "2026-03-01",
+        "to": "2026-03-31",
+        "limit": 50,
+    }
+
+    client.get_order("order-1")
+    assert session.calls[-1][1].endswith("/api/v1/orders/order-1")
+
+    client.modify_order("order-1", {"orderType": "LIMIT", "price": "71000", "quantity": "1"})
+    assert session.calls[-1][0] == "POST"
+    assert session.calls[-1][1].endswith("/api/v1/orders/order-1/modify")
+
+    client.cancel_order("order-1")
+    assert session.calls[-1][0] == "POST"
+    assert session.calls[-1][1].endswith("/api/v1/orders/order-1/cancel")
