@@ -11,6 +11,14 @@ from .models import to_decimal
 
 
 @dataclass(frozen=True)
+class StrategyVariantConfig:
+    name: str
+    type: str
+    enabled: bool
+    parameters: dict[str, Any]
+
+
+@dataclass(frozen=True)
 class StrategyConfig:
     name: str
     symbols: tuple[str, ...]
@@ -21,6 +29,7 @@ class StrategyConfig:
     rsi_period: int
     rsi_buy_below: Decimal
     rsi_sell_above: Decimal
+    variants: tuple[StrategyVariantConfig, ...]
 
 
 @dataclass(frozen=True)
@@ -77,16 +86,35 @@ def load_config(path: str | Path) -> AppConfig:
     execution = _section(raw, "execution")
     toss = _section(raw, "toss")
 
+    strategy_name = str(strategy.get("name", "ma-rsi-core"))
+    short_window = int(strategy.get("short_window", 5))
+    long_window = int(strategy.get("long_window", 20))
+    rsi_period = int(strategy.get("rsi_period", 14))
+    rsi_buy_below = to_decimal(strategy.get("rsi_buy_below", "62"))
+    rsi_sell_above = to_decimal(strategy.get("rsi_sell_above", "72"))
+    variants = _strategy_variants(
+        strategy.get("variants", strategy.get("strategies", [])),
+        defaults={
+            "short_window": short_window,
+            "long_window": long_window,
+            "rsi_period": rsi_period,
+            "rsi_buy_below": rsi_buy_below,
+            "rsi_sell_above": rsi_sell_above,
+        },
+        default_name=strategy_name,
+    )
+
     strategy_config = StrategyConfig(
-        name=str(strategy.get("name", "ma-rsi-core")),
+        name=strategy_name,
         symbols=tuple(str(symbol).upper() for symbol in strategy.get("symbols", [])),
         interval=str(strategy.get("interval", "1d")),
         candle_count=int(strategy.get("candle_count", 120)),
-        short_window=int(strategy.get("short_window", 5)),
-        long_window=int(strategy.get("long_window", 20)),
-        rsi_period=int(strategy.get("rsi_period", 14)),
-        rsi_buy_below=to_decimal(strategy.get("rsi_buy_below", "62")),
-        rsi_sell_above=to_decimal(strategy.get("rsi_sell_above", "72")),
+        short_window=short_window,
+        long_window=long_window,
+        rsi_period=rsi_period,
+        rsi_buy_below=rsi_buy_below,
+        rsi_sell_above=rsi_sell_above,
+        variants=variants,
     )
     if not strategy_config.symbols:
         raise ValueError("At least one strategy.symbols value is required")
@@ -129,3 +157,49 @@ def load_config(path: str | Path) -> AppConfig:
         account_no_env=str(toss.get("account_no_env", "TOSSINVEST_ACCOUNT_NO")),
     )
     return AppConfig(strategy_config, risk_config, execution_config, toss_config)
+
+
+def _strategy_variants(
+    raw_variants: Any,
+    *,
+    defaults: dict[str, Any],
+    default_name: str,
+) -> tuple[StrategyVariantConfig, ...]:
+    if raw_variants in (None, ""):
+        raw_items: list[Any] = []
+    elif isinstance(raw_variants, list):
+        raw_items = raw_variants
+    else:
+        raise ValueError("strategy.variants must be a list")
+
+    if not raw_items:
+        return (
+            StrategyVariantConfig(
+                name=default_name,
+                type="ma_rsi",
+                enabled=True,
+                parameters=dict(defaults),
+            ),
+        )
+
+    variants: list[StrategyVariantConfig] = []
+    for index, item in enumerate(raw_items, start=1):
+        if not isinstance(item, dict):
+            raise ValueError("Each strategy variant must be an object")
+        variant_type = str(item.get("type", "ma_rsi")).replace("-", "_")
+        enabled = bool(item.get("enabled", True))
+        name = str(item.get("name", f"{variant_type}-{index}"))
+        parameters = dict(defaults)
+        for key, value in item.items():
+            if key in {"name", "type", "enabled"}:
+                continue
+            parameters[key] = value
+        variants.append(
+            StrategyVariantConfig(
+                name=name,
+                type=variant_type,
+                enabled=enabled,
+                parameters=parameters,
+            )
+        )
+    return tuple(variant for variant in variants if variant.enabled)

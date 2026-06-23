@@ -16,14 +16,50 @@ type EquityPoint = {
   equity: string;
 };
 
+type DrawdownPoint = {
+  date: string;
+  drawdownPct: string;
+};
+
+type ReturnPoint = {
+  date: string;
+  returnPct: string;
+};
+
+type PricePoint = {
+  date: string;
+  close: string;
+};
+
+type BacktestMetrics = {
+  cagrPct?: string;
+  volatilityPct?: string;
+  sortino?: string;
+  calmar?: string;
+  winRatePct?: string;
+  avgTradeReturnPct?: string;
+  bestTradePct?: string;
+  worstTradePct?: string;
+  profitFactor?: string;
+  exposurePct?: string;
+  buyHoldReturnPct?: string;
+  closedTrades?: number;
+};
+
 type BacktestResult = {
+  id?: string;
   symbol: string;
+  strategyName?: string;
   totalReturnPct: string;
   maxDrawdownPct: string;
   sharpe: string;
   tradeCount: number;
   equityCurve: EquityPoint[];
+  drawdownCurve?: DrawdownPoint[];
+  returnCurve?: ReturnPoint[];
+  priceCurve?: PricePoint[];
   parameters: Record<string, string | number>;
+  metrics?: BacktestMetrics;
 };
 
 type Signal = {
@@ -104,9 +140,12 @@ type DashboardData = {
   summary: {
     symbols: string[];
     bestSymbol: string;
+    bestStrategy?: string;
+    bestResultId?: string;
     bestReturnPct: string;
     tradeCount: number;
     maxDrawdownPct: string;
+    strategyResultCount?: number;
   };
   results: BacktestResult[];
   signals: Signal[];
@@ -127,13 +166,18 @@ const fallbackData: DashboardData = {
   summary: {
     symbols: ["005930", "AAPL"],
     bestSymbol: "AAPL",
+    bestStrategy: "ma-rsi-core",
+    bestResultId: "AAPL:ma-rsi-core",
     bestReturnPct: "4.2",
     tradeCount: 3,
     maxDrawdownPct: "2.1",
+    strategyResultCount: 2,
   },
   results: [
     {
+      id: "005930:ma-rsi-core",
       symbol: "005930",
+      strategyName: "ma-rsi-core",
       totalReturnPct: "2.8",
       maxDrawdownPct: "1.9",
       sharpe: "1.21",
@@ -144,10 +188,29 @@ const fallbackData: DashboardData = {
         { date: "2026-04-30", equity: "10154000" },
         { date: "2026-05-22", equity: "10280000" },
       ],
+      drawdownCurve: [
+        { date: "2026-04-01", drawdownPct: "0" },
+        { date: "2026-04-15", drawdownPct: "-0.6" },
+        { date: "2026-04-30", drawdownPct: "-1.1" },
+        { date: "2026-05-22", drawdownPct: "0" },
+      ],
       parameters: { shortWindow: 5, longWindow: 20, rsiPeriod: 14 },
+      metrics: {
+        cagrPct: "18.4",
+        volatilityPct: "22.1",
+        sortino: "1.62",
+        calmar: "9.68",
+        winRatePct: "50",
+        profitFactor: "1.7",
+        exposurePct: "48",
+        buyHoldReturnPct: "2.1",
+        closedTrades: 2,
+      },
     },
     {
+      id: "AAPL:ma-rsi-core",
       symbol: "AAPL",
+      strategyName: "ma-rsi-core",
       totalReturnPct: "4.2",
       maxDrawdownPct: "2.1",
       sharpe: "1.46",
@@ -158,7 +221,24 @@ const fallbackData: DashboardData = {
         { date: "2026-04-30", equity: "10290000" },
         { date: "2026-05-22", equity: "10420000" },
       ],
+      drawdownCurve: [
+        { date: "2026-04-01", drawdownPct: "0" },
+        { date: "2026-04-15", drawdownPct: "-0.8" },
+        { date: "2026-04-30", drawdownPct: "-2.1" },
+        { date: "2026-05-22", drawdownPct: "0" },
+      ],
       parameters: { shortWindow: 5, longWindow: 20, rsiPeriod: 14 },
+      metrics: {
+        cagrPct: "27.3",
+        volatilityPct: "24.8",
+        sortino: "1.93",
+        calmar: "13",
+        winRatePct: "100",
+        profitFactor: "999",
+        exposurePct: "52",
+        buyHoldReturnPct: "3.2",
+        closedTrades: 1,
+      },
     },
   ],
   signals: [
@@ -259,7 +339,7 @@ const fallbackData: DashboardData = {
 function App() {
   const [data, setData] = useState<DashboardData>(fallbackData);
   const [activeView, setActiveView] = useState<ViewMode>("overview");
-  const [selectedSymbol, setSelectedSymbol] = useState("PORTFOLIO");
+  const [selectedResultId, setSelectedResultId] = useState("PORTFOLIO");
   const [statusMessage, setStatusMessage] = useState("Report loaded");
   const [refreshing, setRefreshing] = useState(false);
 
@@ -274,10 +354,10 @@ function App() {
   const chartOptions = useMemo(() => [portfolio, ...data.results], [portfolio, data.results]);
   const selectedChart = useMemo(
     () =>
-      selectedSymbol === "PORTFOLIO"
+      selectedResultId === "PORTFOLIO"
         ? portfolio
-        : data.results.find((item) => item.symbol === selectedSymbol) ?? portfolio,
-    [data.results, portfolio, selectedSymbol],
+        : data.results.find((item) => resultKey(item) === selectedResultId) ?? portfolio,
+    [data.results, portfolio, selectedResultId],
   );
   const portfolioReturn = useMemo(
     () => num(portfolio.totalReturnPct).toFixed(2),
@@ -330,14 +410,15 @@ function App() {
     setStatusMessage("Dry-run mode previews orders without submitting them");
   };
 
-  const selectChart = (symbol: string) => {
-    setSelectedSymbol(symbol);
-    setStatusMessage(`${displaySymbol(symbol)} chart selected`);
+  const selectChart = (resultId: string) => {
+    setSelectedResultId(resultId);
+    const result = chartOptions.find((item) => resultKey(item) === resultId);
+    setStatusMessage(`${displayResult(result ?? selectedChart)} chart selected`);
   };
 
   const selectedSignal = useMemo(
-    () => data.signals.find((signal) => signal.symbol === selectedSymbol),
-    [data.signals, selectedSymbol],
+    () => data.signals.find((signal) => signal.symbol === selectedChart.symbol),
+    [data.signals, selectedChart.symbol],
   );
 
   return (
@@ -413,7 +494,7 @@ function App() {
           <Metric icon={<Gauge />} label="Universe" value={data.summary.symbols.join(" / ")} note="tracked symbols" />
           <Metric icon={<TrendingUp />} label="Portfolio" value={`${portfolioReturn}%`} note="combined backtest" />
           <Metric icon={<ShieldCheck />} label="Max DD" value={`${num(data.summary.maxDrawdownPct).toFixed(2)}%`} note="risk budget" />
-          <Metric icon={<GitBranch />} label="Trades" value={String(data.summary.tradeCount)} note="daily review set" />
+          <Metric icon={<GitBranch />} label="Strategies" value={String(data.summary.strategyResultCount ?? data.results.length)} note={`${data.summary.bestSymbol} · ${data.summary.bestStrategy ?? "best"}`} />
         </section>
 
         {activeView === "overview" ? (
@@ -422,23 +503,31 @@ function App() {
             <div className="panelHeader">
               <div>
                 <p className="eyebrow">Equity Curve</p>
-                <h2>{displaySymbol(selectedChart.symbol)}</h2>
+                <h2>{displayResult(selectedChart)}</h2>
               </div>
               <span className="timestamp">{formatDate(data.generatedAt)}</span>
             </div>
             <div className="segmented" aria-label="chart symbol selector">
               {chartOptions.map((result) => (
                 <button
-                  key={result.symbol}
-                  className={result.symbol === selectedChart.symbol ? "selected" : ""}
-                  onClick={() => selectChart(result.symbol)}
+                  key={resultKey(result)}
+                  className={resultKey(result) === resultKey(selectedChart) ? "selected" : ""}
+                  onClick={() => selectChart(resultKey(result))}
                 >
-                  {result.symbol === "PORTFOLIO" ? "Portfolio" : result.symbol}
+                  {displayResult(result)}
                 </button>
               ))}
             </div>
             <Sparkline points={selectedChart.equityCurve} />
-            {selectedSignal ? (
+            <DrawdownChart points={selectedChart.drawdownCurve ?? drawdownFromEquity(selectedChart.equityCurve)} />
+            <div className="statStrip">
+              <span>CAGR <strong>{formatPct(selectedChart.metrics?.cagrPct)}</strong></span>
+              <span>Vol <strong>{formatPct(selectedChart.metrics?.volatilityPct)}</strong></span>
+              <span>Win <strong>{formatPct(selectedChart.metrics?.winRatePct)}</strong></span>
+              <span>PF <strong>{formatNumber(selectedChart.metrics?.profitFactor)}</strong></span>
+              <span>Exposure <strong>{formatPct(selectedChart.metrics?.exposurePct)}</strong></span>
+            </div>
+            {selectedSignal && selectedChart.symbol !== "PORTFOLIO" ? (
               <div className="chartNote">
                 <SideBadge side={selectedSignal.side} />
                 <span>{selectedSignal.reason}</span>
@@ -484,27 +573,45 @@ function App() {
               <thead>
                 <tr>
                   <th>Symbol</th>
+                  <th>Strategy</th>
                   <th>Return</th>
                   <th>Max DD</th>
+                  <th>CAGR</th>
+                  <th>Vol</th>
                   <th>Sharpe</th>
+                  <th>Sortino</th>
+                  <th>Calmar</th>
+                  <th>Win</th>
                   <th>Trades</th>
+                  <th>PF</th>
+                  <th>Exposure</th>
                   <th>Parameters</th>
                 </tr>
               </thead>
               <tbody>
                 {data.results.map((result) => (
-                  <tr key={result.symbol}>
+                  <tr key={resultKey(result)}>
                     <td>
-                      <button className="tableButton" onClick={() => selectChart(result.symbol)}>
+                      <button className="tableButton" onClick={() => selectChart(resultKey(result))}>
                         {result.symbol}
                       </button>
                     </td>
+                    <td>{result.strategyName ?? result.parameters.strategy ?? "strategy"}</td>
                     <td className={num(result.totalReturnPct) >= 0 ? "positive" : "negative"}>
                       {num(result.totalReturnPct).toFixed(2)}%
                     </td>
                     <td>{num(result.maxDrawdownPct).toFixed(2)}%</td>
+                    <td className={num(result.metrics?.cagrPct) >= 0 ? "positive" : "negative"}>
+                      {formatPct(result.metrics?.cagrPct)}
+                    </td>
+                    <td>{formatPct(result.metrics?.volatilityPct)}</td>
                     <td>{num(result.sharpe).toFixed(2)}</td>
+                    <td>{formatNumber(result.metrics?.sortino)}</td>
+                    <td>{formatNumber(result.metrics?.calmar)}</td>
+                    <td>{formatPct(result.metrics?.winRatePct)}</td>
                     <td>{result.tradeCount}</td>
+                    <td>{formatNumber(result.metrics?.profitFactor)}</td>
+                    <td>{formatPct(result.metrics?.exposurePct)}</td>
                     <td>{parameterText(result.parameters)}</td>
                   </tr>
                 ))}
@@ -618,23 +725,41 @@ function App() {
                 <thead>
                   <tr>
                     <th>Symbol</th>
+                    <th>Strategy</th>
                     <th>Return</th>
                     <th>Max DD</th>
+                    <th>CAGR</th>
+                    <th>Vol</th>
                     <th>Sharpe</th>
+                    <th>Sortino</th>
+                    <th>Calmar</th>
+                    <th>Win</th>
                     <th>Trades</th>
+                    <th>PF</th>
+                    <th>Exposure</th>
                     <th>Parameters</th>
                   </tr>
                 </thead>
                 <tbody>
                   {data.results.map((result) => (
-                    <tr key={result.symbol}>
+                    <tr key={resultKey(result)}>
                       <td>{result.symbol}</td>
+                      <td>{result.strategyName ?? result.parameters.strategy ?? "strategy"}</td>
                       <td className={num(result.totalReturnPct) >= 0 ? "positive" : "negative"}>
                         {num(result.totalReturnPct).toFixed(2)}%
                       </td>
                       <td>{num(result.maxDrawdownPct).toFixed(2)}%</td>
+                      <td className={num(result.metrics?.cagrPct) >= 0 ? "positive" : "negative"}>
+                        {formatPct(result.metrics?.cagrPct)}
+                      </td>
+                      <td>{formatPct(result.metrics?.volatilityPct)}</td>
                       <td>{num(result.sharpe).toFixed(2)}</td>
+                      <td>{formatNumber(result.metrics?.sortino)}</td>
+                      <td>{formatNumber(result.metrics?.calmar)}</td>
+                      <td>{formatPct(result.metrics?.winRatePct)}</td>
                       <td>{result.tradeCount}</td>
+                      <td>{formatNumber(result.metrics?.profitFactor)}</td>
+                      <td>{formatPct(result.metrics?.exposurePct)}</td>
                       <td>{parameterText(result.parameters)}</td>
                     </tr>
                   ))}
@@ -679,13 +804,17 @@ async function loadDashboardData(cacheBust = false): Promise<DashboardData> {
 function buildPortfolioResult(results: BacktestResult[]): BacktestResult {
   if (!results.length) {
     return {
+      id: "PORTFOLIO",
       symbol: "PORTFOLIO",
+      strategyName: "Combined",
       totalReturnPct: "0",
       maxDrawdownPct: "0",
       sharpe: "0",
       tradeCount: 0,
       equityCurve: [],
+      drawdownCurve: [],
       parameters: {},
+      metrics: {},
     };
   }
   const baseCurve = results.reduce((longest, result) =>
@@ -698,14 +827,28 @@ function buildPortfolioResult(results: BacktestResult[]): BacktestResult {
   const initial = num(equityCurve[0]?.equity ?? 0);
   const final = num(equityCurve[equityCurve.length - 1]?.equity ?? 0);
   const totalReturnPct = initial ? ((final - initial) / initial) * 100 : 0;
+  const drawdownCurve = drawdownFromEquity(equityCurve);
+  const mdd = maxDrawdown(equityCurve);
   return {
+    id: "PORTFOLIO",
     symbol: "PORTFOLIO",
+    strategyName: "Combined",
     totalReturnPct: String(totalReturnPct),
-    maxDrawdownPct: String(maxDrawdown(equityCurve)),
+    maxDrawdownPct: String(mdd),
     sharpe: String(average(results.map((result) => num(result.sharpe)))),
     tradeCount: results.reduce((sum, result) => sum + result.tradeCount, 0),
     equityCurve,
+    drawdownCurve,
     parameters: {},
+    metrics: {
+      cagrPct: String(average(results.map((result) => num(result.metrics?.cagrPct)))),
+      volatilityPct: String(average(results.map((result) => num(result.metrics?.volatilityPct)))),
+      sortino: String(average(results.map((result) => num(result.metrics?.sortino)))),
+      calmar: String(average(results.map((result) => num(result.metrics?.calmar)))),
+      winRatePct: String(average(results.map((result) => num(result.metrics?.winRatePct)))),
+      profitFactor: String(average(results.map((result) => num(result.metrics?.profitFactor)).filter((value) => value < 999))),
+      exposurePct: String(average(results.map((result) => num(result.metrics?.exposurePct)))),
+    },
   };
 }
 
@@ -732,6 +875,9 @@ function Metric({
 
 function Sparkline({ points }: { points: EquityPoint[] }) {
   const values = points.map((point) => num(point.equity));
+  if (!values.length) {
+    return <div className="emptyChart">No equity data</div>;
+  }
   const min = Math.min(...values);
   const max = Math.max(...values);
   const range = max - min || 1;
@@ -764,6 +910,35 @@ function Sparkline({ points }: { points: EquityPoint[] }) {
   );
 }
 
+function DrawdownChart({ points }: { points: DrawdownPoint[] }) {
+  const values = points.map((point) => num(point.drawdownPct));
+  if (!values.length) {
+    return <div className="emptyChart compact">No drawdown data</div>;
+  }
+  const min = Math.min(...values, -1);
+  const range = Math.abs(min) || 1;
+  const path = values
+    .map((value, index) => {
+      const x = (index / Math.max(1, values.length - 1)) * 100;
+      const y = 12 + (Math.abs(value) / range) * 72;
+      return `${x.toFixed(2)},${y.toFixed(2)}`;
+    })
+    .join(" ");
+  return (
+    <div className="drawdownWrap">
+      <div className="miniChartHeader">
+        <span>Drawdown</span>
+        <strong>{Math.min(...values).toFixed(2)}%</strong>
+      </div>
+      <svg viewBox="0 0 100 100" preserveAspectRatio="none" role="img" aria-label="drawdown curve">
+        <line className="zeroLine" x1="0" x2="100" y1="12" y2="12" />
+        <polyline className="drawdownArea" points={`0,12 ${path} 100,12`} />
+        <polyline className="drawdownLine" points={path} />
+      </svg>
+    </div>
+  );
+}
+
 function SideBadge({ side }: { side: Signal["side"] }) {
   return <span className={`sideBadge ${side.toLowerCase()}`}>{side}</span>;
 }
@@ -783,6 +958,10 @@ function parameterText(parameters: Record<string, string | number>) {
   const longWindow = parameters.longWindow ?? "-";
   const rsiPeriod = parameters.rsiPeriod ?? "-";
   return `SMA ${shortWindow}/${longWindow}, RSI ${rsiPeriod}`;
+}
+
+function resultKey(result: BacktestResult) {
+  return result.id ?? `${result.symbol}:${result.strategyName ?? result.parameters.strategy ?? "strategy"}`;
 }
 
 function formatDate(value: string) {
@@ -812,13 +991,31 @@ function formatEntries(entries?: Record<string, string>) {
     .join(", ");
 }
 
-function num(value: string | number) {
+function num(value?: string | number | null) {
+  if (value === undefined || value === null) {
+    return 0;
+  }
   const parsed = Number(value);
   return Number.isFinite(parsed) ? parsed : 0;
 }
 
-function displaySymbol(symbol: string) {
-  return symbol === "PORTFOLIO" ? "Portfolio" : symbol;
+function displayResult(result: BacktestResult) {
+  if (result.symbol === "PORTFOLIO") {
+    return "Portfolio";
+  }
+  return `${result.symbol} · ${result.strategyName ?? result.parameters.strategy ?? "strategy"}`;
+}
+
+function formatPct(value?: string | number) {
+  return `${num(value ?? 0).toFixed(2)}%`;
+}
+
+function formatNumber(value?: string | number) {
+  const parsed = num(value ?? 0);
+  if (parsed >= 999) {
+    return "∞";
+  }
+  return parsed.toFixed(2);
 }
 
 function maxDrawdown(points: EquityPoint[]) {
@@ -832,6 +1029,16 @@ function maxDrawdown(points: EquityPoint[]) {
     }
   });
   return Math.abs(worst) * 100;
+}
+
+function drawdownFromEquity(points: EquityPoint[]): DrawdownPoint[] {
+  let peak = num(points[0]?.equity ?? 0);
+  return points.map((point) => {
+    const equity = num(point.equity);
+    peak = Math.max(peak, equity);
+    const drawdownPct = peak > 0 ? ((equity - peak) / peak) * 100 : 0;
+    return { date: point.date, drawdownPct: String(drawdownPct) };
+  });
 }
 
 function average(values: number[]) {

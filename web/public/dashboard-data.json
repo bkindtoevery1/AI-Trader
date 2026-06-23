@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T08:51:58.092169+09:00",
+  "generatedAt": "2026-06-23T17:40:11.573581+09:00",
   "mode": "dry-run",
   "status": "ready",
   "summary": {
@@ -8,13 +8,18 @@
       "AAPL"
     ],
     "bestSymbol": "AAPL",
-    "bestReturnPct": "0.3882",
-    "tradeCount": 4,
-    "maxDrawdownPct": "0.0212"
+    "bestStrategy": "buy-and-hold",
+    "bestResultId": "AAPL:buy-and-hold",
+    "bestReturnPct": "1.6351",
+    "tradeCount": 10,
+    "maxDrawdownPct": "0.2359",
+    "strategyResultCount": 10
   },
   "results": [
     {
+      "id": "005930:ma-rsi-core",
       "symbol": "005930",
+      "strategyName": "ma-rsi-core",
       "start": "2026-04-01",
       "end": "2026-05-22",
       "initialCash": "10000000",
@@ -170,16 +175,2994 @@
           "equity": "10000000"
         }
       ],
+      "drawdownCurve": [
+        {
+          "date": "2026-04-01",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-02",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-03",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-06",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-07",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-08",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-09",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-10",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-13",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-14",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-15",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-16",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-17",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-20",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-21",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-22",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-23",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-24",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-27",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-28",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-29",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-30",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-04",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-06",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-07",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-08",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-11",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-12",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-13",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-14",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-15",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-18",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-19",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-20",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-21",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-22",
+          "drawdownPct": "0"
+        }
+      ],
+      "returnCurve": [
+        {
+          "date": "2026-04-01",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-02",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-03",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-06",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-07",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-08",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-09",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-10",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-13",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-14",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-15",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-16",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-17",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-20",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-21",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-22",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-23",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-24",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-27",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-28",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-29",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-30",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-04",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-06",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-07",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-08",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-11",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-12",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-13",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-14",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-15",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-18",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-19",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-20",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-21",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-22",
+          "returnPct": "0"
+        }
+      ],
+      "priceCurve": [
+        {
+          "date": "2026-04-01",
+          "close": "70800"
+        },
+        {
+          "date": "2026-04-02",
+          "close": "70400"
+        },
+        {
+          "date": "2026-04-03",
+          "close": "70000"
+        },
+        {
+          "date": "2026-04-06",
+          "close": "69600"
+        },
+        {
+          "date": "2026-04-07",
+          "close": "69400"
+        },
+        {
+          "date": "2026-04-08",
+          "close": "69700"
+        },
+        {
+          "date": "2026-04-09",
+          "close": "69900"
+        },
+        {
+          "date": "2026-04-10",
+          "close": "70100"
+        },
+        {
+          "date": "2026-04-13",
+          "close": "70400"
+        },
+        {
+          "date": "2026-04-14",
+          "close": "70600"
+        },
+        {
+          "date": "2026-04-15",
+          "close": "70900"
+        },
+        {
+          "date": "2026-04-16",
+          "close": "71200"
+        },
+        {
+          "date": "2026-04-17",
+          "close": "71600"
+        },
+        {
+          "date": "2026-04-20",
+          "close": "72000"
+        },
+        {
+          "date": "2026-04-21",
+          "close": "72300"
+        },
+        {
+          "date": "2026-04-22",
+          "close": "72700"
+        },
+        {
+          "date": "2026-04-23",
+          "close": "73100"
+        },
+        {
+          "date": "2026-04-24",
+          "close": "73500"
+        },
+        {
+          "date": "2026-04-27",
+          "close": "73200"
+        },
+        {
+          "date": "2026-04-28",
+          "close": "73400"
+        },
+        {
+          "date": "2026-04-29",
+          "close": "73900"
+        },
+        {
+          "date": "2026-04-30",
+          "close": "74400"
+        },
+        {
+          "date": "2026-05-04",
+          "close": "74900"
+        },
+        {
+          "date": "2026-05-06",
+          "close": "75100"
+        },
+        {
+          "date": "2026-05-07",
+          "close": "74800"
+        },
+        {
+          "date": "2026-05-08",
+          "close": "74400"
+        },
+        {
+          "date": "2026-05-11",
+          "close": "74100"
+        },
+        {
+          "date": "2026-05-12",
+          "close": "74300"
+        },
+        {
+          "date": "2026-05-13",
+          "close": "74900"
+        },
+        {
+          "date": "2026-05-14",
+          "close": "75600"
+        },
+        {
+          "date": "2026-05-15",
+          "close": "76100"
+        },
+        {
+          "date": "2026-05-18",
+          "close": "76400"
+        },
+        {
+          "date": "2026-05-19",
+          "close": "77000"
+        },
+        {
+          "date": "2026-05-20",
+          "close": "77600"
+        },
+        {
+          "date": "2026-05-21",
+          "close": "77400"
+        },
+        {
+          "date": "2026-05-22",
+          "close": "77900"
+        }
+      ],
       "parameters": {
+        "strategy": "ma-rsi-core",
         "shortWindow": 5,
         "longWindow": 20,
         "rsiPeriod": 14,
         "feeBps": "1.5",
         "slippageBps": "5"
+      },
+      "metrics": {
+        "closedTrades": 0,
+        "winRatePct": "0",
+        "avgTradeReturnPct": "0",
+        "bestTradePct": "0",
+        "worstTradePct": "0",
+        "profitFactor": "0",
+        "cagrPct": "0",
+        "volatilityPct": "0",
+        "sortino": "0",
+        "calmar": "0",
+        "exposurePct": "0",
+        "buyHoldReturnPct": "10.0282",
+        "bestEquity": "10000000",
+        "worstEquity": "10000000"
       }
     },
     {
+      "id": "005930:sma-trend-fast",
+      "symbol": "005930",
+      "strategyName": "sma-trend-fast",
+      "start": "2026-04-01",
+      "end": "2026-05-22",
+      "initialCash": "10000000",
+      "finalEquity": "10053450.39",
+      "totalReturnPct": "0.5345",
+      "maxDrawdownPct": "0.135",
+      "sharpe": "6.3879",
+      "tradeCount": 1,
+      "trades": [
+        {
+          "symbol": "005930",
+          "side": "BUY",
+          "timestamp": "2026-04-29T00:00:00+09:00",
+          "price": "73936.95",
+          "quantity": "13.525037",
+          "fee": "149.9999",
+          "cashAfter": "8999850.0155",
+          "reason": "short SMA above long SMA"
+        }
+      ],
+      "equityCurve": [
+        {
+          "date": "2026-04-01",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-02",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-03",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-06",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-07",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-08",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-09",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-10",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-13",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-14",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-15",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-16",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-17",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-20",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-21",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-22",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-23",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-24",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-27",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-28",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-29",
+          "equity": "9999350.24"
+        },
+        {
+          "date": "2026-04-30",
+          "equity": "10006112.76"
+        },
+        {
+          "date": "2026-05-04",
+          "equity": "10012875.28"
+        },
+        {
+          "date": "2026-05-06",
+          "equity": "10015580.29"
+        },
+        {
+          "date": "2026-05-07",
+          "equity": "10011522.78"
+        },
+        {
+          "date": "2026-05-08",
+          "equity": "10006112.76"
+        },
+        {
+          "date": "2026-05-11",
+          "equity": "10002055.25"
+        },
+        {
+          "date": "2026-05-12",
+          "equity": "10004760.26"
+        },
+        {
+          "date": "2026-05-13",
+          "equity": "10012875.28"
+        },
+        {
+          "date": "2026-05-14",
+          "equity": "10022342.81"
+        },
+        {
+          "date": "2026-05-15",
+          "equity": "10029105.33"
+        },
+        {
+          "date": "2026-05-18",
+          "equity": "10033162.84"
+        },
+        {
+          "date": "2026-05-19",
+          "equity": "10041277.86"
+        },
+        {
+          "date": "2026-05-20",
+          "equity": "10049392.88"
+        },
+        {
+          "date": "2026-05-21",
+          "equity": "10046687.87"
+        },
+        {
+          "date": "2026-05-22",
+          "equity": "10053450.39"
+        }
+      ],
+      "drawdownCurve": [
+        {
+          "date": "2026-04-01",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-02",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-03",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-06",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-07",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-08",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-09",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-10",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-13",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-14",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-15",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-16",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-17",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-20",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-21",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-22",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-23",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-24",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-27",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-28",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-29",
+          "drawdownPct": "-0.0064"
+        },
+        {
+          "date": "2026-04-30",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-04",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-06",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-07",
+          "drawdownPct": "-0.0405"
+        },
+        {
+          "date": "2026-05-08",
+          "drawdownPct": "-0.0945"
+        },
+        {
+          "date": "2026-05-11",
+          "drawdownPct": "-0.135"
+        },
+        {
+          "date": "2026-05-12",
+          "drawdownPct": "-0.108"
+        },
+        {
+          "date": "2026-05-13",
+          "drawdownPct": "-0.027"
+        },
+        {
+          "date": "2026-05-14",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-15",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-18",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-19",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-20",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-21",
+          "drawdownPct": "-0.0269"
+        },
+        {
+          "date": "2026-05-22",
+          "drawdownPct": "0"
+        }
+      ],
+      "returnCurve": [
+        {
+          "date": "2026-04-01",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-02",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-03",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-06",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-07",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-08",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-09",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-10",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-13",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-14",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-15",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-16",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-17",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-20",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-21",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-22",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-23",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-24",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-27",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-28",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-29",
+          "returnPct": "-0.0064"
+        },
+        {
+          "date": "2026-04-30",
+          "returnPct": "0.0676"
+        },
+        {
+          "date": "2026-05-04",
+          "returnPct": "0.0675"
+        },
+        {
+          "date": "2026-05-06",
+          "returnPct": "0.027"
+        },
+        {
+          "date": "2026-05-07",
+          "returnPct": "-0.0405"
+        },
+        {
+          "date": "2026-05-08",
+          "returnPct": "-0.054"
+        },
+        {
+          "date": "2026-05-11",
+          "returnPct": "-0.0405"
+        },
+        {
+          "date": "2026-05-12",
+          "returnPct": "0.027"
+        },
+        {
+          "date": "2026-05-13",
+          "returnPct": "0.0811"
+        },
+        {
+          "date": "2026-05-14",
+          "returnPct": "0.0945"
+        },
+        {
+          "date": "2026-05-15",
+          "returnPct": "0.0674"
+        },
+        {
+          "date": "2026-05-18",
+          "returnPct": "0.0404"
+        },
+        {
+          "date": "2026-05-19",
+          "returnPct": "0.0808"
+        },
+        {
+          "date": "2026-05-20",
+          "returnPct": "0.0808"
+        },
+        {
+          "date": "2026-05-21",
+          "returnPct": "-0.0269"
+        },
+        {
+          "date": "2026-05-22",
+          "returnPct": "0.0673"
+        }
+      ],
+      "priceCurve": [
+        {
+          "date": "2026-04-01",
+          "close": "70800"
+        },
+        {
+          "date": "2026-04-02",
+          "close": "70400"
+        },
+        {
+          "date": "2026-04-03",
+          "close": "70000"
+        },
+        {
+          "date": "2026-04-06",
+          "close": "69600"
+        },
+        {
+          "date": "2026-04-07",
+          "close": "69400"
+        },
+        {
+          "date": "2026-04-08",
+          "close": "69700"
+        },
+        {
+          "date": "2026-04-09",
+          "close": "69900"
+        },
+        {
+          "date": "2026-04-10",
+          "close": "70100"
+        },
+        {
+          "date": "2026-04-13",
+          "close": "70400"
+        },
+        {
+          "date": "2026-04-14",
+          "close": "70600"
+        },
+        {
+          "date": "2026-04-15",
+          "close": "70900"
+        },
+        {
+          "date": "2026-04-16",
+          "close": "71200"
+        },
+        {
+          "date": "2026-04-17",
+          "close": "71600"
+        },
+        {
+          "date": "2026-04-20",
+          "close": "72000"
+        },
+        {
+          "date": "2026-04-21",
+          "close": "72300"
+        },
+        {
+          "date": "2026-04-22",
+          "close": "72700"
+        },
+        {
+          "date": "2026-04-23",
+          "close": "73100"
+        },
+        {
+          "date": "2026-04-24",
+          "close": "73500"
+        },
+        {
+          "date": "2026-04-27",
+          "close": "73200"
+        },
+        {
+          "date": "2026-04-28",
+          "close": "73400"
+        },
+        {
+          "date": "2026-04-29",
+          "close": "73900"
+        },
+        {
+          "date": "2026-04-30",
+          "close": "74400"
+        },
+        {
+          "date": "2026-05-04",
+          "close": "74900"
+        },
+        {
+          "date": "2026-05-06",
+          "close": "75100"
+        },
+        {
+          "date": "2026-05-07",
+          "close": "74800"
+        },
+        {
+          "date": "2026-05-08",
+          "close": "74400"
+        },
+        {
+          "date": "2026-05-11",
+          "close": "74100"
+        },
+        {
+          "date": "2026-05-12",
+          "close": "74300"
+        },
+        {
+          "date": "2026-05-13",
+          "close": "74900"
+        },
+        {
+          "date": "2026-05-14",
+          "close": "75600"
+        },
+        {
+          "date": "2026-05-15",
+          "close": "76100"
+        },
+        {
+          "date": "2026-05-18",
+          "close": "76400"
+        },
+        {
+          "date": "2026-05-19",
+          "close": "77000"
+        },
+        {
+          "date": "2026-05-20",
+          "close": "77600"
+        },
+        {
+          "date": "2026-05-21",
+          "close": "77400"
+        },
+        {
+          "date": "2026-05-22",
+          "close": "77900"
+        }
+      ],
+      "parameters": {
+        "strategy": "sma-trend-fast",
+        "shortWindow": 5,
+        "longWindow": 20,
+        "rsiPeriod": 14,
+        "feeBps": "1.5",
+        "slippageBps": "5"
+      },
+      "metrics": {
+        "closedTrades": 0,
+        "winRatePct": "0",
+        "avgTradeReturnPct": "0",
+        "bestTradePct": "0",
+        "worstTradePct": "0",
+        "profitFactor": "0",
+        "cagrPct": "3.9127",
+        "volatilityPct": "0.6011",
+        "sortino": "6.4781",
+        "calmar": "28.975",
+        "exposurePct": "44.4444",
+        "buyHoldReturnPct": "10.0282",
+        "bestEquity": "10053450.3978",
+        "worstEquity": "9999350.2498"
+      }
+    },
+    {
+      "id": "005930:sma-trend-slow",
+      "symbol": "005930",
+      "strategyName": "sma-trend-slow",
+      "start": "2026-04-01",
+      "end": "2026-05-22",
+      "initialCash": "10000000",
+      "finalEquity": "10022991.51",
+      "totalReturnPct": "0.2299",
+      "maxDrawdownPct": "0.0262",
+      "sharpe": "4.5963",
+      "tradeCount": 1,
+      "trades": [
+        {
+          "symbol": "005930",
+          "side": "BUY",
+          "timestamp": "2026-05-15T00:00:00+09:00",
+          "price": "76138.05",
+          "quantity": "13.134037",
+          "fee": "149.9999",
+          "cashAfter": "8999850.0341",
+          "reason": "short SMA above long SMA"
+        }
+      ],
+      "equityCurve": [
+        {
+          "date": "2026-04-01",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-02",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-03",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-06",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-07",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-08",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-09",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-10",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-13",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-14",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-15",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-16",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-17",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-20",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-21",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-22",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-23",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-24",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-27",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-28",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-29",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-30",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-04",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-06",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-07",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-08",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-11",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-12",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-13",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-14",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-15",
+          "equity": "9999350.24"
+        },
+        {
+          "date": "2026-05-18",
+          "equity": "10003290.46"
+        },
+        {
+          "date": "2026-05-19",
+          "equity": "10011170.88"
+        },
+        {
+          "date": "2026-05-20",
+          "equity": "10019051.3"
+        },
+        {
+          "date": "2026-05-21",
+          "equity": "10016424.49"
+        },
+        {
+          "date": "2026-05-22",
+          "equity": "10022991.51"
+        }
+      ],
+      "drawdownCurve": [
+        {
+          "date": "2026-04-01",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-02",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-03",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-06",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-07",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-08",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-09",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-10",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-13",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-14",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-15",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-16",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-17",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-20",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-21",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-22",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-23",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-24",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-27",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-28",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-29",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-30",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-04",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-06",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-07",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-08",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-11",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-12",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-13",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-14",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-15",
+          "drawdownPct": "-0.0064"
+        },
+        {
+          "date": "2026-05-18",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-19",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-20",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-21",
+          "drawdownPct": "-0.0262"
+        },
+        {
+          "date": "2026-05-22",
+          "drawdownPct": "0"
+        }
+      ],
+      "returnCurve": [
+        {
+          "date": "2026-04-01",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-02",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-03",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-06",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-07",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-08",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-09",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-10",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-13",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-14",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-15",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-16",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-17",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-20",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-21",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-22",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-23",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-24",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-27",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-28",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-29",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-30",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-04",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-06",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-07",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-08",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-11",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-12",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-13",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-14",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-15",
+          "returnPct": "-0.0064"
+        },
+        {
+          "date": "2026-05-18",
+          "returnPct": "0.0394"
+        },
+        {
+          "date": "2026-05-19",
+          "returnPct": "0.0787"
+        },
+        {
+          "date": "2026-05-20",
+          "returnPct": "0.0787"
+        },
+        {
+          "date": "2026-05-21",
+          "returnPct": "-0.0262"
+        },
+        {
+          "date": "2026-05-22",
+          "returnPct": "0.0655"
+        }
+      ],
+      "priceCurve": [
+        {
+          "date": "2026-04-01",
+          "close": "70800"
+        },
+        {
+          "date": "2026-04-02",
+          "close": "70400"
+        },
+        {
+          "date": "2026-04-03",
+          "close": "70000"
+        },
+        {
+          "date": "2026-04-06",
+          "close": "69600"
+        },
+        {
+          "date": "2026-04-07",
+          "close": "69400"
+        },
+        {
+          "date": "2026-04-08",
+          "close": "69700"
+        },
+        {
+          "date": "2026-04-09",
+          "close": "69900"
+        },
+        {
+          "date": "2026-04-10",
+          "close": "70100"
+        },
+        {
+          "date": "2026-04-13",
+          "close": "70400"
+        },
+        {
+          "date": "2026-04-14",
+          "close": "70600"
+        },
+        {
+          "date": "2026-04-15",
+          "close": "70900"
+        },
+        {
+          "date": "2026-04-16",
+          "close": "71200"
+        },
+        {
+          "date": "2026-04-17",
+          "close": "71600"
+        },
+        {
+          "date": "2026-04-20",
+          "close": "72000"
+        },
+        {
+          "date": "2026-04-21",
+          "close": "72300"
+        },
+        {
+          "date": "2026-04-22",
+          "close": "72700"
+        },
+        {
+          "date": "2026-04-23",
+          "close": "73100"
+        },
+        {
+          "date": "2026-04-24",
+          "close": "73500"
+        },
+        {
+          "date": "2026-04-27",
+          "close": "73200"
+        },
+        {
+          "date": "2026-04-28",
+          "close": "73400"
+        },
+        {
+          "date": "2026-04-29",
+          "close": "73900"
+        },
+        {
+          "date": "2026-04-30",
+          "close": "74400"
+        },
+        {
+          "date": "2026-05-04",
+          "close": "74900"
+        },
+        {
+          "date": "2026-05-06",
+          "close": "75100"
+        },
+        {
+          "date": "2026-05-07",
+          "close": "74800"
+        },
+        {
+          "date": "2026-05-08",
+          "close": "74400"
+        },
+        {
+          "date": "2026-05-11",
+          "close": "74100"
+        },
+        {
+          "date": "2026-05-12",
+          "close": "74300"
+        },
+        {
+          "date": "2026-05-13",
+          "close": "74900"
+        },
+        {
+          "date": "2026-05-14",
+          "close": "75600"
+        },
+        {
+          "date": "2026-05-15",
+          "close": "76100"
+        },
+        {
+          "date": "2026-05-18",
+          "close": "76400"
+        },
+        {
+          "date": "2026-05-19",
+          "close": "77000"
+        },
+        {
+          "date": "2026-05-20",
+          "close": "77600"
+        },
+        {
+          "date": "2026-05-21",
+          "close": "77400"
+        },
+        {
+          "date": "2026-05-22",
+          "close": "77900"
+        }
+      ],
+      "parameters": {
+        "strategy": "sma-trend-slow",
+        "shortWindow": 10,
+        "longWindow": 30,
+        "rsiPeriod": 14,
+        "feeBps": "1.5",
+        "slippageBps": "5"
+      },
+      "metrics": {
+        "closedTrades": 0,
+        "winRatePct": "0",
+        "avgTradeReturnPct": "0",
+        "bestTradePct": "0",
+        "worstTradePct": "0",
+        "profitFactor": "0",
+        "cagrPct": "1.6672",
+        "volatilityPct": "0.3598",
+        "sortino": "5.4557",
+        "calmar": "63.5909",
+        "exposurePct": "16.6666",
+        "buyHoldReturnPct": "10.0282",
+        "bestEquity": "10022991.5164",
+        "worstEquity": "9999350.2498"
+      }
+    },
+    {
+      "id": "005930:rsi-mean-reversion",
+      "symbol": "005930",
+      "strategyName": "rsi-mean-reversion",
+      "start": "2026-04-01",
+      "end": "2026-05-22",
+      "initialCash": "10000000",
+      "finalEquity": "10000000",
+      "totalReturnPct": "0",
+      "maxDrawdownPct": "0",
+      "sharpe": "0",
+      "tradeCount": 0,
+      "trades": [],
+      "equityCurve": [
+        {
+          "date": "2026-04-01",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-02",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-03",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-06",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-07",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-08",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-09",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-10",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-13",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-14",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-15",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-16",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-17",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-20",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-21",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-22",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-23",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-24",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-27",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-28",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-29",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-30",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-04",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-06",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-07",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-08",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-11",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-12",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-13",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-14",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-15",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-18",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-19",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-20",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-21",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-22",
+          "equity": "10000000"
+        }
+      ],
+      "drawdownCurve": [
+        {
+          "date": "2026-04-01",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-02",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-03",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-06",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-07",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-08",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-09",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-10",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-13",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-14",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-15",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-16",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-17",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-20",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-21",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-22",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-23",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-24",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-27",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-28",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-29",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-30",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-04",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-06",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-07",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-08",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-11",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-12",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-13",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-14",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-15",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-18",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-19",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-20",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-21",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-22",
+          "drawdownPct": "0"
+        }
+      ],
+      "returnCurve": [
+        {
+          "date": "2026-04-01",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-02",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-03",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-06",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-07",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-08",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-09",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-10",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-13",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-14",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-15",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-16",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-17",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-20",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-21",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-22",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-23",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-24",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-27",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-28",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-29",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-30",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-04",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-06",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-07",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-08",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-11",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-12",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-13",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-14",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-15",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-18",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-19",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-20",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-21",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-22",
+          "returnPct": "0"
+        }
+      ],
+      "priceCurve": [
+        {
+          "date": "2026-04-01",
+          "close": "70800"
+        },
+        {
+          "date": "2026-04-02",
+          "close": "70400"
+        },
+        {
+          "date": "2026-04-03",
+          "close": "70000"
+        },
+        {
+          "date": "2026-04-06",
+          "close": "69600"
+        },
+        {
+          "date": "2026-04-07",
+          "close": "69400"
+        },
+        {
+          "date": "2026-04-08",
+          "close": "69700"
+        },
+        {
+          "date": "2026-04-09",
+          "close": "69900"
+        },
+        {
+          "date": "2026-04-10",
+          "close": "70100"
+        },
+        {
+          "date": "2026-04-13",
+          "close": "70400"
+        },
+        {
+          "date": "2026-04-14",
+          "close": "70600"
+        },
+        {
+          "date": "2026-04-15",
+          "close": "70900"
+        },
+        {
+          "date": "2026-04-16",
+          "close": "71200"
+        },
+        {
+          "date": "2026-04-17",
+          "close": "71600"
+        },
+        {
+          "date": "2026-04-20",
+          "close": "72000"
+        },
+        {
+          "date": "2026-04-21",
+          "close": "72300"
+        },
+        {
+          "date": "2026-04-22",
+          "close": "72700"
+        },
+        {
+          "date": "2026-04-23",
+          "close": "73100"
+        },
+        {
+          "date": "2026-04-24",
+          "close": "73500"
+        },
+        {
+          "date": "2026-04-27",
+          "close": "73200"
+        },
+        {
+          "date": "2026-04-28",
+          "close": "73400"
+        },
+        {
+          "date": "2026-04-29",
+          "close": "73900"
+        },
+        {
+          "date": "2026-04-30",
+          "close": "74400"
+        },
+        {
+          "date": "2026-05-04",
+          "close": "74900"
+        },
+        {
+          "date": "2026-05-06",
+          "close": "75100"
+        },
+        {
+          "date": "2026-05-07",
+          "close": "74800"
+        },
+        {
+          "date": "2026-05-08",
+          "close": "74400"
+        },
+        {
+          "date": "2026-05-11",
+          "close": "74100"
+        },
+        {
+          "date": "2026-05-12",
+          "close": "74300"
+        },
+        {
+          "date": "2026-05-13",
+          "close": "74900"
+        },
+        {
+          "date": "2026-05-14",
+          "close": "75600"
+        },
+        {
+          "date": "2026-05-15",
+          "close": "76100"
+        },
+        {
+          "date": "2026-05-18",
+          "close": "76400"
+        },
+        {
+          "date": "2026-05-19",
+          "close": "77000"
+        },
+        {
+          "date": "2026-05-20",
+          "close": "77600"
+        },
+        {
+          "date": "2026-05-21",
+          "close": "77400"
+        },
+        {
+          "date": "2026-05-22",
+          "close": "77900"
+        }
+      ],
+      "parameters": {
+        "strategy": "rsi-mean-reversion",
+        "shortWindow": 5,
+        "longWindow": 20,
+        "rsiPeriod": 14,
+        "feeBps": "1.5",
+        "slippageBps": "5"
+      },
+      "metrics": {
+        "closedTrades": 0,
+        "winRatePct": "0",
+        "avgTradeReturnPct": "0",
+        "bestTradePct": "0",
+        "worstTradePct": "0",
+        "profitFactor": "0",
+        "cagrPct": "0",
+        "volatilityPct": "0",
+        "sortino": "0",
+        "calmar": "0",
+        "exposurePct": "0",
+        "buyHoldReturnPct": "10.0282",
+        "bestEquity": "10000000",
+        "worstEquity": "10000000"
+      }
+    },
+    {
+      "id": "005930:buy-and-hold",
+      "symbol": "005930",
+      "strategyName": "buy-and-hold",
+      "start": "2026-04-01",
+      "end": "2026-05-22",
+      "initialCash": "10000000",
+      "finalEquity": "10105831.09",
+      "totalReturnPct": "1.0583",
+      "maxDrawdownPct": "0.1484",
+      "sharpe": "10.3276",
+      "tradeCount": 1,
+      "trades": [
+        {
+          "symbol": "005930",
+          "side": "BUY",
+          "timestamp": "2026-04-02T00:00:00+09:00",
+          "price": "70435.2",
+          "quantity": "14.197446",
+          "fee": "149.9999",
+          "cashAfter": "8999850.0515",
+          "reason": "baseline buy and hold"
+        }
+      ],
+      "equityCurve": [
+        {
+          "date": "2026-04-01",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-02",
+          "equity": "9999350.24"
+        },
+        {
+          "date": "2026-04-03",
+          "equity": "9993671.27"
+        },
+        {
+          "date": "2026-04-06",
+          "equity": "9987992.29"
+        },
+        {
+          "date": "2026-04-07",
+          "equity": "9985152.8"
+        },
+        {
+          "date": "2026-04-08",
+          "equity": "9989412.03"
+        },
+        {
+          "date": "2026-04-09",
+          "equity": "9992251.52"
+        },
+        {
+          "date": "2026-04-10",
+          "equity": "9995091.01"
+        },
+        {
+          "date": "2026-04-13",
+          "equity": "9999350.24"
+        },
+        {
+          "date": "2026-04-14",
+          "equity": "10002189.73"
+        },
+        {
+          "date": "2026-04-15",
+          "equity": "10006448.97"
+        },
+        {
+          "date": "2026-04-16",
+          "equity": "10010708.2"
+        },
+        {
+          "date": "2026-04-17",
+          "equity": "10016387.18"
+        },
+        {
+          "date": "2026-04-20",
+          "equity": "10022066.16"
+        },
+        {
+          "date": "2026-04-21",
+          "equity": "10026325.39"
+        },
+        {
+          "date": "2026-04-22",
+          "equity": "10032004.37"
+        },
+        {
+          "date": "2026-04-23",
+          "equity": "10037683.35"
+        },
+        {
+          "date": "2026-04-24",
+          "equity": "10043362.33"
+        },
+        {
+          "date": "2026-04-27",
+          "equity": "10039103.09"
+        },
+        {
+          "date": "2026-04-28",
+          "equity": "10041942.58"
+        },
+        {
+          "date": "2026-04-29",
+          "equity": "10049041.31"
+        },
+        {
+          "date": "2026-04-30",
+          "equity": "10056140.03"
+        },
+        {
+          "date": "2026-05-04",
+          "equity": "10063238.75"
+        },
+        {
+          "date": "2026-05-06",
+          "equity": "10066078.24"
+        },
+        {
+          "date": "2026-05-07",
+          "equity": "10061819.01"
+        },
+        {
+          "date": "2026-05-08",
+          "equity": "10056140.03"
+        },
+        {
+          "date": "2026-05-11",
+          "equity": "10051880.8"
+        },
+        {
+          "date": "2026-05-12",
+          "equity": "10054720.28"
+        },
+        {
+          "date": "2026-05-13",
+          "equity": "10063238.75"
+        },
+        {
+          "date": "2026-05-14",
+          "equity": "10073176.96"
+        },
+        {
+          "date": "2026-05-15",
+          "equity": "10080275.69"
+        },
+        {
+          "date": "2026-05-18",
+          "equity": "10084534.92"
+        },
+        {
+          "date": "2026-05-19",
+          "equity": "10093053.39"
+        },
+        {
+          "date": "2026-05-20",
+          "equity": "10101571.86"
+        },
+        {
+          "date": "2026-05-21",
+          "equity": "10098732.37"
+        },
+        {
+          "date": "2026-05-22",
+          "equity": "10105831.09"
+        }
+      ],
+      "drawdownCurve": [
+        {
+          "date": "2026-04-01",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-02",
+          "drawdownPct": "-0.0064"
+        },
+        {
+          "date": "2026-04-03",
+          "drawdownPct": "-0.0632"
+        },
+        {
+          "date": "2026-04-06",
+          "drawdownPct": "-0.12"
+        },
+        {
+          "date": "2026-04-07",
+          "drawdownPct": "-0.1484"
+        },
+        {
+          "date": "2026-04-08",
+          "drawdownPct": "-0.1058"
+        },
+        {
+          "date": "2026-04-09",
+          "drawdownPct": "-0.0774"
+        },
+        {
+          "date": "2026-04-10",
+          "drawdownPct": "-0.049"
+        },
+        {
+          "date": "2026-04-13",
+          "drawdownPct": "-0.0064"
+        },
+        {
+          "date": "2026-04-14",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-15",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-16",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-17",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-20",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-21",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-22",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-23",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-24",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-27",
+          "drawdownPct": "-0.0424"
+        },
+        {
+          "date": "2026-04-28",
+          "drawdownPct": "-0.0141"
+        },
+        {
+          "date": "2026-04-29",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-30",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-04",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-06",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-07",
+          "drawdownPct": "-0.0423"
+        },
+        {
+          "date": "2026-05-08",
+          "drawdownPct": "-0.0987"
+        },
+        {
+          "date": "2026-05-11",
+          "drawdownPct": "-0.141"
+        },
+        {
+          "date": "2026-05-12",
+          "drawdownPct": "-0.1128"
+        },
+        {
+          "date": "2026-05-13",
+          "drawdownPct": "-0.0282"
+        },
+        {
+          "date": "2026-05-14",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-15",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-18",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-19",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-20",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-21",
+          "drawdownPct": "-0.0281"
+        },
+        {
+          "date": "2026-05-22",
+          "drawdownPct": "0"
+        }
+      ],
+      "returnCurve": [
+        {
+          "date": "2026-04-01",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-02",
+          "returnPct": "-0.0064"
+        },
+        {
+          "date": "2026-04-03",
+          "returnPct": "-0.0567"
+        },
+        {
+          "date": "2026-04-06",
+          "returnPct": "-0.0568"
+        },
+        {
+          "date": "2026-04-07",
+          "returnPct": "-0.0284"
+        },
+        {
+          "date": "2026-04-08",
+          "returnPct": "0.0426"
+        },
+        {
+          "date": "2026-04-09",
+          "returnPct": "0.0284"
+        },
+        {
+          "date": "2026-04-10",
+          "returnPct": "0.0284"
+        },
+        {
+          "date": "2026-04-13",
+          "returnPct": "0.0426"
+        },
+        {
+          "date": "2026-04-14",
+          "returnPct": "0.0283"
+        },
+        {
+          "date": "2026-04-15",
+          "returnPct": "0.0425"
+        },
+        {
+          "date": "2026-04-16",
+          "returnPct": "0.0425"
+        },
+        {
+          "date": "2026-04-17",
+          "returnPct": "0.0567"
+        },
+        {
+          "date": "2026-04-20",
+          "returnPct": "0.0566"
+        },
+        {
+          "date": "2026-04-21",
+          "returnPct": "0.0424"
+        },
+        {
+          "date": "2026-04-22",
+          "returnPct": "0.0566"
+        },
+        {
+          "date": "2026-04-23",
+          "returnPct": "0.0566"
+        },
+        {
+          "date": "2026-04-24",
+          "returnPct": "0.0565"
+        },
+        {
+          "date": "2026-04-27",
+          "returnPct": "-0.0424"
+        },
+        {
+          "date": "2026-04-28",
+          "returnPct": "0.0282"
+        },
+        {
+          "date": "2026-04-29",
+          "returnPct": "0.0706"
+        },
+        {
+          "date": "2026-04-30",
+          "returnPct": "0.0706"
+        },
+        {
+          "date": "2026-05-04",
+          "returnPct": "0.0705"
+        },
+        {
+          "date": "2026-05-06",
+          "returnPct": "0.0282"
+        },
+        {
+          "date": "2026-05-07",
+          "returnPct": "-0.0423"
+        },
+        {
+          "date": "2026-05-08",
+          "returnPct": "-0.0564"
+        },
+        {
+          "date": "2026-05-11",
+          "returnPct": "-0.0423"
+        },
+        {
+          "date": "2026-05-12",
+          "returnPct": "0.0282"
+        },
+        {
+          "date": "2026-05-13",
+          "returnPct": "0.0847"
+        },
+        {
+          "date": "2026-05-14",
+          "returnPct": "0.0987"
+        },
+        {
+          "date": "2026-05-15",
+          "returnPct": "0.0704"
+        },
+        {
+          "date": "2026-05-18",
+          "returnPct": "0.0422"
+        },
+        {
+          "date": "2026-05-19",
+          "returnPct": "0.0844"
+        },
+        {
+          "date": "2026-05-20",
+          "returnPct": "0.0843"
+        },
+        {
+          "date": "2026-05-21",
+          "returnPct": "-0.0281"
+        },
+        {
+          "date": "2026-05-22",
+          "returnPct": "0.0702"
+        }
+      ],
+      "priceCurve": [
+        {
+          "date": "2026-04-01",
+          "close": "70800"
+        },
+        {
+          "date": "2026-04-02",
+          "close": "70400"
+        },
+        {
+          "date": "2026-04-03",
+          "close": "70000"
+        },
+        {
+          "date": "2026-04-06",
+          "close": "69600"
+        },
+        {
+          "date": "2026-04-07",
+          "close": "69400"
+        },
+        {
+          "date": "2026-04-08",
+          "close": "69700"
+        },
+        {
+          "date": "2026-04-09",
+          "close": "69900"
+        },
+        {
+          "date": "2026-04-10",
+          "close": "70100"
+        },
+        {
+          "date": "2026-04-13",
+          "close": "70400"
+        },
+        {
+          "date": "2026-04-14",
+          "close": "70600"
+        },
+        {
+          "date": "2026-04-15",
+          "close": "70900"
+        },
+        {
+          "date": "2026-04-16",
+          "close": "71200"
+        },
+        {
+          "date": "2026-04-17",
+          "close": "71600"
+        },
+        {
+          "date": "2026-04-20",
+          "close": "72000"
+        },
+        {
+          "date": "2026-04-21",
+          "close": "72300"
+        },
+        {
+          "date": "2026-04-22",
+          "close": "72700"
+        },
+        {
+          "date": "2026-04-23",
+          "close": "73100"
+        },
+        {
+          "date": "2026-04-24",
+          "close": "73500"
+        },
+        {
+          "date": "2026-04-27",
+          "close": "73200"
+        },
+        {
+          "date": "2026-04-28",
+          "close": "73400"
+        },
+        {
+          "date": "2026-04-29",
+          "close": "73900"
+        },
+        {
+          "date": "2026-04-30",
+          "close": "74400"
+        },
+        {
+          "date": "2026-05-04",
+          "close": "74900"
+        },
+        {
+          "date": "2026-05-06",
+          "close": "75100"
+        },
+        {
+          "date": "2026-05-07",
+          "close": "74800"
+        },
+        {
+          "date": "2026-05-08",
+          "close": "74400"
+        },
+        {
+          "date": "2026-05-11",
+          "close": "74100"
+        },
+        {
+          "date": "2026-05-12",
+          "close": "74300"
+        },
+        {
+          "date": "2026-05-13",
+          "close": "74900"
+        },
+        {
+          "date": "2026-05-14",
+          "close": "75600"
+        },
+        {
+          "date": "2026-05-15",
+          "close": "76100"
+        },
+        {
+          "date": "2026-05-18",
+          "close": "76400"
+        },
+        {
+          "date": "2026-05-19",
+          "close": "77000"
+        },
+        {
+          "date": "2026-05-20",
+          "close": "77600"
+        },
+        {
+          "date": "2026-05-21",
+          "close": "77400"
+        },
+        {
+          "date": "2026-05-22",
+          "close": "77900"
+        }
+      ],
+      "parameters": {
+        "strategy": "buy-and-hold",
+        "shortWindow": 5,
+        "longWindow": 20,
+        "rsiPeriod": 14,
+        "feeBps": "1.5",
+        "slippageBps": "5"
+      },
+      "metrics": {
+        "closedTrades": 0,
+        "winRatePct": "0",
+        "avgTradeReturnPct": "0",
+        "bestTradePct": "0",
+        "worstTradePct": "0",
+        "profitFactor": "0",
+        "cagrPct": "7.8744",
+        "volatilityPct": "0.7342",
+        "sortino": "11.1022",
+        "calmar": "53.0367",
+        "exposurePct": "97.2222",
+        "buyHoldReturnPct": "10.0282",
+        "bestEquity": "10105831.0949",
+        "worstEquity": "9985152.8039"
+      }
+    },
+    {
+      "id": "AAPL:ma-rsi-core",
       "symbol": "AAPL",
+      "strategyName": "ma-rsi-core",
       "start": "2026-04-01",
       "end": "2026-05-22",
       "initialCash": "10000000",
@@ -376,12 +3359,2988 @@
           "equity": "10038821.11"
         }
       ],
+      "drawdownCurve": [
+        {
+          "date": "2026-04-01",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-02",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-03",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-06",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-07",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-08",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-09",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-10",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-13",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-14",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-15",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-16",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-17",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-20",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-21",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-22",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-23",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-24",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-27",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-28",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-29",
+          "drawdownPct": "-0.0064"
+        },
+        {
+          "date": "2026-04-30",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-04",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-06",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-07",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-08",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-11",
+          "drawdownPct": "-0.0064"
+        },
+        {
+          "date": "2026-05-12",
+          "drawdownPct": "-0.0212"
+        },
+        {
+          "date": "2026-05-13",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-14",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-15",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-18",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-19",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-20",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-21",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-22",
+          "drawdownPct": "0"
+        }
+      ],
+      "returnCurve": [
+        {
+          "date": "2026-04-01",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-02",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-03",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-06",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-07",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-08",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-09",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-10",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-13",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-14",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-15",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-16",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-17",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-20",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-21",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-22",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-23",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-24",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-27",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-28",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-29",
+          "returnPct": "-0.0064"
+        },
+        {
+          "date": "2026-04-30",
+          "returnPct": "0.0781"
+        },
+        {
+          "date": "2026-05-04",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-06",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-07",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-08",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-11",
+          "returnPct": "-0.0064"
+        },
+        {
+          "date": "2026-05-12",
+          "returnPct": "-0.0147"
+        },
+        {
+          "date": "2026-05-13",
+          "returnPct": "0.1032"
+        },
+        {
+          "date": "2026-05-14",
+          "returnPct": "0.1326"
+        },
+        {
+          "date": "2026-05-15",
+          "returnPct": "0.1012"
+        },
+        {
+          "date": "2026-05-18",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-19",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-20",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-21",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-22",
+          "returnPct": "0"
+        }
+      ],
+      "priceCurve": [
+        {
+          "date": "2026-04-01",
+          "close": "187.2"
+        },
+        {
+          "date": "2026-04-02",
+          "close": "185.7"
+        },
+        {
+          "date": "2026-04-03",
+          "close": "186.4"
+        },
+        {
+          "date": "2026-04-06",
+          "close": "188.6"
+        },
+        {
+          "date": "2026-04-07",
+          "close": "190.8"
+        },
+        {
+          "date": "2026-04-08",
+          "close": "191.9"
+        },
+        {
+          "date": "2026-04-09",
+          "close": "192.5"
+        },
+        {
+          "date": "2026-04-10",
+          "close": "190.4"
+        },
+        {
+          "date": "2026-04-13",
+          "close": "188.1"
+        },
+        {
+          "date": "2026-04-14",
+          "close": "189.9"
+        },
+        {
+          "date": "2026-04-15",
+          "close": "191.5"
+        },
+        {
+          "date": "2026-04-16",
+          "close": "193.8"
+        },
+        {
+          "date": "2026-04-17",
+          "close": "194.9"
+        },
+        {
+          "date": "2026-04-20",
+          "close": "196.5"
+        },
+        {
+          "date": "2026-04-21",
+          "close": "197.9"
+        },
+        {
+          "date": "2026-04-22",
+          "close": "198.8"
+        },
+        {
+          "date": "2026-04-23",
+          "close": "197.4"
+        },
+        {
+          "date": "2026-04-24",
+          "close": "195.6"
+        },
+        {
+          "date": "2026-04-27",
+          "close": "196.9"
+        },
+        {
+          "date": "2026-04-28",
+          "close": "198.7"
+        },
+        {
+          "date": "2026-04-29",
+          "close": "200.5"
+        },
+        {
+          "date": "2026-04-30",
+          "close": "202.2"
+        },
+        {
+          "date": "2026-05-04",
+          "close": "203.6"
+        },
+        {
+          "date": "2026-05-06",
+          "close": "205.1"
+        },
+        {
+          "date": "2026-05-07",
+          "close": "206.8"
+        },
+        {
+          "date": "2026-05-08",
+          "close": "205.7"
+        },
+        {
+          "date": "2026-05-11",
+          "close": "203.1"
+        },
+        {
+          "date": "2026-05-12",
+          "close": "202.8"
+        },
+        {
+          "date": "2026-05-13",
+          "close": "204.9"
+        },
+        {
+          "date": "2026-05-14",
+          "close": "207.6"
+        },
+        {
+          "date": "2026-05-15",
+          "close": "209.8"
+        },
+        {
+          "date": "2026-05-18",
+          "close": "211.3"
+        },
+        {
+          "date": "2026-05-19",
+          "close": "213"
+        },
+        {
+          "date": "2026-05-20",
+          "close": "214.6"
+        },
+        {
+          "date": "2026-05-21",
+          "close": "213.5"
+        },
+        {
+          "date": "2026-05-22",
+          "close": "216.2"
+        }
+      ],
       "parameters": {
+        "strategy": "ma-rsi-core",
         "shortWindow": 5,
         "longWindow": 20,
         "rsiPeriod": 14,
         "feeBps": "1.5",
         "slippageBps": "5"
+      },
+      "metrics": {
+        "closedTrades": 2,
+        "winRatePct": "100",
+        "avgTradeReturnPct": "1.941",
+        "bestTradePct": "3.1651",
+        "worstTradePct": "0.7169",
+        "profitFactor": "999",
+        "cagrPct": "2.8289",
+        "volatilityPct": "0.5488",
+        "sortino": "17.5237",
+        "calmar": "133.1542",
+        "exposurePct": "13.8888",
+        "buyHoldReturnPct": "15.4914",
+        "bestEquity": "10038821.1172",
+        "worstEquity": "9999350.2498"
+      }
+    },
+    {
+      "id": "AAPL:sma-trend-fast",
+      "symbol": "AAPL",
+      "strategyName": "sma-trend-fast",
+      "start": "2026-04-01",
+      "end": "2026-05-22",
+      "initialCash": "10000000",
+      "finalEquity": "10077615.35",
+      "totalReturnPct": "0.7761",
+      "maxDrawdownPct": "0.1987",
+      "sharpe": "6.2174",
+      "tradeCount": 1,
+      "trades": [
+        {
+          "symbol": "AAPL",
+          "side": "BUY",
+          "timestamp": "2026-04-29T00:00:00+09:00",
+          "price": "200.6002",
+          "quantity": "4985.038652",
+          "fee": "149.9999",
+          "cashAfter": "8999850.0001",
+          "reason": "short SMA above long SMA"
+        }
+      ],
+      "equityCurve": [
+        {
+          "date": "2026-04-01",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-02",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-03",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-06",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-07",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-08",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-09",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-10",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-13",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-14",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-15",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-16",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-17",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-20",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-21",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-22",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-23",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-24",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-27",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-28",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-29",
+          "equity": "9999350.24"
+        },
+        {
+          "date": "2026-04-30",
+          "equity": "10007824.81"
+        },
+        {
+          "date": "2026-05-04",
+          "equity": "10014803.86"
+        },
+        {
+          "date": "2026-05-06",
+          "equity": "10022281.42"
+        },
+        {
+          "date": "2026-05-07",
+          "equity": "10030755.99"
+        },
+        {
+          "date": "2026-05-08",
+          "equity": "10025272.45"
+        },
+        {
+          "date": "2026-05-11",
+          "equity": "10012311.35"
+        },
+        {
+          "date": "2026-05-12",
+          "equity": "10010815.83"
+        },
+        {
+          "date": "2026-05-13",
+          "equity": "10021284.41"
+        },
+        {
+          "date": "2026-05-14",
+          "equity": "10034744.02"
+        },
+        {
+          "date": "2026-05-15",
+          "equity": "10045711.1"
+        },
+        {
+          "date": "2026-05-18",
+          "equity": "10053188.66"
+        },
+        {
+          "date": "2026-05-19",
+          "equity": "10061663.23"
+        },
+        {
+          "date": "2026-05-20",
+          "equity": "10069639.29"
+        },
+        {
+          "date": "2026-05-21",
+          "equity": "10064155.75"
+        },
+        {
+          "date": "2026-05-22",
+          "equity": "10077615.35"
+        }
+      ],
+      "drawdownCurve": [
+        {
+          "date": "2026-04-01",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-02",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-03",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-06",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-07",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-08",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-09",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-10",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-13",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-14",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-15",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-16",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-17",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-20",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-21",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-22",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-23",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-24",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-27",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-28",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-29",
+          "drawdownPct": "-0.0064"
+        },
+        {
+          "date": "2026-04-30",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-04",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-06",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-07",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-08",
+          "drawdownPct": "-0.0546"
+        },
+        {
+          "date": "2026-05-11",
+          "drawdownPct": "-0.1838"
+        },
+        {
+          "date": "2026-05-12",
+          "drawdownPct": "-0.1987"
+        },
+        {
+          "date": "2026-05-13",
+          "drawdownPct": "-0.0944"
+        },
+        {
+          "date": "2026-05-14",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-15",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-18",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-19",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-20",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-21",
+          "drawdownPct": "-0.0544"
+        },
+        {
+          "date": "2026-05-22",
+          "drawdownPct": "0"
+        }
+      ],
+      "returnCurve": [
+        {
+          "date": "2026-04-01",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-02",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-03",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-06",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-07",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-08",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-09",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-10",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-13",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-14",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-15",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-16",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-17",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-20",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-21",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-22",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-23",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-24",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-27",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-28",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-29",
+          "returnPct": "-0.0064"
+        },
+        {
+          "date": "2026-04-30",
+          "returnPct": "0.0847"
+        },
+        {
+          "date": "2026-05-04",
+          "returnPct": "0.0697"
+        },
+        {
+          "date": "2026-05-06",
+          "returnPct": "0.0746"
+        },
+        {
+          "date": "2026-05-07",
+          "returnPct": "0.0845"
+        },
+        {
+          "date": "2026-05-08",
+          "returnPct": "-0.0546"
+        },
+        {
+          "date": "2026-05-11",
+          "returnPct": "-0.1292"
+        },
+        {
+          "date": "2026-05-12",
+          "returnPct": "-0.0149"
+        },
+        {
+          "date": "2026-05-13",
+          "returnPct": "0.1045"
+        },
+        {
+          "date": "2026-05-14",
+          "returnPct": "0.1343"
+        },
+        {
+          "date": "2026-05-15",
+          "returnPct": "0.1092"
+        },
+        {
+          "date": "2026-05-18",
+          "returnPct": "0.0744"
+        },
+        {
+          "date": "2026-05-19",
+          "returnPct": "0.0842"
+        },
+        {
+          "date": "2026-05-20",
+          "returnPct": "0.0792"
+        },
+        {
+          "date": "2026-05-21",
+          "returnPct": "-0.0544"
+        },
+        {
+          "date": "2026-05-22",
+          "returnPct": "0.1337"
+        }
+      ],
+      "priceCurve": [
+        {
+          "date": "2026-04-01",
+          "close": "187.2"
+        },
+        {
+          "date": "2026-04-02",
+          "close": "185.7"
+        },
+        {
+          "date": "2026-04-03",
+          "close": "186.4"
+        },
+        {
+          "date": "2026-04-06",
+          "close": "188.6"
+        },
+        {
+          "date": "2026-04-07",
+          "close": "190.8"
+        },
+        {
+          "date": "2026-04-08",
+          "close": "191.9"
+        },
+        {
+          "date": "2026-04-09",
+          "close": "192.5"
+        },
+        {
+          "date": "2026-04-10",
+          "close": "190.4"
+        },
+        {
+          "date": "2026-04-13",
+          "close": "188.1"
+        },
+        {
+          "date": "2026-04-14",
+          "close": "189.9"
+        },
+        {
+          "date": "2026-04-15",
+          "close": "191.5"
+        },
+        {
+          "date": "2026-04-16",
+          "close": "193.8"
+        },
+        {
+          "date": "2026-04-17",
+          "close": "194.9"
+        },
+        {
+          "date": "2026-04-20",
+          "close": "196.5"
+        },
+        {
+          "date": "2026-04-21",
+          "close": "197.9"
+        },
+        {
+          "date": "2026-04-22",
+          "close": "198.8"
+        },
+        {
+          "date": "2026-04-23",
+          "close": "197.4"
+        },
+        {
+          "date": "2026-04-24",
+          "close": "195.6"
+        },
+        {
+          "date": "2026-04-27",
+          "close": "196.9"
+        },
+        {
+          "date": "2026-04-28",
+          "close": "198.7"
+        },
+        {
+          "date": "2026-04-29",
+          "close": "200.5"
+        },
+        {
+          "date": "2026-04-30",
+          "close": "202.2"
+        },
+        {
+          "date": "2026-05-04",
+          "close": "203.6"
+        },
+        {
+          "date": "2026-05-06",
+          "close": "205.1"
+        },
+        {
+          "date": "2026-05-07",
+          "close": "206.8"
+        },
+        {
+          "date": "2026-05-08",
+          "close": "205.7"
+        },
+        {
+          "date": "2026-05-11",
+          "close": "203.1"
+        },
+        {
+          "date": "2026-05-12",
+          "close": "202.8"
+        },
+        {
+          "date": "2026-05-13",
+          "close": "204.9"
+        },
+        {
+          "date": "2026-05-14",
+          "close": "207.6"
+        },
+        {
+          "date": "2026-05-15",
+          "close": "209.8"
+        },
+        {
+          "date": "2026-05-18",
+          "close": "211.3"
+        },
+        {
+          "date": "2026-05-19",
+          "close": "213"
+        },
+        {
+          "date": "2026-05-20",
+          "close": "214.6"
+        },
+        {
+          "date": "2026-05-21",
+          "close": "213.5"
+        },
+        {
+          "date": "2026-05-22",
+          "close": "216.2"
+        }
+      ],
+      "parameters": {
+        "strategy": "sma-trend-fast",
+        "shortWindow": 5,
+        "longWindow": 20,
+        "rsiPeriod": 14,
+        "feeBps": "1.5",
+        "slippageBps": "5"
+      },
+      "metrics": {
+        "closedTrades": 0,
+        "winRatePct": "0",
+        "avgTradeReturnPct": "0",
+        "bestTradePct": "0",
+        "worstTradePct": "0",
+        "profitFactor": "0",
+        "cagrPct": "5.7245",
+        "volatilityPct": "0.896",
+        "sortino": "5.182",
+        "calmar": "28.7971",
+        "exposurePct": "44.4444",
+        "buyHoldReturnPct": "15.4914",
+        "bestEquity": "10077615.3567",
+        "worstEquity": "9999350.2498"
+      }
+    },
+    {
+      "id": "AAPL:sma-trend-slow",
+      "symbol": "AAPL",
+      "strategyName": "sma-trend-slow",
+      "start": "2026-04-01",
+      "end": "2026-05-22",
+      "initialCash": "10000000",
+      "finalEquity": "10029840.24",
+      "totalReturnPct": "0.2984",
+      "maxDrawdownPct": "0.0522",
+      "sharpe": "4.265",
+      "tradeCount": 1,
+      "trades": [
+        {
+          "symbol": "AAPL",
+          "side": "BUY",
+          "timestamp": "2026-05-15T00:00:00+09:00",
+          "price": "209.9049",
+          "quantity": "4764.062201",
+          "fee": "149.9999",
+          "cashAfter": "8999850.0001",
+          "reason": "short SMA above long SMA"
+        }
+      ],
+      "equityCurve": [
+        {
+          "date": "2026-04-01",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-02",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-03",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-06",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-07",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-08",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-09",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-10",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-13",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-14",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-15",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-16",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-17",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-20",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-21",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-22",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-23",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-24",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-27",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-28",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-29",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-30",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-04",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-06",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-07",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-08",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-11",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-12",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-13",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-14",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-15",
+          "equity": "9999350.24"
+        },
+        {
+          "date": "2026-05-18",
+          "equity": "10006496.34"
+        },
+        {
+          "date": "2026-05-19",
+          "equity": "10014595.24"
+        },
+        {
+          "date": "2026-05-20",
+          "equity": "10022217.74"
+        },
+        {
+          "date": "2026-05-21",
+          "equity": "10016977.28"
+        },
+        {
+          "date": "2026-05-22",
+          "equity": "10029840.24"
+        }
+      ],
+      "drawdownCurve": [
+        {
+          "date": "2026-04-01",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-02",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-03",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-06",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-07",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-08",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-09",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-10",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-13",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-14",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-15",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-16",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-17",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-20",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-21",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-22",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-23",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-24",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-27",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-28",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-29",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-30",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-04",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-06",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-07",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-08",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-11",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-12",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-13",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-14",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-15",
+          "drawdownPct": "-0.0064"
+        },
+        {
+          "date": "2026-05-18",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-19",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-20",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-21",
+          "drawdownPct": "-0.0522"
+        },
+        {
+          "date": "2026-05-22",
+          "drawdownPct": "0"
+        }
+      ],
+      "returnCurve": [
+        {
+          "date": "2026-04-01",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-02",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-03",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-06",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-07",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-08",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-09",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-10",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-13",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-14",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-15",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-16",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-17",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-20",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-21",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-22",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-23",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-24",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-27",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-28",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-29",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-30",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-04",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-06",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-07",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-08",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-11",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-12",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-13",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-14",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-15",
+          "returnPct": "-0.0064"
+        },
+        {
+          "date": "2026-05-18",
+          "returnPct": "0.0714"
+        },
+        {
+          "date": "2026-05-19",
+          "returnPct": "0.0809"
+        },
+        {
+          "date": "2026-05-20",
+          "returnPct": "0.0761"
+        },
+        {
+          "date": "2026-05-21",
+          "returnPct": "-0.0522"
+        },
+        {
+          "date": "2026-05-22",
+          "returnPct": "0.1284"
+        }
+      ],
+      "priceCurve": [
+        {
+          "date": "2026-04-01",
+          "close": "187.2"
+        },
+        {
+          "date": "2026-04-02",
+          "close": "185.7"
+        },
+        {
+          "date": "2026-04-03",
+          "close": "186.4"
+        },
+        {
+          "date": "2026-04-06",
+          "close": "188.6"
+        },
+        {
+          "date": "2026-04-07",
+          "close": "190.8"
+        },
+        {
+          "date": "2026-04-08",
+          "close": "191.9"
+        },
+        {
+          "date": "2026-04-09",
+          "close": "192.5"
+        },
+        {
+          "date": "2026-04-10",
+          "close": "190.4"
+        },
+        {
+          "date": "2026-04-13",
+          "close": "188.1"
+        },
+        {
+          "date": "2026-04-14",
+          "close": "189.9"
+        },
+        {
+          "date": "2026-04-15",
+          "close": "191.5"
+        },
+        {
+          "date": "2026-04-16",
+          "close": "193.8"
+        },
+        {
+          "date": "2026-04-17",
+          "close": "194.9"
+        },
+        {
+          "date": "2026-04-20",
+          "close": "196.5"
+        },
+        {
+          "date": "2026-04-21",
+          "close": "197.9"
+        },
+        {
+          "date": "2026-04-22",
+          "close": "198.8"
+        },
+        {
+          "date": "2026-04-23",
+          "close": "197.4"
+        },
+        {
+          "date": "2026-04-24",
+          "close": "195.6"
+        },
+        {
+          "date": "2026-04-27",
+          "close": "196.9"
+        },
+        {
+          "date": "2026-04-28",
+          "close": "198.7"
+        },
+        {
+          "date": "2026-04-29",
+          "close": "200.5"
+        },
+        {
+          "date": "2026-04-30",
+          "close": "202.2"
+        },
+        {
+          "date": "2026-05-04",
+          "close": "203.6"
+        },
+        {
+          "date": "2026-05-06",
+          "close": "205.1"
+        },
+        {
+          "date": "2026-05-07",
+          "close": "206.8"
+        },
+        {
+          "date": "2026-05-08",
+          "close": "205.7"
+        },
+        {
+          "date": "2026-05-11",
+          "close": "203.1"
+        },
+        {
+          "date": "2026-05-12",
+          "close": "202.8"
+        },
+        {
+          "date": "2026-05-13",
+          "close": "204.9"
+        },
+        {
+          "date": "2026-05-14",
+          "close": "207.6"
+        },
+        {
+          "date": "2026-05-15",
+          "close": "209.8"
+        },
+        {
+          "date": "2026-05-18",
+          "close": "211.3"
+        },
+        {
+          "date": "2026-05-19",
+          "close": "213"
+        },
+        {
+          "date": "2026-05-20",
+          "close": "214.6"
+        },
+        {
+          "date": "2026-05-21",
+          "close": "213.5"
+        },
+        {
+          "date": "2026-05-22",
+          "close": "216.2"
+        }
+      ],
+      "parameters": {
+        "strategy": "sma-trend-slow",
+        "shortWindow": 10,
+        "longWindow": 30,
+        "rsiPeriod": 14,
+        "feeBps": "1.5",
+        "slippageBps": "5"
+      },
+      "metrics": {
+        "closedTrades": 0,
+        "winRatePct": "0",
+        "avgTradeReturnPct": "0",
+        "bestTradePct": "0",
+        "worstTradePct": "0",
+        "profitFactor": "0",
+        "cagrPct": "2.1684",
+        "volatilityPct": "0.5033",
+        "sortino": "3.6294",
+        "calmar": "41.4713",
+        "exposurePct": "16.6666",
+        "buyHoldReturnPct": "15.4914",
+        "bestEquity": "10029840.2479",
+        "worstEquity": "9999350.2498"
+      }
+    },
+    {
+      "id": "AAPL:rsi-mean-reversion",
+      "symbol": "AAPL",
+      "strategyName": "rsi-mean-reversion",
+      "start": "2026-04-01",
+      "end": "2026-05-22",
+      "initialCash": "10000000",
+      "finalEquity": "10000000",
+      "totalReturnPct": "0",
+      "maxDrawdownPct": "0",
+      "sharpe": "0",
+      "tradeCount": 0,
+      "trades": [],
+      "equityCurve": [
+        {
+          "date": "2026-04-01",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-02",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-03",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-06",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-07",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-08",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-09",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-10",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-13",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-14",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-15",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-16",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-17",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-20",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-21",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-22",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-23",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-24",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-27",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-28",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-29",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-30",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-04",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-06",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-07",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-08",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-11",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-12",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-13",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-14",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-15",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-18",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-19",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-20",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-21",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-05-22",
+          "equity": "10000000"
+        }
+      ],
+      "drawdownCurve": [
+        {
+          "date": "2026-04-01",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-02",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-03",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-06",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-07",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-08",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-09",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-10",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-13",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-14",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-15",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-16",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-17",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-20",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-21",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-22",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-23",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-24",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-27",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-28",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-29",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-30",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-04",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-06",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-07",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-08",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-11",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-12",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-13",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-14",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-15",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-18",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-19",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-20",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-21",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-22",
+          "drawdownPct": "0"
+        }
+      ],
+      "returnCurve": [
+        {
+          "date": "2026-04-01",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-02",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-03",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-06",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-07",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-08",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-09",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-10",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-13",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-14",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-15",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-16",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-17",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-20",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-21",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-22",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-23",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-24",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-27",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-28",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-29",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-30",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-04",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-06",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-07",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-08",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-11",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-12",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-13",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-14",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-15",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-18",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-19",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-20",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-21",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-05-22",
+          "returnPct": "0"
+        }
+      ],
+      "priceCurve": [
+        {
+          "date": "2026-04-01",
+          "close": "187.2"
+        },
+        {
+          "date": "2026-04-02",
+          "close": "185.7"
+        },
+        {
+          "date": "2026-04-03",
+          "close": "186.4"
+        },
+        {
+          "date": "2026-04-06",
+          "close": "188.6"
+        },
+        {
+          "date": "2026-04-07",
+          "close": "190.8"
+        },
+        {
+          "date": "2026-04-08",
+          "close": "191.9"
+        },
+        {
+          "date": "2026-04-09",
+          "close": "192.5"
+        },
+        {
+          "date": "2026-04-10",
+          "close": "190.4"
+        },
+        {
+          "date": "2026-04-13",
+          "close": "188.1"
+        },
+        {
+          "date": "2026-04-14",
+          "close": "189.9"
+        },
+        {
+          "date": "2026-04-15",
+          "close": "191.5"
+        },
+        {
+          "date": "2026-04-16",
+          "close": "193.8"
+        },
+        {
+          "date": "2026-04-17",
+          "close": "194.9"
+        },
+        {
+          "date": "2026-04-20",
+          "close": "196.5"
+        },
+        {
+          "date": "2026-04-21",
+          "close": "197.9"
+        },
+        {
+          "date": "2026-04-22",
+          "close": "198.8"
+        },
+        {
+          "date": "2026-04-23",
+          "close": "197.4"
+        },
+        {
+          "date": "2026-04-24",
+          "close": "195.6"
+        },
+        {
+          "date": "2026-04-27",
+          "close": "196.9"
+        },
+        {
+          "date": "2026-04-28",
+          "close": "198.7"
+        },
+        {
+          "date": "2026-04-29",
+          "close": "200.5"
+        },
+        {
+          "date": "2026-04-30",
+          "close": "202.2"
+        },
+        {
+          "date": "2026-05-04",
+          "close": "203.6"
+        },
+        {
+          "date": "2026-05-06",
+          "close": "205.1"
+        },
+        {
+          "date": "2026-05-07",
+          "close": "206.8"
+        },
+        {
+          "date": "2026-05-08",
+          "close": "205.7"
+        },
+        {
+          "date": "2026-05-11",
+          "close": "203.1"
+        },
+        {
+          "date": "2026-05-12",
+          "close": "202.8"
+        },
+        {
+          "date": "2026-05-13",
+          "close": "204.9"
+        },
+        {
+          "date": "2026-05-14",
+          "close": "207.6"
+        },
+        {
+          "date": "2026-05-15",
+          "close": "209.8"
+        },
+        {
+          "date": "2026-05-18",
+          "close": "211.3"
+        },
+        {
+          "date": "2026-05-19",
+          "close": "213"
+        },
+        {
+          "date": "2026-05-20",
+          "close": "214.6"
+        },
+        {
+          "date": "2026-05-21",
+          "close": "213.5"
+        },
+        {
+          "date": "2026-05-22",
+          "close": "216.2"
+        }
+      ],
+      "parameters": {
+        "strategy": "rsi-mean-reversion",
+        "shortWindow": 5,
+        "longWindow": 20,
+        "rsiPeriod": 14,
+        "feeBps": "1.5",
+        "slippageBps": "5"
+      },
+      "metrics": {
+        "closedTrades": 0,
+        "winRatePct": "0",
+        "avgTradeReturnPct": "0",
+        "bestTradePct": "0",
+        "worstTradePct": "0",
+        "profitFactor": "0",
+        "cagrPct": "0",
+        "volatilityPct": "0",
+        "sortino": "0",
+        "calmar": "0",
+        "exposurePct": "0",
+        "buyHoldReturnPct": "15.4914",
+        "bestEquity": "10000000",
+        "worstEquity": "10000000"
+      }
+    },
+    {
+      "id": "AAPL:buy-and-hold",
+      "symbol": "AAPL",
+      "strategyName": "buy-and-hold",
+      "start": "2026-04-01",
+      "end": "2026-05-22",
+      "initialCash": "10000000",
+      "finalEquity": "10163511.57",
+      "totalReturnPct": "1.6351",
+      "maxDrawdownPct": "0.2359",
+      "sharpe": "9.1656",
+      "tradeCount": 1,
+      "trades": [
+        {
+          "symbol": "AAPL",
+          "side": "BUY",
+          "timestamp": "2026-04-02T00:00:00+09:00",
+          "price": "185.7928",
+          "quantity": "5382.338448",
+          "fee": "149.9999",
+          "cashAfter": "8999850",
+          "reason": "baseline buy and hold"
+        }
+      ],
+      "equityCurve": [
+        {
+          "date": "2026-04-01",
+          "equity": "10000000"
+        },
+        {
+          "date": "2026-04-02",
+          "equity": "9999350.24"
+        },
+        {
+          "date": "2026-04-03",
+          "equity": "10003117.88"
+        },
+        {
+          "date": "2026-04-06",
+          "equity": "10014959.03"
+        },
+        {
+          "date": "2026-04-07",
+          "equity": "10026800.17"
+        },
+        {
+          "date": "2026-04-08",
+          "equity": "10032720.74"
+        },
+        {
+          "date": "2026-04-09",
+          "equity": "10035950.15"
+        },
+        {
+          "date": "2026-04-10",
+          "equity": "10024647.24"
+        },
+        {
+          "date": "2026-04-13",
+          "equity": "10012267.86"
+        },
+        {
+          "date": "2026-04-14",
+          "equity": "10021956.07"
+        },
+        {
+          "date": "2026-04-15",
+          "equity": "10030567.81"
+        },
+        {
+          "date": "2026-04-16",
+          "equity": "10042947.19"
+        },
+        {
+          "date": "2026-04-17",
+          "equity": "10048867.76"
+        },
+        {
+          "date": "2026-04-20",
+          "equity": "10057479.5"
+        },
+        {
+          "date": "2026-04-21",
+          "equity": "10065014.77"
+        },
+        {
+          "date": "2026-04-22",
+          "equity": "10069858.88"
+        },
+        {
+          "date": "2026-04-23",
+          "equity": "10062323.6"
+        },
+        {
+          "date": "2026-04-24",
+          "equity": "10052635.4"
+        },
+        {
+          "date": "2026-04-27",
+          "equity": "10059632.44"
+        },
+        {
+          "date": "2026-04-28",
+          "equity": "10069320.64"
+        },
+        {
+          "date": "2026-04-29",
+          "equity": "10079008.85"
+        },
+        {
+          "date": "2026-04-30",
+          "equity": "10088158.83"
+        },
+        {
+          "date": "2026-05-04",
+          "equity": "10095694.1"
+        },
+        {
+          "date": "2026-05-06",
+          "equity": "10103767.61"
+        },
+        {
+          "date": "2026-05-07",
+          "equity": "10112917.59"
+        },
+        {
+          "date": "2026-05-08",
+          "equity": "10106997.01"
+        },
+        {
+          "date": "2026-05-11",
+          "equity": "10093002.93"
+        },
+        {
+          "date": "2026-05-12",
+          "equity": "10091388.23"
+        },
+        {
+          "date": "2026-05-13",
+          "equity": "10102691.14"
+        },
+        {
+          "date": "2026-05-14",
+          "equity": "10117223.46"
+        },
+        {
+          "date": "2026-05-15",
+          "equity": "10129064.6"
+        },
+        {
+          "date": "2026-05-18",
+          "equity": "10137138.11"
+        },
+        {
+          "date": "2026-05-19",
+          "equity": "10146288.08"
+        },
+        {
+          "date": "2026-05-20",
+          "equity": "10154899.83"
+        },
+        {
+          "date": "2026-05-21",
+          "equity": "10148979.25"
+        },
+        {
+          "date": "2026-05-22",
+          "equity": "10163511.57"
+        }
+      ],
+      "drawdownCurve": [
+        {
+          "date": "2026-04-01",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-02",
+          "drawdownPct": "-0.0064"
+        },
+        {
+          "date": "2026-04-03",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-06",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-07",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-08",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-09",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-10",
+          "drawdownPct": "-0.1126"
+        },
+        {
+          "date": "2026-04-13",
+          "drawdownPct": "-0.2359"
+        },
+        {
+          "date": "2026-04-14",
+          "drawdownPct": "-0.1394"
+        },
+        {
+          "date": "2026-04-15",
+          "drawdownPct": "-0.0536"
+        },
+        {
+          "date": "2026-04-16",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-17",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-20",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-21",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-22",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-23",
+          "drawdownPct": "-0.0748"
+        },
+        {
+          "date": "2026-04-24",
+          "drawdownPct": "-0.171"
+        },
+        {
+          "date": "2026-04-27",
+          "drawdownPct": "-0.1015"
+        },
+        {
+          "date": "2026-04-28",
+          "drawdownPct": "-0.0053"
+        },
+        {
+          "date": "2026-04-29",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-04-30",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-04",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-06",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-07",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-08",
+          "drawdownPct": "-0.0585"
+        },
+        {
+          "date": "2026-05-11",
+          "drawdownPct": "-0.1969"
+        },
+        {
+          "date": "2026-05-12",
+          "drawdownPct": "-0.2128"
+        },
+        {
+          "date": "2026-05-13",
+          "drawdownPct": "-0.1011"
+        },
+        {
+          "date": "2026-05-14",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-15",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-18",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-19",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-20",
+          "drawdownPct": "0"
+        },
+        {
+          "date": "2026-05-21",
+          "drawdownPct": "-0.0583"
+        },
+        {
+          "date": "2026-05-22",
+          "drawdownPct": "0"
+        }
+      ],
+      "returnCurve": [
+        {
+          "date": "2026-04-01",
+          "returnPct": "0"
+        },
+        {
+          "date": "2026-04-02",
+          "returnPct": "-0.0064"
+        },
+        {
+          "date": "2026-04-03",
+          "returnPct": "0.0376"
+        },
+        {
+          "date": "2026-04-06",
+          "returnPct": "0.1183"
+        },
+        {
+          "date": "2026-04-07",
+          "returnPct": "0.1182"
+        },
+        {
+          "date": "2026-04-08",
+          "returnPct": "0.059"
+        },
+        {
+          "date": "2026-04-09",
+          "returnPct": "0.0321"
+        },
+        {
+          "date": "2026-04-10",
+          "returnPct": "-0.1126"
+        },
+        {
+          "date": "2026-04-13",
+          "returnPct": "-0.1234"
+        },
+        {
+          "date": "2026-04-14",
+          "returnPct": "0.0967"
+        },
+        {
+          "date": "2026-04-15",
+          "returnPct": "0.0859"
+        },
+        {
+          "date": "2026-04-16",
+          "returnPct": "0.1234"
+        },
+        {
+          "date": "2026-04-17",
+          "returnPct": "0.0589"
+        },
+        {
+          "date": "2026-04-20",
+          "returnPct": "0.0856"
+        },
+        {
+          "date": "2026-04-21",
+          "returnPct": "0.0749"
+        },
+        {
+          "date": "2026-04-22",
+          "returnPct": "0.0481"
+        },
+        {
+          "date": "2026-04-23",
+          "returnPct": "-0.0748"
+        },
+        {
+          "date": "2026-04-24",
+          "returnPct": "-0.0962"
+        },
+        {
+          "date": "2026-04-27",
+          "returnPct": "0.0696"
+        },
+        {
+          "date": "2026-04-28",
+          "returnPct": "0.0963"
+        },
+        {
+          "date": "2026-04-29",
+          "returnPct": "0.0962"
+        },
+        {
+          "date": "2026-04-30",
+          "returnPct": "0.0907"
+        },
+        {
+          "date": "2026-05-04",
+          "returnPct": "0.0746"
+        },
+        {
+          "date": "2026-05-06",
+          "returnPct": "0.0799"
+        },
+        {
+          "date": "2026-05-07",
+          "returnPct": "0.0905"
+        },
+        {
+          "date": "2026-05-08",
+          "returnPct": "-0.0585"
+        },
+        {
+          "date": "2026-05-11",
+          "returnPct": "-0.1384"
+        },
+        {
+          "date": "2026-05-12",
+          "returnPct": "-0.0159"
+        },
+        {
+          "date": "2026-05-13",
+          "returnPct": "0.112"
+        },
+        {
+          "date": "2026-05-14",
+          "returnPct": "0.1438"
+        },
+        {
+          "date": "2026-05-15",
+          "returnPct": "0.117"
+        },
+        {
+          "date": "2026-05-18",
+          "returnPct": "0.0797"
+        },
+        {
+          "date": "2026-05-19",
+          "returnPct": "0.0902"
+        },
+        {
+          "date": "2026-05-20",
+          "returnPct": "0.0848"
+        },
+        {
+          "date": "2026-05-21",
+          "returnPct": "-0.0583"
+        },
+        {
+          "date": "2026-05-22",
+          "returnPct": "0.1431"
+        }
+      ],
+      "priceCurve": [
+        {
+          "date": "2026-04-01",
+          "close": "187.2"
+        },
+        {
+          "date": "2026-04-02",
+          "close": "185.7"
+        },
+        {
+          "date": "2026-04-03",
+          "close": "186.4"
+        },
+        {
+          "date": "2026-04-06",
+          "close": "188.6"
+        },
+        {
+          "date": "2026-04-07",
+          "close": "190.8"
+        },
+        {
+          "date": "2026-04-08",
+          "close": "191.9"
+        },
+        {
+          "date": "2026-04-09",
+          "close": "192.5"
+        },
+        {
+          "date": "2026-04-10",
+          "close": "190.4"
+        },
+        {
+          "date": "2026-04-13",
+          "close": "188.1"
+        },
+        {
+          "date": "2026-04-14",
+          "close": "189.9"
+        },
+        {
+          "date": "2026-04-15",
+          "close": "191.5"
+        },
+        {
+          "date": "2026-04-16",
+          "close": "193.8"
+        },
+        {
+          "date": "2026-04-17",
+          "close": "194.9"
+        },
+        {
+          "date": "2026-04-20",
+          "close": "196.5"
+        },
+        {
+          "date": "2026-04-21",
+          "close": "197.9"
+        },
+        {
+          "date": "2026-04-22",
+          "close": "198.8"
+        },
+        {
+          "date": "2026-04-23",
+          "close": "197.4"
+        },
+        {
+          "date": "2026-04-24",
+          "close": "195.6"
+        },
+        {
+          "date": "2026-04-27",
+          "close": "196.9"
+        },
+        {
+          "date": "2026-04-28",
+          "close": "198.7"
+        },
+        {
+          "date": "2026-04-29",
+          "close": "200.5"
+        },
+        {
+          "date": "2026-04-30",
+          "close": "202.2"
+        },
+        {
+          "date": "2026-05-04",
+          "close": "203.6"
+        },
+        {
+          "date": "2026-05-06",
+          "close": "205.1"
+        },
+        {
+          "date": "2026-05-07",
+          "close": "206.8"
+        },
+        {
+          "date": "2026-05-08",
+          "close": "205.7"
+        },
+        {
+          "date": "2026-05-11",
+          "close": "203.1"
+        },
+        {
+          "date": "2026-05-12",
+          "close": "202.8"
+        },
+        {
+          "date": "2026-05-13",
+          "close": "204.9"
+        },
+        {
+          "date": "2026-05-14",
+          "close": "207.6"
+        },
+        {
+          "date": "2026-05-15",
+          "close": "209.8"
+        },
+        {
+          "date": "2026-05-18",
+          "close": "211.3"
+        },
+        {
+          "date": "2026-05-19",
+          "close": "213"
+        },
+        {
+          "date": "2026-05-20",
+          "close": "214.6"
+        },
+        {
+          "date": "2026-05-21",
+          "close": "213.5"
+        },
+        {
+          "date": "2026-05-22",
+          "close": "216.2"
+        }
+      ],
+      "parameters": {
+        "strategy": "buy-and-hold",
+        "shortWindow": 5,
+        "longWindow": 20,
+        "rsiPeriod": 14,
+        "feeBps": "1.5",
+        "slippageBps": "5"
+      },
+      "metrics": {
+        "closedTrades": 0,
+        "winRatePct": "0",
+        "avgTradeReturnPct": "0",
+        "bestTradePct": "0",
+        "worstTradePct": "0",
+        "profitFactor": "0",
+        "cagrPct": "12.3867",
+        "volatilityPct": "1.2752",
+        "sortino": "8.4029",
+        "calmar": "52.492",
+        "exposurePct": "97.2222",
+        "buyHoldReturnPct": "15.4914",
+        "bestEquity": "10163511.5725",
+        "worstEquity": "9999350.2498"
       }
     }
   ],
@@ -409,6 +6368,7 @@
       "rationale": "그리드 탐색에서 기준 전략을 명확히 이긴 조합이 없어 운영 파라미터 변경을 보류합니다.",
       "expectedDeltaPct": "0",
       "parameters": {
+        "strategy": "ma-rsi-core",
         "shortWindow": 5,
         "longWindow": 20,
         "rsiPeriod": 14,
@@ -421,6 +6381,7 @@
       "rationale": "동일 데이터에서 기준 전략 대비 수익률이 0.25%p 높았고 최대 낙폭은 0.02%였습니다.",
       "expectedDeltaPct": "0.2523",
       "parameters": {
+        "strategy": "ma-rsi-core",
         "shortWindow": 3,
         "longWindow": 15,
         "rsiPeriod": 14,
@@ -433,6 +6394,7 @@
       "rationale": "동일 데이터에서 기준 전략 대비 수익률이 0.25%p 높았고 최대 낙폭은 0.02%였습니다.",
       "expectedDeltaPct": "0.2523",
       "parameters": {
+        "strategy": "ma-rsi-core",
         "shortWindow": 5,
         "longWindow": 15,
         "rsiPeriod": 14,
@@ -504,7 +6466,7 @@
     "priceOffsetBps": "10"
   },
   "account": {
-    "generatedAt": "2026-06-22T08:51:58.092135+09:00",
+    "generatedAt": "2026-06-23T17:40:11.573562+09:00",
     "source": "simulated",
     "buyingPower": {
       "KRW": "10000000"

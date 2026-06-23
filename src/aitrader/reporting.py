@@ -24,17 +24,20 @@ def write_markdown_report(
         "# AI Trader Daily Report",
         "",
         f"- Generated at: `{generated_at.isoformat()}`",
-        f"- Symbols: `{', '.join(result.symbol for result in results)}`",
+        f"- Symbols: `{', '.join(sorted({result.symbol for result in results}))}`",
         "",
         "## Backtest Summary",
         "",
-        "| Symbol | Return | Max DD | Sharpe | Trades |",
-        "|---|---:|---:|---:|---:|",
+        "| Symbol | Strategy | Return | Max DD | CAGR | Sharpe | Sortino | Win Rate | Trades |",
+        "|---|---|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for result in results:
+        metrics = result.metrics
         lines.append(
-            f"| {result.symbol} | {result.total_return_pct:.2f}% | "
-            f"{result.max_drawdown_pct:.2f}% | {result.sharpe:.2f} | {len(result.trades)} |"
+            f"| {result.symbol} | {result.strategy_name} | {result.total_return_pct:.2f}% | "
+            f"{result.max_drawdown_pct:.2f}% | {metrics.get('cagrPct', 0):.2f}% | "
+            f"{result.sharpe:.2f} | {metrics.get('sortino', 0):.2f} | "
+            f"{metrics.get('winRatePct', 0):.2f}% | {len(result.trades)} |"
         )
 
     lines.extend(["", "## Latest Signals", "", "| Symbol | Side | Score | Reason |", "|---|---:|---:|---|"])
@@ -91,16 +94,20 @@ def write_dashboard_json(
     account: AccountSnapshot | None = None,
 ) -> None:
     best_result = max(results, key=lambda item: item.total_return_pct)
+    symbols = sorted({result.symbol for result in results})
     payload = {
         "generatedAt": generated_at.isoformat(),
         "mode": "dry-run",
         "status": "ready",
         "summary": {
-            "symbols": [result.symbol for result in results],
+            "symbols": symbols,
             "bestSymbol": best_result.symbol,
+            "bestStrategy": best_result.strategy_name,
+            "bestResultId": best_result.result_id,
             "bestReturnPct": decimal_str(best_result.total_return_pct, 4),
             "tradeCount": sum(len(result.trades) for result in results),
             "maxDrawdownPct": decimal_str(max(result.max_drawdown_pct for result in results), 4),
+            "strategyResultCount": len(results),
         },
         "results": [result.to_dict() for result in results],
         "signals": [

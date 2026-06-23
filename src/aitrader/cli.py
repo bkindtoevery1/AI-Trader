@@ -7,14 +7,14 @@ from datetime import datetime
 from pathlib import Path
 
 from .account import cash_by_symbol, fetch_account_snapshot, simulated_account_snapshot
-from .backtest import find_improvements, run_backtest
+from .backtest import find_improvements, run_backtest, run_strategy_suite
 from .broker import TradingBroker, build_trade_decisions
 from .config import load_config
 from .data import load_candles_csv, write_candles_csv
 from .env import env_status, load_dotenv
 from .models import Candle
 from .reporting import write_dashboard_json, write_markdown_report
-from .strategy import MovingAverageRsiStrategy
+from .strategy import MovingAverageRsiStrategy, build_strategy_variants
 from .toss_client import TossInvestClient
 
 
@@ -26,14 +26,15 @@ def _collect_results(config, candles_by_symbol: dict[str, list[Candle]]):
     results = []
     improvements = []
     signals = []
-    strategy = MovingAverageRsiStrategy(config.strategy)
+    strategies = build_strategy_variants(config.strategy)
+    primary_strategy = strategies[0] if strategies else MovingAverageRsiStrategy(config.strategy)
     for symbol in config.strategy.symbols:
         candles = candles_by_symbol.get(symbol)
         if not candles:
             raise SystemExit(f"No candle data found for {symbol}")
-        results.append(run_backtest(symbol, candles, config))
+        results.extend(run_strategy_suite(symbol, candles, config))
         improvements.extend(find_improvements(symbol, candles, config)[:2])
-        signals.append(strategy.signal(symbol, candles))
+        signals.append(primary_strategy.signal(symbol, candles))
     return results, improvements, signals
 
 
@@ -58,7 +59,7 @@ def cmd_backtest(args: argparse.Namespace) -> int:
         )
     for result in results:
         print(
-            f"{result.symbol}: return={result.total_return_pct:.2f}% "
+            f"{result.symbol}/{result.strategy_name}: return={result.total_return_pct:.2f}% "
             f"mdd={result.max_drawdown_pct:.2f}% trades={len(result.trades)}"
         )
     return 0
@@ -135,8 +136,9 @@ def cmd_trade(args: argparse.Namespace) -> int:
         candles_by_symbol = _fetch_candles(market_client, config)
     else:
         candles_by_symbol = load_candles_csv(args.data)
-    strategy = MovingAverageRsiStrategy(config.strategy)
-    signals = [strategy.signal(symbol, candles_by_symbol[symbol]) for symbol in config.strategy.symbols]
+    strategies = build_strategy_variants(config.strategy)
+    primary_strategy = strategies[0] if strategies else MovingAverageRsiStrategy(config.strategy)
+    signals = [primary_strategy.signal(symbol, candles_by_symbol[symbol]) for symbol in config.strategy.symbols]
     decisions = build_trade_decisions(
         signals,
         config=config,

@@ -1,7 +1,7 @@
 import json
 from datetime import datetime, timezone
 
-from aitrader.backtest import find_improvements, run_backtest
+from aitrader.backtest import find_improvements, run_backtest, run_strategy_suite
 from aitrader.broker import build_trade_decisions
 from aitrader.config import load_config
 from aitrader.data import load_candles_csv, write_candles_csv
@@ -17,7 +17,19 @@ def test_backtest_produces_equity_curve_and_metrics():
     assert result.symbol == "AAPL"
     assert result.final_equity > 0
     assert len(result.equity_curve) == len(candles)
+    assert len(result.drawdown_curve) == len(candles)
     assert "shortWindow" in result.parameters
+    assert "cagrPct" in result.metrics
+
+
+def test_strategy_suite_runs_configured_variants():
+    config = load_config("config/strategy.yaml")
+    candles = load_candles_csv("data/sample_candles.csv")["AAPL"]
+
+    results = run_strategy_suite("AAPL", candles, config)
+
+    assert len(results) == len(config.strategy.variants)
+    assert {result.strategy_name for result in results}
 
 
 def test_improvement_finder_always_returns_recommendation():
@@ -62,6 +74,9 @@ def test_report_writers_create_markdown_and_dashboard_json(tmp_path):
     assert "Backtest Summary" in md_path.read_text(encoding="utf-8")
     payload = json.loads(json_path.read_text(encoding="utf-8"))
     assert payload["results"][0]["symbol"] == "AAPL"
+    assert payload["results"][0]["strategyName"]
+    assert payload["results"][0]["drawdownCurve"]
+    assert "cagrPct" in payload["results"][0]["metrics"]
     assert payload["decisions"][0]["symbol"] == "AAPL"
     assert payload["risk"]["allowLiveTrading"] is False
     assert payload["account"]["source"] == "simulated"

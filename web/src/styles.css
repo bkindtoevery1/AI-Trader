@@ -419,6 +419,88 @@ h2 {
   text-align: right;
 }
 
+.drawdownWrap {
+  display: grid;
+  gap: 8px;
+  padding-top: 10px;
+}
+
+.drawdownWrap svg {
+  width: 100%;
+  height: 118px;
+  overflow: visible;
+  border-bottom: 1px solid #d5dde8;
+}
+
+.miniChartHeader,
+.statStrip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.miniChartHeader {
+  color: #687588;
+  font-size: 12px;
+}
+
+.miniChartHeader strong {
+  color: #c53030;
+}
+
+.zeroLine {
+  stroke: #cbd5e1;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.drawdownArea {
+  fill: rgba(197, 48, 48, 0.1);
+  stroke: none;
+}
+
+.drawdownLine {
+  fill: none;
+  stroke: #c53030;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.4;
+  vector-effect: non-scaling-stroke;
+}
+
+.statStrip {
+  flex-wrap: wrap;
+  padding: 10px 0 0;
+  color: #687588;
+  font-size: 12px;
+}
+
+.statStrip span {
+  display: inline-flex;
+  gap: 5px;
+  min-height: 24px;
+  align-items: center;
+}
+
+.statStrip strong {
+  color: #18212f;
+  font-size: 13px;
+}
+
+.emptyChart {
+  display: grid;
+  place-items: center;
+  min-height: 300px;
+  border-bottom: 1px solid #d5dde8;
+  color: #687588;
+  font-size: 13px;
+}
+
+.emptyChart.compact {
+  min-height: 118px;
+}
+
 .signalList,
 .improvementList {
   display: grid;

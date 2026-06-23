@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime
 from decimal import Decimal, ROUND_DOWN
 from typing import Any, Literal
@@ -122,6 +122,7 @@ class Trade:
 @dataclass(frozen=True)
 class BacktestResult:
     symbol: str
+    strategy_name: str
     start: datetime
     end: datetime
     initial_cash: Decimal
@@ -132,10 +133,21 @@ class BacktestResult:
     trades: tuple[Trade, ...]
     equity_curve: tuple[tuple[datetime, Decimal], ...]
     parameters: dict[str, Any]
+    metrics: dict[str, Decimal | int | str] = field(default_factory=dict)
+    drawdown_curve: tuple[tuple[datetime, Decimal], ...] = ()
+    return_curve: tuple[tuple[datetime, Decimal], ...] = ()
+    price_curve: tuple[tuple[datetime, Decimal], ...] = ()
+
+    @property
+    def result_id(self) -> str:
+        clean_strategy = self.strategy_name.lower().replace(" ", "-")
+        return f"{self.symbol}:{clean_strategy}"
 
     def to_dict(self) -> dict[str, Any]:
         return {
+            "id": self.result_id,
             "symbol": self.symbol,
+            "strategyName": self.strategy_name,
             "start": self.start.date().isoformat(),
             "end": self.end.date().isoformat(),
             "initialCash": decimal_str(self.initial_cash, 2),
@@ -149,7 +161,20 @@ class BacktestResult:
                 {"date": ts.date().isoformat(), "equity": decimal_str(equity, 2)}
                 for ts, equity in self.equity_curve
             ],
+            "drawdownCurve": [
+                {"date": ts.date().isoformat(), "drawdownPct": decimal_str(drawdown, 4)}
+                for ts, drawdown in self.drawdown_curve
+            ],
+            "returnCurve": [
+                {"date": ts.date().isoformat(), "returnPct": decimal_str(return_pct, 4)}
+                for ts, return_pct in self.return_curve
+            ],
+            "priceCurve": [
+                {"date": ts.date().isoformat(), "close": decimal_str(close, 4)}
+                for ts, close in self.price_curve
+            ],
             "parameters": self.parameters,
+            "metrics": {key: _metric_value(value) for key, value in self.metrics.items()},
         }
 
 
@@ -168,3 +193,8 @@ class Improvement:
             "parameters": self.parameters,
         }
 
+
+def _metric_value(value: Decimal | int | str) -> str | int:
+    if isinstance(value, Decimal):
+        return decimal_str(value, 4)
+    return value
