@@ -10,7 +10,7 @@ from .account import cash_by_symbol, fetch_account_snapshot, simulated_account_s
 from .backtest import find_improvements, run_backtest, run_strategy_suite
 from .broker import TradingBroker, build_trade_decisions
 from .config import load_config
-from .data import load_candles_csv, write_candles_csv
+from .data import drop_today_candles, load_candles_csv, write_candles_csv
 from .env import env_status, load_dotenv
 from .models import Candle
 from .reporting import write_dashboard_json, write_markdown_report
@@ -20,6 +20,10 @@ from .toss_client import TossInvestClient
 
 def _load_config(args: argparse.Namespace):
     return load_config(args.config)
+
+
+def _strategy_input_candles(candles_by_symbol: dict[str, list[Candle]], args: argparse.Namespace):
+    return candles_by_symbol if getattr(args, "include_today", False) else drop_today_candles(candles_by_symbol)
 
 
 def _collect_results(config, candles_by_symbol: dict[str, list[Candle]]):
@@ -40,7 +44,7 @@ def _collect_results(config, candles_by_symbol: dict[str, list[Candle]]):
 
 def cmd_backtest(args: argparse.Namespace) -> int:
     config = _load_config(args)
-    candles_by_symbol = load_candles_csv(args.data)
+    candles_by_symbol = _strategy_input_candles(load_candles_csv(args.data), args)
     results, improvements, signals = _collect_results(config, candles_by_symbol)
     generated_at = datetime.now().astimezone()
     if args.out:
@@ -82,6 +86,7 @@ def cmd_daily(args: argparse.Namespace) -> int:
     else:
         candles_by_symbol = load_candles_csv(args.data)
 
+    candles_by_symbol = _strategy_input_candles(candles_by_symbol, args)
     results, improvements, signals = _collect_results(config, candles_by_symbol)
     account = (
         fetch_account_snapshot(client, config, symbols=config.strategy.symbols)
@@ -136,6 +141,7 @@ def cmd_trade(args: argparse.Namespace) -> int:
         candles_by_symbol = _fetch_candles(market_client, config)
     else:
         candles_by_symbol = load_candles_csv(args.data)
+    candles_by_symbol = _strategy_input_candles(candles_by_symbol, args)
     strategies = build_strategy_variants(config.strategy)
     primary_strategy = strategies[0] if strategies else MovingAverageRsiStrategy(config.strategy)
     signals = [primary_strategy.signal(symbol, candles_by_symbol[symbol]) for symbol in config.strategy.symbols]
@@ -449,6 +455,7 @@ def build_parser() -> argparse.ArgumentParser:
     backtest.add_argument("--data", default="data/sample_candles.csv")
     backtest.add_argument("--out", default="reports/backtest.md")
     backtest.add_argument("--json", default="reports/backtest.json")
+    backtest.add_argument("--include-today", action="store_true")
     backtest.set_defaults(func=cmd_backtest)
 
     daily = subparsers.add_parser("daily")
@@ -458,6 +465,7 @@ def build_parser() -> argparse.ArgumentParser:
     daily.add_argument("--save-data")
     daily.add_argument("--report-dir", default="reports")
     daily.add_argument("--dashboard", default="web/public/dashboard-data.json")
+    daily.add_argument("--include-today", action="store_true")
     daily.set_defaults(func=cmd_daily)
 
     trade = subparsers.add_parser("trade")
@@ -465,6 +473,7 @@ def build_parser() -> argparse.ArgumentParser:
     trade.add_argument("--live-data", action="store_true")
     trade.add_argument("--account-snapshot", action="store_true")
     trade.add_argument("--execute", action="store_true")
+    trade.add_argument("--include-today", action="store_true")
     trade.set_defaults(func=cmd_trade)
 
     account = subparsers.add_parser("account")

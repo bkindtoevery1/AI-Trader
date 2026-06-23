@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import csv
 from collections import defaultdict
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 
 from .models import Candle, to_decimal
@@ -27,6 +27,24 @@ def load_candles_csv(path: str | Path) -> dict[str, list[Candle]]:
                 )
             )
     return {symbol: sorted(items, key=lambda item: item.timestamp) for symbol, items in candles.items()}
+
+
+def filter_candles_before_date(
+    candles_by_symbol: dict[str, list[Candle]],
+    cutoff_date: date,
+) -> dict[str, list[Candle]]:
+    return {
+        symbol: [candle for candle in candles if candle.timestamp.date() < cutoff_date]
+        for symbol, candles in candles_by_symbol.items()
+    }
+
+
+def drop_today_candles(
+    candles_by_symbol: dict[str, list[Candle]],
+    *,
+    today: date | None = None,
+) -> dict[str, list[Candle]]:
+    return filter_candles_before_date(candles_by_symbol, today or datetime.now().astimezone().date())
 
 
 def write_candles_csv(path: str | Path, candles_by_symbol: dict[str, list[Candle]]) -> None:

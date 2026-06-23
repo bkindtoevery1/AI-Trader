@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T19:24:37.506871+09:00",
+  "generatedAt": "2026-06-23T19:33:06.478081+09:00",
   "mode": "dry-run",
   "status": "ready",
   "summary": {
@@ -11,7 +11,7 @@
     "bestStrategy": "bdsp-pro3",
     "bestResultId": "SOXL:bdsp-pro3",
     "bestReturnPct": "1153.6695",
-    "tradeCount": 7150,
+    "tradeCount": 7141,
     "maxDrawdownPct": "92.0547",
     "strategyResultCount": 6
   },
@@ -21,13 +21,13 @@
       "symbol": "SOXL",
       "strategyName": "bdsp-pro1",
       "start": "2021-06-23",
-      "end": "2026-06-23",
+      "end": "2026-06-22",
       "initialCash": "10000000",
       "finalEquity": "59773142.2",
       "totalReturnPct": "497.7314",
       "maxDrawdownPct": "19.0366",
-      "sharpe": "1.4682",
-      "tradeCount": 1161,
+      "sharpe": "1.4687",
+      "tradeCount": 1160,
       "trades": [
         {
           "symbol": "SOXL",
@@ -11628,16 +11628,6 @@
           "fee": "0",
           "cashAfter": "59773142.2",
           "reason": "Pro1 tier 1 LOC sell; close 233.86 >= limit 226.21"
-        },
-        {
-          "symbol": "SOXL",
-          "side": "BUY",
-          "timestamp": "2026-06-23T13:00:00+09:00",
-          "price": "249.34",
-          "quantity": "9938",
-          "fee": "0",
-          "cashAfter": "57295201.28",
-          "reason": "Pro1 tier 1 LOC buy; previous close 300.77, limit 300.73"
         }
       ],
       "equityCurve": [
@@ -16655,10 +16645,6 @@
         },
         {
           "date": "2026-06-22",
-          "equity": "59773142.2"
-        },
-        {
-          "date": "2026-06-23",
           "equity": "59773142.2"
         }
       ],
@@ -21678,10 +21664,6 @@
         {
           "date": "2026-06-22",
           "drawdownPct": "0"
-        },
-        {
-          "date": "2026-06-23",
-          "drawdownPct": "0"
         }
       ],
       "returnCurve": [
@@ -26699,10 +26681,6 @@
         },
         {
           "date": "2026-06-22",
-          "returnPct": "0"
-        },
-        {
-          "date": "2026-06-23",
           "returnPct": "0"
         }
       ],
@@ -31722,10 +31700,6 @@
         {
           "date": "2026-06-22",
           "close": "300.77"
-        },
-        {
-          "date": "2026-06-23",
-          "close": "249.34"
         }
       ],
       "parameters": {
@@ -31754,16 +31728,16 @@
         "bestTradePct": "42.4557",
         "worstTradePct": "-30.7534",
         "profitFactor": "3.6826",
-        "cagrPct": "43.2333",
-        "volatilityPct": "26.8245",
-        "sortino": "1.5477",
-        "calmar": "2.271",
-        "exposurePct": "65.4183",
-        "buyHoldReturnPct": "538.5147",
+        "cagrPct": "43.2744",
+        "volatilityPct": "26.8351",
+        "sortino": "1.5489",
+        "calmar": "2.2732",
+        "exposurePct": "65.3907",
+        "buyHoldReturnPct": "670.2176",
         "bestEquity": "59773142.2",
         "worstEquity": "8949888.25",
         "completedCycles": 213,
-        "activeTiers": 1,
+        "activeTiers": 0,
         "tierCount": 7
       }
     },
@@ -31772,13 +31746,13 @@
       "symbol": "SOXL",
       "strategyName": "bdsp-pro2",
       "start": "2021-06-23",
-      "end": "2026-06-23",
+      "end": "2026-06-22",
       "initialCash": "10000000",
       "finalEquity": "106003732.61",
       "totalReturnPct": "960.0373",
       "maxDrawdownPct": "38.5248",
-      "sharpe": "1.3548",
-      "tradeCount": 1159,
+      "sharpe": "1.3554",
+      "tradeCount": 1158,
       "trades": [
         {
           "symbol": "SOXL",
@@ -43359,16 +43333,6 @@
           "fee": "0",
           "cashAfter": "106003732.61",
           "reason": "Pro2 tier 1 LOC sell; close 233.86 >= limit 229.58"
-        },
-        {
-          "symbol": "SOXL",
-          "side": "BUY",
-          "timestamp": "2026-06-23T13:00:00+09:00",
-          "price": "249.34",
-          "quantity": "35248",
-          "fee": "0",
-          "cashAfter": "97214996.29",
-          "reason": "Pro2 tier 1 LOC buy; previous close 300.77, limit 300.73"
         }
       ],
       "equityCurve": [
@@ -48386,10 +48350,6 @@
         },
         {
           "date": "2026-06-22",
-          "equity": "106003732.61"
-        },
-        {
-          "date": "2026-06-23",
           "equity": "106003732.61"
         }
       ],
@@ -53409,10 +53369,6 @@
         {
           "date": "2026-06-22",
           "drawdownPct": "0"
-        },
-        {
-          "date": "2026-06-23",
-          "drawdownPct": "0"
         }
       ],
       "returnCurve": [
@@ -58430,10 +58386,6 @@
         },
         {
           "date": "2026-06-22",
-          "returnPct": "0"
-        },
-        {
-          "date": "2026-06-23",
           "returnPct": "0"
         }
       ],
@@ -63453,10 +63405,6 @@
         {
           "date": "2026-06-22",
           "close": "300.77"
-        },
-        {
-          "date": "2026-06-23",
-          "close": "249.34"
         }
       ],
       "parameters": {
@@ -63485,16 +63433,16 @@
         "bestTradePct": "40.7792",
         "worstTradePct": "-43.8924",
         "profitFactor": "3.1475",
-        "cagrPct": "60.7109",
-        "volatilityPct": "41.0122",
-        "sortino": "1.3212",
-        "calmar": "1.5758",
-        "exposurePct": "69.8804",
-        "buyHoldReturnPct": "538.5147",
+        "cagrPct": "60.7717",
+        "volatilityPct": "41.0285",
+        "sortino": "1.3222",
+        "calmar": "1.5774",
+        "exposurePct": "69.8564",
+        "buyHoldReturnPct": "670.2176",
         "bestEquity": "106003732.61",
         "worstEquity": "8697501.14",
         "completedCycles": 183,
-        "activeTiers": 1,
+        "activeTiers": 0,
         "tierCount": 7
       }
     },
@@ -63503,13 +63451,13 @@
       "symbol": "SOXL",
       "strategyName": "bdsp-pro3",
       "start": "2021-06-23",
-      "end": "2026-06-23",
+      "end": "2026-06-22",
       "initialCash": "10000000",
       "finalEquity": "125366957.63",
       "totalReturnPct": "1153.6695",
       "maxDrawdownPct": "39.6416",
-      "sharpe": "1.3504",
-      "tradeCount": 1123,
+      "sharpe": "1.3509",
+      "tradeCount": 1122,
       "trades": [
         {
           "symbol": "SOXL",
@@ -74730,16 +74678,6 @@
           "fee": "0",
           "cashAfter": "125366957.63",
           "reason": "Pro3 tier 1 LOC sell; close 233.86 >= limit 230.71"
-        },
-        {
-          "symbol": "SOXL",
-          "side": "BUY",
-          "timestamp": "2026-06-23T13:00:00+09:00",
-          "price": "249.34",
-          "quantity": "69541",
-          "fee": "0",
-          "cashAfter": "108027604.69",
-          "reason": "Pro3 tier 1 LOC buy; previous close 300.77, limit 300.46"
         }
       ],
       "equityCurve": [
@@ -79757,10 +79695,6 @@
         },
         {
           "date": "2026-06-22",
-          "equity": "125366957.63"
-        },
-        {
-          "date": "2026-06-23",
           "equity": "125366957.63"
         }
       ],
@@ -84780,10 +84714,6 @@
         {
           "date": "2026-06-22",
           "drawdownPct": "0"
-        },
-        {
-          "date": "2026-06-23",
-          "drawdownPct": "0"
         }
       ],
       "returnCurve": [
@@ -89801,10 +89731,6 @@
         },
         {
           "date": "2026-06-22",
-          "returnPct": "0"
-        },
-        {
-          "date": "2026-06-23",
           "returnPct": "0"
         }
       ],
@@ -94824,10 +94750,6 @@
         {
           "date": "2026-06-22",
           "close": "300.77"
-        },
-        {
-          "date": "2026-06-23",
-          "close": "249.34"
         }
       ],
       "parameters": {
@@ -94856,16 +94778,16 @@
         "bestTradePct": "36.8728",
         "worstTradePct": "-36.3275",
         "profitFactor": "3.6626",
-        "cagrPct": "66.2216",
-        "volatilityPct": "44.7435",
-        "sortino": "1.3421",
-        "calmar": "1.6705",
-        "exposurePct": "73.227",
-        "buyHoldReturnPct": "538.5147",
+        "cagrPct": "66.289",
+        "volatilityPct": "44.7613",
+        "sortino": "1.3431",
+        "calmar": "1.6722",
+        "exposurePct": "73.2057",
+        "buyHoldReturnPct": "670.2176",
         "bestEquity": "125366957.63",
         "worstEquity": "8712236.21",
         "completedCycles": 161,
-        "activeTiers": 1,
+        "activeTiers": 0,
         "tierCount": 7
       }
     },
@@ -94874,13 +94796,13 @@
       "symbol": "SOXS",
       "strategyName": "bdsp-pro1",
       "start": "2021-06-23",
-      "end": "2026-06-23",
+      "end": "2026-06-22",
       "initialCash": "10000000",
-      "finalEquity": "4611946.77",
-      "totalReturnPct": "-53.8805",
+      "finalEquity": "4189897.58",
+      "totalReturnPct": "-58.101",
       "maxDrawdownPct": "75.5279",
-      "sharpe": "-0.3152",
-      "tradeCount": 1275,
+      "sharpe": "-0.3813",
+      "tradeCount": 1273,
       "trades": [
         {
           "symbol": "SOXS",
@@ -107611,26 +107533,6 @@
           "fee": "0",
           "cashAfter": "1586603.48",
           "reason": "Pro1 tier 5 LOC buy; previous close 3.59, limit 3.58"
-        },
-        {
-          "symbol": "SOXS",
-          "side": "SELL",
-          "timestamp": "2026-06-23T13:00:00+09:00",
-          "price": "3.835",
-          "quantity": "202570",
-          "fee": "0",
-          "cashAfter": "2363459.43",
-          "reason": "Pro1 tier 4 LOC sell; close 3.835 >= limit 3.59"
-        },
-        {
-          "symbol": "SOXS",
-          "side": "SELL",
-          "timestamp": "2026-06-23T13:00:00+09:00",
-          "price": "3.835",
-          "quantity": "314747",
-          "fee": "0",
-          "cashAfter": "3570514.175",
-          "reason": "Pro1 tier 5 LOC sell; close 3.835 >= limit 3.30"
         }
       ],
       "equityCurve": [
@@ -112649,10 +112551,6 @@
         {
           "date": "2026-06-22",
           "equity": "4189897.58"
-        },
-        {
-          "date": "2026-06-23",
-          "equity": "4611946.77"
         }
       ],
       "drawdownCurve": [
@@ -117671,10 +117569,6 @@
         {
           "date": "2026-06-22",
           "drawdownPct": "-73.71"
-        },
-        {
-          "date": "2026-06-23",
-          "drawdownPct": "-71.0618"
         }
       ],
       "returnCurve": [
@@ -122693,10 +122587,6 @@
         {
           "date": "2026-06-22",
           "returnPct": "-3.1773"
-        },
-        {
-          "date": "2026-06-23",
-          "returnPct": "10.073"
         }
       ],
       "priceCurve": [
@@ -127715,10 +127605,6 @@
         {
           "date": "2026-06-22",
           "close": "3.3"
-        },
-        {
-          "date": "2026-06-23",
-          "close": "3.835"
         }
       ],
       "parameters": {
@@ -127741,22 +127627,22 @@
         "executionModel": "daily close LOC/MOC historical rule evaluation"
       },
       "metrics": {
-        "closedTrades": 636,
-        "winRatePct": "60.3773",
-        "avgTradeReturnPct": "0.7584",
+        "closedTrades": 634,
+        "winRatePct": "60.2523",
+        "avgTradeReturnPct": "0.7541",
         "bestTradePct": "28.8872",
         "worstTradePct": "-46.8618",
-        "profitFactor": "0.8222",
-        "cagrPct": "-14.4036",
-        "volatilityPct": "32.5379",
-        "sortino": "-0.2857",
-        "calmar": "-0.1907",
-        "exposurePct": "75.6175",
-        "buyHoldReturnPct": "-99.9765",
+        "profitFactor": "0.8208",
+        "cagrPct": "-16.0504",
+        "volatilityPct": "32.2328",
+        "sortino": "-0.3423",
+        "calmar": "-0.2125",
+        "exposurePct": "75.598",
+        "buyHoldReturnPct": "-99.9798",
         "bestEquity": "15937275.4",
         "worstEquity": "3900182.58",
         "completedCycles": 154,
-        "activeTiers": 3,
+        "activeTiers": 5,
         "tierCount": 7
       }
     },
@@ -127765,13 +127651,13 @@
       "symbol": "SOXS",
       "strategyName": "bdsp-pro2",
       "start": "2021-06-23",
-      "end": "2026-06-23",
+      "end": "2026-06-22",
       "initialCash": "10000000",
-      "finalEquity": "2228274.26",
-      "totalReturnPct": "-77.7172",
+      "finalEquity": "1989207.37",
+      "totalReturnPct": "-80.1079",
       "maxDrawdownPct": "88.289",
-      "sharpe": "-0.421",
-      "tradeCount": 1235,
+      "sharpe": "-0.4767",
+      "tradeCount": 1233,
       "trades": [
         {
           "symbol": "SOXS",
@@ -140102,26 +139988,6 @@
           "fee": "0",
           "cashAfter": "514589.17",
           "reason": "Pro2 tier 5 LOC buy; previous close 3.59, limit 3.58"
-        },
-        {
-          "symbol": "SOXS",
-          "side": "SELL",
-          "timestamp": "2026-06-23T13:00:00+09:00",
-          "price": "3.835",
-          "quantity": "125008",
-          "fee": "0",
-          "cashAfter": "993994.85",
-          "reason": "Pro2 tier 4 LOC sell; close 3.835 >= limit 3.64"
-        },
-        {
-          "symbol": "SOXS",
-          "side": "SELL",
-          "timestamp": "2026-06-23T13:00:00+09:00",
-          "price": "3.835",
-          "quantity": "124309",
-          "fee": "0",
-          "cashAfter": "1470719.865",
-          "reason": "Pro2 tier 5 LOC sell; close 3.835 >= limit 3.34"
         }
       ],
       "equityCurve": [
@@ -145140,10 +145006,6 @@
         {
           "date": "2026-06-22",
           "equity": "1989207.37"
-        },
-        {
-          "date": "2026-06-23",
-          "equity": "2228274.26"
         }
       ],
       "drawdownCurve": [
@@ -150162,10 +150024,6 @@
         {
           "date": "2026-06-22",
           "drawdownPct": "-87.519"
-        },
-        {
-          "date": "2026-06-23",
-          "drawdownPct": "-86.019"
         }
       ],
       "returnCurve": [
@@ -155184,10 +155042,6 @@
         {
           "date": "2026-06-22",
           "returnPct": "-4.491"
-        },
-        {
-          "date": "2026-06-23",
-          "returnPct": "12.0181"
         }
       ],
       "priceCurve": [
@@ -160206,10 +160060,6 @@
         {
           "date": "2026-06-22",
           "close": "3.3"
-        },
-        {
-          "date": "2026-06-23",
-          "close": "3.835"
         }
       ],
       "parameters": {
@@ -160232,22 +160082,22 @@
         "executionModel": "daily close LOC/MOC historical rule evaluation"
       },
       "metrics": {
-        "closedTrades": 616,
-        "winRatePct": "59.4155",
-        "avgTradeReturnPct": "-0.4824",
+        "closedTrades": 614,
+        "winRatePct": "59.6091",
+        "avgTradeReturnPct": "-0.4803",
         "bestTradePct": "28.7071",
         "worstTradePct": "-44.5252",
-        "profitFactor": "0.8018",
-        "cagrPct": "-26.0446",
-        "volatilityPct": "46.229",
-        "sortino": "-0.3861",
-        "calmar": "-0.2949",
-        "exposurePct": "79.6812",
-        "buyHoldReturnPct": "-99.9765",
+        "profitFactor": "0.802",
+        "cagrPct": "-27.7309",
+        "volatilityPct": "45.9277",
+        "sortino": "-0.4344",
+        "calmar": "-0.314",
+        "exposurePct": "79.665",
+        "buyHoldReturnPct": "-99.9798",
         "bestEquity": "15937960.6",
         "worstEquity": "1866493.79",
         "completedCycles": 134,
-        "activeTiers": 3,
+        "activeTiers": 5,
         "tierCount": 7
       }
     },
@@ -160256,13 +160106,13 @@
       "symbol": "SOXS",
       "strategyName": "bdsp-pro3",
       "start": "2021-06-23",
-      "end": "2026-06-23",
+      "end": "2026-06-22",
       "initialCash": "10000000",
-      "finalEquity": "1360056.52",
-      "totalReturnPct": "-86.3994",
+      "finalEquity": "1226681.02",
+      "totalReturnPct": "-87.7331",
       "maxDrawdownPct": "92.0547",
-      "sharpe": "-0.5208",
-      "tradeCount": 1197,
+      "sharpe": "-0.566",
+      "tradeCount": 1195,
       "trades": [
         {
           "symbol": "SOXS",
@@ -172213,26 +172063,6 @@
           "fee": "0",
           "cashAfter": "403991.02",
           "reason": "Pro3 tier 5 LOC buy; previous close 3.59, limit 3.58"
-        },
-        {
-          "symbol": "SOXS",
-          "side": "SELL",
-          "timestamp": "2026-06-23T13:00:00+09:00",
-          "price": "3.835",
-          "quantity": "52136",
-          "fee": "0",
-          "cashAfter": "603932.58",
-          "reason": "Pro3 tier 4 LOC sell; close 3.835 >= limit 3.66"
-        },
-        {
-          "symbol": "SOXS",
-          "side": "SELL",
-          "timestamp": "2026-06-23T13:00:00+09:00",
-          "price": "3.835",
-          "quantity": "64806",
-          "fee": "0",
-          "cashAfter": "852463.59",
-          "reason": "Pro3 tier 5 LOC sell; close 3.835 >= limit 3.36"
         }
       ],
       "equityCurve": [
@@ -177251,10 +177081,6 @@
         {
           "date": "2026-06-22",
           "equity": "1226681.02"
-        },
-        {
-          "date": "2026-06-23",
-          "equity": "1360056.52"
         }
       ],
       "drawdownCurve": [
@@ -182273,10 +182099,6 @@
         {
           "date": "2026-06-22",
           "drawdownPct": "-90.67"
-        },
-        {
-          "date": "2026-06-23",
-          "drawdownPct": "-89.6556"
         }
       ],
       "returnCurve": [
@@ -187295,10 +187117,6 @@
         {
           "date": "2026-06-22",
           "returnPct": "-4.1793"
-        },
-        {
-          "date": "2026-06-23",
-          "returnPct": "10.8728"
         }
       ],
       "priceCurve": [
@@ -192317,10 +192135,6 @@
         {
           "date": "2026-06-22",
           "close": "3.3"
-        },
-        {
-          "date": "2026-06-23",
-          "close": "3.835"
         }
       ],
       "parameters": {
@@ -192343,22 +192157,22 @@
         "executionModel": "daily close LOC/MOC historical rule evaluation"
       },
       "metrics": {
-        "closedTrades": 597,
-        "winRatePct": "50.4187",
-        "avgTradeReturnPct": "-1.4479",
+        "closedTrades": 595,
+        "winRatePct": "50.5882",
+        "avgTradeReturnPct": "-1.4397",
         "bestTradePct": "44.618",
         "worstTradePct": "-59.5425",
-        "profitFactor": "0.7746",
-        "cagrPct": "-33.0296",
-        "volatilityPct": "51.5599",
-        "sortino": "-0.4879",
-        "calmar": "-0.3588",
-        "exposurePct": "83.6653",
-        "buyHoldReturnPct": "-99.9765",
+        "profitFactor": "0.775",
+        "cagrPct": "-34.4265",
+        "volatilityPct": "51.3446",
+        "sortino": "-0.528",
+        "calmar": "-0.3739",
+        "exposurePct": "83.6523",
+        "buyHoldReturnPct": "-99.9798",
         "bestEquity": "13147836",
         "worstEquity": "1044632.6",
         "completedCycles": 113,
-        "activeTiers": 3,
+        "activeTiers": 5,
         "tierCount": 7
       }
     }
@@ -192368,16 +192182,16 @@
       "symbol": "SOXL",
       "side": "HOLD",
       "score": 0.0,
-      "price": "249.34",
-      "timestamp": "2026-06-23T13:00:00+09:00",
+      "price": "300.77",
+      "timestamp": "2026-06-22T13:00:00+09:00",
       "reason": "Pro1 uses stateful tier backtest logic"
     },
     {
       "symbol": "SOXS",
       "side": "HOLD",
       "score": 0.0,
-      "price": "3.835",
-      "timestamp": "2026-06-23T13:00:00+09:00",
+      "price": "3.3",
+      "timestamp": "2026-06-22T13:00:00+09:00",
       "reason": "Pro1 uses stateful tier backtest logic"
     }
   ],
@@ -192414,7 +192228,7 @@
     "priceOffsetBps": "10"
   },
   "account": {
-    "generatedAt": "2026-06-23T19:24:37.506858+09:00",
+    "generatedAt": "2026-06-23T19:33:06.478074+09:00",
     "source": "unavailable",
     "buyingPower": {},
     "holdings": {},

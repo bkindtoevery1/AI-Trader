@@ -5,7 +5,7 @@ from decimal import Decimal
 from aitrader.backtest import find_improvements, run_backtest, run_strategy_suite
 from aitrader.broker import build_trade_decisions
 from aitrader.config import load_config
-from aitrader.data import load_candles_csv, write_candles_csv
+from aitrader.data import drop_today_candles, load_candles_csv, write_candles_csv
 from aitrader.models import Candle
 from aitrader.reporting import write_dashboard_json, write_markdown_report
 from aitrader.strategy import DipSellPeakStrategy, MovingAverageRsiStrategy, build_strategy_variants
@@ -122,6 +122,19 @@ def test_candle_csv_round_trip(tmp_path):
     assert list(reloaded) == ["AAPL"]
     assert len(reloaded["AAPL"]) == 3
     assert reloaded["AAPL"][0].close == candles_by_symbol["AAPL"][0].close
+
+
+def test_drop_today_candles_uses_previous_completed_date_only():
+    candles_by_symbol = {
+        "SOXL": [
+            _candle("SOXL", 22, "300.77"),
+            _candle("SOXL", 23, "249.34"),
+        ]
+    }
+
+    filtered = drop_today_candles(candles_by_symbol, today=datetime(2024, 1, 23).date())
+
+    assert [candle.timestamp.day for candle in filtered["SOXL"]] == [22]
 
 
 def _candle(symbol: str, day: int, close: str) -> Candle:
