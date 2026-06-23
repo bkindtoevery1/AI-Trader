@@ -1,5 +1,5 @@
 strategy:
-  name: ma-rsi-core
+  name: buy-dip-sell-peak
   symbols:
     - "SOXL"
     - "SOXS"
@@ -11,28 +11,15 @@ strategy:
   rsi_buy_below: 62
   rsi_sell_above: 72
   variants:
-    - name: ma-rsi-core
-      type: ma_rsi
-      short_window: 5
-      long_window: 20
-      rsi_period: 14
-      rsi_buy_below: 62
-      rsi_sell_above: 72
-    - name: sma-trend-fast
-      type: sma_crossover
-      short_window: 5
-      long_window: 20
-    - name: sma-trend-slow
-      type: sma_crossover
-      short_window: 10
-      long_window: 40
-    - name: rsi-mean-reversion
-      type: rsi_mean_reversion
-      rsi_period: 14
-      rsi_buy_below: 35
-      rsi_sell_above: 65
-    - name: buy-and-hold
-      type: buy_and_hold
+    - name: bdsp-pro1
+      type: dip_sell_peak
+      pro: Pro1
+    - name: bdsp-pro2
+      type: dip_sell_peak
+      pro: Pro2
+    - name: bdsp-pro3
+      type: dip_sell_peak
+      pro: Pro3
 
 risk:
   initial_cash: "10000000"

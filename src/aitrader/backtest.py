@@ -1,12 +1,29 @@
 from __future__ import annotations
 
-from dataclasses import replace
+from dataclasses import dataclass, replace
 from decimal import Decimal, ROUND_DOWN
 from math import isfinite, sqrt
 
 from .config import AppConfig
 from .models import BacktestResult, Candle, Improvement, Trade
-from .strategy import MovingAverageRsiStrategy, TradingStrategy, build_strategy_variants
+from .strategy import DipSellPeakStrategy, MovingAverageRsiStrategy, TradingStrategy, build_strategy_variants
+
+
+@dataclass
+class _TierPosition:
+    tier: int
+    buy_price: Decimal
+    quantity: Decimal
+    buy_index: int
+    sell_limit_price: Decimal
+
+
+@dataclass(frozen=True)
+class _PendingTierBuy:
+    tier: int
+    amount: Decimal
+    limit_price: Decimal
+    quantity: Decimal
 
 
 def _fee(amount: Decimal, fee_bps: Decimal) -> Decimal:
@@ -22,6 +39,16 @@ def _quantity_for_budget(budget: Decimal, price: Decimal) -> Decimal:
     if price <= 0:
         return Decimal("0")
     return (budget / price).quantize(Decimal("0.000001"), rounding=ROUND_DOWN)
+
+
+def _floor_price(price: Decimal) -> Decimal:
+    return price.quantize(Decimal("0.01"), rounding=ROUND_DOWN)
+
+
+def _whole_share_quantity(amount: Decimal, price: Decimal) -> Decimal:
+    if amount <= 0 or price <= 0:
+        return Decimal("0")
+    return (amount / price).quantize(Decimal("1"), rounding=ROUND_DOWN)
 
 
 def _max_drawdown(curve: list[tuple[object, Decimal]]) -> Decimal:
@@ -168,6 +195,9 @@ def run_backtest(
 ) -> BacktestResult:
     ordered = sorted(candles, key=lambda item: item.timestamp)
     active_strategy = strategy or MovingAverageRsiStrategy(config.strategy)
+    if isinstance(active_strategy, DipSellPeakStrategy):
+        return _run_dip_sell_peak_backtest(symbol, ordered, config, active_strategy)
+
     strategy_config = getattr(active_strategy, "config", config.strategy)
     warmup_window = active_strategy.warmup_window
     if len(ordered) < warmup_window + 1:
@@ -260,6 +290,220 @@ def run_backtest(
         return_curve=tuple(_return_curve(equity_curve)),
         price_curve=tuple((candle.timestamp, candle.close) for candle in ordered),
     )
+
+
+def _run_dip_sell_peak_backtest(
+    symbol: str,
+    ordered: list[Candle],
+    config: AppConfig,
+    strategy: DipSellPeakStrategy,
+) -> BacktestResult:
+    if len(ordered) < 2:
+        raise ValueError(f"{symbol} needs at least 2 candles")
+
+    cash = config.risk.initial_cash
+    cycle_initial_cash = cash
+    has_traded_in_cycle = False
+    reset_cycle_next_day = False
+    completed_cycles = 0
+    active_tiers: dict[int, _TierPosition] = {}
+    trades: list[Trade] = []
+    equity_curve: list[tuple[object, Decimal]] = [(ordered[0].timestamp, cash)]
+    exposure_days = 0
+
+    for index in range(1, len(ordered)):
+        candle = ordered[index]
+        previous = ordered[index - 1]
+        if reset_cycle_next_day:
+            cycle_initial_cash = cash
+            has_traded_in_cycle = False
+            reset_cycle_next_day = False
+
+        pending_buy = _pending_dip_sell_peak_buy(
+            active_tiers=active_tiers,
+            cash=cash,
+            cycle_initial_cash=cycle_initial_cash,
+            previous_close=previous.close,
+            strategy=strategy,
+        )
+
+        stop_loss_tiers = {
+            tier
+            for tier, position in active_tiers.items()
+            if index - position.buy_index >= strategy.stop_loss_days
+        }
+
+        for tier in sorted(list(active_tiers)):
+            if tier in stop_loss_tiers:
+                continue
+            position = active_tiers[tier]
+            if candle.close < position.sell_limit_price:
+                continue
+            gross = position.quantity * candle.close
+            cash += gross
+            trades.append(
+                Trade(
+                    symbol,
+                    "SELL",
+                    candle.timestamp,
+                    candle.close,
+                    position.quantity,
+                    Decimal("0"),
+                    cash,
+                    (
+                        f"{strategy.pro} tier {tier} LOC sell; "
+                        f"close {candle.close} >= limit {position.sell_limit_price}"
+                    ),
+                )
+            )
+            del active_tiers[tier]
+
+        for tier in sorted(stop_loss_tiers):
+            position = active_tiers.get(tier)
+            if position is None:
+                continue
+            gross = position.quantity * candle.close
+            cash += gross
+            trades.append(
+                Trade(
+                    symbol,
+                    "SELL",
+                    candle.timestamp,
+                    candle.close,
+                    position.quantity,
+                    Decimal("0"),
+                    cash,
+                    f"{strategy.pro} tier {tier} stop-loss MOC after {index - position.buy_index} days",
+                )
+            )
+            del active_tiers[tier]
+
+        if (
+            pending_buy is not None
+            and candle.close <= pending_buy.limit_price
+            and pending_buy.quantity * candle.close <= cash
+        ):
+            gross = pending_buy.quantity * candle.close
+            cash -= gross
+            sell_limit_price = _floor_price(candle.close * (Decimal("1") + strategy.sell_threshold))
+            active_tiers[pending_buy.tier] = _TierPosition(
+                tier=pending_buy.tier,
+                buy_price=candle.close,
+                quantity=pending_buy.quantity,
+                buy_index=index,
+                sell_limit_price=sell_limit_price,
+            )
+            has_traded_in_cycle = True
+            trades.append(
+                Trade(
+                    symbol,
+                    "BUY",
+                    candle.timestamp,
+                    candle.close,
+                    pending_buy.quantity,
+                    Decimal("0"),
+                    cash,
+                    (
+                        f"{strategy.pro} tier {pending_buy.tier} LOC buy; "
+                        f"previous close {previous.close}, limit {pending_buy.limit_price}"
+                    ),
+                )
+            )
+
+        if has_traded_in_cycle and not active_tiers:
+            completed_cycles += 1
+            reset_cycle_next_day = True
+
+        if active_tiers:
+            exposure_days += 1
+        equity_curve.append((candle.timestamp, cash + _tier_market_value(active_tiers, candle.close)))
+
+    final_equity = equity_curve[-1][1]
+    total_return = (final_equity - config.risk.initial_cash) / config.risk.initial_cash * Decimal("100")
+    period_returns = _period_returns(equity_curve)
+    max_drawdown = _max_drawdown(equity_curve)
+    cagr = _cagr(equity_curve)
+    calmar = Decimal("0") if max_drawdown == 0 else cagr / max_drawdown
+    buy_hold_return = (
+        (ordered[-1].close - ordered[0].close) / ordered[0].close * Decimal("100")
+        if ordered[0].close
+        else Decimal("0")
+    )
+    metrics = {
+        **_trade_metrics(trades),
+        "cagrPct": cagr,
+        "volatilityPct": _volatility_from_returns(period_returns),
+        "sortino": _sortino_from_returns(period_returns),
+        "calmar": calmar,
+        "exposurePct": Decimal(exposure_days) / Decimal(len(ordered)) * Decimal("100"),
+        "buyHoldReturnPct": buy_hold_return,
+        "bestEquity": max((equity for _, equity in equity_curve), default=Decimal("0")),
+        "worstEquity": min((equity for _, equity in equity_curve), default=Decimal("0")),
+        "completedCycles": completed_cycles,
+        "activeTiers": len(active_tiers),
+        "tierCount": 7,
+    }
+    return BacktestResult(
+        symbol=symbol,
+        strategy_name=strategy.name,
+        start=ordered[0].timestamp,
+        end=ordered[-1].timestamp,
+        initial_cash=config.risk.initial_cash,
+        final_equity=final_equity,
+        total_return_pct=total_return,
+        max_drawdown_pct=max_drawdown,
+        sharpe=_sharpe_from_returns(period_returns),
+        trades=tuple(trades),
+        equity_curve=tuple(equity_curve),
+        parameters={
+            "strategy": strategy.name,
+            "pro": strategy.pro,
+            "tierRatios": [str(ratio) for ratio in strategy.tier_ratios],
+            "buyThresholdPct": str(strategy.buy_threshold * Decimal("100")),
+            "sellThresholdPct": str(strategy.sell_threshold * Decimal("100")),
+            "stopLossDays": strategy.stop_loss_days,
+            "feeBps": "0",
+            "slippageBps": "0",
+            "sourceLogic": "buy-dip-sell-peak",
+            "executionModel": "daily close LOC/MOC historical rule evaluation",
+        },
+        metrics=metrics,
+        drawdown_curve=tuple(_drawdown_curve(equity_curve)),
+        return_curve=tuple(_return_curve(equity_curve)),
+        price_curve=tuple((candle.timestamp, candle.close) for candle in ordered),
+    )
+
+
+def _pending_dip_sell_peak_buy(
+    *,
+    active_tiers: dict[int, _TierPosition],
+    cash: Decimal,
+    cycle_initial_cash: Decimal,
+    previous_close: Decimal,
+    strategy: DipSellPeakStrategy,
+) -> _PendingTierBuy | None:
+    tier = _next_buy_tier(active_tiers, cash)
+    if tier is None:
+        return None
+    amount = cash if tier == 7 else cycle_initial_cash * strategy.tier_ratios[tier - 1]
+    limit_price = _floor_price(previous_close * (Decimal("1") + strategy.buy_threshold))
+    quantity = _whole_share_quantity(amount, limit_price)
+    if quantity <= 0:
+        return None
+    return _PendingTierBuy(tier=tier, amount=amount, limit_price=limit_price, quantity=quantity)
+
+
+def _next_buy_tier(active_tiers: dict[int, _TierPosition], cash: Decimal) -> int | None:
+    for tier in range(1, 7):
+        if tier not in active_tiers:
+            return tier
+    if cash > 0 and 7 not in active_tiers:
+        return 7
+    return None
+
+
+def _tier_market_value(active_tiers: dict[int, _TierPosition], close: Decimal) -> Decimal:
+    return sum((position.quantity * close for position in active_tiers.values()), Decimal("0"))
 
 
 def run_strategy_suite(symbol: str, candles: list[Candle], config: AppConfig) -> list[BacktestResult]:

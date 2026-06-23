@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import replace
+from dataclasses import dataclass, replace
 from decimal import Decimal
 from typing import Protocol
 
@@ -18,6 +18,34 @@ class TradingStrategy(Protocol):
 
     def signal(self, symbol: str, candles: list[Candle]) -> Signal:
         ...
+
+
+@dataclass(frozen=True)
+class DipSellPeakStrategy:
+    """Buy Dip Sell Peak Pro tier strategy."""
+
+    name: str
+    pro: str
+    tier_ratios: tuple[Decimal, ...]
+    buy_threshold: Decimal
+    sell_threshold: Decimal
+    stop_loss_days: int
+    config: StrategyConfig
+
+    @property
+    def warmup_window(self) -> int:
+        return 1
+
+    def signal(self, symbol: str, candles: list[Candle]) -> Signal:
+        latest = sorted(candles, key=lambda item: item.timestamp)[-1]
+        return Signal(
+            symbol,
+            "HOLD",
+            0.0,
+            latest.close,
+            latest.timestamp,
+            f"{self.pro} uses stateful tier backtest logic",
+        )
 
 
 class MovingAverageRsiStrategy:
@@ -183,6 +211,8 @@ def build_strategy_variants(config: StrategyConfig) -> list[TradingStrategy]:
 
 def _build_strategy_variant(config: StrategyConfig, variant: StrategyVariantConfig) -> TradingStrategy:
     strategy_config = _config_for_variant(config, variant)
+    if variant.type in {"dip_sell_peak", "buy_dip_sell_peak", "bdsp"}:
+        return _build_dip_sell_peak_strategy(strategy_config, variant)
     if variant.type in {"ma_rsi", "ma_rsi_core"}:
         strategy = MovingAverageRsiStrategy(replace(strategy_config, name=variant.name))
         strategy.name = variant.name
@@ -196,6 +226,70 @@ def _build_strategy_variant(config: StrategyConfig, variant: StrategyVariantConf
         strategy.name = variant.name
         return strategy
     raise ValueError(f"Unknown strategy variant type: {variant.type}")
+
+
+def _build_dip_sell_peak_strategy(config: StrategyConfig, variant: StrategyVariantConfig) -> DipSellPeakStrategy:
+    pro = _normalize_pro_name(str(variant.parameters.get("pro", variant.name)))
+    profile = _dip_sell_peak_profile(pro)
+    return DipSellPeakStrategy(
+        name=variant.name,
+        pro=pro,
+        tier_ratios=profile["tier_ratios"],
+        buy_threshold=profile["buy_threshold"],
+        sell_threshold=profile["sell_threshold"],
+        stop_loss_days=int(profile["stop_loss_days"]),
+        config=replace(config, name=variant.name),
+    )
+
+
+def _normalize_pro_name(raw: str) -> str:
+    value = raw.upper().replace("-", "").replace("_", "").replace(" ", "")
+    if value.endswith("PRO1") or value == "1":
+        return "Pro1"
+    if value.endswith("PRO2") or value == "2":
+        return "Pro2"
+    if value.endswith("PRO3") or value == "3":
+        return "Pro3"
+    raise ValueError(f"Unknown dip-sell-peak pro profile: {raw}")
+
+
+def _dip_sell_peak_profile(pro: str) -> dict[str, tuple[Decimal, ...] | Decimal | int]:
+    equal_six = tuple(Decimal("1") / Decimal("6") for _ in range(6))
+    profiles: dict[str, dict[str, tuple[Decimal, ...] | Decimal | int]] = {
+        "Pro1": {
+            "tier_ratios": (
+                Decimal("0.05"),
+                Decimal("0.10"),
+                Decimal("0.15"),
+                Decimal("0.20"),
+                Decimal("0.25"),
+                Decimal("0.25"),
+            ),
+            "buy_threshold": Decimal("-0.0001"),
+            "sell_threshold": Decimal("0.0001"),
+            "stop_loss_days": 10,
+        },
+        "Pro2": {
+            "tier_ratios": (
+                Decimal("0.10"),
+                Decimal("0.15"),
+                Decimal("0.20"),
+                Decimal("0.25"),
+                Decimal("0.20"),
+                Decimal("0.10"),
+            ),
+            "buy_threshold": Decimal("-0.0001"),
+            "sell_threshold": Decimal("0.015"),
+            "stop_loss_days": 10,
+        },
+        "Pro3": {
+            "tier_ratios": equal_six,
+            "buy_threshold": Decimal("-0.001"),
+            "sell_threshold": Decimal("0.02"),
+            "stop_loss_days": 12,
+        },
+    }
+    return profiles[pro]
 
 
 def _config_for_variant(config: StrategyConfig, variant: StrategyVariantConfig) -> StrategyConfig:
