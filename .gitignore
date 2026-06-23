@@ -3,6 +3,9 @@
 .venv/
 __pycache__/
 *.py[cod]
+service/server/data/
+service/server/logs/
+service/server/scripts/__pycache__/
 *.tsbuildinfo
 .pytest_cache/
 .mypy_cache/
