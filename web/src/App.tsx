@@ -31,6 +31,8 @@ type PricePoint = {
   close: string;
 };
 
+type ParameterValue = string | number | string[];
+
 type BacktestMetrics = {
   cagrPct?: string;
   volatilityPct?: string;
@@ -58,7 +60,7 @@ type BacktestResult = {
   drawdownCurve?: DrawdownPoint[];
   returnCurve?: ReturnPoint[];
   priceCurve?: PricePoint[];
-  parameters: Record<string, string | number>;
+  parameters: Record<string, ParameterValue>;
   metrics?: BacktestMetrics;
 };
 
@@ -75,7 +77,7 @@ type Improvement = {
   title: string;
   rationale: string;
   expectedDeltaPct: string;
-  parameters: Record<string, string | number>;
+  parameters: Record<string, ParameterValue>;
 };
 
 type TradeDecision = {
@@ -158,6 +160,20 @@ type DashboardData = {
 };
 
 type ViewMode = "overview" | "risk" | "reports";
+
+type BuyPlan = {
+  symbol: string;
+  strategyName: string;
+  pro: string;
+  usedDate: string;
+  usedClose: number;
+  tierPct: number;
+  tierBudget: number;
+  buyLimit: number;
+  quantity: number;
+  sellThresholdPct: number;
+  stopLossDays: number;
+};
 
 const fallbackData: DashboardData = {
   generatedAt: "2026-06-22T00:00:00+09:00",
@@ -363,6 +379,7 @@ function App() {
     () => num(portfolio.totalReturnPct).toFixed(2),
     [portfolio.totalReturnPct],
   );
+  const buyPlans = useMemo(() => buildBuyPlans(data.results, data.risk), [data.results, data.risk]);
   const decisions = useMemo(() => {
     if (data.decisions?.length) {
       return data.decisions;
@@ -498,6 +515,53 @@ function App() {
         </section>
 
         {activeView === "overview" ? (
+          <>
+          <section className="panel planPanel" aria-label="previous close buy plan">
+            <div className="panelHeader">
+              <div>
+                <p className="eyebrow">Buy Dip Sell Peak</p>
+                <h2>전일 확정봉 기준 매수표</h2>
+              </div>
+              <span className="badge safe">Today excluded</span>
+            </div>
+            <p className="basisNote">
+              전략 계산은 오늘 날짜 캔들을 제외하고 마지막 확정봉까지만 사용합니다.
+            </p>
+            <div className="planTableWrap">
+              <table className="dataTable planTable">
+                <thead>
+                  <tr>
+                    <th>Symbol</th>
+                    <th>Strategy</th>
+                    <th>Used Close</th>
+                    <th>Tier 1</th>
+                    <th>Buy If</th>
+                    <th>Qty</th>
+                    <th>Sell / Stop</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {buyPlans.map((plan) => (
+                    <tr key={`${plan.symbol}:${plan.strategyName}`}>
+                      <td>{plan.symbol}</td>
+                      <td>{plan.strategyName}</td>
+                      <td>
+                        {plan.usedDate} · {formatPrice(plan.usedClose)}
+                      </td>
+                      <td>
+                        {formatPct(plan.tierPct * 100)} · {formatMoney(plan.tierBudget, data.risk?.currency)}
+                      </td>
+                      <td className="positive">≤ {formatPrice(plan.buyLimit)}</td>
+                      <td>{plan.quantity.toLocaleString()}</td>
+                      <td>
+                        +{formatPct(plan.sellThresholdPct)} / {plan.stopLossDays}d
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
           <section className="mainGrid">
           <section className="panel chartPanel">
             <div className="panelHeader">
@@ -638,6 +702,7 @@ function App() {
             </div>
           </section>
         </section>
+        </>
         ) : null}
 
         {activeView === "risk" ? (
@@ -679,6 +744,13 @@ function App() {
                   <strong>Account</strong>
                   <span>
                     {data.account?.source ?? "simulated"} · buying power {formatEntries(data.account?.buyingPower)}
+                  </span>
+                </article>
+                <article>
+                  <strong>Dashboard access</strong>
+                  <span>
+                    Local Vite scripts bind to 127.0.0.1. It is local-only unless you deploy it, bind to 0.0.0.0,
+                    or expose it through a tunnel.
                   </span>
                 </article>
                 <article>
@@ -953,7 +1025,52 @@ function DecisionBadge({ decision }: { decision: TradeDecision }) {
   );
 }
 
-function parameterText(parameters: Record<string, string | number>) {
+function buildBuyPlans(results: BacktestResult[], risk?: RiskData): BuyPlan[] {
+  const initialCash = num(risk?.initialCash ?? 0);
+  return results
+    .filter((result) => result.parameters.sourceLogic === "buy-dip-sell-peak")
+    .map((result) => {
+      const latest = result.priceCurve?.[result.priceCurve.length - 1];
+      const usedClose = num(latest?.close ?? 0);
+      const tierRatios = Array.isArray(result.parameters.tierRatios)
+        ? result.parameters.tierRatios.map((item) => num(item))
+        : [];
+      const tierPct = tierRatios[0] ?? 0;
+      const buyThresholdPct = numParam(result.parameters.buyThresholdPct);
+      const sellThresholdPct = numParam(result.parameters.sellThresholdPct);
+      const buyLimit = floorPrice(usedClose * (1 + buyThresholdPct / 100));
+      const tierBudget = initialCash * tierPct;
+      const quantity = buyLimit > 0 ? Math.floor(tierBudget / buyLimit) : 0;
+      return {
+        symbol: result.symbol,
+        strategyName: result.strategyName ?? String(result.parameters.strategy ?? "strategy"),
+        pro: String(result.parameters.pro ?? ""),
+        usedDate: latest?.date ?? "-",
+        usedClose,
+        tierPct,
+        tierBudget,
+        buyLimit,
+        quantity,
+        sellThresholdPct,
+        stopLossDays: Math.trunc(numParam(result.parameters.stopLossDays)),
+      };
+    });
+}
+
+function numParam(value?: ParameterValue) {
+  return Array.isArray(value) ? 0 : num(value);
+}
+
+function floorPrice(value: number) {
+  return Math.floor(value * 100) / 100;
+}
+
+function parameterText(parameters: Record<string, ParameterValue>) {
+  if (parameters.sourceLogic === "buy-dip-sell-peak") {
+    return `${parameters.pro ?? ""} · buy ${parameters.buyThresholdPct ?? "-"}% · sell ${
+      parameters.sellThresholdPct ?? "-"
+    }% · stop ${parameters.stopLossDays ?? "-"}d`;
+  }
   const shortWindow = parameters.shortWindow ?? "-";
   const longWindow = parameters.longWindow ?? "-";
   const rsiPeriod = parameters.rsiPeriod ?? "-";
@@ -980,6 +1097,14 @@ function formatMoney(value: string | number, currency = "") {
     return `0${suffix}`;
   }
   return `${Math.round(amount).toLocaleString()}${suffix}`;
+}
+
+function formatPrice(value: string | number) {
+  const amount = num(value);
+  if (amount >= 100) {
+    return amount.toFixed(2);
+  }
+  return amount.toFixed(4).replace(/0+$/, "").replace(/\.$/, "");
 }
 
 function formatEntries(entries?: Record<string, string>) {

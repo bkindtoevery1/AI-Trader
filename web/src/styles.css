@@ -289,6 +289,25 @@ h2 {
   gap: 14px;
 }
 
+.planPanel {
+  margin-bottom: 14px;
+}
+
+.basisNote {
+  margin: -4px 0 14px;
+  color: #5a6475;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.planTableWrap {
+  overflow-x: auto;
+}
+
+.planTable {
+  min-width: 860px;
+}
+
 .panel {
   min-width: 0;
   padding: 18px;
