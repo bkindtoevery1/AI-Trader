@@ -5,6 +5,7 @@ from aitrader.account import AccountSnapshot
 from aitrader.broker import build_trade_decisions
 from aitrader.config import load_config
 from aitrader.models import Signal
+from aitrader.portfolio import PortfolioEvaluation, PositionEvaluation
 from aitrader.telegram import TelegramConfig, build_strategy_digest
 
 
@@ -52,9 +53,48 @@ def test_strategy_digest_includes_daily_limit_and_soxs_cap():
         signals=[signal],
         decisions=decisions,
         account=account,
+        phase="close",
+        portfolio=PortfolioEvaluation(
+            generated_at=datetime(2026, 7, 2, tzinfo=timezone.utc),
+            positions=(
+                PositionEvaluation(
+                    symbol="SOXL",
+                    name="SOXL",
+                    quantity=Decimal("1"),
+                    sellable_quantity=Decimal("1"),
+                    average_purchase_price=Decimal("248.598"),
+                    last_price=Decimal("225"),
+                    purchase_amount=Decimal("248.598"),
+                    market_amount=Decimal("225"),
+                    market_amount_after_cost=Decimal("224.54"),
+                    profit_loss_amount=Decimal("-23.598"),
+                    profit_loss_amount_after_cost=Decimal("-24.058"),
+                    profit_loss_rate=Decimal("-0.0949"),
+                    profit_loss_rate_after_cost=Decimal("-0.0967"),
+                    daily_profit_loss_amount=Decimal("7.45"),
+                    daily_profit_loss_rate=Decimal("0.0299"),
+                    currency="USD",
+                    weight_pct=Decimal("18.34"),
+                ),
+            ),
+            buying_power={"USD": Decimal("1000")},
+            total_purchase_amount=Decimal("248.598"),
+            total_market_amount=Decimal("225"),
+            total_market_amount_after_cost=Decimal("224.54"),
+            total_profit_loss_amount=Decimal("-23.598"),
+            total_profit_loss_amount_after_cost=Decimal("-24.058"),
+            total_profit_loss_rate=Decimal("-0.0949"),
+            total_profit_loss_rate_after_cost=Decimal("-0.0967"),
+            total_daily_profit_loss_amount=Decimal("7.45"),
+            total_daily_profit_loss_rate=Decimal("0.0342"),
+            total_equity=Decimal("1225"),
+            currency="USD",
+        ),
     )
 
-    assert "AI 증권 분석 리포트" in digest
+    assert "AI 증권 분석 리포트 - 미장 마감 성과" in digest
     assert "일일 최대 2건" in digest
     assert "SOXS 최대 20%" in digest
+    assert "하루 성과: 7.45 USD" in digest
+    assert "SOXL: 1주 평단 248.598" in digest
     assert "symbol position cap reached" in digest

@@ -12,7 +12,9 @@ from .broker import TradingBroker, build_trade_decisions
 from .config import load_config
 from .data import drop_today_candles, load_candles_csv, write_candles_csv
 from .env import env_status, load_dotenv
+from .market_schedule import us_regular_market_report_window
 from .models import Candle
+from .portfolio import fetch_portfolio_evaluation
 from .reporting import write_dashboard_json, write_markdown_report
 from .strategy import MovingAverageRsiStrategy, build_strategy_variants
 from .telegram import TelegramConfig, build_strategy_digest, send_telegram_message
@@ -78,6 +80,18 @@ def cmd_daily(args: argparse.Namespace) -> int:
     elif args.live_data:
         client = _market_client_from_env(config)
 
+    if args.market_window_guard:
+        if client is None:
+            client = _market_client_from_env(config)
+        window = us_regular_market_report_window(
+            client.get_us_market_calendar(),
+            phase=args.telegram_phase,
+            tolerance_minutes=args.market_window_minutes,
+        )
+        if not window.allowed:
+            print(f"skipped report: {window.reason}")
+            return 0
+
     if args.live_data:
         if client is None:
             client = _market_client_from_env(config)
@@ -93,6 +107,11 @@ def cmd_daily(args: argparse.Namespace) -> int:
         fetch_account_snapshot(client, config, symbols=config.strategy.symbols)
         if args.account_snapshot and client is not None
         else simulated_account_snapshot(config)
+    )
+    portfolio = (
+        fetch_portfolio_evaluation(client, config, account)
+        if args.account_snapshot and client is not None
+        else None
     )
     decisions = build_trade_decisions(
         signals,
@@ -139,6 +158,8 @@ def cmd_daily(args: argparse.Namespace) -> int:
                     signals=signals,
                     decisions=decisions,
                     account=account,
+                    phase=args.telegram_phase,
+                    portfolio=portfolio,
                 ),
             )
             print("sent Telegram notification")
@@ -523,6 +544,9 @@ def build_parser() -> argparse.ArgumentParser:
     daily.add_argument("--include-today", action="store_true")
     daily.add_argument("--telegram", action="store_true")
     daily.add_argument("--telegram-optional", action="store_true")
+    daily.add_argument("--telegram-phase", choices=["daily", "open", "close"], default="daily")
+    daily.add_argument("--market-window-guard", action="store_true")
+    daily.add_argument("--market-window-minutes", type=int, default=45)
     daily.set_defaults(func=cmd_daily)
 
     trade = subparsers.add_parser("trade")

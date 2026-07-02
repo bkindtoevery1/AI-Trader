@@ -9,7 +9,9 @@ import requests
 
 from .account import AccountSnapshot
 from .config import AppConfig
+from .market_schedule import ReportPhase
 from .models import Signal, decimal_str
+from .portfolio import PortfolioEvaluation
 
 
 class TelegramError(RuntimeError):
@@ -54,9 +56,16 @@ def build_strategy_digest(
     signals: list[Signal],
     decisions: list[Any],
     account: AccountSnapshot,
+    phase: ReportPhase = "daily",
+    portfolio: PortfolioEvaluation | None = None,
 ) -> str:
+    phase_title = {
+        "daily": "AI 증권 분석 리포트",
+        "open": "AI 증권 분석 리포트 - 미장 시작 전략",
+        "close": "AI 증권 분석 리포트 - 미장 마감 성과",
+    }[phase]
     lines = [
-        "AI 증권 분석 리포트",
+        phase_title,
         f"기준시각: {generated_at.isoformat(timespec='minutes')}",
         f"전략: {config.strategy.name}",
         f"종목: {', '.join(config.strategy.symbols)}",
@@ -66,9 +75,12 @@ def build_strategy_digest(
             f"SOXS 최대 {_symbol_cap_text(config, 'SOXS')}, "
             f"실거래 {'허용' if config.risk.allow_live_trading else '차단'}"
         ),
-        "",
-        "신호",
     ]
+
+    if portfolio is not None:
+        lines.extend(_portfolio_lines(portfolio, phase=phase))
+
+    lines.extend(["", "전략 신호" if phase != "close" else "마감 기준 전략 신호"])
     for signal in signals:
         lines.append(
             f"- {signal.symbol}: {signal.side} @ {decimal_str(signal.price, 4)} "
@@ -101,6 +113,51 @@ def build_strategy_digest(
         lines.append("계좌 조회 오류")
         lines.extend(f"- {error}" for error in account.errors[:3])
     return "\n".join(lines)
+
+
+def _portfolio_lines(portfolio: PortfolioEvaluation, *, phase: ReportPhase) -> list[str]:
+    if phase == "close":
+        headline = (
+            f"하루 성과: {decimal_str(portfolio.total_daily_profit_loss_amount, 2)} "
+            f"{portfolio.currency} "
+            f"({decimal_str(portfolio.total_daily_profit_loss_rate * Decimal('100'), 2)}%)"
+        )
+    else:
+        headline = (
+            f"포트폴리오: 평가 {decimal_str(portfolio.total_market_amount, 2)} "
+            f"{portfolio.currency}, 현금 "
+            f"{decimal_str(portfolio.buying_power.get(portfolio.currency, Decimal('0')), 2)} "
+            f"{portfolio.currency}"
+        )
+    lines = [
+        "",
+        headline,
+        (
+            f"총손익: {decimal_str(portfolio.total_profit_loss_amount_after_cost, 2)} "
+            f"{portfolio.currency} "
+            f"({decimal_str(portfolio.total_profit_loss_rate_after_cost * Decimal('100'), 2)}%)"
+        ),
+        f"총자산 추정: {decimal_str(portfolio.total_equity, 2)} {portfolio.currency}",
+    ]
+    if portfolio.positions:
+        lines.append("보유 포지션")
+    for position in portfolio.positions:
+        lines.append(
+            f"- {position.symbol}: {decimal_str(position.quantity, 6)}주 "
+            f"평단 {decimal_str(position.average_purchase_price, 4)}, "
+            f"현재 {decimal_str(position.last_price, 4)}, "
+            f"비중 {decimal_str(position.weight_pct, 2)}%"
+        )
+        lines.append(
+            f"  손익 {decimal_str(position.profit_loss_amount_after_cost, 2)} "
+            f"({decimal_str(position.profit_loss_rate_after_cost * Decimal('100'), 2)}%), "
+            f"당일 {decimal_str(position.daily_profit_loss_amount, 2)} "
+            f"({decimal_str(position.daily_profit_loss_rate * Decimal('100'), 2)}%)"
+        )
+    if portfolio.errors:
+        lines.append("포트폴리오 평가 오류")
+        lines.extend(f"- {error}" for error in portfolio.errors[:3])
+    return lines
 
 
 def _symbol_cap_text(config: AppConfig, symbol: str) -> str:
