@@ -5,6 +5,7 @@ __pycache__/
 *.py[cod]
 service/server/data/
 service/server/logs/
+state/
 service/server/scripts/__pycache__/
 *.tsbuildinfo
 .pytest_cache/

@@ -14,6 +14,7 @@ from .data import drop_today_candles, load_candles_csv, write_candles_csv
 from .env import env_status, load_dotenv
 from .market_schedule import us_regular_market_report_window
 from .models import Candle
+from .order_ledger import DEFAULT_ORDER_LEDGER_PATH, count_logged_orders, record_submitted_order
 from .portfolio import fetch_portfolio_evaluation
 from .reporting import write_dashboard_json, write_markdown_report
 from .strategy import MovingAverageRsiStrategy, build_strategy_variants
@@ -179,7 +180,7 @@ def cmd_trade(args: argparse.Namespace) -> int:
     if args.execute:
         if account_client is None:
             account_client = _client_from_env(config)
-        orders_today = _count_orders_today(account_client)
+        orders_today = _count_bot_orders_today(args.order_log)
 
     if args.live_data:
         market_client = account_client or _market_client_from_env(config)
@@ -209,6 +210,10 @@ def cmd_trade(args: argparse.Namespace) -> int:
         execute=args.execute,
         orders_today=orders_today,
     )
+    if args.execute:
+        for preview in previews:
+            if preview.accepted and preview.reason == "submitted":
+                record_submitted_order(args.order_log, preview.intent, preview.response)
     print(
         json.dumps(
             {
@@ -448,6 +453,11 @@ def _fetch_candles(
     return candles_by_symbol
 
 
+def _count_bot_orders_today(order_log: str | Path) -> int:
+    today = datetime.now().astimezone().date().isoformat()
+    return count_logged_orders(order_log, today)
+
+
 def _count_orders_today(client: TossInvestClient) -> int:
     today = datetime.now().astimezone().date().isoformat()
     count = 0
@@ -555,6 +565,7 @@ def build_parser() -> argparse.ArgumentParser:
     trade.add_argument("--account-snapshot", action="store_true")
     trade.add_argument("--execute", action="store_true")
     trade.add_argument("--include-today", action="store_true")
+    trade.add_argument("--order-log", default=str(DEFAULT_ORDER_LEDGER_PATH))
     trade.set_defaults(func=cmd_trade)
 
     account = subparsers.add_parser("account")
