@@ -58,6 +58,15 @@ ai-trader daily --live-data --account-snapshot --save-data data/live_candles.csv
 ai-trader trade --live-data --account-snapshot
 ```
 
+Telegram 리포트와 실계좌 조회는 로컬에서만 실행합니다.
+
+```bash
+ai-trader daily --live-data --account-snapshot --telegram --telegram-phase open
+ai-trader daily --live-data --account-snapshot --include-today --telegram --telegram-phase close
+```
+
+GitHub Actions는 외부 API나 Telegram을 호출하지 않고 샘플 데이터 기반 dry-run 리포트만 생성합니다.
+
 실주문은 여전히 아래 두 조건이 동시에 필요합니다.
 
 - `config/strategy.yaml`의 `risk.allow_live_trading: true`
