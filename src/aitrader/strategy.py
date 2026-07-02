@@ -21,6 +21,43 @@ class TradingStrategy(Protocol):
 
 
 @dataclass(frozen=True)
+class ConsensusStrategy:
+    name: str
+    strategies: tuple[TradingStrategy, ...]
+
+    @property
+    def warmup_window(self) -> int:
+        return max((strategy.warmup_window for strategy in self.strategies), default=1)
+
+    def signal(self, symbol: str, candles: list[Candle]) -> Signal:
+        signals = [strategy.signal(symbol, candles) for strategy in self.strategies]
+        if not signals:
+            latest = sorted(candles, key=lambda item: item.timestamp)[-1]
+            return Signal(symbol, "HOLD", 0.0, latest.close, latest.timestamp, "no strategies configured")
+
+        latest_signal = signals[-1]
+        sides = [signal.side for signal in signals]
+        if all(side == sides[0] for side in sides) and sides[0] in {"BUY", "SELL"}:
+            return Signal(
+                symbol,
+                sides[0],
+                min(signal.score for signal in signals),
+                latest_signal.price,
+                latest_signal.timestamp,
+                f"{self.name} unanimous {sides[0]}: {_signal_summary(self.strategies, signals)}",
+            )
+
+        return Signal(
+            symbol,
+            "HOLD",
+            min(signal.score for signal in signals),
+            latest_signal.price,
+            latest_signal.timestamp,
+            f"{self.name} hold until unanimous signal: {_signal_summary(self.strategies, signals)}",
+        )
+
+
+@dataclass(frozen=True)
 class DipSellPeakStrategy:
     """Buy Dip Sell Peak Pro tier strategy."""
 
@@ -251,6 +288,13 @@ def build_strategy_variants(config: StrategyConfig) -> list[TradingStrategy]:
     return variants or [MovingAverageRsiStrategy(config)]
 
 
+def build_execution_strategy(config: StrategyConfig) -> TradingStrategy:
+    strategies = build_strategy_variants(config)
+    if len(strategies) == 1:
+        return strategies[0]
+    return ConsensusStrategy(name=f"{config.name}-consensus", strategies=tuple(strategies))
+
+
 def _build_strategy_variant(config: StrategyConfig, variant: StrategyVariantConfig) -> TradingStrategy:
     strategy_config = _config_for_variant(config, variant)
     if variant.type in {"dip_sell_peak", "buy_dip_sell_peak", "bdsp"}:
@@ -344,4 +388,11 @@ def _config_for_variant(config: StrategyConfig, variant: StrategyVariantConfig) 
         rsi_period=int(parameters.get("rsi_period", config.rsi_period)),
         rsi_buy_below=Decimal(str(parameters.get("rsi_buy_below", config.rsi_buy_below))),
         rsi_sell_above=Decimal(str(parameters.get("rsi_sell_above", config.rsi_sell_above))),
+    )
+
+
+def _signal_summary(strategies: tuple[TradingStrategy, ...], signals: list[Signal]) -> str:
+    return ", ".join(
+        f"{strategy.name}={signal.side}"
+        for strategy, signal in zip(strategies, signals, strict=False)
     )

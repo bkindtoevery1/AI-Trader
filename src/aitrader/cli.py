@@ -17,7 +17,7 @@ from .models import Candle
 from .order_ledger import DEFAULT_ORDER_LEDGER_PATH, count_logged_orders, record_submitted_order
 from .portfolio import fetch_portfolio_evaluation
 from .reporting import write_dashboard_json, write_markdown_report
-from .strategy import MovingAverageRsiStrategy, build_strategy_variants
+from .strategy import build_execution_strategy, build_strategy_variants
 from .telegram import TelegramConfig, build_strategy_digest, send_telegram_message
 from .toss_client import TossInvestClient
 
@@ -35,14 +35,14 @@ def _collect_results(config, candles_by_symbol: dict[str, list[Candle]]):
     improvements = []
     signals = []
     strategies = build_strategy_variants(config.strategy)
-    primary_strategy = strategies[0] if strategies else MovingAverageRsiStrategy(config.strategy)
+    execution_strategy = build_execution_strategy(config.strategy)
     for symbol in config.strategy.symbols:
         candles = candles_by_symbol.get(symbol)
         if not candles:
             raise SystemExit(f"No candle data found for {symbol}")
         results.extend(run_strategy_suite(symbol, candles, config))
         improvements.extend(find_improvements(symbol, candles, config)[:2])
-        signals.append(primary_strategy.signal(symbol, candles))
+        signals.append(execution_strategy.signal(symbol, candles))
     return results, improvements, signals
 
 
@@ -188,9 +188,8 @@ def cmd_trade(args: argparse.Namespace) -> int:
     else:
         candles_by_symbol = load_candles_csv(args.data)
     candles_by_symbol = _strategy_input_candles(candles_by_symbol, args)
-    strategies = build_strategy_variants(config.strategy)
-    primary_strategy = strategies[0] if strategies else MovingAverageRsiStrategy(config.strategy)
-    signals = [primary_strategy.signal(symbol, candles_by_symbol[symbol]) for symbol in config.strategy.symbols]
+    execution_strategy = build_execution_strategy(config.strategy)
+    signals = [execution_strategy.signal(symbol, candles_by_symbol[symbol]) for symbol in config.strategy.symbols]
     decisions = build_trade_decisions(
         signals,
         config=config,

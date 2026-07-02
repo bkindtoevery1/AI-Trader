@@ -419,7 +419,8 @@ function App() {
   }, [data.decisions, data.signals]);
   const isStaleSnapshot = useMemo(() => snapshotIsStale(data.generatedAt), [data.generatedAt]);
   const snapshotAge = useMemo(() => snapshotAgeLabel(data.generatedAt), [data.generatedAt]);
-  const primaryStrategyName = strategyPlans[0]?.strategyName ?? data.strategy?.name ?? "primary strategy";
+  const executionStrategyName =
+    strategyPlans.length > 1 ? "Pro1/Pro2/Pro3 만장일치" : (strategyPlans[0]?.strategyName ?? data.strategy?.name ?? "primary strategy");
   const previewMode = decisions.every((decision) => decision.dryRun) ? "Dry Run" : "Live";
 
   const refreshReport = async () => {
@@ -553,8 +554,8 @@ function App() {
               <span className="badge amber">정보용</span>
             </div>
             <p className="basisNote">
-              이 표는 모든 전략 변형의 dip/peak 조건을 비교합니다. 실제 주문 후보는 {primaryStrategyName}
-              신호에 계좌 잔액, SOXS 20% 제한, 일일 2건 제한을 적용한 아래 카드 기준입니다.
+              이 표는 모든 전략 변형의 dip/peak 조건을 비교합니다. 실제 주문 후보는 {executionStrategyName}
+              신호에 계좌 잔액, SOXS 20% 제한, 봇 일일 2건 제한을 적용한 아래 카드 기준입니다.
             </p>
             <div className="planTableWrap">
               <table className="dataTable planTable">
@@ -795,7 +796,7 @@ function App() {
                 <article>
                   <strong>Execution source</strong>
                   <span>
-                    실제 주문 후보는 {primaryStrategyName} 신호와 계좌/리스크 가드로 생성합니다. 전략별 조건표는 비교용입니다.
+                    실제 주문 후보는 {executionStrategyName} 신호와 계좌/리스크 가드로 생성합니다. 전략별 조건표는 비교용입니다.
                   </span>
                 </article>
                 <article>

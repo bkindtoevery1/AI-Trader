@@ -3,7 +3,13 @@ from decimal import Decimal
 from aitrader.config import load_config
 from aitrader.data import load_candles_csv
 from aitrader.indicators import rsi, sma
-from aitrader.strategy import DipSellPeakStrategy, MovingAverageRsiStrategy, build_strategy_variants
+from aitrader.strategy import (
+    ConsensusStrategy,
+    DipSellPeakStrategy,
+    MovingAverageRsiStrategy,
+    build_execution_strategy,
+    build_strategy_variants,
+)
 
 
 def test_sma_returns_latest_window_average():
@@ -51,6 +57,51 @@ def test_dip_sell_peak_strategy_buys_dip_and_sells_peak():
     assert "buy dip" in buy_signal.reason
     assert sell_signal.side == "SELL"
     assert "sell peak" in sell_signal.reason
+
+
+def test_execution_strategy_requires_unanimous_buy_or_sell():
+    config = load_config("config/strategy.yaml")
+    strategy = build_execution_strategy(config.strategy)
+
+    assert isinstance(strategy, ConsensusStrategy)
+
+    unanimous_buy = strategy.signal(
+        "SOXL",
+        [
+            _candle("SOXL", "2026-07-01", "100"),
+            _candle("SOXL", "2026-07-02", "99.85"),
+        ],
+    )
+    mixed_buy = strategy.signal(
+        "SOXL",
+        [
+            _candle("SOXL", "2026-07-01", "100"),
+            _candle("SOXL", "2026-07-02", "99.95"),
+        ],
+    )
+    mixed_sell = strategy.signal(
+        "SOXL",
+        [
+            _candle("SOXL", "2026-07-01", "100"),
+            _candle("SOXL", "2026-07-02", "100.02"),
+        ],
+    )
+    unanimous_sell = strategy.signal(
+        "SOXL",
+        [
+            _candle("SOXL", "2026-07-01", "100"),
+            _candle("SOXL", "2026-07-02", "102.01"),
+        ],
+    )
+
+    assert unanimous_buy.side == "BUY"
+    assert "unanimous BUY" in unanimous_buy.reason
+    assert mixed_buy.side == "HOLD"
+    assert "bdsp-pro3=HOLD" in mixed_buy.reason
+    assert mixed_sell.side == "HOLD"
+    assert "bdsp-pro1=SELL" in mixed_sell.reason
+    assert unanimous_sell.side == "SELL"
+    assert "unanimous SELL" in unanimous_sell.reason
 
 
 def _candle(symbol: str, date: str, close: str):
