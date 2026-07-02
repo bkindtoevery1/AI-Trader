@@ -305,7 +305,20 @@ h2 {
 }
 
 .planTable {
-  min-width: 860px;
+  min-width: 1120px;
+}
+
+.planTable td {
+  vertical-align: top;
+}
+
+.cellSub {
+  display: block;
+  margin-top: 4px;
+  color: #687588;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.35;
 }
 
 .panel {

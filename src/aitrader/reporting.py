@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 from datetime import datetime
+from decimal import Decimal, ROUND_DOWN
 from pathlib import Path
 
 from .account import AccountSnapshot, simulated_account_snapshot
@@ -123,6 +124,7 @@ def write_dashboard_json(
         ],
         "improvements": [item.to_dict() for item in improvements],
         "decisions": [item.to_dict() for item in decisions or []],
+        "strategyPlans": _strategy_plans(results, config),
     }
     if config is not None:
         account = account or simulated_account_snapshot(config)
@@ -161,3 +163,66 @@ def write_dashboard_json(
     target = Path(path)
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def _strategy_plans(results: list[BacktestResult], config: AppConfig | None) -> list[dict]:
+    if config is None:
+        return []
+    plans = []
+    for result in results:
+        if result.parameters.get("sourceLogic") != "buy-dip-sell-peak":
+            continue
+        if len(result.price_curve) < 2:
+            continue
+        previous_date, previous_close = result.price_curve[-2]
+        current_date, current_close = result.price_curve[-1]
+        buy_threshold_pct = _decimal_param(result.parameters.get("buyThresholdPct"))
+        sell_threshold_pct = _decimal_param(result.parameters.get("sellThresholdPct"))
+        tier_ratios = result.parameters.get("tierRatios", [])
+        tier_ratio = _decimal_param(tier_ratios[0]) if isinstance(tier_ratios, list) and tier_ratios else Decimal("0")
+        buy_limit = _floor_usd(previous_close * (Decimal("1") + buy_threshold_pct / Decimal("100")))
+        sell_trigger = _floor_usd(previous_close * (Decimal("1") + sell_threshold_pct / Decimal("100")))
+        sell_target_after_buy = _floor_usd(buy_limit * (Decimal("1") + sell_threshold_pct / Decimal("100")))
+        tier_budget = config.risk.initial_cash * tier_ratio
+        tier_quantity = Decimal("0") if buy_limit <= 0 else (tier_budget / buy_limit).to_integral_value(rounding=ROUND_DOWN)
+        action = "HOLD"
+        action_reason = "current close is between buy dip and sell peak triggers"
+        if current_close <= buy_limit:
+            action = "BUY"
+            action_reason = "current close is at or below the buy-dip trigger"
+        elif current_close >= sell_trigger:
+            action = "SELL"
+            action_reason = "current close is at or above the sell-peak trigger"
+        plans.append(
+            {
+                "symbol": result.symbol,
+                "strategyName": result.strategy_name,
+                "pro": result.parameters.get("pro", ""),
+                "action": action,
+                "actionReason": action_reason,
+                "previousDate": previous_date.date().isoformat(),
+                "previousClose": decimal_str(previous_close, 4),
+                "currentDate": current_date.date().isoformat(),
+                "currentClose": decimal_str(current_close, 4),
+                "buyThresholdPct": decimal_str(buy_threshold_pct, 4),
+                "buyLimit": decimal_str(buy_limit, 4),
+                "sellThresholdPct": decimal_str(sell_threshold_pct, 4),
+                "sellTrigger": decimal_str(sell_trigger, 4),
+                "tierPct": decimal_str(tier_ratio * Decimal("100"), 4),
+                "tierBudget": decimal_str(tier_budget, 2),
+                "tierQuantity": decimal_str(tier_quantity, 0),
+                "sellTargetAfterBuy": decimal_str(sell_target_after_buy, 4),
+                "stopLossDays": int(_decimal_param(result.parameters.get("stopLossDays"))),
+            }
+        )
+    return plans
+
+
+def _decimal_param(value) -> Decimal:
+    if isinstance(value, Decimal):
+        return value
+    return Decimal(str(value or "0"))
+
+
+def _floor_usd(value: Decimal) -> Decimal:
+    return value.quantize(Decimal("0.01"), rounding=ROUND_DOWN)

@@ -153,6 +153,7 @@ type DashboardData = {
   signals: Signal[];
   improvements: Improvement[];
   decisions?: TradeDecision[];
+  strategyPlans?: StrategyPlan[];
   risk?: RiskData;
   strategy?: StrategyData;
   execution?: ExecutionData;
@@ -161,17 +162,24 @@ type DashboardData = {
 
 type ViewMode = "overview" | "risk" | "reports";
 
-type BuyPlan = {
+type StrategyPlan = {
   symbol: string;
   strategyName: string;
   pro: string;
-  usedDate: string;
-  usedClose: number;
-  tierPct: number;
-  tierBudget: number;
-  buyLimit: number;
-  quantity: number;
-  sellThresholdPct: number;
+  action: "BUY" | "SELL" | "HOLD";
+  actionReason: string;
+  previousDate: string;
+  previousClose: string;
+  currentDate: string;
+  currentClose: string;
+  buyThresholdPct: string;
+  buyLimit: string;
+  sellThresholdPct: string;
+  sellTrigger: string;
+  tierPct: string;
+  tierBudget: string;
+  tierQuantity: string;
+  sellTargetAfterBuy: string;
   stopLossDays: number;
 };
 
@@ -379,7 +387,10 @@ function App() {
     () => num(portfolio.totalReturnPct).toFixed(2),
     [portfolio.totalReturnPct],
   );
-  const buyPlans = useMemo(() => buildBuyPlans(data.results, data.risk), [data.results, data.risk]);
+  const strategyPlans = useMemo(
+    () => data.strategyPlans?.length ? data.strategyPlans : buildStrategyPlans(data.results, data.risk),
+    [data.results, data.risk, data.strategyPlans],
+  );
   const decisions = useMemo(() => {
     if (data.decisions?.length) {
       return data.decisions;
@@ -516,16 +527,17 @@ function App() {
 
         {activeView === "overview" ? (
           <>
-          <section className="panel planPanel" aria-label="previous close buy plan">
+          <section className="panel planPanel" aria-label="strategy buy sell plans">
             <div className="panelHeader">
               <div>
                 <p className="eyebrow">Buy Dip Sell Peak</p>
-                <h2>전일 확정봉 기준 매수표</h2>
+                <h2>전략별 매수·매도 계획</h2>
               </div>
               <span className="badge safe">Today excluded</span>
             </div>
             <p className="basisNote">
-              전략 계산은 오늘 날짜 캔들을 제외하고 마지막 확정봉까지만 사용합니다.
+              각 전략은 마지막 두 확정봉으로 dip/peak 트리거를 계산합니다. 실제 주문 가능 여부는
+              계좌 잔액, SOXS 20% 제한, 일일 2건 제한을 적용한 Order Preview에서 최종 확인합니다.
             </p>
             <div className="planTableWrap">
               <table className="dataTable planTable">
@@ -533,28 +545,52 @@ function App() {
                   <tr>
                     <th>Symbol</th>
                     <th>Strategy</th>
-                    <th>Used Close</th>
+                    <th>Plan</th>
+                    <th>Basis</th>
+                    <th>Buy Dip</th>
+                    <th>Sell Peak</th>
                     <th>Tier 1</th>
-                    <th>Buy If</th>
-                    <th>Qty</th>
-                    <th>Sell / Stop</th>
+                    <th>After Buy</th>
+                    <th>Risk</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {buyPlans.map((plan) => (
+                  {strategyPlans.map((plan) => (
                     <tr key={`${plan.symbol}:${plan.strategyName}`}>
                       <td>{plan.symbol}</td>
-                      <td>{plan.strategyName}</td>
                       <td>
-                        {plan.usedDate} · {formatPrice(plan.usedClose)}
+                        <strong>{plan.strategyName}</strong>
+                        <span className="cellSub">{plan.pro}</span>
                       </td>
                       <td>
-                        {formatPct(plan.tierPct * 100)} · {formatMoney(plan.tierBudget, data.risk?.currency)}
+                        <SideBadge side={plan.action} />
+                        <span className="cellSub">{plan.actionReason}</span>
                       </td>
-                      <td className="positive">≤ {formatPrice(plan.buyLimit)}</td>
-                      <td>{plan.quantity.toLocaleString()}</td>
                       <td>
-                        +{formatPct(plan.sellThresholdPct)} / {plan.stopLossDays}d
+                        {plan.previousDate} → {plan.currentDate}
+                        <span className="cellSub">
+                          {formatPrice(plan.previousClose)} → {formatPrice(plan.currentClose)}
+                        </span>
+                      </td>
+                      <td>
+                        <strong className="positive">≤ {formatPrice(plan.buyLimit)}</strong>
+                        <span className="cellSub">{formatPct(plan.buyThresholdPct)}</span>
+                      </td>
+                      <td>
+                        <strong className="negative">≥ {formatPrice(plan.sellTrigger)}</strong>
+                        <span className="cellSub">{formatPct(plan.sellThresholdPct)}</span>
+                      </td>
+                      <td>
+                        {formatMoney(plan.tierBudget, data.risk?.currency)}
+                        <span className="cellSub">{formatPct(plan.tierPct)} · {plan.tierQuantity}주</span>
+                      </td>
+                      <td>
+                        {formatPrice(plan.sellTargetAfterBuy)}
+                        <span className="cellSub">filled buy 기준 목표</span>
+                      </td>
+                      <td>
+                        {plan.stopLossDays}d stop
+                        <span className="cellSub">{plan.symbol === "SOXS" ? "max 20% cap" : "position cap"}</span>
                       </td>
                     </tr>
                   ))}
@@ -1025,33 +1061,54 @@ function DecisionBadge({ decision }: { decision: TradeDecision }) {
   );
 }
 
-function buildBuyPlans(results: BacktestResult[], risk?: RiskData): BuyPlan[] {
+function buildStrategyPlans(results: BacktestResult[], risk?: RiskData): StrategyPlan[] {
   const initialCash = num(risk?.initialCash ?? 0);
   return results
     .filter((result) => result.parameters.sourceLogic === "buy-dip-sell-peak")
     .map((result) => {
-      const latest = result.priceCurve?.[result.priceCurve.length - 1];
-      const usedClose = num(latest?.close ?? 0);
+      const prices = result.priceCurve ?? [];
+      const latest = prices[prices.length - 1];
+      const previous = prices[prices.length - 2] ?? latest;
+      const currentClose = num(latest?.close ?? 0);
+      const previousClose = num(previous?.close ?? 0);
       const tierRatios = Array.isArray(result.parameters.tierRatios)
         ? result.parameters.tierRatios.map((item) => num(item))
         : [];
       const tierPct = tierRatios[0] ?? 0;
       const buyThresholdPct = numParam(result.parameters.buyThresholdPct);
       const sellThresholdPct = numParam(result.parameters.sellThresholdPct);
-      const buyLimit = floorPrice(usedClose * (1 + buyThresholdPct / 100));
+      const buyLimit = floorPrice(previousClose * (1 + buyThresholdPct / 100));
+      const sellTrigger = floorPrice(previousClose * (1 + sellThresholdPct / 100));
+      const sellTargetAfterBuy = floorPrice(buyLimit * (1 + sellThresholdPct / 100));
       const tierBudget = initialCash * tierPct;
-      const quantity = buyLimit > 0 ? Math.floor(tierBudget / buyLimit) : 0;
+      const tierQuantity = buyLimit > 0 ? Math.floor(tierBudget / buyLimit) : 0;
+      let action: StrategyPlan["action"] = "HOLD";
+      let actionReason = "current close is between buy dip and sell peak triggers";
+      if (currentClose <= buyLimit) {
+        action = "BUY";
+        actionReason = "current close is at or below the buy-dip trigger";
+      } else if (currentClose >= sellTrigger) {
+        action = "SELL";
+        actionReason = "current close is at or above the sell-peak trigger";
+      }
       return {
         symbol: result.symbol,
         strategyName: result.strategyName ?? String(result.parameters.strategy ?? "strategy"),
         pro: String(result.parameters.pro ?? ""),
-        usedDate: latest?.date ?? "-",
-        usedClose,
-        tierPct,
-        tierBudget,
-        buyLimit,
-        quantity,
-        sellThresholdPct,
+        action,
+        actionReason,
+        previousDate: previous?.date ?? "-",
+        previousClose: String(previousClose),
+        currentDate: latest?.date ?? "-",
+        currentClose: String(currentClose),
+        buyThresholdPct: String(buyThresholdPct),
+        buyLimit: String(buyLimit),
+        sellThresholdPct: String(sellThresholdPct),
+        sellTrigger: String(sellTrigger),
+        tierPct: String(tierPct * 100),
+        tierBudget: String(tierBudget),
+        tierQuantity: String(tierQuantity),
+        sellTargetAfterBuy: String(sellTargetAfterBuy),
         stopLossDays: Math.trunc(numParam(result.parameters.stopLossDays)),
       };
     });

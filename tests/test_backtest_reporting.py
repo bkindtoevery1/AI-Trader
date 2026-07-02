@@ -75,9 +75,10 @@ def test_improvement_finder_always_returns_recommendation():
 def test_report_writers_create_markdown_and_dashboard_json(tmp_path):
     config = load_config("config/strategy.yaml")
     candles_by_symbol = load_candles_csv("data/sample_candles.csv")
-    result = run_backtest("AAPL", candles_by_symbol["AAPL"], config)
-    signal = MovingAverageRsiStrategy(config.strategy).signal("AAPL", candles_by_symbol["AAPL"])
-    improvements = find_improvements("AAPL", candles_by_symbol["AAPL"], config)
+    strategy = build_strategy_variants(config.strategy)[0]
+    result = run_backtest("SOXL", candles_by_symbol["SOXL"], config, strategy)
+    signal = strategy.signal("SOXL", candles_by_symbol["SOXL"])
+    improvements = find_improvements("SOXL", candles_by_symbol["SOXL"], config)
     decisions = build_trade_decisions([signal], config=config, available_cash=config.risk.initial_cash)
     generated_at = datetime.now(timezone.utc)
     md_path = tmp_path / "daily.md"
@@ -103,11 +104,15 @@ def test_report_writers_create_markdown_and_dashboard_json(tmp_path):
 
     assert "Backtest Summary" in md_path.read_text(encoding="utf-8")
     payload = json.loads(json_path.read_text(encoding="utf-8"))
-    assert payload["results"][0]["symbol"] == "AAPL"
+    assert payload["results"][0]["symbol"] == "SOXL"
     assert payload["results"][0]["strategyName"]
     assert payload["results"][0]["drawdownCurve"]
     assert "cagrPct" in payload["results"][0]["metrics"]
-    assert payload["decisions"][0]["symbol"] == "AAPL"
+    assert payload["decisions"][0]["symbol"] == "SOXL"
+    assert payload["strategyPlans"][0]["symbol"] == "SOXL"
+    assert payload["strategyPlans"][0]["action"] in {"BUY", "SELL", "HOLD"}
+    assert "buyLimit" in payload["strategyPlans"][0]
+    assert "sellTrigger" in payload["strategyPlans"][0]
     assert payload["risk"]["allowLiveTrading"] is False
     assert payload["account"]["source"] == "simulated"
 
