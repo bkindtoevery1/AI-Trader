@@ -236,6 +236,21 @@ h2 {
   text-align: right;
 }
 
+.statusStrip .staleText {
+  color: #a13a2d;
+}
+
+.warningBanner {
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  border: 1px solid #f0c9a9;
+  border-radius: 8px;
+  background: #fff7ed;
+  color: #7a4a17;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .metricGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -298,6 +313,10 @@ h2 {
   color: #5a6475;
   font-size: 13px;
   line-height: 1.5;
+}
+
+.basisNote.compact {
+  margin-top: -8px;
 }
 
 .planTableWrap {

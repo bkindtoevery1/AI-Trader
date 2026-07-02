@@ -15,6 +15,7 @@ build/
 *.egg-info/
 node_modules/
 web/dist/
+web/public/dashboard-data.json
 web/vite.config.js
 web/vite.config.d.ts
 coverage.xml

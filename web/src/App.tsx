@@ -100,6 +100,7 @@ type RiskData = {
   initialCash: string;
   currency: string;
   maxPositionPct: string;
+  symbolPositionCaps?: Record<string, string>;
   reserveCashPct: string;
   maxOrderValue: string;
   maxDailyOrders: number;
@@ -183,167 +184,172 @@ type StrategyPlan = {
   stopLossDays: number;
 };
 
+function sampleResult(
+  symbol: string,
+  strategyName: string,
+  pro: string,
+  totalReturnPct: string,
+  maxDrawdownPct: string,
+  sharpe: string,
+  buyThresholdPct: string,
+  sellThresholdPct: string,
+): BacktestResult {
+  const initialEquity = 10000;
+  const finalEquity = initialEquity * (1 + Number(totalReturnPct) / 100);
+  const previousClose = symbol === "SOXL" ? "212.40" : "3.94";
+  const currentClose = symbol === "SOXL" ? "217.55" : "3.86";
+  return {
+    id: `${symbol}:${strategyName}`,
+    symbol,
+    strategyName,
+    totalReturnPct,
+    maxDrawdownPct,
+    sharpe,
+    tradeCount: 4,
+    equityCurve: [
+      { date: "2026-04-01", equity: String(initialEquity) },
+      { date: "2026-05-01", equity: String(Math.round((initialEquity + finalEquity) / 2)) },
+      { date: "2026-06-22", equity: String(Math.round(finalEquity)) },
+    ],
+    drawdownCurve: [
+      { date: "2026-04-01", drawdownPct: "0" },
+      { date: "2026-05-01", drawdownPct: `-${maxDrawdownPct}` },
+      { date: "2026-06-22", drawdownPct: "-2.20" },
+    ],
+    priceCurve: [
+      { date: "2026-06-19", close: previousClose },
+      { date: "2026-06-22", close: currentClose },
+    ],
+    parameters: {
+      sourceLogic: "buy-dip-sell-peak",
+      strategy: strategyName,
+      pro,
+      buyThresholdPct,
+      sellThresholdPct,
+      tierRatios: ["0.33", "0.33", "0.34"],
+      stopLossDays: "3",
+    },
+    metrics: {
+      cagrPct: totalReturnPct,
+      volatilityPct: symbol === "SOXL" ? "68.20" : "52.40",
+      sortino: "1.20",
+      calmar: "1.10",
+      winRatePct: "54.00",
+      profitFactor: "1.35",
+      exposurePct: "36.00",
+      buyHoldReturnPct: "0.00",
+      closedTrades: 4,
+    },
+  };
+}
+
+const fallbackRisk: RiskData = {
+  initialCash: "10000",
+  currency: "USD",
+  maxPositionPct: "30",
+  symbolPositionCaps: { SOXS: "20" },
+  reserveCashPct: "15",
+  maxOrderValue: "1000",
+  maxDailyOrders: 2,
+  feeBps: "1.5",
+  slippageBps: "5",
+  allowLiveTrading: false,
+};
+
+const fallbackResults: BacktestResult[] = [
+  sampleResult("SOXL", "bdsp-pro1", "Pro 1", "18.40", "14.20", "1.18", "-2.50", "4.00"),
+  sampleResult("SOXL", "bdsp-pro2", "Pro 2", "16.10", "12.80", "1.05", "-3.00", "5.00"),
+  sampleResult("SOXL", "bdsp-pro3", "Pro 3", "13.75", "11.40", "0.94", "-3.50", "6.00"),
+  sampleResult("SOXS", "bdsp-pro1", "Pro 1", "5.80", "8.90", "0.72", "-2.50", "4.00"),
+  sampleResult("SOXS", "bdsp-pro2", "Pro 2", "4.90", "8.20", "0.68", "-3.00", "5.00"),
+  sampleResult("SOXS", "bdsp-pro3", "Pro 3", "3.60", "7.70", "0.61", "-3.50", "6.00"),
+];
+
 const fallbackData: DashboardData = {
   generatedAt: "2026-06-22T00:00:00+09:00",
   mode: "dry-run",
   status: "ready",
   summary: {
-    symbols: ["005930", "AAPL"],
-    bestSymbol: "AAPL",
-    bestStrategy: "ma-rsi-core",
-    bestResultId: "AAPL:ma-rsi-core",
-    bestReturnPct: "4.2",
-    tradeCount: 3,
-    maxDrawdownPct: "2.1",
-    strategyResultCount: 2,
+    symbols: ["SOXL", "SOXS"],
+    bestSymbol: "SOXL",
+    bestStrategy: "bdsp-pro1",
+    bestResultId: "SOXL:bdsp-pro1",
+    bestReturnPct: "18.40",
+    tradeCount: 24,
+    maxDrawdownPct: "14.20",
+    strategyResultCount: fallbackResults.length,
   },
-  results: [
-    {
-      id: "005930:ma-rsi-core",
-      symbol: "005930",
-      strategyName: "ma-rsi-core",
-      totalReturnPct: "2.8",
-      maxDrawdownPct: "1.9",
-      sharpe: "1.21",
-      tradeCount: 2,
-      equityCurve: [
-        { date: "2026-04-01", equity: "10000000" },
-        { date: "2026-04-15", equity: "10082000" },
-        { date: "2026-04-30", equity: "10154000" },
-        { date: "2026-05-22", equity: "10280000" },
-      ],
-      drawdownCurve: [
-        { date: "2026-04-01", drawdownPct: "0" },
-        { date: "2026-04-15", drawdownPct: "-0.6" },
-        { date: "2026-04-30", drawdownPct: "-1.1" },
-        { date: "2026-05-22", drawdownPct: "0" },
-      ],
-      parameters: { shortWindow: 5, longWindow: 20, rsiPeriod: 14 },
-      metrics: {
-        cagrPct: "18.4",
-        volatilityPct: "22.1",
-        sortino: "1.62",
-        calmar: "9.68",
-        winRatePct: "50",
-        profitFactor: "1.7",
-        exposurePct: "48",
-        buyHoldReturnPct: "2.1",
-        closedTrades: 2,
-      },
-    },
-    {
-      id: "AAPL:ma-rsi-core",
-      symbol: "AAPL",
-      strategyName: "ma-rsi-core",
-      totalReturnPct: "4.2",
-      maxDrawdownPct: "2.1",
-      sharpe: "1.46",
-      tradeCount: 1,
-      equityCurve: [
-        { date: "2026-04-01", equity: "10000000" },
-        { date: "2026-04-15", equity: "10110000" },
-        { date: "2026-04-30", equity: "10290000" },
-        { date: "2026-05-22", equity: "10420000" },
-      ],
-      drawdownCurve: [
-        { date: "2026-04-01", drawdownPct: "0" },
-        { date: "2026-04-15", drawdownPct: "-0.8" },
-        { date: "2026-04-30", drawdownPct: "-2.1" },
-        { date: "2026-05-22", drawdownPct: "0" },
-      ],
-      parameters: { shortWindow: 5, longWindow: 20, rsiPeriod: 14 },
-      metrics: {
-        cagrPct: "27.3",
-        volatilityPct: "24.8",
-        sortino: "1.93",
-        calmar: "13",
-        winRatePct: "100",
-        profitFactor: "999",
-        exposurePct: "52",
-        buyHoldReturnPct: "3.2",
-        closedTrades: 1,
-      },
-    },
-  ],
+  results: fallbackResults,
   signals: [
     {
-      symbol: "005930",
+      symbol: "SOXL",
       side: "HOLD",
-      score: 0.32,
-      price: "77900",
-      timestamp: "2026-05-22T00:00:00+09:00",
-      reason: "no crossover; RSI=66.42",
+      score: 0.5,
+      price: "217.55",
+      timestamp: "2026-06-22T00:00:00+09:00",
+      reason: "sample snapshot; run local daily report for live Toss data",
     },
     {
-      symbol: "AAPL",
+      symbol: "SOXS",
       side: "HOLD",
-      score: 0.41,
-      price: "216.2",
-      timestamp: "2026-05-22T00:00:00+09:00",
-      reason: "no crossover; RSI=68.10",
+      score: 0.5,
+      price: "3.86",
+      timestamp: "2026-06-22T00:00:00+09:00",
+      reason: "sample snapshot; run local daily report for live Toss data",
     },
   ],
   improvements: [
     {
-      title: "AAPL: SMA 8/30 검증",
-      rationale: "최근 데이터에서 기준 전략 대비 낙폭 대비 수익률이 개선되었습니다.",
-      expectedDeltaPct: "1.4",
-      parameters: { shortWindow: 8, longWindow: 30, rsiPeriod: 14 },
+      title: "SOXL/SOXS: 종가 확정 후 threshold 재검증",
+      rationale: "장 시작 전에는 stale snapshot 여부를 먼저 확인하고, 종가 확정 데이터로 다음날 기준선을 갱신합니다.",
+      expectedDeltaPct: "0.8",
+      parameters: { sourceLogic: "buy-dip-sell-peak" },
     },
   ],
   decisions: [
     {
-      symbol: "005930",
+      symbol: "SOXL",
       signal: "HOLD",
       action: "SKIP",
-      score: 0.32,
-      price: "77900",
+      score: 0.5,
+      price: "217.55",
       quantity: "0",
       notional: "0",
       orderType: null,
       limitPrice: null,
       clientOrderId: null,
       accepted: true,
-      reason: "hold signal",
+      reason: "fallback sample; no live order preview loaded",
       dryRun: true,
     },
     {
-      symbol: "AAPL",
+      symbol: "SOXS",
       signal: "HOLD",
       action: "SKIP",
-      score: 0.41,
-      price: "216.2",
+      score: 0.5,
+      price: "3.86",
       quantity: "0",
       notional: "0",
       orderType: null,
       limitPrice: null,
       clientOrderId: null,
       accepted: true,
-      reason: "hold signal",
+      reason: "fallback sample; no live order preview loaded",
       dryRun: true,
     },
   ],
-  risk: {
-    initialCash: "10000000",
-    currency: "KRW",
-    maxPositionPct: "30",
-    reserveCashPct: "15",
-    maxOrderValue: "1000000",
-    maxDailyOrders: 3,
-    feeBps: "1.5",
-    slippageBps: "5",
-    allowLiveTrading: false,
-  },
+  strategyPlans: buildStrategyPlans(fallbackResults, fallbackRisk),
+  risk: fallbackRisk,
   strategy: {
-    name: "ma-rsi-core",
-    symbols: ["005930", "AAPL"],
+    name: "buy-dip-sell-peak",
+    symbols: ["SOXL", "SOXS"],
     interval: "1d",
     candleCount: 120,
-    shortWindow: 5,
-    longWindow: 20,
-    rsiPeriod: 14,
-    rsiBuyBelow: "62",
-    rsiSellAbove: "72",
+    shortWindow: 0,
+    longWindow: 0,
+    rsiPeriod: 0,
+    rsiBuyBelow: "0",
+    rsiSellAbove: "0",
   },
   execution: {
     mode: "dry-run",
@@ -353,7 +359,7 @@ const fallbackData: DashboardData = {
   account: {
     generatedAt: "2026-06-22T00:00:00+09:00",
     source: "simulated",
-    buyingPower: { KRW: "10000000" },
+    buyingPower: { USD: "10000" },
     holdings: {},
     sellableQuantities: {},
     errors: [],
@@ -411,6 +417,10 @@ function App() {
       dryRun: true,
     }));
   }, [data.decisions, data.signals]);
+  const isStaleSnapshot = useMemo(() => snapshotIsStale(data.generatedAt), [data.generatedAt]);
+  const snapshotAge = useMemo(() => snapshotAgeLabel(data.generatedAt), [data.generatedAt]);
+  const primaryStrategyName = strategyPlans[0]?.strategyName ?? data.strategy?.name ?? "primary strategy";
+  const previewMode = decisions.every((decision) => decision.dryRun) ? "Dry Run" : "Live";
 
   const refreshReport = async () => {
     setRefreshing(true);
@@ -515,8 +525,15 @@ function App() {
 
         <div className="statusStrip" role="status">
           <span>{statusMessage}</span>
-          <strong>{data.summary.symbols.join(" / ")}</strong>
+          <strong className={isStaleSnapshot ? "staleText" : ""}>
+            {snapshotAge} · {data.summary.symbols.join(" / ")}
+          </strong>
         </div>
+        {isStaleSnapshot ? (
+          <div className="warningBanner" role="note">
+            정적 스냅샷이 오래됐습니다. 화면의 전략별 조건표보다 실제 주문 후보와 로컬 dry-run 결과를 우선 확인하세요.
+          </div>
+        ) : null}
 
         <section className="metricGrid" aria-label="summary">
           <Metric icon={<Gauge />} label="Universe" value={data.summary.symbols.join(" / ")} note="tracked symbols" />
@@ -530,14 +547,14 @@ function App() {
           <section className="panel planPanel" aria-label="strategy buy sell plans">
             <div className="panelHeader">
               <div>
-                <p className="eyebrow">Buy Dip Sell Peak</p>
-                <h2>전략별 매수·매도 계획</h2>
+                <p className="eyebrow">Strategy Conditions</p>
+                <h2>전략별 조건표</h2>
               </div>
-              <span className="badge safe">Today excluded</span>
+              <span className="badge amber">정보용</span>
             </div>
             <p className="basisNote">
-              각 전략은 마지막 두 확정봉으로 dip/peak 트리거를 계산합니다. 실제 주문 가능 여부는
-              계좌 잔액, SOXS 20% 제한, 일일 2건 제한을 적용한 Order Preview에서 최종 확인합니다.
+              이 표는 모든 전략 변형의 dip/peak 조건을 비교합니다. 실제 주문 후보는 {primaryStrategyName}
+              신호에 계좌 잔액, SOXS 20% 제한, 일일 2건 제한을 적용한 아래 카드 기준입니다.
             </p>
             <div className="planTableWrap">
               <table className="dataTable planTable">
@@ -643,17 +660,23 @@ function App() {
           <section className="panel">
             <div className="panelHeader">
               <div>
-                <p className="eyebrow">Order Preview</p>
-                <h2>Trade Plan</h2>
+                <p className="eyebrow">Executable Preview</p>
+                <h2>실제 주문 후보</h2>
               </div>
-              <span className="badge safe">Guarded</span>
+              <span className={previewMode === "Dry Run" ? "badge amber" : "badge safe"}>{previewMode}</span>
             </div>
+            <p className="basisNote compact">
+              이 카드의 행만 주문 엔진 결과입니다. 대시보드 버튼은 토스 주문을 제출하지 않습니다.
+            </p>
             <div className="signalList">
               {decisions.map((decision) => (
                 <article className="signalRow" key={decision.symbol}>
                   <div>
                     <strong>{decision.symbol}</strong>
-                    <span>{decision.reason} · {formatMoney(decision.notional)}</span>
+                    <span>
+                      {decision.reason} · {decision.quantity}주 · {formatMoney(decision.notional)}
+                      {decision.limitPrice ? ` · ${decision.orderType ?? "LIMIT"} ${formatPrice(decision.limitPrice)}` : ""}
+                    </span>
                   </div>
                   <DecisionBadge decision={decision} />
                 </article>
@@ -770,6 +793,12 @@ function App() {
                   </span>
                 </article>
                 <article>
+                  <strong>Execution source</strong>
+                  <span>
+                    실제 주문 후보는 {primaryStrategyName} 신호와 계좌/리스크 가드로 생성합니다. 전략별 조건표는 비교용입니다.
+                  </span>
+                </article>
+                <article>
                   <strong>Strategy</strong>
                   <span>
                     {data.strategy?.name ?? "strategy"} · SMA {data.strategy?.shortWindow ?? "-"}
@@ -798,8 +827,8 @@ function App() {
             <section className="panel">
               <div className="panelHeader">
                 <div>
-                  <p className="eyebrow">Order Preview</p>
-                  <h2>Current Signals</h2>
+                  <p className="eyebrow">Executable Preview</p>
+                  <h2>실제 주문 후보</h2>
                 </div>
               </div>
               <div className="signalList">
@@ -1145,6 +1174,33 @@ function formatDate(value: string) {
     hour: "2-digit",
     minute: "2-digit",
   }).format(new Date(value));
+}
+
+function snapshotAgeLabel(value: string) {
+  const hours = snapshotAgeHours(value);
+  if (hours === null) {
+    return "snapshot unknown";
+  }
+  if (hours < 1) {
+    return "updated now";
+  }
+  if (hours < 48) {
+    return `updated ${Math.round(hours)}h ago`;
+  }
+  return `updated ${Math.round(hours / 24)}d ago`;
+}
+
+function snapshotIsStale(value: string) {
+  const hours = snapshotAgeHours(value);
+  return hours === null || hours > 36;
+}
+
+function snapshotAgeHours(value: string) {
+  const generatedAt = new Date(value).getTime();
+  if (!Number.isFinite(generatedAt)) {
+    return null;
+  }
+  return Math.max(0, (Date.now() - generatedAt) / 3_600_000);
 }
 
 function formatMoney(value: string | number, currency = "") {
