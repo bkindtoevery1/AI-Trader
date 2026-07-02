@@ -141,6 +141,10 @@ def write_dashboard_json(
             "initialCash": decimal_str(config.risk.initial_cash, 2),
             "currency": config.risk.currency,
             "maxPositionPct": decimal_str(config.risk.max_position_pct * 100, 2),
+            "symbolPositionCaps": {
+                symbol: decimal_str(cap * 100, 2)
+                for symbol, cap in sorted(config.risk.symbol_position_caps.items())
+            },
             "reserveCashPct": decimal_str(config.risk.reserve_cash_pct * 100, 2),
             "maxOrderValue": decimal_str(config.risk.max_order_value, 2),
             "maxDailyOrders": config.risk.max_daily_orders,

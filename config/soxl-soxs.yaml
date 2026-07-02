@@ -4,7 +4,7 @@ strategy:
     - "SOXL"
     - "SOXS"
   interval: "1d"
-  candle_count: 1200
+  candle_count: 200
   short_window: 5
   long_window: 20
   rsi_period: 14
@@ -25,9 +25,11 @@ risk:
   initial_cash: "10000000"
   currency: "USD"
   max_position_pct: "0.50"
+  symbol_position_caps:
+    SOXS: "0.20"
   reserve_cash_pct: "0.10"
   max_order_value: "5000"
-  max_daily_orders: 3
+  max_daily_orders: 2
   fee_bps: "1.5"
   slippage_bps: "5"
   allow_live_trading: false

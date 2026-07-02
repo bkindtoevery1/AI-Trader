@@ -15,6 +15,7 @@ from .env import env_status, load_dotenv
 from .models import Candle
 from .reporting import write_dashboard_json, write_markdown_report
 from .strategy import MovingAverageRsiStrategy, build_strategy_variants
+from .telegram import TelegramConfig, build_strategy_digest, send_telegram_message
 from .toss_client import TossInvestClient
 
 
@@ -123,6 +124,24 @@ def cmd_daily(args: argparse.Namespace) -> int:
         config=config,
         account=account,
     )
+    if args.telegram or args.telegram_optional:
+        telegram_config = TelegramConfig.from_env()
+        if telegram_config is None:
+            if args.telegram:
+                raise SystemExit("Missing Telegram environment variables: TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID")
+            print("skipped Telegram notification: missing Telegram environment variables")
+        else:
+            send_telegram_message(
+                telegram_config,
+                build_strategy_digest(
+                    generated_at=generated_at,
+                    config=config,
+                    signals=signals,
+                    decisions=decisions,
+                    account=account,
+                ),
+            )
+            print("sent Telegram notification")
     print(f"wrote {report_dir / report_name}")
     print(f"wrote {args.dashboard}")
     return 0
@@ -132,9 +151,14 @@ def cmd_trade(args: argparse.Namespace) -> int:
     config = _load_config(args)
     account = simulated_account_snapshot(config)
     account_client = None
+    orders_today = 0
     if args.account_snapshot or args.execute:
         account_client = _client_from_env(config)
         account = fetch_account_snapshot(account_client, config, symbols=config.strategy.symbols)
+    if args.execute:
+        if account_client is None:
+            account_client = _client_from_env(config)
+        orders_today = _count_orders_today(account_client)
 
     if args.live_data:
         market_client = account_client or _market_client_from_env(config)
@@ -151,6 +175,7 @@ def cmd_trade(args: argparse.Namespace) -> int:
         available_cash=account.buying_power.get(config.risk.currency, config.risk.initial_cash),
         available_cash_by_symbol=cash_by_symbol(account, config.strategy.symbols),
         held_quantities=account.sellable_quantities or account.holdings,
+        orders_today=orders_today,
         dry_run=not args.execute,
     )
     intents = [decision.intent for decision in decisions if decision.accepted and decision.intent is not None]
@@ -158,7 +183,11 @@ def cmd_trade(args: argparse.Namespace) -> int:
     client = None
     if args.execute:
         client = account_client or _client_from_env(config)
-    previews = TradingBroker(client, config).submit(intents, execute=args.execute)
+    previews = TradingBroker(client, config).submit(
+        intents,
+        execute=args.execute,
+        orders_today=orders_today,
+    )
     print(
         json.dumps(
             {
@@ -398,6 +427,32 @@ def _fetch_candles(
     return candles_by_symbol
 
 
+def _count_orders_today(client: TossInvestClient) -> int:
+    today = datetime.now().astimezone().date().isoformat()
+    count = 0
+    for status in ("OPEN", "CLOSED"):
+        payload = client.get_orders(status=status, from_date=today, to_date=today, limit=100)
+        count += len(_extract_order_items(payload))
+    return count
+
+
+def _extract_order_items(payload) -> list[dict]:
+    if isinstance(payload, list):
+        return [item for item in payload if isinstance(item, dict)]
+    if not isinstance(payload, dict):
+        return []
+    for key in ("orders", "items"):
+        value = payload.get(key)
+        if isinstance(value, list):
+            return [item for item in value if isinstance(item, dict)]
+    result = payload.get("result")
+    if isinstance(result, list):
+        return [item for item in result if isinstance(item, dict)]
+    if isinstance(result, dict):
+        return _extract_order_items(result)
+    return []
+
+
 def _market_client_from_env(config) -> TossInvestClient:
     load_dotenv()
     client_id = os.environ.get(config.toss.client_id_env)
@@ -466,6 +521,8 @@ def build_parser() -> argparse.ArgumentParser:
     daily.add_argument("--report-dir", default="reports")
     daily.add_argument("--dashboard", default="web/public/dashboard-data.json")
     daily.add_argument("--include-today", action="store_true")
+    daily.add_argument("--telegram", action="store_true")
+    daily.add_argument("--telegram-optional", action="store_true")
     daily.set_defaults(func=cmd_daily)
 
     trade = subparsers.add_parser("trade")

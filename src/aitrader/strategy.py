@@ -37,14 +37,56 @@ class DipSellPeakStrategy:
         return 1
 
     def signal(self, symbol: str, candles: list[Candle]) -> Signal:
-        latest = sorted(candles, key=lambda item: item.timestamp)[-1]
+        ordered = sorted(candles, key=lambda item: item.timestamp)
+        latest = ordered[-1]
+        if len(ordered) < 2:
+            return Signal(symbol, "HOLD", 0.0, latest.close, latest.timestamp, "not enough candles")
+
+        previous = ordered[-2]
+        move = (latest.close - previous.close) / previous.close if previous.close else Decimal("0")
+        buy_limit = previous.close * (Decimal("1") + self.buy_threshold)
+        sell_trigger = previous.close * (Decimal("1") + self.sell_threshold)
+
+        if latest.close <= buy_limit:
+            depth = abs(move - self.buy_threshold)
+            score = min(Decimal("1"), Decimal("0.55") + depth * Decimal("20"))
+            return Signal(
+                symbol,
+                "BUY",
+                float(score),
+                latest.close,
+                latest.timestamp,
+                (
+                    f"{self.pro} buy dip: close {latest.close} <= "
+                    f"previous close {previous.close} threshold {self.buy_threshold * Decimal('100'):.4f}%"
+                ),
+            )
+        if latest.close >= sell_trigger:
+            strength = abs(move - self.sell_threshold)
+            score = min(Decimal("1"), Decimal("0.55") + strength * Decimal("20"))
+            return Signal(
+                symbol,
+                "SELL",
+                float(score),
+                latest.close,
+                latest.timestamp,
+                (
+                    f"{self.pro} sell peak: close {latest.close} >= "
+                    f"previous close {previous.close} threshold {self.sell_threshold * Decimal('100'):.4f}%"
+                ),
+            )
+
         return Signal(
             symbol,
             "HOLD",
-            0.0,
+            float(min(Decimal("1"), abs(move) * Decimal("10"))),
             latest.close,
             latest.timestamp,
-            f"{self.pro} uses stateful tier backtest logic",
+            (
+                f"{self.pro} neutral: move {move * Decimal('100'):.4f}% "
+                f"is between buy {self.buy_threshold * Decimal('100'):.4f}% "
+                f"and sell {self.sell_threshold * Decimal('100'):.4f}%"
+            ),
         )
 
 

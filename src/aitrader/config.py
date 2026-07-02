@@ -37,6 +37,7 @@ class RiskConfig:
     initial_cash: Decimal
     currency: str
     max_position_pct: Decimal
+    symbol_position_caps: dict[str, Decimal]
     reserve_cash_pct: Decimal
     max_order_value: Decimal
     max_daily_orders: int
@@ -125,6 +126,10 @@ def load_config(path: str | Path) -> AppConfig:
         initial_cash=to_decimal(risk.get("initial_cash", "10000000")),
         currency=str(risk.get("currency", "KRW")).upper(),
         max_position_pct=to_decimal(risk.get("max_position_pct", "0.30")),
+        symbol_position_caps={
+            str(symbol).upper(): to_decimal(value)
+            for symbol, value in _section(risk, "symbol_position_caps").items()
+        },
         reserve_cash_pct=to_decimal(risk.get("reserve_cash_pct", "0.15")),
         max_order_value=to_decimal(risk.get("max_order_value", "1000000")),
         max_daily_orders=int(risk.get("max_daily_orders", 3)),
@@ -135,6 +140,10 @@ def load_config(path: str | Path) -> AppConfig:
     for name, value in {
         "max_position_pct": risk_config.max_position_pct,
         "reserve_cash_pct": risk_config.reserve_cash_pct,
+        **{
+            f"symbol_position_caps.{symbol}": value
+            for symbol, value in risk_config.symbol_position_caps.items()
+        },
     }.items():
         if value < 0 or value >= 1:
             raise ValueError(f"risk.{name} must be in [0, 1)")
