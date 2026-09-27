@@ -65,7 +65,7 @@ For V1-V74, use the existing [research protocol and historical overview](NQ_APEX
 | V117 | Isolate baseline-head PA nomination from execution stress using unchanged original forecasts. | FAILED: more trades, negative candidate PA in every mode. | [Design](research-v117-design.md), [completion](research-v117-completion.md) |
 | V118 | Compare distributional payoff utility at fixed versus current own-account headroom. | FAILED_ALL_PA_ABSTENTION: both new policies inactive; no realized dynamic-headroom benefit. | [Design](research-v118-design.md), [results](research-v118-results.md) |
 | V119 | Optimize integer quantity including flat over restored V118 distributions instead of testing maximum size only. | FAILED: sparse one-MNQ fills did not satisfy stress, activity or full-route gates. | [Design](research-v119-design.md), [results](research-v119-results.md), [status](research-v119-status.md), [test-count erratum](research-v119-test-count-erratum.md) |
-| V120 | Isolate actual trade-size information against equally weighted predecision tick-direction pressure with matched learners. | SOURCE ADMITTED; full regression has disclosed failures; market fits/replays NOT RUN and no new trial charges. | [Design](research-v120-design.md), [implementation](research-v120-implementation.md) |
+| V120 | Isolate actual trade-size information against equally weighted predecision tick-direction pressure with matched learners. | SOURCE ADMITTED; complete runner/audit implemented, qualification pending; market fits/replays NOT RUN and no new trial charges. | [Design](research-v120-design.md), [implementation](research-v120-implementation.md), [execution boundary](research-v120-runner.md) |
 
 ## New Records And Publication
 

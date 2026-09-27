@@ -89,3 +89,22 @@ At this checkpoint new market fits, economic replays and comparison charges are
 zero; the historical total remains13209. No market verdict, live-model change,
 Telegram message, broker order, fee purchase or independent-validation claim
 is implied by implementation progress.
+
+## Execution-Runner Checkpoint
+
+The complete frozen runner and separate recorded-account audit are implemented.
+Local commits `cc81340` and `be988d1` connect source admission, six causal fits,
+eighteen durable stages, eight new books and eight exact retained controls.
+The runner's initial43 synthetic control-plane cases passed. The auditor's
+216-case focused check passed after correcting a pre-market verification defect:
+embedding its own receipt must not inflate the check count on the next audit.
+Native JSON validation still checks all fields, but metadata shape no longer
+changes the arithmetic census. No historical fit or economic retry occurred.
+
+The full prior source report and V119 completion were reauthenticated with actual
+exit0,181 paired sources and no fits/replays/charges. The new combined focused
+qualification is running; the current runner has not yet qualified through a
+full suite. Earlier component/full results are not substituted for that gate.
+Read [execution boundary](research-v120-runner.md) for immutable claim, observed
+processes and terminal/postrun completion rules. Historical total remains13209;
+the four proposed charges and all six market fits remain unexecuted.

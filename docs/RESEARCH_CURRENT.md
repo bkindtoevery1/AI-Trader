@@ -43,6 +43,14 @@ and account adapter have not entered economic evaluation. See the [design](resea
 [implementation checkpoint](research-v120-implementation.md). Do not rescue V119
 by removing stress conditions, forcing activity or tuning completed outcomes.
 
+The complete runner and independent recorded-account auditor are now implemented
+but not yet qualified for historical execution. Initial runner checks43pass;
+auditor focused check216pass. Combined focused qualification is running.
+The earlier full suite is not current-runner coverage. Source/predecessor hashes
+were reverified without any new fits, account replays or comparison charges.
+See the [execution boundary](research-v120-runner.md). This implementation record
+does not change V119's failure or imply V120 economic success.
+
 See the [version index](RESEARCH_VERSION_INDEX.md) and
 [publication boundary](RESEARCH_PUBLICATION.md).
 
