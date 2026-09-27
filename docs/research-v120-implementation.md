@@ -144,3 +144,24 @@ Full-v1 actually started at2026-09-27T09:19:34Z in the approved full-suite
 interpreter. Its exit/result remain pending at this checkpoint. Do not restart
 or treat the earlier component full suite as this runner's qualification.
 No V120 market claim, fit, account replay or comparison charge has occurred.
+
+### Terminal Execution Follow-Up
+
+Full-v1 ended2026-09-27T10:09:31Z with observed exit1,20594 unique passes,
+the exact two predeclared inherited failures and one inherited skip. Source,
+parent runtime and selected child runtime stayed unchanged. The full census
+contained all888 current focused cases. This is not a green-suite claim.
+Full XML SHA256:
+`b3a09da46d3795ebf1a730ad3442aa59e722f82d32a7a7f8440f145cb29fb2a8`.
+Qualification SHA256:
+`f16ec8661851a1f93175b719dd523067c7c49a0ff579d9d1aa2cd8222e5f48c3`.
+
+The one actual market child started10:10:32Z and its10:10:47Z exclusive claim
+reserved four comparisons,total13213. Six forests/384trees/18stages completed.
+At10:18:48Z it exited1 in the pre-replay target-binding check. Exact integer
+values exported as floats by the forest differed in JSON bytes from the required
+integer daily representation. No account replay or economic result occurred.
+The read-only failure audit validated every export and retained the unchanged
+failure, source, process and reservation evidence. See the complete
+[cause and retrospective](research-v120-results.md). No refit, V120 restart,
+refund of comparisons or model-performance failure inference is allowed.
