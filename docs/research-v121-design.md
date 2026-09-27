@@ -1,7 +1,8 @@
 # V121: Replay-Only Integrity Successor
 
-Status: implementation direction after V120's confirmed technical abort; no
-market execution, new fit, prediction reconstruction or new trial claim yet.
+Status: replay-only implementation after V120's confirmed technical abort;
+pre-execution software qualification is pending. No actual-market execution,
+new fit, forecast reconstruction or new trial claim yet.
 Read research-v120-results.md before using its retained artifacts.
 
 ## Purpose And Invariants
@@ -69,6 +70,24 @@ Helper SHA256:efd48353a0dcef01e032f0cd28e9aaf29c66bba9f3e01077b02a3693e375d210.
 Test SHA256:6d42bb42a1fed76ab97d7fca7e7db01394b41248e418dc9c2f7f3442505c7cfb.
 Qualified V120 pins were independently rechecked unchanged after this work.
 The new helper was added after V120's full-suite run; it is not retrospectively
-counted in that run. A complete replay-only runner, restored-prediction equivalence
-checks, qualification and exclusive V121 execution policy remain unimplemented.
-No real forecast reconstruction, market replay, new fit or added trial occurred.
+counted in that run. At this initial checkpoint the replay-only runner and
+qualification were not implemented. No real forecast reconstruction, market
+replay, new fit or added trial occurred.
+
+## Replay-Only Implementation
+
+The separate failure-lineage admission, pure no-fit restorer, execution policy
+and observed runner are now implemented. Read research-v121-execution.md for
+their frozen intended execution sequence. Actual retained-lineage admission
+verified all3848 dependencies and six original exports, with no predictions.
+Its24 synthetic regression cases pass, including changes to consumed process
+evidence and input dependencies during verification.
+
+The restorer's73 focused cases passed under the full-suite runtime, exit0.
+Genuine synthetic V120 fits produce exactly the same252 complete arm-day forecast
+envelopes after restoration with fit APIs disabled. These are invented software
+fixtures, not new market research or validation evidence. Independent runner
+review identified completion dependency rechecks and an adopted-terminal-hash
+race; both were repaired before qualification, along with prepublication control
+mutation detection. Test receipts and actual completion status must be checked
+separately; implementation alone is not an authorized market execution or pass.

@@ -3,7 +3,7 @@
 Publication checkpoint: 2026-09-27. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V120 Technical Abort, V121 Planned
+## Current Checkpoint: V120 Technical Abort, V121 Qualification
 
 The user resumed model research using existing admitted Mac data and requested
 per-version reasons, results, lessons, commits and verified GitHub publication.
@@ -50,12 +50,20 @@ source/parent/selected-child runtime. These checks missed the actual representat
 boundary because the runner fixture used invented integer targets on both sides.
 Do not equate broad passing tests with coverage that was absent.
 
-[V121](research-v121-design.md) plans a separately qualified replay-only integrity
+[V121](research-v121-design.md) implements a separately qualified replay-only
 successor using the exact retained forests and unchanged causal/statistical rules.
-Its pure comparison helper and190 combined synthetic pipeline/runner checks pass,
-but the replay-only runner and its full qualification are still pending. No
-successor execution or new market fit has occurred. Original V120 evidence
-remains immutable; no stress relaxation, forced activity or outcome tuning.
+The no-fit restorer reproduced the original synthetic pipeline's252 arm-day
+forecasts exactly with fit APIs disabled. The observed integrated focused suite
+finished1138 unique passes,0failures/skips,exit0 with source/runtime unchanged.
+The full regression process started at2026-09-27T11:15:56Z and is not yet terminal
+at this checkpoint. These are software checks, not market strategy evidence.
+
+The [execution policy](research-v121-execution.md) preserves the six original
+models, four previously charged comparisons and13213total. Retained-lineage,
+mutable-control, terminal-hash and completion recheck defects were fixed before
+qualification. No successor market execution or new fit has occurred. Original
+V120 evidence remains immutable; no stress relaxation, forced activity or outcome
+tuning. Local implementation commit42e9e5c is not an ancestor published here.
 
 See the [version index](RESEARCH_VERSION_INDEX.md) and
 [publication boundary](RESEARCH_PUBLICATION.md).
