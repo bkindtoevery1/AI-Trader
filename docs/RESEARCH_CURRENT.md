@@ -3,7 +3,7 @@
 Publication checkpoint: 2026-09-27. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V119 Completed, Economic Gates Failed
+## Current Checkpoint: V120 Implementation, V119 Failed
 
 The user resumed model research using existing admitted Mac data and requested
 per-version reasons, results, lessons, commits and verified GitHub publication.
@@ -30,17 +30,22 @@ Windows collection is not a prerequisite for the historical research.
 - No orders, deployment, data purchases, credential transfer or schedule changes
   are authorized by these documents.
 
-Next research should first establish whether genuinely new causal payoff
-information exists relative to earlier volume/event-order studies. No successor
-model or new trial is created by that direction. Do not rescue V119 by removing
-stress conditions, forcing activity or tuning against these completed outcomes.
+V120 now implements a fixed comparison of equally weighted tick direction and
+actual trade-size-weighted pressure aggregated over the predecision minute.
+Both add the same number of coordinates, keep matched learner capacity, causal
+prefixes and account rules. Actual source admission completed181 contract pairs
+and5485 events; market fits, account replays and new trial charges are still zero.
+The integrated pipeline and account adapter are undergoing software qualification,
+not economic evaluation. See the [design](research-v120-design.md) and
+[implementation checkpoint](research-v120-implementation.md). Do not rescue V119
+by removing stress conditions, forcing activity or tuning completed outcomes.
 
 See the [version index](RESEARCH_VERSION_INDEX.md) and
 [publication boundary](RESEARCH_PUBLICATION.md).
 
 ## Historical Checkpoints
 
-V75-V119 have individually linked design/results records. Earlier versions are
+V75-V120 have individually linked design/results or implementation records. Earlier versions are
 not retrospectively assigned invented reasons or results. The full private
 central ledger is intentionally absent from this public branch.
 

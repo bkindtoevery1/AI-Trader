@@ -14,7 +14,7 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 For V1-V74, use the existing [research protocol and historical overview](NQ_APEX_RESEARCH.md) and [central historical summary](RESEARCH_CURRENT.md#historical-checkpoints). These are dated records, not a complete retrospective rationale for every version. Missing contemporaneous reasons or verdicts are not invented here; the detailed central `historical_research` ledger remains local-only.
 
-## V75-V119
+## V75-V120
 
 `FAILED` below means the linked study's declared development/economic gate failed, not that every individual metric was negative. Ambiguous or unevaluated records are explicitly distinguished.
 
@@ -65,6 +65,7 @@ For V1-V74, use the existing [research protocol and historical overview](NQ_APEX
 | V117 | Isolate baseline-head PA nomination from execution stress using unchanged original forecasts. | FAILED: more trades, negative candidate PA in every mode. | [Design](research-v117-design.md), [completion](research-v117-completion.md) |
 | V118 | Compare distributional payoff utility at fixed versus current own-account headroom. | FAILED_ALL_PA_ABSTENTION: both new policies inactive; no realized dynamic-headroom benefit. | [Design](research-v118-design.md), [results](research-v118-results.md) |
 | V119 | Optimize integer quantity including flat over restored V118 distributions instead of testing maximum size only. | FAILED: sparse one-MNQ fills did not satisfy stress, activity or full-route gates. | [Design](research-v119-design.md), [results](research-v119-results.md), [status](research-v119-status.md), [test-count erratum](research-v119-test-count-erratum.md) |
+| V120 | Isolate actual trade-size information against equally weighted predecision tick-direction pressure with matched learners. | SOURCE ADMITTED; software qualification in progress; market fits/replays NOT RUN and no new trial charges. | [Design](research-v120-design.md), [implementation](research-v120-implementation.md) |
 
 ## New Records And Publication
 
