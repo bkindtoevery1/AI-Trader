@@ -10,7 +10,11 @@ costed bracket PnL. Stale entries are blocked.
 The unchanged signal transport and route passed 98 focused software tests.
 These tests use invented fixtures and mocked transport, not market evidence.
 The already verified Windows fixed-model package contains the consumer and local
-publisher; its separate SSH sender still needs host staging and integration.
+publisher. Its separate SSH sender was subsequently copied with an exact hash
+match, and one guarded Windows import/--help probe exited0 with empty stderr.
+The verified model tree was unchanged; live sender configuration and integration
+remain pending. A Mac-only getMe check verified the intended Telegram bot without
+sending a message. Bot identity does not prove delivery to the selected chat.
 
 Fresh Windows metadata showed an advancing native producer, zero price ticks
 and no V102 consumer process. Genuine callback-time interpretation, suitable
