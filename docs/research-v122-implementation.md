@@ -58,3 +58,27 @@ charges have run. Proposed charges remain two; historical total remains13213
 and the sealed48-date holdout is closed. V121 remains the latest completed
 economic study and failed. More complete software is not evidence of a better
 trading policy.
+
+## Batch Follow-Up
+
+Later on the same UTC date, the core and label path gained a locally generated
+event-major batch. It performs one full-tape validation and hash per batch,
+including empty input; the complete label path has three validations and two
+hashes independent of event count. Per-event execution scans can remain O(EN).
+There is no persistent trusted cache or caller-supplied validation bypass.
+
+The final integration run passed927 unique software tests, exit0, covering all
+V122 components and all six retained V119 quantity test modules. Eight complete
+pre-change envelopes and32 entry receipts remained bit-exact across both sides
+and four modes. Scalar API error precedence is unchanged; day-level entries now
+all resolve before any geometry/replay, a documented and tested failure-order
+difference that returns no partial results. A separate read-only review found
+no actionable correctness or policy regression.
+
+Four bounded invented expiry benchmarks retained exact output hashes; one-run
+timings under different host load do not establish real-market throughput.
+The older full suite completed with21450 passes, two inherited failures and one
+skip; its actual exit was not recovered, and it does not cover these additions.
+No post-batch full-suite claim is made. A complete frozen runner still requires
+full qualification before market execution. Model fits, replays and new charges
+remain zero; the research result and holdout boundaries above are unchanged.
