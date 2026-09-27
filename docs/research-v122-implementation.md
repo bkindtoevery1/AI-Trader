@@ -82,3 +82,50 @@ skip; its actual exit was not recovered, and it does not cover these additions.
 No post-batch full-suite claim is made. A complete frozen runner still requires
 full qualification before market execution. Model fits, replays and new charges
 remain zero; the research result and holdout boundaries above are unchanged.
+
+## Source And Three-Fit Follow-Up
+
+The next additive checkpoint connects original stored-export verification to
+complete129-day attempt labels and three fixed causal fits. Each original raw
+scan, window receipt and old own-product label must reconcile before new labels.
+All original feature memberships and the complete scoring queries are checked
+before the first fit. The fixed45/87/129-date prefixes, ten-date purges and three
+42-date scoring blocks yield192 trees and126 daily distributions. Detached model
+callbacks and private accepted-model hashes prevent later record substitution.
+
+Receipt schema2 corrects one distinction before any real V122 market outcome:
+historical event-time maturity is not the later administrative verification time.
+The final supplied tick is the historical replay watermark; actual source
+verification is recorded separately and may occur after a historical cutoff.
+This does not establish historical feed arrival or backdate intake evidence.
+Legacy receipts are rejected instead of silently upgraded. Trading rules,
+features, costs, quantities and model hyperparameters are unchanged.
+
+Eight complete old invented envelopes remain preserved. A narrowly defined
+availability/hash projection verifies unchanged business results; new schema2
+envelopes are not called byte-identical to schema1. All32 unchanged core receipt
+goldens remain exact when supplied their original opaque coverage identity.
+
+The first source-focused test found a text-versus-bytes receipt interface error
+(six failures, sixteen passes). Explicit UTF-8 encoding corrected it; the next
+run passed22, exit0. A separate connected invented-data test generated labels,
+performed all three fits and produced the full scoring calendar; its two tests
+passed. Static review found no actionable source or pipeline issue. Additional
+tests cover last-day inference failure and a self-consistently rehashed model
+mutation. None of these software tests uses real market outcomes as evidence.
+
+Four-account guarded replay, a trigger-aware independent auditor, the complete
+frozen runner and its full qualification still remain. No market label run,
+market fit, new economic result or comparison charge is claimed. This research
+path is separate from the existing Windows signal deployment; its progress does
+not mean that live judgments or Telegram trade messages are being produced.
+
+Final focused integration passed1342 distinct cases across20 modules in289.33
+seconds, actual exit0, with no failures/errors/skips. Earlier focused counts
+overlap this run. The full retained suite was not repeated for this additive
+checkpoint; it remains mandatory after the complete runner closure is frozen.
+
+Local source/evidence checkpoint:10c8aab. This private-worktree commit is not
+published ancestry on this documentation-only branch. The initial failed test
+and corrected evidence are preserved locally. Only this sanitized account of
+scope, tests, failure attribution and remaining work is published here.
