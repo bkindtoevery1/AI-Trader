@@ -108,3 +108,39 @@ full suite. Earlier component/full results are not substituted for that gate.
 Read [execution boundary](research-v120-runner.md) for immutable claim, observed
 processes and terminal/postrun completion rules. Historical total remains13209;
 the four proposed charges and all six market fits remain unexecuted.
+
+### Pre-Market Adversarial Findings
+
+The first combined focused run completed with810 unique passes, no failures or
+skips, actual exit0 and unchanged source/runtime bindings. XML SHA256:
+`efa1e164280b6fabf6219d0e95afcc5788fcb63624f37ffb51721202005092ce`.
+This attempt is retained, but does not qualify the subsequently revised runner.
+
+Read-only review found four concrete gaps before any market claim: per-day
+distributions needed exact arm/fold model/target binding; postrun manifests
+could hash a replacement file rather than retain the hashes actually audited;
+the market observer did not bind its output seal; and full-suite runtime checks
+only fingerprinted the different parent environment. The first three are now
+fixed with synthetic arm-swap, audit-time mutation, successful closure and seal-
+replacement tests. The selected-child runtime probe is now implemented and
+includes the actual macOS framework binary. Its63 focused tests and actual
+read-only probes of both approved interpreters succeeded. A separate observed
+run of the58 runner and63 probe checks finished with121 passes and exit0.
+New complete focused/full qualification is still required. The initial green
+focused run is not relabelled a market failure or treated as final approval.
+
+### Frozen Runner Qualification
+
+Local commit2e3aeda freezes all four integrity repairs and selected-child runtime
+evidence. Observed focused-v2 completed with888 unique passes,0failures,0skips
+and actual exit0. Source, parent runtime and selected child runtime were unchanged;
+an independent receipt read rechecked the complete case census and current pins.
+XML SHA256 is
+`ad8d384ac931d1ca7fa2c2fffe8227211af0fad3e029ffb1e8e873e7a5e3cb82`;
+terminal SHA256 is
+`5c4981ce011367d7b9ebb770a92a61259f1e1a448b0db81316860b334f1906f7`.
+
+Full-v1 actually started at2026-09-27T09:19:34Z in the approved full-suite
+interpreter. Its exit/result remain pending at this checkpoint. Do not restart
+or treat the earlier component full suite as this runner's qualification.
+No V120 market claim, fit, account replay or comparison charge has occurred.
