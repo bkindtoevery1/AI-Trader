@@ -129,3 +129,58 @@ Local source/evidence checkpoint:10c8aab. This private-worktree commit is not
 published ancestry on this documentation-only branch. The initial failed test
 and corrected evidence are preserved locally. Only this sanitized account of
 scope, tests, failure attribution and remaining work is published here.
+
+## Four-Book And Independent-Audit Follow-Up
+
+The next additive implementation connects four new guarded account books to
+the source/fit pipeline and reuses four externally pinned V119 controls without
+refitting or replaying them. Original Evaluation prefixes remain exact. Every
+paired stored-export scan and both products' original labels reconcile before
+day execution. The complete loop scans181 dates and schedules126 scoring dates
+across four cost/latency modes. Source authenticity remains runner-owned.
+
+Two separate stdlib-only auditors check recorded trade/trigger arithmetic and
+the modeled account lifecycle. Neither calls the account or execution engine.
+They cover pending expiry and delays, quantity and cash conservation, cooldown,
+Evaluation resets, monthly billing, PA capital reset, calendar-gap inactivity
+and first eligible hypothetical withdrawal. Intratrade paths and raw first
+crossings remain separately verified dependencies, not conclusions drawn from
+recorded hash consistency. Fee amounts and official account eligibility remain
+unverified; no actual payout or deployment approval is asserted.
+
+A connected invented-data test now runs129 label days, three actual small forest
+fits,126 daily distributions and all four guarded books, including PA expiry,
+triggered entries and fills in every mode. Its first run found tuple date slices
+in a test-built receipt where JSON lists were required; the corrected fixture
+passed. Production behavior was not changed to accept that malformed input.
+
+Independent review found one concrete integrity gap: deleting a zero-cash expired
+attempt together with its choice and counters could preserve all cash/lifecycle
+checks. The source-bound replay now reconciles the complete original event
+membership, identities, clocks, support census, direction/contract and anchors.
+A self-consistently repaired omission passes the two standalone auditors but
+must fail this source binding. Independent re-review confirmed the correction.
+
+The expanded replay test first recorded78 passes and14 fixture setup errors;
+the invented unsupported forecast violated original reference support. The
+fixture was corrected without weakening that validation, and the retained
+second run passed92, exit0. An independent lifecycle review found no actionable
+issue, and a read-only consistency check matched all four existing V119 reports
+without refitting or replaying them. These are software and recorded-account
+checks, not new market performance evidence.
+
+Complete runner admission, immutable publication, dependency/runtime closure,
+full software qualification and pre-outcome two-comparison reservation remain.
+No actual-market V122 labels, fits, replay or charges have occurred; the existing
+historical total and sealed holdout are unchanged. This checkpoint does not
+activate real-time model judgments or Telegram trade messages.
+
+Final focused regression passed1653 distinct software tests across24 modules in
+382.90seconds, actual exit0, with no failures/errors/skips. All1342 previous
+cases remain in the census; all26 predecessor and33 current named source/test
+pins remain unchanged. Earlier focused counts overlap this run and are not added
+to its total. Complete-runner full regression is still pending.
+
+Local source/evidence checkpoint:e77bc19. It is not published source ancestry on
+this documentation branch. Initial failing XML remains byte-preserved locally;
+only this sanitized development, failure-attribution and scope record is public.
