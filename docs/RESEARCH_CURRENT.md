@@ -15,6 +15,10 @@ Windows collection is not a prerequisite for the historical research.
 - V119: integer quantity selection over the exact retained V118 distributions,
   including flat as an action. Implemented; market evaluation NOT_RUN at this
   publication checkpoint. See [status](research-v119-status.md).
+- V119 software qualification completed with485 focused passes and19689 unique
+  full-suite passes,2failures and1skip. The status record discloses a corrected
+  metadata spelling regression and targeted confirmation of inherited failures.
+  This is neither an all-green suite nor a model performance result.
 - Historical effective trial count: 13,206. The planned V119 increment of three
   is not charged until its exclusive market claim. No new V119 fits are planned.
 - The sealed historical holdout remains closed. Reused historical dates are
