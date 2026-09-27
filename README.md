@@ -5,8 +5,9 @@
 [Version index: V75-V119](docs/RESEARCH_VERSION_INDEX.md) contains development
 reasons, outcomes, failures and next questions. This branch publishes reviewed
 documentation only; see [publication scope](docs/RESEARCH_PUBLICATION.md).
-V119 is implemented but not economically evaluated at this checkpoint. These
-records do not establish a verified model pass or authorize trading.
+V119 is complete but failed PA activity and stress-economic gates; see its
+[results and retrospective](docs/research-v119-results.md). These records do not
+establish a verified account pass or authorize trading.
 
 Toss Invest Open API 기반 룰 베이스 자동매매 프로젝트입니다. 기본 실행은 항상 `dry-run`이며, 실거래는 `config/strategy.yaml`의 `risk.allow_live_trading: true`와 CLI의 `--execute`가 동시에 필요합니다.
 

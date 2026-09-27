@@ -25,6 +25,8 @@ this documentation branch does not claim to be a standalone runnable research tr
 
 - Local documentation source commit: `bc1d855`.
 - Local initial V119 implementation commit: `f8e7eaf`.
+- Local completed V119 results/evidence commit: `da3618d`. Only its reviewed
+  documentation is copied here; its detailed reports and ancestry remain local.
 - Historical version notes are backfilled in version-specific publication commits
   dated now. They are not falsely backdated to their original experiments.
 - Public notes replace personal repository/home/temporary-directory prefixes
@@ -38,9 +40,13 @@ this documentation branch does not claim to be a standalone runnable research tr
 
 ## Result And Publication Honesty
 
-V118 is closed failed. V119 is implemented but not economically evaluated at this
-checkpoint. No partial economics are published. Passing tests alone is not a model
-pass. See [V119 status](research-v119-status.md).
+V118 and V119 are closed failures. V119's sole historical replay and postrun
+verification completed with exit 0, but PA activity and stress economics failed.
+The new policy made only 1/2/1/1 PA trades across four scenarios. Baseline PA
+trading PnL was +135.96 USD and stress PnL was -68.50 USD before unpriced program
+fees. All PA books closed for inactivity; neither economic contrast passed.
+No partial economics were published. Passing checks is not an account pass.
+See [V119 results](research-v119-results.md) and [status](research-v119-status.md).
 
 This file records preparation, not a successful push. A remote commit SHA and
 verification timestamp will be recorded locally only after the push is checked

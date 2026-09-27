@@ -1,7 +1,8 @@
 # V119 Status And Development Record
 
-Updated 2026-09-27 UTC. **RUNNING / NOT_EVALUATED**: the one V119 historical
-execution is active; no completed economic verdict exists at this checkpoint.
+Updated 2026-09-27 UTC. **COMPLETED / FAILED_SPARSE_PA_ACTIVITY_AND_STRESS**.
+The sole execution and postrun verification exited0; economic gates failed.
+See the complete [results and retrospective](research-v119-results.md).
 
 ## Why This Version Exists
 
@@ -53,19 +54,21 @@ sealed holdout stays closed. Windows and future collection are not prerequisites
   `d148f1d7d647c9cea2f90457191d1eb67aa2f2b30fe7ab1da84ed86771847b81`.
   Metadata follow-up terminal SHA256:
   `0e36ccc2c152a5e0ceaf1005d5f09ea1990c51c1ae4c8d1b36137f8ca8221be7`.
-- Historical execution started2026-09-27T05:15:43Z; exclusive claim at05:15:47Z.
-  New fits:0. Charged comparisons:3, current total13209. Four new account books
-  will be compared with eight retained controls. No partial outcomes are opened.
+- Historical execution ran2026-09-27T05:15:43Z through06:32:42Z; exclusive claim
+  at05:15:47Z. New fits:0. Charged comparisons:3, current total13209. Four new
+  account books and eight retained controls are complete. No partial outcomes
+  were opened; separate postrun verification ended06:36:21Z.
 - Preoutcome lock SHA256:
   `0d3f2fce73e3ade254cb8e446f511c71e20f226fc34247d211ba74b85efe5126`.
-- PA PnL, trades, survival and payout: **NOT_MEASURED for V119**.
+- PA PnL is+135.96/+72.00/-65.54/-68.50USD in baseline/cost/latency/stress;
+  PA trades1/2/1/1, all one MNQ. All four books closed for inactivity. No payout.
 - No verified account pass, operational deployment or live order is claimed.
 
 ## Next Decision
 
-Observe the existing claimed process, never dispatch another copy because a
-poll times out. After terminal execution, verify complete source/account evidence
-and record failure as well as success. Do not rescue a completed
+Both observed processes are terminal. Preserve the complete results, receipts
+and13209charges; do not replay the closed run. Investigate genuinely new causal
+payoff information before defining a successor. Do not rescue a completed
 attempt by changing quantity preferences, costs, modes or account gates.
 
 Publication records must distinguish the reviewed public source/docs from local

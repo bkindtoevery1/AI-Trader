@@ -3,29 +3,37 @@
 Publication checkpoint: 2026-09-27. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V119 Resumed
+## Current Checkpoint: V119 Completed, Economic Gates Failed
 
 The user resumed model research using existing admitted Mac data and requested
 per-version reasons, results, lessons, commits and verified GitHub publication.
 Windows collection is not a prerequisite for the historical research.
 
 - Target: Apex Legacy 50K Evaluation; PA economics and payout assessed separately.
-- Latest completed study: V118, failed because both new policies abstained
-  throughout PA. Software and arithmetic checks did not establish a model pass.
-- V119: integer quantity selection over the exact retained V118 distributions,
-  including flat as an action. Claimed market execution is now running; results
-  remain unopened at this
-  publication checkpoint. See [status](research-v119-status.md).
-- V119 software qualification completed with485 focused passes and19689 unique
-  full-suite passes,2failures and1skip. The status record discloses a corrected
+- Latest completed study: V119, failed because PA activity remained too sparse
+  and stress economics were negative. Four new account books and eight retained
+  controls are complete across 126 scored dates from 181 admitted contract pairs.
+- The new policy jointly selected entry and integer quantity from exact retained
+  V118 distributions, including flat. No model was refitted. PA trading PnL was
+  +135.96/+72.00/-65.54/-68.50 USD in baseline/cost/latency/stress, after modeled
+  execution costs but before unpriced program fees. All four PA books closed for
+  inactivity. See [results and retrospective](research-v119-results.md).
+- V119 software qualification completed with 485 focused passes and 19,689 unique
+  full-suite passes, two failures and one skip. The status record discloses a corrected
   metadata spelling regression and targeted confirmation of inherited failures.
-  This is neither an all-green suite nor a model performance result.
+  This is not an all-green suite. The sole market replay and postrun verification
+  exited 0, but neither economic comparison passed.
 - Historical effective trial count: 13,209 after the exclusive V119 claim at
-  2026-09-27T05:15:47Z. No new V119 fits are planned. Do not restart the run.
+  2026-09-27T05:15:47Z. No new V119 fits occurred. Do not restart the closed run.
 - The sealed historical holdout remains closed. Reused historical dates are
   development evidence, not independent validation.
 - No orders, deployment, data purchases, credential transfer or schedule changes
   are authorized by these documents.
+
+Next research should first establish whether genuinely new causal payoff
+information exists relative to earlier volume/event-order studies. No successor
+model or new trial is created by that direction. Do not rescue V119 by removing
+stress conditions, forcing activity or tuning against these completed outcomes.
 
 See the [version index](RESEARCH_VERSION_INDEX.md) and
 [publication boundary](RESEARCH_PUBLICATION.md).

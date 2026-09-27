@@ -64,7 +64,7 @@ For V1-V74, use the existing [research protocol and historical overview](NQ_APEX
 | V116 | Learn whether original NQ forecasts add information beyond the original MNQ score. | FAILED: all PA abstention; both comparisons and separate economic gates fail. | [Design](research-v116-design.md), [completion](research-v116-completion.md) |
 | V117 | Isolate baseline-head PA nomination from execution stress using unchanged original forecasts. | FAILED: more trades, negative candidate PA in every mode. | [Design](research-v117-design.md), [completion](research-v117-completion.md) |
 | V118 | Compare distributional payoff utility at fixed versus current own-account headroom. | FAILED_ALL_PA_ABSTENTION: both new policies inactive; no realized dynamic-headroom benefit. | [Design](research-v118-design.md), [results](research-v118-results.md) |
-| V119 | Optimize integer quantity including flat over restored V118 distributions instead of testing maximum size only. | RUNNING/NOT_EVALUATED: one claimed market execution, no completed economics. | [Design](research-v119-design.md), [status](research-v119-status.md), [test-count erratum](research-v119-test-count-erratum.md), [current checkpoint](RESEARCH_CURRENT.md#current-checkpoint-v119-resumed) |
+| V119 | Optimize integer quantity including flat over restored V118 distributions instead of testing maximum size only. | FAILED: sparse one-MNQ fills did not satisfy stress, activity or full-route gates. | [Design](research-v119-design.md), [results](research-v119-results.md), [status](research-v119-status.md), [test-count erratum](research-v119-test-count-erratum.md) |
 
 ## New Records And Publication
 
