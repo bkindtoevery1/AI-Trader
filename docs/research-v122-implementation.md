@@ -3,6 +3,32 @@
 Checkpoint2026-09-27UTC. This is a curated development record, not a completed
 experiment, market-performance result or deployment instruction.
 
+## Runner Follow-Up
+
+The additive execution runner now binds retained V119 controls, V121 completion,
+source/runtime dependencies and the preclaim trial ledger. It records one
+exclusive claim, nine fit stages, three models and four guarded account books.
+Postrun restores predictions from saved forests without fitting again, binds
+all stored source records, and repeats the recorded-account/lifecycle audits.
+This is not an independent raw-tape replay or independent statistical test.
+
+Three added test modules passed207 invented-data cases, actual exit0 in48.94
+seconds, including a full temporary label/fit/account/publication/completion
+workflow. Earlier adversarial cases exposed preclaim drift, incomplete process
+identity binding and overflowing JSON numbers. Normal integration also exposed
+a compact-ledger field-name mismatch; the other initial normal failure was an
+outdated fixture expectation. These defects were corrected without changing
+the frozen strategy or components. Initial failed evidence is retained; two
+early boundary runs had terminal output but no XML and are recorded as such.
+
+The complete focused closure and full retained regression remain unrun for this
+new runner. No actual-market labels, fits, replays or comparison charges have
+occurred;13213 effective historical trials and the sealed holdout are unchanged.
+Existing-model signal activation remains the user's immediate priority. This
+software checkpoint is neither a new economic success nor evidence that live
+signals are being delivered. No private source history, fitted artifact, raw
+market data, operational receipt or secret is included in this publication.
+
 ## What Changed
 
 The fixed quarter-stop pullback policy now has three additional implemented
