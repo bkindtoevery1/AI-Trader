@@ -1,7 +1,7 @@
 # V119 Status And Development Record
 
-Updated 2026-09-27 UTC. **NOT_EVALUATED**: no V119 historical execution, model
-fit or economic verdict exists at this checkpoint.
+Updated 2026-09-27 UTC. **RUNNING / NOT_EVALUATED**: the one V119 historical
+execution is active; no completed economic verdict exists at this checkpoint.
 
 ## Why This Version Exists
 
@@ -38,8 +38,9 @@ sealed holdout stays closed. Windows and future collection are not prerequisites
 - Audit/qualification integration local commit: `af4c843`. The audit checks
   recorded arithmetic only, not independent tape or full lifecycle reconstruction.
 - Full regression ended with observed exit1 in2845.712seconds:19689 unique
-  passed cases,2failed and1skipped;19781JUnit execution records include repeated
-  case IDs. Source/runtime hashes stayed unchanged and the predecessor census
+  passed cases,2failed and1skipped;19692 actual cases have unique IDs. The suite
+  header declares19781; see the [count erratum](research-v119-test-count-erratum.md).
+  Source/runtime hashes stayed unchanged and the predecessor census
   plus every focused case remained present. This is not an all-green suite.
 - The two failing case IDs match the inherited baseline. The account-transition
   case initially stopped earlier on this turn's `Legacy50K` status spelling.
@@ -52,16 +53,19 @@ sealed holdout stays closed. Windows and future collection are not prerequisites
   `d148f1d7d647c9cea2f90457191d1eb67aa2f2b30fe7ab1da84ed86771847b81`.
   Metadata follow-up terminal SHA256:
   `0e36ccc2c152a5e0ceaf1005d5f09ea1990c51c1ae4c8d1b36137f8ca8221be7`.
-- Historical execution: **NOT_RUN**. New fits:0. New comparison charges:0.
-  Planned charge:3, only on a genuine exclusive claim. Current total:13206.
+- Historical execution started2026-09-27T05:15:43Z; exclusive claim at05:15:47Z.
+  New fits:0. Charged comparisons:3, current total13209. Four new account books
+  will be compared with eight retained controls. No partial outcomes are opened.
+- Preoutcome lock SHA256:
+  `0d3f2fce73e3ade254cb8e446f511c71e20f226fc34247d211ba74b85efe5126`.
 - PA PnL, trades, survival and payout: **NOT_MEASURED for V119**.
 - No verified account pass, operational deployment or live order is claimed.
 
 ## Next Decision
 
-Qualification and metadata follow-up are terminal. Recheck the pinned evidence,
-freeze exact dependencies, and execute the one fixed policy over the complete
-existing calendar. Record failure as well as success. Do not rescue a completed
+Observe the existing claimed process, never dispatch another copy because a
+poll times out. After terminal execution, verify complete source/account evidence
+and record failure as well as success. Do not rescue a completed
 attempt by changing quantity preferences, costs, modes or account gates.
 
 Publication records must distinguish the reviewed public source/docs from local
