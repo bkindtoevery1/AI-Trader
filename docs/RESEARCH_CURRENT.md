@@ -39,6 +39,24 @@ PnL. Focused diagnostic tests passed 27 cases; its additive full regression is
 pending. The historical total stays 13,213 and the independent holdout stays
 closed. The failure is not converted into a pass or a relaxed cost assumption.
 
+## Next Development: V122 Triggered Market Entry
+
+[V122's fixed design](research-v122-design.md) changes entry mechanics rather
+than relaxing costs. It waits for a causal quarter-stop price move, expires
+without chasing if no trigger occurs, and models market entry only at the first
+timely print after the unchanged baseline/stressed delay. No passive fill or
+price-improvement guarantee is assumed. Missing evidence is an error, not a
+convenient zero-payoff label.
+
+The pure trigger/entry-clock component is implemented: 126 focused core tests
+and 330 integrated synthetic tests passed, with a separate static review finding
+no blocking issue in that scope. Local source commit a46c803 is not published
+ancestry. Full regression is pending. Labels, pending account occupation,
+learner bindings and a complete runner remain unimplemented. One candidate
+and one contrast propose two later charges; none is reserved or charged now.
+There is no new fit, market replay, performance result or deployment. V121
+remains the latest completed study and failed; historical total stays 13,213.
+
 ## Earlier Implementation Checkpoint
 
 The user resumed model research using existing admitted Mac data and requested
@@ -106,7 +124,7 @@ See the [version index](RESEARCH_VERSION_INDEX.md) and
 
 ## Historical Checkpoints
 
-V75-V121 have individually linked design/results or implementation records. Earlier versions are
+V75-V122 have individually linked design/results or implementation records. Earlier versions are
 not retrospectively assigned invented reasons or results. The full private
 central ledger is intentionally absent from this public branch.
 

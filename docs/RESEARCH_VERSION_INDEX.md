@@ -14,7 +14,7 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 For V1-V74, use the existing [research protocol and historical overview](NQ_APEX_RESEARCH.md) and [central historical summary](RESEARCH_CURRENT.md#historical-checkpoints). These are dated records, not a complete retrospective rationale for every version. Missing contemporaneous reasons or verdicts are not invented here; the detailed central `historical_research` ledger remains local-only.
 
-## V75-V121
+## V75-V122
 
 `FAILED` below means the linked study's declared development/economic gate failed, not that every individual metric was negative. Ambiguous or unevaluated records are explicitly distinguished.
 
@@ -67,6 +67,7 @@ For V1-V74, use the existing [research protocol and historical overview](NQ_APEX
 | V119 | Optimize integer quantity including flat over restored V118 distributions instead of testing maximum size only. | FAILED: sparse one-MNQ fills did not satisfy stress, activity or full-route gates. | [Design](research-v119-design.md), [results](research-v119-results.md), [status](research-v119-status.md), [test-count erratum](research-v119-test-count-erratum.md) |
 | V120 | Isolate actual trade-size information against equally weighted predecision tick-direction pressure with matched learners. | TECHNICAL ABORT after six fits, before account replay: equivalent float/integer cent targets rejected by byte comparison. No performance verdict; four reserved comparisons retained,total13213. | [Design](research-v120-design.md), [implementation](research-v120-implementation.md), [execution boundary](research-v120-runner.md), [failure analysis](research-v120-results.md) |
 | V121 | Evaluate the same retained V120 forests without refitting, repairing only exact integer-cent representation binding. | FAILED_ALL_PA_ABSTENTION: both candidates made zero PA trades; economic contrasts and full-route gates fail. Replay and postrun exit0, no new fit/charge. | [Design](research-v121-design.md), [execution boundary](research-v121-execution.md), [results](research-v121-results.md), [abstention attribution](research-v121-abstention-audit.md) |
+| V122 | Test a fixed post-decision price trigger and delayed market entry with expiry, not reduced costs or assumed passive fills. | PURE CORE ONLY: 126 core/330 integrated synthetic tests pass; full pending. Labels/account adapter/learner/runner incomplete; no fit, market replay or reserved charge. | [Design and remaining work](research-v122-design.md) |
 
 ## New Records And Publication
 
