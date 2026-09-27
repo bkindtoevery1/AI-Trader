@@ -48,14 +48,17 @@ timely print after the unchanged baseline/stressed delay. No passive fill or
 price-improvement guarantee is assumed. Missing evidence is an error, not a
 convenient zero-payoff label.
 
-The pure trigger/entry-clock component is implemented: 126 focused core tests
-and 330 integrated synthetic tests passed, with a separate static review finding
-no blocking issue in that scope. Local source commit a46c803 is not published
-ancestry. Full regression is pending. Labels, pending account occupation,
-learner bindings and a complete runner remain unimplemented. One candidate
-and one contrast propose two later charges; none is reserved or charged now.
-There is no new fit, market replay, performance result or deployment. V121
-remains the latest completed study and failed; historical total stays 13,213.
+The pure trigger clock now has implemented unconditional labels, a pending PA
+account adapter and explicit new-target training inputs. The integrated run
+passed631 unique invented-fixture cases; separate static reviews found no
+concrete account/input defects. Local implementation54a731a is not published
+ancestry. See the [implementation boundary](research-v122-implementation.md).
+The full runner, causal three-fit pipeline, independent replay auditor and
+real-tape throughput qualification remain incomplete. An earlier full regression
+was collected before these new components and does not qualify them. One
+candidate and one contrast propose two later charges; none is reserved or
+charged now. No actual-market fit, replay, performance result or deployment
+exists. V121 remains the latest completed study and failed; total stays13,213.
 
 ## Earlier Implementation Checkpoint
 
