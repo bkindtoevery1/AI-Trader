@@ -35,8 +35,11 @@ actual trade-size-weighted pressure aggregated over the predecision minute.
 Both add the same number of coordinates, keep matched learner capacity, causal
 prefixes and account rules. Actual source admission completed181 contract pairs
 and5485 events; market fits, account replays and new trial charges are still zero.
-The integrated pipeline and account adapter are undergoing software qualification,
-not economic evaluation. See the [design](research-v120-design.md) and
+Full regression completed with20051 unique passes,4failures and1skip. Two V119
+central-metadata omissions were repaired against existing immutable evidence;
+focused recheck leaves two inherited failures. The suite is not reported green
+and was not repeated after metadata-only corrections. The integrated pipeline
+and account adapter have not entered economic evaluation. See the [design](research-v120-design.md) and
 [implementation checkpoint](research-v120-implementation.md). Do not rescue V119
 by removing stress conditions, forcing activity or tuning completed outcomes.
 

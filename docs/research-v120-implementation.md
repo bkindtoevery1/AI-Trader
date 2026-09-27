@@ -36,8 +36,25 @@ private result remains identical. They were added after full-suite collection,
 so their separate focused exit0 is not full-suite coverage.
 
 Synthetic prices, forecasts and fitted trees in these tests are software evidence
-only. The full regression is in progress; do not claim it is green or that the
-implementation is qualified for market execution yet. The future integrated runner
+only. Full regression exited1 after2935.967seconds:20051 distinct passes,
+four failures and one skip among20056 unique cases. Its header reports20145
+tests due to an inherited89-count overstatement; case nodes are authoritative.
+All364 collected V120 cases passed and the11 recorded source/test hashes stayed
+unchanged. The late-added isolation, V102 sender and V3 files were not collected;
+their separate checks are not retroactively counted in this run. XML SHA256:
+`729da5e927422b286900022790874e843e010566ae98ff4fa9bb7ce5646533b1`.
+
+Two failures are the inherited comparison-count assertion and missing V88
+temporary XML. The other two exposed incomplete V119 central completion metadata,
+not a new model outcome: missing terminal/claim/seal aliases and a stale V118
+summary. These were reconciled against immutable V119 evidence without changing
+tests, strategy results or sealed files. The four-case follow-up now passes those
+two checks and retains the two inherited failures, actual exit1. Full regression
+was not repeated after this metadata-only correction. Original failures remain
+retained; focused follow-up does not rewrite the full run as green. Checkpoint:
+`reports/nq_apex_tick_pressure_v120_implementation/integration-verification-v1.json`.
+
+The future integrated runner
 must authenticate each arm's model bindings and exact retained V119 control bytes;
 self-consistent hashes in pure-component inputs do not establish provenance.
 
@@ -62,8 +79,8 @@ and terminal records live under
 
 ## Remaining Work
 
-Complete full regression and independent code review, bind the integrated
-pipeline/account comparison to a frozen execution policy and exclusive claim,
+Bind the reviewed integrated pipeline/account comparison to a frozen execution
+policy, explicit software-qualification evidence and exclusive claim,
 then execute all candidates without exposing partial outcomes. Independently
 reconcile account decisions against the fitted distributions and original ticks.
 Only a later genuine claim reserves the four planned comparison charges.
