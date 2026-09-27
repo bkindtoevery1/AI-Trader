@@ -3,7 +3,30 @@
 Publication checkpoint: 2026-09-27. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V120 Technical Abort, V121 Qualification
+## Current Checkpoint: V121 Completed, All PA Abstention
+
+The sole V121 replay finished2026-09-27T13:28:09Z,exit0; postrun verification
+also exited0 and authenticated517971 recorded-account arithmetic checks.
+Both equal-print and volume-weighted pressure candidates made zero PA trades
+across all four scenarios and closed for inactivity. Each chose flat on all2210
+positive-capacity PA decisions. Both economic contrasts and all full-route gates
+failed. The unchanged numerical Evaluation passes are inherited, not a pressure
+feature benefit. Read [results and retrospective](research-v121-results.md).
+
+All181 explicit-contract pairs and126 scored dates completed, with8new books and
+8unchanged controls. The exact six retained V120 forests/384trees were restored
+without refitting; no new comparison was charged. Historical total stays13213,
+the sealed48-date holdout remains closed, and original V120 remains a technical
+failure. This is development evidence, not independent validation, a confirmed
+50K account pass or a deployment instruction.
+
+V121 software qualification was1138 unique focused passes and20844 full-suite
+passes,2predeclared inherited failures,1skip. Full regression was not green.
+All source and parent/selected-child runtime checks remained unchanged. Result
+status, seal and completion hashes are recorded in the results document; detailed
+local evidence and private source ancestry are not published here.
+
+## Earlier Implementation Checkpoint
 
 The user resumed model research using existing admitted Mac data and requested
 per-version reasons, results, lessons, commits and verified GitHub publication.
