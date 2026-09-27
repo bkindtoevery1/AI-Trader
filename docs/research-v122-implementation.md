@@ -29,6 +29,27 @@ software checkpoint is neither a new economic success nor evidence that live
 signals are being delivered. No private source history, fitted artifact, raw
 market data, operational receipt or secret is included in this publication.
 
+### Retained Evidence And Frozen Focused Run
+
+A subsequent read-only check against actual retained artifacts found one
+integration assumption that the invented fixtures had missed: the old metadata
+follow-up deliberately has exit1 for exactly two inherited failures. The new
+authority incorrectly expected exit0. It now requires the real exit1 and exact
+known failed-case census rather than changing old records or calling them green.
+Eleven added negative cases bring the authority-only run to87 passes, exit0.
+The corrected read-only preflight verifies4025 immutable dependencies, all four
+retained controls and the closed13213-trial ledger without market admission,
+new labels, fits, replay or reservation. Local correction checkpoint:6df5c95;
+this private source commit is not published ancestry.
+
+The complete frozen focused run then passed1871 distinct cases across27 modules
+in444.30seconds, actual exit0. Its observing process verified unchanged source,
+parent/child runtime and retained component-case coverage. The full retained
+suite is still running and has no terminal result at this checkpoint. No
+qualification, economic result or live signal activation is implied. The1871
+includes the previous component and additive checks, not1871 additional market
+trials or independent validations.
+
 ## What Changed
 
 The fixed quarter-stop pullback policy now has three additional implemented
