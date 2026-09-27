@@ -26,6 +26,19 @@ All source and parent/selected-child runtime checks remained unchanged. Result
 status, seal and completion hashes are recorded in the results document; detailed
 local evidence and private source ancestry are not published here.
 
+## Descriptive Abstention Audit
+
+A separate post-outcome [abstention audit](research-v121-abstention-audit.md)
+rechecked all 517,971 recorded-account arithmetic assertions and summarized the
+stored choices without refitting, inference, replay or alternative-policy PnL.
+Every candidate choice had capacity, with one contract best among positive
+quantities but below flat. The cost-only head was uniquely limiting throughout;
+this does not prove that it was the only negative head or that removing it
+would improve trading. Stored certainty equivalents are not expected or realized
+PnL. Focused diagnostic tests passed 27 cases; its additive full regression is
+pending. The historical total stays 13,213 and the independent holdout stays
+closed. The failure is not converted into a pass or a relaxed cost assumption.
+
 ## Earlier Implementation Checkpoint
 
 The user resumed model research using existing admitted Mac data and requested
