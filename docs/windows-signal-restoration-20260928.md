@@ -702,3 +702,11 @@ A genuinely new direct action-time answer is necessary for that later native
 application. Repeated lookup, offline testing and old consent are not substitutes.
 The exact Windows V5 offline qualification remains valid, but real model-to-signal
 operation remains incomplete. No runtime or frozen model code changed here.
+
+At 22:20:28 UTC the goal API confirmed `blocked`, with both original objectives
+unchanged (private checkpoint `00aed96`). The same external confirmation boundary
+persisted across three consecutive turns; the Windows task is terminal, not a
+live wait. Qualified artifacts remain intact. No repeated lookup, synthetic
+qualification or new historical search substitutes for the missing native action.
+Resume on a genuinely new direct confirmation or material external evidence;
+native application, authentic context and real signal delivery remain unproven.
