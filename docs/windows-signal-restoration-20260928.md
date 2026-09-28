@@ -313,3 +313,36 @@ Mac Telegram delivery are still incomplete. This handoff did not inspect or act
 on the native trust window, start a live service, change schedules or send orders.
 Bounded Windows qualification does not establish sustained operation or ordinary
 scheduled-task accessibility. Operational restoration remains in progress.
+
+## Source-Bound V63 Service V3
+
+Private checkpoint `c1bddb8` adds a separately identified V3 execution service.
+It connects the original V63 prediction to the production virtual-execution
+callback only when explicitly reviewed native and capacity evidence is supplied.
+Ten pinned inputs are revalidated at consumption and final commit. Hash matching
+alone does not prove authentic activation, provider clocks or a connection.
+Raw timestamps and false authority flags, fitted models and qualified V1/V2
+files remain unchanged. Both books, cursor, evidence and outbox commit together.
+
+Adversarial review found two inherited defects that fixed-clock offline tests
+missed: a healthy advancing clock could be rejected after an earlier boundary
+check, and an identical context reattached after restart acquired a conflicting
+availability timestamp. V3 uses the latest checked clock and preserves the
+original exact context evidence. A standalone import-path failure was also
+fixed through isolated supplied-module resolution. The qualified V2 bytes are
+preserved as offline evidence, not silently relabeled as production-ready.
+
+Verification: **322 focused cases and 2,503 related cases across 28 files pass**,
+in 34.41 and 137.22 seconds respectively. Counts overlap; these are software
+checks with explicitly invented inputs, not model trials or actual trades.
+The V2 archive and all 39 current members were rehashed and remain identical.
+An existing goal-prose metadata test still fails independently. No full-repository
+pass is claimed, and the operational goal was not rewritten just to pass it.
+
+Fresh read-only Windows evidence at 17:26 UTC still shows the native trust
+warning and no collection epochs, journals, durable files or producer lock.
+Explicit connection fields remain unknown. No prompt was acted on, no real
+approval packet was generated, and this V3 has not been qualified or deployed
+on Windows. Genuine V92 volume-chain ownership, daily/epoch financial carry
+and authenticated Mac Telegram remain unfinished. No new model fits, market
+trials, orders, schedules or Telegram tests occurred. Restoration remains active.
