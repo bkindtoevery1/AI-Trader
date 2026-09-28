@@ -44,3 +44,33 @@ of a separate legacy chunk-order failure.
 
 Private implementation checkpoint: `8b6bf10`. This public note contains no
 credentials, account identifiers, raw market payloads or remote-access settings.
+
+## V4 Correction Implemented
+
+Private implementation checkpoint `e0a7e2b` adds an isolated V4 collection
+source, schema3 raw verifier, durable reader and event-time minute aggregation.
+Frozen V3 and the trained model artifacts remain unchanged.
+
+The new source preserves original event and receipt clocks, raw .NET Time/Kind,
+monotonic receipt ticks and callback sequence. Explicit policy bounds allow up
+to 250ms event lead, 10s receipt age and 2s backstep from product high water.
+These bounds are not claimed as empirical maxima of provider disorder.
+Real receipt-clock regression, larger violations and changed timezone offsets
+remain failures. No timestamps are clamped or callbacks deduplicated.
+
+Minute open/close use event time with original callback sequence as tie-breaker.
+The first next-minute callback cannot prematurely finalize the preceding minute;
+closure waits for the product's event high-water minus the full disorder bound.
+Local timers do not fabricate completeness, and missing minutes do not create
+empty bars. Current outputs are quarantined, not automatically model-admitted.
+
+Verification: 409 focused tests and a separate 398-case legacy compatibility
+suite pass. A credential-free, model-free package was sent to the existing
+Windows task for its actual 44-case C#5 harness, isolated Python smoke and scratch
+compilation against NinjaTrader references. The task was confirmed running;
+Windows executable results and native installation are not yet verified.
+
+Remaining work includes native qualification, atomic running-consumer state,
+explicit virtual-fill ordering, original V63/V92 input integration and verified
+Mac Telegram signal delivery. Collection alone is not completion of the user's
+operational objective. No new model fitting, orders or test signals occurred.
