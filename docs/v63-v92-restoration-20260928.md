@@ -45,6 +45,13 @@ No full-repository rerun is claimed. See
 Private implementation commit: `0ef4685`. This public branch contains the
 design/results notes, not the private model, source archive or host evidence.
 
+The successor now has its own deterministic offline package,571913bytes/SHA256
+`9a27d218285eacf5f8a21bb69b70db5d6fc6e42fc047ac55ea39a927e0b8b7d5`.
+All baseline payload bytes are retained. Packaging regressions passed145cases,
+and an isolated Mac smoke loaded28modules and compared304invented scalar values.
+Windows was asked for static staging only, not execution. See the
+[package checkpoint](v92-v3-native-stage-v2.md). Private packaging commit:`cf4c2a1`.
+
 ## Remaining Work
 
 The actual collector is still stopped on an unconfirmed timestamp interpretation.
