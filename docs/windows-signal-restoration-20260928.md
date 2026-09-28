@@ -385,3 +385,26 @@ does not establish whether the qualification commands succeeded, failed or ran.
 It also does not prove the machine shut down. Existing handles are preserved;
 no qualification rerun or executor workaround was requested. Windows V3 remains
 unqualified until authentic original execution evidence can be recovered.
+
+### Recovered Windows Result
+
+Private checkpoint `fddce5f`: coordination returned and original evidence
+resolved the interruption. Independent
+archive verification/extraction had passed, but another direct user request took
+priority before any of the three supplied commands ran. This was not a test
+failure. Mac checked the original preflight outputs and all 46 member pins;
+only the unexecuted commands were then continued in the same unchanged stage.
+
+The exact V3 verifier, smoke and isolated service-help now all exit zero on
+Windows, with empty stderr and no retries or timeouts. Smoke took **39.817 seconds**.
+Mac independently checked all six original output blobs, before/after identities
+of all 46 files, the archive, manifest and unchanged interpreter. All non-runtime
+results agree with Mac within `1e-9`; the largest floating difference is about
+`3.56e-15`. Integer cents and event counts agree exactly. The actual advancing-
+clock probe, production V63 callback, atomic rollback and once-only restarts pass.
+
+No original test was rerun, package installed, native collector activated or
+actual signal delivered. Private invented approvals were removed. This supersedes
+the missing-result state above for **offline qualification only**. Real source
+activation, V92 volume-history ownership, daily financial carry and authenticated
+Mac Telegram delivery remain unfinished. The full operational goal is not complete.
