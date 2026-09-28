@@ -555,3 +555,27 @@ same-owner deferred context attachment, durable pre-read intent and a V4-specifi
 receipt callback. Its required prior20 volume sessions need genuine provenance;
 they do not inherently require waiting20 new trading days. No substitute model,
 invented context or relaxed statistical gate was introduced.
+
+## Deferred V92 Context Read Barrier
+
+Private checkpoint `6ceecff` adds an in-process controller for the exact running
+V4 service. It durably records a single session-scoped context-read intent before
+the existing loader reads history. It preserves genuine pre09 startup and first
+successful context availability. Interrupted reads can retry only the same path,
+digest and helper/runtime identity; prior attachments cannot acquire retroactive
+intent. Existing service, session, model and qualified archive bytes are unchanged.
+
+Independent review identified postcommit foreign-checkpoint adoption and clock
+regression between attempts. Both are corrected. Tests exercise separate SQLite
+connections, rollback, competing owners before/after commit, restarted attachment,
+explicit object identity, actual-clock bounds and continued synthetic model
+cycles. **37 focused cases and 697 related cases across nine files pass**; the
+final related run takes174.57seconds. These are invented software fixtures, not
+market/strategy validation. The full repository suite was not rerun.
+
+The controller returns structure-only results and grants no V92 paper admission.
+Automatic deferred launcher integration, genuine volume-acquisition/conversion
+lineage, the V4-specific V92 receipt callback, new-source admission and actual
+Windows-to-Telegram operation remain incomplete. Windows supplied no new native
+application result during this work. No new fit, order, live context read,
+holdout outcome access, connection or schedule change was performed.
