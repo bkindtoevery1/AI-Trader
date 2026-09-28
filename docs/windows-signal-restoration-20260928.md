@@ -523,3 +523,35 @@ active. No native replacement or restart was performed. Real source admission,
 original V92 context ownership and authenticated model-to-Telegram operation
 remain incomplete. No new fitting, holdout observation, order or test message
 occurred. Model operation remains the priority, not completion by diagnostics.
+
+## Native Candidate Qualified; Application Not Completed
+
+Private checkpoint `1932fd8` records actual Windows qualification of the exact
+prospective owner-binding candidate: C# harness compile, all15 executable cases
+and native-reference scratch compile pass. Mac independently verified the six
+original output streams, source/reference pins and original C#-emitted synthetic
+sidecar/settings/initial-record bytes. The read-only Python checker accepts
+their structure without granting native or model authority. A focused recheck
+passes179cases; the previous non-green full-suite result remains unchanged.
+
+Native application did not occur. The current user approved the bounded
+single-source replacement and one F5 in the Mac task, but the Windows executor
+could not independently retrieve that user turn. An initial hostless lookup
+searched Windows only; a corrected inventory still exposed no Mac task there.
+Windows' latest retrieved direct approval concerned the earlier AddOn, not this
+new replacement. This is asymmetric task visibility, not proof of a network
+failure or a claim that the user withheld consent. No alternate executor or
+permission bypass was used. Backup/replacement/F5 counts remain zero.
+
+The next requirement is a directly available current answer in the Windows
+task or supported retrieval of the Mac user turn, not another offline test or
+reapproval of the old trust dialog. Both follow-up tasks completed; no native
+application job is still running. Original V63/V92 real-data signal operation
+and Telegram delivery remain unfinished. No order, test message, new fit,
+historical trial or holdout outcome access occurred.
+
+A separate V92 integration audit identifies actual implementation gaps:
+same-owner deferred context attachment, durable pre-read intent and a V4-specific
+receipt callback. Its required prior20 volume sessions need genuine provenance;
+they do not inherently require waiting20 new trading days. No substitute model,
+invented context or relaxed statistical gate was introduced.
