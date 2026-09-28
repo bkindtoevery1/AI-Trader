@@ -173,3 +173,10 @@ Yes click. No automated security-prompt interaction, manual compile repetition,
 reboot, order, forced model entry or Telegram test was performed. The producer
 root contains settings only. Installed files, offline checks and a connected
 status are not a completed model-to-Telegram workflow.
+
+A separate verified clarification identifies an explicit Windows automation
+rule against acting on security/privacy permission requests. The observed
+AddOn trust wording was classified under that rule. This is not missing user
+installation consent; no backend refusal or OS privilege change was proven.
+No click or bypass was attempted. Direct user handling followed by a fresh
+native observation is the remaining installation step, not another diagnostic.
