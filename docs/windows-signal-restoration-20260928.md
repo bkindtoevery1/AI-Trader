@@ -681,3 +681,24 @@ return a concrete blocker once if that answer still cannot be retrieved.
 There is no repeated approval question or substitute offline testing loop.
 Native deployment, real model execution and actual signal delivery remain
 unverified; the broader goal is not complete.
+
+## Correction: Approval Was Earlier Than The New Candidate
+
+Private checkpoint `6542807` corrects the previous approval interpretation.
+The coordinator inspected its actual user message through supported task
+retrieval: that recheck/approval statement was at 18:37:58 UTC. The newly added
+candidate's replacement/F5 action-time question came later, at 20:16:36 UTC.
+Treating the earlier statement as subsequently received confirmation was wrong.
+Restoring cross-host visibility would not make it confirmation of that later
+action. The prior AddOn consent remains valid for its original scope.
+
+The bounded native follow-up completed without changes. Mac verified its
+4,317-byte receipt and expected installed-source, settings and candidate pins.
+No native replacement, F5, model start or Telegram send occurred. The correction
+was sent to Windows with no further diagnostic, approval question or execution.
+The job is terminal, not running or silently proceeding toward deployment.
+
+A genuinely new direct action-time answer is necessary for that later native
+application. Repeated lookup, offline testing and old consent are not substitutes.
+The exact Windows V5 offline qualification remains valid, but real model-to-signal
+operation remains incomplete. No runtime or frozen model code changed here.
