@@ -74,3 +74,47 @@ Remaining work includes native qualification, atomic running-consumer state,
 explicit virtual-fill ordering, original V63/V92 input integration and verified
 Mac Telegram signal delivery. Collection alone is not completion of the user's
 operational objective. No new model fitting, orders or test signals occurred.
+
+## Windows Runtime And Atomic Persistence
+
+Private checkpoint `d70da3f` adds a separate raw-minute consumer and a pure
+bridge to the unchanged V63/V92 prediction functions. Cursor, pending buckets
+and completed bars commit together; restarts retain genuine consumer start
+time and cannot re-emit a committed prefix. The bridge preserves exact model
+hashes and complete-prefix timing, including V92's pre09 consumer requirement.
+Its outputs remain unsized and quarantined, not tradable signals.
+
+Independent review found hot-journal recovery, fatal-latch contention and
+stored-bar corruption defects in the initial consumer. These were fixed with
+sealed database identity, immutable fault evidence separate from SQLite locks,
+and sticky integrity handling. Ordinary read contention remains retryable by
+explicit reopen, not a fabricated fatal source error. Crash-injection and real
+SQLite lock tests are included. The final focused/legacy integration suite
+passes **1,222 cases**, including 30 consumer and 306 prediction-bridge cases.
+These counts overlap earlier runs; this is not a full-repository test or model
+performance result.
+
+Actual Windows qualification now passes: **44/44 C#5/.NET Framework harness
+cases**, Python3.12 smoke and scratch compilation against installed NinjaTrader
+references. The unchanged harness initially failed under a 279-character
+temporary path; it passed in 6.12 seconds when paths were limited to231characters.
+Both attempts are retained. This supports a test-environment path-length cause,
+not a directly captured production exception. Mac also verified original
+C#-serialized synthetic journal bytes independently.
+
+Native installation is still incomplete. The initial source-folder preflight
+was overbroad: known OneDrive CloudFiles tags and SYSTEM ownership were not
+themselves proof of redirection or access denial. Exact tags and ordinary access
+checks resolved that issue without permission changes. A subsequent actual raw
+directory creation did reveal package AppData virtualization: its physical
+location differs from the location expected by NinjaTrader.
+
+The next correction is to qualify an ordinary shared local document directory
+and change only the new producer's storage root, preserving existing artifacts,
+security settings, old data and financial ledgers. The documented distinction
+between AppData virtualization and permitted writes elsewhere in the user
+profile is described by [Microsoft](https://learn.microsoft.com/en-us/windows/msix/desktop/flexible-virtualization).
+No alternate executor, elevated access, ACL change or virtualized market spool
+is being used. Native collection, actual model execution and Telegram delivery
+remain unverified. No new fitting, historical trial, order or test signal was
+performed in this checkpoint.
