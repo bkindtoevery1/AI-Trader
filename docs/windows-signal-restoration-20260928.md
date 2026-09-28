@@ -449,3 +449,39 @@ V4 has not been packaged, qualified or deployed on Windows. Automatic multi-day
 source management, genuine V92 context ownership and authenticated Mac Telegram
 delivery are unfinished. No new fitting, historical search or holdout observation
 was performed. The operational goal remains active and incomplete.
+
+## V4 Exact Lifecycle Package
+
+Private checkpoint `5929ef9` packages the reviewed V4 runtime while preserving
+all 45 exact V3 payload members. The credential-free archive has 50 payload
+files and one closed manifest; all installation, service, source, delivery and
+order authority flags remain false. No native collector or existing paper
+ledger is replaced by this package.
+
+Mac exact-extracted verification, standalone smoke and isolated help pass with
+empty stderr. The smoke takes **85.328 seconds** and matches the worker's stdout
+byte-for-byte. The unchanged production V63 callback and real ledger service
+consume 1,154 invented ticks, close 300 minutes per product, park, and carry a
+simulated loss of **20,408 cents** into one later fixture session exactly once.
+Five restarts preserve evidence and three outbox events; zero deliveries occur.
+All 50 files stay unchanged and private invented approval scratch is removed.
+V92 context is absent and its head evaluation count is zero: this run does not
+qualify V92 decisions, real sources or market throughput.
+
+**112 focused tests pass in 3.81 seconds; 2,298 related checks across 29 files
+pass in 398.32 seconds.** Counts overlap and are not strategy trials. The prior
+interrupted non-green full-repository result remains documented.
+
+A distinct Windows existing-evidence audit identifies missing owner-to-epoch /
+loaded-assembly linkage and current instrument-routing metadata in the actual
+source. Older clock samples support Seoul empirically but do not establish the
+provider-specific timestamp contract. This is an implementation/evidence gap,
+not missing user consent. No repeat live canary, F5, restart, source or schedule
+change occurred; the collector was left untouched.
+
+The exact new archive was dispatched to the existing Windows task, whose active
+handle was verified. Windows qualification remains pending its original outputs,
+not inferred from Mac success. Preserve that handle and do not duplicate the job
+because an observation times out. Native admission, V92 history ownership and
+actual model-to-Telegram delivery remain unfinished. No fit, holdout observation,
+order, Telegram send or strategy-pass claim was made.
