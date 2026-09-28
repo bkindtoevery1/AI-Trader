@@ -25,9 +25,25 @@ The private credential-free Windows artifact is544061bytes with SHA256
 Private source commit is `77270c7`; this public commit publishes documentation,
 not the private fitted artifact, Windows settings or full research history.
 
+Windows subsequently received that exact archive and statically verified the
+manifest and all31members. It did not extract or execute the archive, run its
+smoke tests, admit a source or start the model. Static staging is not deployment.
+
 **The new adapter supports one source epoch only.** Automatic next-day handoff
 is not implemented. Never delete the ledger or select an empty database to
 obtain fresh virtual funds. See [implementation boundary](v92-v3-native-service-v1.md).
+
+A separate offline V2 successor now supports explicit later-session financial
+carry after clean park. Cash, realized losses/profits, closed trades and trailing
+limits persist; context and native sequence are bound to the new admitted source.
+It neither converts V1 ledgers nor adds automatic multi-day supervision. This is
+not the V1 archive already staged on Windows. The initial component suite passed
+119cases; parent integration passed583cases/exit0 in82.98seconds, using invented
+fixtures and the original fixed model. The sets overlap and are not additive.
+No full-repository rerun is claimed. See
+[V2 carry boundary](v92-v3-native-service-v2.md).
+Private implementation commit: `0ef4685`. This public branch contains the
+design/results notes, not the private model, source archive or host evidence.
 
 ## Remaining Work
 
@@ -37,11 +53,17 @@ and capture have not been evidenced. Windows requires direct user confirmation
 in its task; a confirmation relayed by the Mac coordinator was not accepted.
 That boundary is not bypassed.
 
-Fresh V63 metadata finds the expected model and aligned configured package
-roots, but no input packages. One deployed worker differs from the Mac copy and
-must be reviewed before replacement. Its existing package route requires a
+V63 metadata now identifies a concrete current-session blocker:
+`PRODUCT_TIMESTAMP_REVERSED`. A product's15-minute chunk index moved backward,
+so the existing invalid marker blocks package creation. This is distinct from
+an empty package root observed before its deadline. The underlying time-basis
+or callback-order cause remains unresolved; no invalid marker was deleted.
+
+The deployed V63 worker was reviewed byte-for-byte and matches its installed
+manifest. Its difference from the Mac copy is an added committed-package guard,
+not a changed model or signal window. Its existing package route requires a
 complete16-hour predecision session; the separate23-hour collector is not a
-direct inference dependency.
+direct inference dependency. Preserve the deployed file.
 
 Windows execution, actual completed-minute judgments, authentic virtual trade
 events, SSH acknowledgments and Telegram delivery remain separate unverified
