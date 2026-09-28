@@ -213,3 +213,35 @@ was performed.
 A fresh read-only Windows observation at 15:52 UTC confirms unchanged installed
 pins, the visible trust prompt and zero collection epochs/journals. This is an
 explicit unresolved operating state, not a running service wait or signal success.
+
+## Windows Fixed-Model Offline Execution
+
+Private checkpoint `64c2ef5` adds a credential-free, closed-inventory runtime
+bundle and isolated smoke runner. Original V63/V92 artifacts remain unchanged;
+the archive includes no credentials, market history, native installation,
+financial ledgers, settings or scheduling actions. Deterministic publication,
+strict member hashes and externally pinned archive identity are tested.
+
+**1,732 related cases passed in 43.48 seconds.** The exact extracted archive
+also self-verifies and executes on both Mac and Windows. Windows uses an
+existing CPython 3.14.3 environment with the specified package versions; no
+package installation or environment modification was needed.
+
+Windows returned original outputs from an independent package check, bundle
+self-verifier and one smoke run. All three exited zero, with no retries,
+timeouts or stderr. Mac independently checked the six output blobs and every
+one of the 34 archive members. Frozen-model outputs agree across platforms
+within absolute tolerance `1e-9` on the same invented input.
+
+The smoke exercised 722 invented raw callbacks, 90 complete minutes per product,
+once-only fixed-model predictions and two state-preserving restarts. The outbox
+and accounting event counts remained zero. V92 rejected the invented nominations
+at its unchanged payoff gate. This is **offline software execution evidence**,
+not a model-performance result, real market observation or admitted paper trade.
+
+Remaining: native source activation, genuine input/context admission, separate
+V63 execution, daily/epoch carry and authenticated Mac Telegram delivery.
+Ordinary scheduled-task access to the existing environment is not yet proven.
+No security prompt, ACL, privilege, login, schedule, broker order or Telegram
+test was changed. End-to-end operational restoration is still incomplete.
+The prior interrupted, non-green full-repository test result is unchanged.
