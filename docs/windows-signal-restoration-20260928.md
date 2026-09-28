@@ -118,3 +118,20 @@ No alternate executor, elevated access, ACL change or virtualized market spool
 is being used. Native collection, actual model execution and Telegram delivery
 remain unverified. No new fitting, historical trial, order or test signal was
 performed in this checkpoint.
+
+## Shared-Root Fix Prepared
+
+Private checkpoint `c9a7ab2` applies the two-line producer-root correction after
+read-only Windows checks confirmed the shared local directory and ordinary
+access for both existing processes. No new executor or privilege is involved.
+The new exact archive preserves old artifacts and changes only the producer
+root expression, design note and derived manifest. Its 91 targeted and 1,222
+integration tests pass (overlapping counts). Windows is qualifying these exact
+new bytes before the requested native install and real collection check; old
+source test success is not substituted for that evidence.
+
+Continuous model integration remains unfinished: expected exchange maintenance
+breaks, producer epoch changes and genuine model observation windows require
+explicit orchestration. A late attachment or a raw-only consumer is not proof
+of tomorrow's full model coverage. No working signal or Telegram delivery is
+claimed by this checkpoint.
