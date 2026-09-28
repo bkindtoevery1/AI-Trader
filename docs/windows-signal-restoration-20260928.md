@@ -652,3 +652,32 @@ Genuine prior-volume authority, reviewed successor source admission,
 authenticated cross-host control delivery, native application and sustained
 model-to-Telegram operation remain incomplete. No model search, holdout outcome
 access, actual order, forced selection or test message occurred.
+
+## Windows V5 Qualification Completed
+
+Private checkpoint `65af3df` records the independently verified Windows result.
+The exact archive passed independent preflight, self-verifier, original V92 and
+Launcher smoke, and standalone help. Supplied commands exited zero in 0.2430405,
+50.5647334 and 3.2739193 seconds. All stderr was empty; no supplied command
+timed out or retried. Synthetic scratch was removed after child completion.
+
+Mac verified the 65,415-byte receipt, eight original output streams and all 65
+member length/hash pairs against its exact archive. Original inference and
+Launcher recovery agree across hosts: all 33 integer leaves match, and one
+forecast scalar differs by only 4.44e-16. Both products correctly reject selection
+on invented input. Expected platform differences are OS and timezone package.
+This is software qualification, not model profitability or live operation.
+
+The initial audit recognized a null-versus-string timezone-package field after
+first stopping on it; no evidence was changed or Windows command repeated.
+Windows had also shortened a planned scratch path before any supplied execution.
+No runtime, frozen model or qualified package bytes changed in this follow-up.
+
+The completed qualification job is no longer described as running. A separate
+bounded native follow-up was dispatched and independently confirmed active. It
+checks newly available user answers before any previously requested source
+replacement/F5, honors the existing action-time confirmation boundary, and must
+return a concrete blocker once if that answer still cannot be retrieved.
+There is no repeated approval question or substitute offline testing loop.
+Native deployment, real model execution and actual signal delivery remain
+unverified; the broader goal is not complete.
