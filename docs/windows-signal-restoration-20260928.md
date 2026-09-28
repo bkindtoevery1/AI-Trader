@@ -180,3 +180,36 @@ AddOn trust wording was classified under that rule. This is not missing user
 installation consent; no backend refusal or OS privilege change was proven.
 No click or bypass was attempted. Direct user handling followed by a fresh
 native observation is the remaining installation step, not another diagnostic.
+
+## Durable Fixed-Model Session
+
+Private checkpoint `980691f` joins the raw reader, bounded model-window bars,
+unchanged V63/V92 calculations and explicitly receipt-time virtual state.
+Cursor, decisions, model/virtual state, evidence and outbox commit atomically.
+Restarts preserve the genuine attachment clock and processed input identity;
+SQLite contention/crash recovery does not reset a financial book. Final model
+deadlines are checked again before commit.
+
+Adjacent original journal records are grouped, bounded by 4,096 callbacks or
+64 records, without dropping or reordering. This avoids repeating whole-state
+work for every small producer flush. It is not yet a measured sustained Windows
+throughput guarantee. Earlier prefixes are not retrospectively traded.
+
+Verification: **1,707 related tests pass in 22.69 seconds**, including 19 durable
+service and 38 pure-session cases. Invented raw journals feed the real unchanged
+model functions in the integration tests; these are not strategy results.
+The largest tested serialized evidence is 3,174,646 bytes for 4,096 callbacks
+and 600 bars, below the 4 MiB store bound without truncation. Counts overlap
+earlier suites. The interrupted non-green full-repository result remains recorded;
+no new full-suite pass is claimed.
+
+The runnable service does not manufacture native source receipts, admit new
+paper risk or send Telegram. V63 remains its own prediction evidence, not a
+V92 accounting substitute. Genuine native/context admission, V63 execution,
+daily/epoch carry, Windows runtime capacity and authenticated delivery still
+require completion. No fit, historical strategy trial, holdout access or order
+was performed.
+
+A fresh read-only Windows observation at 15:52 UTC confirms unchanged installed
+pins, the visible trust prompt and zero collection epochs/journals. This is an
+explicit unresolved operating state, not a running service wait or signal success.
