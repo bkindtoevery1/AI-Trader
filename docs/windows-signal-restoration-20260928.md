@@ -245,3 +245,37 @@ Ordinary scheduled-task access to the existing environment is not yet proven.
 No security prompt, ACL, privilege, login, schedule, broker order or Telegram
 test was changed. End-to-end operational restoration is still incomplete.
 The prior interrupted, non-green full-repository test result is unchanged.
+
+## Separate V63 Virtual Execution
+
+Private checkpoint `c1ad5a1` connects a separate V63 virtual book to the durable
+model session. It does not send V63 through V92's trading logic. Original V63
+size, stop, decision/entry/exit clocks and frozen fee/slippage assumptions remain
+unchanged. Long sell-to-exit and short buy-to-exit retain distinct side/action
+fields, contract identity, quantity and failed-validation shadow labels.
+
+The new V2 database persists both books, original raw cursor, evidence and
+outbox together. Restart cannot duplicate a committed fill or reset an old
+ledger. Final commit checks include both event/receipt freshness and original
+entry/exit deadlines. A delayed entry commit rolls back instead of being
+represented as timely. Existing V1 files and its Windows-qualified ZIP remain
+byte-identical; there is no automatic financial migration.
+
+An overstrict assumption was corrected before deployment: V63 can consume its
+complete original producer opening prefix after collection began, provided the
+consumer observes the original timely prediction. It does not inherit V92's
+different pre-opening consumer condition. Pre-admission catchup never fills a
+trade; stale active risk and actual source gaps still fail closed.
+
+Verification: **2,145 related tests pass in 67.27 seconds**, including 132 V63
+sidecar, 20 combined-session and 22 new durable-service cases. Differential
+tests use the existing pure settlement arithmetic as oracle. These are invented
+input software checks, not new model trials or an Apex pass. The previous
+interrupted non-green full-repository result remains recorded.
+
+Fresh read-only Windows evidence at 16:34 UTC still shows the native trust
+warning and zero collection epochs/journals. No explicit connection fields
+were visible, so a green indicator was not treated as proof of connectivity.
+The production V2 service has no source-admission callback enabled and is not
+Windows-qualified. Native activation, actual context, daily carry and real
+Mac Telegram delivery remain incomplete. No order or Telegram test was sent.
