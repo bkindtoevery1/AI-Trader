@@ -135,3 +135,41 @@ breaks, producer epoch changes and genuine model observation windows require
 explicit orchestration. A late attachment or a raw-only consumer is not proof
 of tomorrow's full model coverage. No working signal or Telegram delivery is
 claimed by this checkpoint.
+
+## Native Files Installed; Model Adapters Tested
+
+Private checkpoint `652b997` integrates an explicitly dated 09:00..14:00 ET
+predictor window into the raw-minute consumer. Every raw callback is still
+validated. Off-window intervals produce no invented bars; missing required
+minutes still fail. Genuine capture/start/emission clocks and exact model
+artifacts remain unchanged. Day and producer-epoch orchestration is not yet
+complete.
+
+A separate receipt-time virtual accounting adapter now delegates unchanged V92
+financial math while retaining both original clocks and callback identity.
+Fresh traces whose event and receipt times coincide exactly match the legacy
+financial results. Disordered traces make no event-time performance or actual
+broker-fill claim. Original-event staleness cannot be hidden by a newer receipt;
+invalid batches roll back and missing-tick exits are never fabricated. The new
+route remains simulation-only and does not authenticate or publish itself.
+
+Verification: **1,634 related cases passed**, including 170 adapter cases and
+51 window/store cases. Counts overlap previous component runs. A full repository
+run was attempted and deliberately interrupted after 197 seconds, with 1,970
+passes and one existing metadata test failure, exit 2. That assertion expects
+`Legacy 50K` in unchanged operational-priority goal prose. It is not a new model
+performance failure or a green full-suite result; the preceding full run took
+approximately one hour.
+
+Windows has independently qualified the revised shared-root producer with its
+44-case harness and native-reference compilation. Actual creation of the shared
+local raw directory now resolves correctly. The exact new source and settings
+are installed, and the old source is unchanged. Fresh UI observations identify
+the Seoul timezone and explicit same-maturity contracts.
+
+Native activation and actual Last collection remain unverified: the latest
+screen still shows the new AddOn trust warning, despite the reported manual
+Yes click. No automated security-prompt interaction, manual compile repetition,
+reboot, order, forced model entry or Telegram test was performed. The producer
+root contains settings only. Installed files, offline checks and a connected
+status are not a completed model-to-Telegram workflow.
