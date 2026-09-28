@@ -408,3 +408,44 @@ actual signal delivered. Private invented approvals were removed. This supersede
 the missing-result state above for **offline qualification only**. Real source
 activation, V92 volume-history ownership, daily financial carry and authenticated
 Mac Telegram delivery remain unfinished. The full operational goal is not complete.
+
+## Approved Native Collection And Durable Carry
+
+Private checkpoint `059554d`: after the user's Windows approval, fresh native
+UI shows both connection and price status **Connected**, with no trust warning.
+A bounded 40.228-second observation confirms actual same-maturity NQ/MNQ raw
+collection advancing in both sampled intervals. Windows verifies committed hash
+chains, product sequences and receipt-clock progression without a failure or
+terminal record. Mac checks the original diagnostic output and three original
+durable anchors, including exact integer timestamps. This is real collection
+evidence, not an inference from task status or file growth alone.
+
+Coverage is limited to those committed prefixes. Raw market rows were not
+published or independently replayed on Mac. Loaded managed-binary/source binding,
+provider timestamp semantics, complete-session coverage and production source
+admission remain separate. The late capture is not backfilled into an earlier
+prediction window. No F5, restart, settings or schedule change was needed for
+this observation; no model service, order or Telegram send was started.
+
+An additive V4 service implements explicit clean-session financial carry in one
+durable database. It preserves V92 losses, cash and trailing state, and separately
+accumulates settled original V63 costs and PnL. New-day source clocks, sequences
+and context remain genuine; existing databases are not reset or migrated. Exact
+qualified V3 payloads and both original fitted models remain byte-identical.
+
+Independent review found five predeployment defects: checkpoint replacement,
+stale-owner failure latches, nonsticky park failures, missing-ledger inception
+reset and hot-journal recovery. Fixes add transactional state commitments,
+checkpoint-scoped latches, durable park errors, refusal to recreate established
+accounts and a mandatory latch recheck after sealed SQLite recovery. The final
+review found no further blockers.
+
+**144 focused/adversarial tests pass in 235.85 seconds; 2,700 related tests across
+30 files pass in 168.55 seconds.** Tests use invented private inputs, including
+actual crash subprocesses. The prior non-green full-repository result remains
+documented. These are software checks, not model profitability or an Apex pass.
+
+V4 has not been packaged, qualified or deployed on Windows. Automatic multi-day
+source management, genuine V92 context ownership and authenticated Mac Telegram
+delivery are unfinished. No new fitting, historical search or holdout observation
+was performed. The operational goal remains active and incomplete.
