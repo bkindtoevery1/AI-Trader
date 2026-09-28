@@ -346,3 +346,42 @@ approval packet was generated, and this V3 has not been qualified or deployed
 on Windows. Genuine V92 volume-chain ownership, daily/epoch financial carry
 and authenticated Mac Telegram remain unfinished. No new model fits, market
 trials, orders, schedules or Telegram tests occurred. Restoration remains active.
+
+## V3 Advancing-Clock Qualification
+
+Private checkpoint `fc1f11d` adds an exact credential-free V3 qualification
+package. All 39 qualified V2 members and the reviewed production runtime remain
+unchanged. A closed inventory contains 45 payload files and one manifest. Its
+C# file is inert identity material, not permission to install or activate anything.
+
+Mac exact-extracted verifier, smoke and isolated service-help all exited zero
+with empty stderr. The smoke took 10.126 seconds. Unlike the earlier V2 test,
+this run does not replace the production V63 callback. Explicitly invented
+private source/context fixtures exercise 712 ticks, 90 complete minutes, virtual
+entry/stop, atomic rollback, two once-only restarts and preserved context timing.
+The original V92 heads execute without admitting risk or altering their books.
+A separate empty invented journal checks 133 records in three transactions and
+restart under the actual advancing wall clock. Neither branch is native proof,
+a performance result or a sustained market-throughput benchmark. Generated
+fixture approvals are removed and cannot be reused as operational evidence.
+
+Verification: **197 focused tests and 2,700 related tests across 30 files pass**,
+in 27.55 and 164.56 seconds respectively. The worker's initial broader run used
+an environment missing a scientific dependency; that failure is retained and
+the parent reran the related scope using the existing qualified environment.
+No packages were installed. Counts overlap earlier tests; the prior non-green
+full-repository result is not superseded.
+
+The exact offline request was sent to the existing Windows task and an active
+execution was observed. Windows evidence remains distinct from Mac results.
+The request excludes native UI, trust prompts, real source roots, login, account
+state, schedules, orders and Telegram. Actual operation is still unverified.
+
+Private evidence record `6e83d08`: the original Windows coordination turn
+subsequently completed, but its original
+command outputs and receipt did not arrive. A result-only recovery request was
+observed active; later the Windows task was no longer readable or listed. This
+does not establish whether the qualification commands succeeded, failed or ran.
+It also does not prove the machine shut down. Existing handles are preserved;
+no qualification rerun or executor workaround was requested. Windows V3 remains
+unqualified until authentic original execution evidence can be recovered.
