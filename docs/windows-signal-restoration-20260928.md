@@ -616,3 +616,39 @@ not an active installation job. Genuine volume authority, the reviewed successor
 source binding, launcher and authenticated context delivery, Windows qualification
 and actual model-to-Telegram operation remain incomplete. No new model fitting,
 historical search, holdout outcome access, actual order or test message occurred.
+
+## Same-Owner Launcher And Exact V5 Package
+
+Private checkpoint `9a57b0a` adds the executable original V92 paper launcher.
+One externally authenticated command can arrive while the same service keeps
+polling. Command, original metadata observation and registration plan are durable;
+partial recovery retains both original observation clocks rather than inventing
+earlier availability. Restart checks the same source, code and ledger identities.
+The original metadata loader, models and qualified V4 payload remain unchanged.
+An input pipe and matching hashes do not independently authenticate provenance.
+
+Combined launcher/package/volume/runtime tests pass 208 cases in 184.36 seconds;
+standalone smoke tests pass 44 cases in 33.05 seconds; V4/V5 package regression
+passes 105 cases in 2.31 seconds. Counts overlap. The full repository suite was not
+rerun and its previous non-green result remains unchanged.
+
+The exact 412,828-byte V5 archive has 64 payload members plus its manifest.
+All 50 qualified V4 payload members are preserved. A newly extracted Mac payload
+passed verifier, smoke and standalone help with exit zero, empty stderr and
+unchanged before/after hashes for all 65 files. Smoke took 14.88073 seconds and
+exercised 101 virtual cycles. Original V92 evaluated all four heads once per
+product and correctly made no selection on invented data. The actual Launcher
+also exercised deferred binding and restart after invented input removal.
+These are software tests, not performance or real-market operation evidence.
+
+Windows received the exact credential-free offline qualification request, and
+the task was confirmed in progress. This is not a native installation or a live
+model job. Current user consent remains recorded; no repeated approval request
+or native confirmation bypass was made. A later status lookup returned no
+readable remote task, so completion must be checked from the returned receipt,
+not inferred from that transient observation failure or assumed successful.
+
+Genuine prior-volume authority, reviewed successor source admission,
+authenticated cross-host control delivery, native application and sustained
+model-to-Telegram operation remain incomplete. No model search, holdout outcome
+access, actual order, forced selection or test message occurred.
