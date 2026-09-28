@@ -279,3 +279,37 @@ were visible, so a green indicator was not treated as proof of connectivity.
 The production V2 service has no source-admission callback enabled and is not
 Windows-qualified. Native activation, actual context, daily carry and real
 Mac Telegram delivery remain incomplete. No order or Telegram test was sent.
+
+## V2 Windows Offline Qualification
+
+Private checkpoint `9d29811` adds an isolated V2 qualification bundle without
+changing any original model, qualified V1 member or reviewed V2 runtime byte.
+The additive archive has 40 entries. Its explicit, closed inventory and externally
+supplied archive hash are checked before executing the payload.
+
+The same extracted archive now passes on Mac and the existing Windows CPython
+3.14.3 environment. Windows independent verification, bundle self-verification
+and one smoke each exited zero, without retry, timeout or stderr. Mac decoded
+and checked all six original output blobs and all 40 member identities. Fixed
+model diagnostics agree within absolute tolerance `1e-9`; the largest observed
+floating-point difference was approximately `3.56e-15`. Windows smoke took
+32.346 seconds. No package installation or execution-context change was needed.
+
+The production-service branch uses invented raw data and retains absent source
+receipts and an empty outbox. A separately labeled test-only callback exercises
+original V63 virtual entry, stop, cent arithmetic, atomic rollback and restart.
+The callback is restored and the unchanged V92 financial books remain separate.
+These are software mechanics, not native authentication, strategy performance,
+market observations or actual paper trades. Test outputs were not sent as signals.
+
+Verification: **36 focused cases and 2,181 related cases across 26 files pass**.
+Counts overlap prior suites. Initial Mac extraction through a symbolic-link path
+was rejected; identical bytes qualified through the physical path without
+weakening the policy. The failed invocation is preserved. The previous
+interrupted, non-green full-repository result remains unchanged.
+
+Native activation, genuine context/admission, daily carry and authenticated
+Mac Telegram delivery are still incomplete. This handoff did not inspect or act
+on the native trust window, start a live service, change schedules or send orders.
+Bounded Windows qualification does not establish sustained operation or ordinary
+scheduled-task accessibility. Operational restoration remains in progress.
