@@ -485,3 +485,41 @@ not inferred from Mac success. Preserve that handle and do not duplicate the job
 because an observation times out. Native admission, V92 history ownership and
 actual model-to-Telegram delivery remain unfinished. No fit, holdout observation,
 order, Telegram send or strategy-pass claim was made.
+
+## Windows V4 Pass And Prospective Owner Binding
+
+Private checkpoint `154618c` records the exact Windows lifecycle package result
+and adds the missing prospective native owner observation. The original Windows
+job completed normally; it was not duplicated when observation waits expired.
+
+Windows independent preflight, verifier, lifecycle smoke and help exit0, with
+empty stderr and no retries/timeouts. Smoke takes222.901seconds. Mac independently
+checks original output bytes, all51 archive/before/after pins and runtime
+identity. The54 integer results match exactly; only OS, architecture and timezone
+package availability differ. Both hosts record399cycles,1154invented ticks,
+five restarts, one financial carry and no duplicate carry. Invented approval
+scratch is removed. V92 head evaluations remain zero: this is software lifecycle
+qualification, not V92 decision validation, strategy performance or live service.
+
+The current collector still lacks owner-to-epoch/loaded-assembly linkage. A
+separate replacement candidate captures that context from its actual owner,
+then publishes an immutable bounded observation after the first two raw records
+are durable and before subscribing to prices. It records per-instrument
+connection snapshots and both timezone contexts. Missing file or route facts
+remain unknown; file hashes do not prove loaded-memory identity, and connection
+snapshots do not prove callback-atomic routing or provider clock semantics.
+
+An independent Python reader checks the exact original initial records,
+settings, schema/types, chronology and file bounds, but never grants source or
+model admission. Existing collectors, model packages and fitted models remain
+unchanged. A review caught an oversized time constant in the synthetic C#
+harness before dispatch; a regression now catches out-of-range long literals.
+
+**823 related tests across10 files pass in3.30seconds**, including69 C# static
+checks. These are not actual C# execution; the previous non-green full-repository
+result remains documented. Exact candidate and15-case executable harness were
+sent for bounded offline Windows compilation/execution, with the task confirmed
+active. No native replacement or restart was performed. Real source admission,
+original V92 context ownership and authenticated model-to-Telegram operation
+remain incomplete. No new fitting, holdout observation, order or test message
+occurred. Model operation remains the priority, not completion by diagnostics.
