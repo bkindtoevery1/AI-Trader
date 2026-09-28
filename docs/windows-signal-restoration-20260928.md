@@ -579,3 +579,40 @@ lineage, the V4-specific V92 receipt callback, new-source admission and actual
 Windows-to-Telegram operation remain incomplete. Windows supplied no new native
 application result during this work. No new fit, order, live context read,
 holdout outcome access, connection or schedule change was performed.
+
+## Original V92 Receipt Controller
+
+Private checkpoint `a5e3285` implements the missing metadata binding and original
+V92 paper receipt controller on the exact existing V4 owner. Frozen models,
+services, collectors and previously qualified packages remain unchanged.
+The metadata loader joins native/converter intent and terminal evidence with
+reviewed prior20 dates, explicit contracts, calendar, timezone and raw pins.
+It reads no historical result or context file. Hash equality is not provenance;
+an independently authenticated deployment/source/volume bootstrap is still needed.
+
+The controller attaches context through the existing durable read barrier and
+joins both raw and canonical identities to the committed attachment. Inside its
+owned transaction, the receipt callback recomputes the unchanged V92 prediction
+on the exact prefix, calendar and history. Cursor, financial state, receipts and
+outbox commit together. Original costs, sizing and final decision/entry deadlines
+remain enforced. These are paper events, not broker fills or delivery authority.
+
+Independent review found restore-before-poll, parked-reopen, preflight-fault and
+orphaned-registration gaps, plus cached authority surviving damage to attachment
+evidence. The implementation now checks original dependencies inside transactions
+and commit guards, requires explicitly pinned restoration before consuming new
+prefixes, detects retained checkpoint witnesses, and preserves the winning ledger
+when a stale owner fails. Tests also confirm a post-cost unprofitable entry is
+still refused; the implementation does not force an entry to satisfy a test.
+
+**146 focused cases pass in173.89seconds; 1,237 separate related cases across11
+files pass in259.07seconds.** All use invented source/volume fixtures and trust
+roots. One path retains the original forecasts; positive-forecast branch tests
+are explicitly synthetic control-flow tests, not evidence that V92 is profitable.
+The previously recorded non-green full-suite result is not relabeled as a pass.
+
+No new Windows native installation result arrived; the existing task is idle,
+not an active installation job. Genuine volume authority, the reviewed successor
+source binding, launcher and authenticated context delivery, Windows qualification
+and actual model-to-Telegram operation remain incomplete. No new model fitting,
+historical search, holdout outcome access, actual order or test message occurred.
