@@ -913,3 +913,17 @@ are no current model/delivery workers or active native epoch in the returned
 receipt. The original same-day recovery remains expired, V92 context/calendar
 admission is unresolved, V102 stays deferred, and no Telegram test or order was
 sent. Software repair and restored real-time operation remain separate claims.
+
+A subsequent read-only clock check returned five successful samples from each
+of two public NTP peers. Reported median offsets were 32.5841 ms and 45.9945 ms;
+all ten magnitudes were below the unchanged 250-ms collector future-lead bound.
+Original captured output hashes and decoded sample values were independently
+verified. This narrows the current clock hypothesis but does not reconstruct the
+rejected callback or establish clock behavior eight hours earlier. No system
+time, service, configuration, native threshold or model state was changed.
+
+The earlier UI focus attempt was explicitly stopped by the user's Escape key.
+No new target image, probe start or callback samples resulted. UI automation
+remains paused until the user resumes it; background goal continuation does not
+override that stop. The collector's precise time-failure cause and original
+V63/V92 live execution remain unresolved, with no claim of signal delivery.
