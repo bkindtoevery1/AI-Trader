@@ -881,3 +881,19 @@ prepared, not live-accepted. A current-session start must be independently
 established after host control returns; backdating or silently reusing next-day
 receipts is forbidden. V92 context/calendar admission is still unresolved and
 V102 remains deferred. No signal, Telegram test or broker/Sim order was sent.
+
+Subsequent resume corrected the control-plane status: Windows execution became
+available again, and the V9 offline verification request is active. The actual
+source audit found a separate collector stop: a connection interruption ended
+the old epoch, and its successor latched on a timestamp-freshness rejection.
+Neither epoch is a current live feed. The rejected callback's exact product/time
+was not journaled, so stale-cache and clock-skew explanations remain hypotheses.
+A one-shot run of the already-installed, bounded raw-clock diagnostic was
+requested; no collector latch was cleared or freshness threshold increased.
+The same-day model window remains missed. Complete V4-family regression of the
+repair now reports 3,041 passing tests in 664.23 seconds, still not live evidence.
+
+The subsequent repository-wide attempt stopped after 1,509 passes and the same
+three unrelated failures in 156.20 seconds: two historical broker dependency
+seals and the operational-goal wording assertion. Neither user changes nor old
+evidence were rewritten, and a complete repository pass is not claimed.
