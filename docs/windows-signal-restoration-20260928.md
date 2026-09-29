@@ -751,3 +751,35 @@ execution requests were dispatched; actual operation and end-to-end delivery
 still require returned evidence. Genuine V92 prior20 volume context is not yet
 admitted. The latest user explicitly prioritizes completing V63 and V92 before
 any V102 addition. No new model fitting or historical outcome trials occurred.
+
+### Actual First Start Failed
+
+Returned Windows evidence supersedes the launch-requested status above. Source
+admission passed, but the first actual model-owner start failed before committing
+any source cursor, model attempt or signal. A separate read-only diagnostic
+reproduced the frozen 8 MiB live pending-budget error on the accumulated startup
+journal. Shutdown also exposed a buffered-stdin daemon-thread defect. The failed
+ledger and original logs remain preserved; no reset, increased live limit or
+automatic retry was performed. The Mac relay waiting on an empty inbox is not
+end-to-end success. V63/V92 initialization repair is in progress, and V102 remains
+deferred until both original operational signal paths are demonstrated.
+
+Private checkpoint `aae34f8` implements the narrowly scoped recovery: V7 retains
+every V6 member, audits a pinned zero-activity failed predecessor without editing
+it, validates the original raw prefix in bounded memory, and commits pre09 raw
+anchors without retroactive bars, predictions or fills. Genuine observation times,
+original live pending/freshness limits and all fitted-model bytes stay unchanged.
+An independent review identified commit-time quote aging and a clock-regression
+gap; both were fixed with rollback regressions. The separate v2 control reader
+uses unbuffered descriptors to avoid the shutdown defect.
+
+Focused verification: 468 passed. A further whole-repository attempt stopped
+after 1,509 passes and the same three unrelated failures in 155.97 seconds; it is
+not a full-suite pass. The exact V7 request authorizes one actual Windows launch
+only after package/source/predecessor verification. A new V7-pinned Mac relay is
+running with no test message; the obsolete owned V6 relay was stopped only after
+its inbox was confirmed empty. Windows runtime and end-to-end delivery still need
+returned evidence. V92 additionally has an unadmitted genuine prior20 context and
+a frozen calendar-day restriction conflicting with the overnight native capture.
+Neither problem is hidden by falsifying dates, resetting the source, or claiming
+two working models. Operational success also does not mean a profitability pass.
