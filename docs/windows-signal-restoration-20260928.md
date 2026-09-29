@@ -990,3 +990,34 @@ order action is included in this recovery step. The expired same-day initializer
 remains unusable, genuine V92 volume context is still outstanding and V102 stays
 deferred. Prepared software and current short diagnostics are not end-to-end
 operational success.
+
+### Collector Recovery Confirmed
+
+The controlled collector-only request subsequently returned verified evidence.
+One disable was acknowledged and the exact original settings were restored once.
+The new raw prefix spans 200.1687635 seconds: 4,651 durable records, 6,881 NQ ticks
+and 26,214 MNQ ticks. Both products and the durable cursor advanced, with no
+recorded product-sequence gaps, configured timestamp-guard violations or terminal
+failure in the observation. The original source, thresholds and 73 old epoch/live
+files remained unchanged. Full-session settings were left enabled; no UI,
+model, publisher, Telegram or order operation occurred.
+
+Mac independently checked the content-addressed receipt and embedded original
+durable/provenance markers. The complete recorded prefix was audited on Windows,
+not transferred for a second Mac replay. These checks do not prove upstream
+vendor completeness, the cause of the earlier discarded callback or future
+uptime. Two preliminary wrapper failures occurred before any native write and
+were corrected in read-only path/log access; they were not extra native rearm
+cycles. Actual rearm count is one. V10 Windows offline preparation is now active.
+
+Next-session readiness remains unproved for specific code-level reasons. V2
+requires the capture origin to fall within the operational overnight session;
+the restored daytime epoch begins too early for the following date. The native
+23-hour budget would also expire near 09:41 ET on the following date if the
+epoch survives unchanged, within the next model window. Current model identity
+is bound to one epoch, and this recovery did not implement continuous model
+handoff or a new-date initializer. Neither backdating nor resetting prior
+financial evidence is permitted. Genuine prior20 context remains outstanding,
+and its installed acquisition host is explicit-UI-start only. These constraints
+must be resolved before promising next-day V63/V92 signals; raw recovery alone
+is not that promise.
