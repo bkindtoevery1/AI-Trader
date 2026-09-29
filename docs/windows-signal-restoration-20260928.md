@@ -790,3 +790,51 @@ above. As of 03:34:36 UTC, the Windows V7 task remains active without returned
 installation/runtime evidence, and neither real signal delivery nor V102 work
 has been claimed. Private state checkpoint `16f4eef` preserves the first-start
 failure and the explicit first-two-model gate without staging unrelated roots.
+
+### V7 Windows Failure And V8 Sharing Fix
+
+Returned Windows evidence supersedes the earlier pending status. V7 initialized
+successfully and committed 711 actual records over 85.811 seconds, then stopped
+with `PermissionError`. Neither model attempted inference and no signal or
+delivery occurred. Collection continued after the consumer stopped. The fatal
+record lacked its original syscall, path and error code, so the incident's exact
+historical call is not claimed as known.
+
+An independent Windows reproduction established a specific implementation bug:
+the CRT receipt reader omitted DELETE sharing while the native collector used
+atomic replacement. This was reproduced without a persistent ACL denial. The
+solution is a narrowly scoped, bounded snapshot reader, not elevation, directory
+relocation, a larger live backlog budget, or indiscriminate PermissionError retry.
+
+Private checkpoint `b09b242` introduces a versioned V8 package. Only the declared
+receipt-I/O helper implementation replaces prior payload bytes; every fitted
+model, risk rule, sizing, cost, timestamp guard and prior archive is retained.
+The new reader shares READ/WRITE/DELETE, rejects reparse paths and in-place changes,
+and retries a complete replacement/sharing race at most five times within 250 ms.
+An independent review found that mode changes could be misclassified as file
+replacement; separating file identity from mode fixed it before final packaging.
+
+Actual Windows verification of the final bytes: 14 tests passed, one file-symlink
+fixture was skipped because the host lacked its creation privilege. Real parent
+and leaf junctions were rejected without elevation. Across 768 ReplaceFileW
+updates and 1,871 reads, there were no candidate errors and every returned payload
+matched a complete known fixture. Genuine access denial still stopped immediately.
+These are synthetic filesystem tests, not market or profitability evidence.
+
+The progressed V7 ledger is not an empty predecessor and is never erased. A new,
+explicit pre09 recovery proof requires zero bars, model attempts, positions,
+economic activity, context, and delivery; it links the failed history, verifies
+its original raw cursor and permits only the reviewed I/O dependency change.
+Downtime is not represented as continuous live operation. Narrow diagnostics
+now retain error codes and approved source locations without messages, account
+details, filesystem paths, local variables or secret values.
+
+The prior V7 delivery request also selected an inbox not permitted by the pinned
+sender. The new request and Mac relay use the already approved base inbox, the
+same V8 runtime identity and separate V8 state. No destination allowlist was
+expanded and no test message was sent. Mac verification: 225 focused tests passed;
+the whole-repository attempt again stopped after 1,509 passes and the same three
+unrelated historical failures in 160.47 seconds. Broader V4 regression and actual
+Windows continuation are pending at this checkpoint. A healthy empty relay is
+not end-to-end success. V92's genuine volume context and overnight calendar-day
+restriction remain separate; V102 stays deferred.
