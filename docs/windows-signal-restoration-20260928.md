@@ -783,3 +783,10 @@ returned evidence. V92 additionally has an unadmitted genuine prior20 context an
 a frozen calendar-day restriction conflicting with the overnight native capture.
 Neither problem is hidden by falsifying dates, resetting the source, or claiming
 two working models. Operational success also does not mean a profitability pass.
+
+The broader V4-family regression subsequently completed: all 2,744 tests passed
+in 639.98 seconds. This is distinct from the repository-wide historical failures
+above. As of 03:34:36 UTC, the Windows V7 task remains active without returned
+installation/runtime evidence, and neither real signal delivery nor V102 work
+has been claimed. Private state checkpoint `16f4eef` preserves the first-start
+failure and the explicit first-two-model gate without staging unrelated roots.
