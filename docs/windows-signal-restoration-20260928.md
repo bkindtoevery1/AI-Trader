@@ -1039,3 +1039,33 @@ epoch. Original source/settings, older payloads and all 73 retained old files
 were preserved. There was no additional collector restart, UI, model, message,
 order or schedule action. Next-session startup and genuine V92 prior20 context
 still separate this successful offline installation from operational signals.
+
+### V11 Later-Date Startup Implemented
+
+The next-session defect now has an explicit implementation. An exact stopped
+nontrading predecessor is audited as immutable aborted history at the actual
+later-date clock; it is not replayed as a live session or counted as a completed
+day. The new initializer requires a separate source epoch after the stop, an
+actual pre09 startup and native lifetime beyond the unchanged15:31ET park
+boundary. Any predecessor inference, economics or changed evidence rejects
+inception. Existing financial history is never reset to recover a failed model.
+
+A separate metadata correction distinguishes producer inception from the actual
+observation day. Calendar, prior20, contract and source identity checks remain.
+The live reader still rejects an expired epoch even when its metadata passes.
+Original models, decision times, stops, costs and source time guards are exact
+unchanged bytes. This deployment version is not a new trading model.
+
+The new immutable overlay passed171 focused tests, including isolated original
+model inference on invented nonexpired fixtures, explicit expired-source
+rejection and rollback when the clock expires inside the final transaction
+guard. A read-only independent review found no actionable safety defect and
+led to that additional commit-boundary test coverage. These fixtures are not
+market-performance or live-operation evidence. Broad regression is ongoing.
+
+Windows received an offline-only preparation request for the107-member overlay;
+installation is not yet evidenced. The existing healthy collector is unchanged,
+but its daytime23h epoch cannot cover tomorrow's full model window. A genuine
+off-window source epoch and genuine same-day V92 prior20 remain necessary.
+The user stop on UI automation is respected. No model, Telegram/test message,
+broker/simulator order, secret transfer or schedule change occurred in this step.
