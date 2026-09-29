@@ -838,3 +838,7 @@ unrelated historical failures in 160.47 seconds. Broader V4 regression and actua
 Windows continuation are pending at this checkpoint. A healthy empty relay is
 not end-to-end success. V92's genuine volume context and overnight calendar-day
 restriction remain separate; V102 stays deferred.
+
+The complete V4-family regression subsequently passed all 2,900 tests in 652.97
+seconds. The repository-wide historical failures remain separately disclosed;
+neither result is a live model or Telegram delivery claim.
