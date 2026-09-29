@@ -953,3 +953,40 @@ update are still needed. It does not resolve the collector's unclassified
 freshness rejection, bypass the missed pre09 start, resume user-stopped UI
 automation, or provide real volume context. Models, stops, costs and decision
 windows were not retuned; no historical trial, order or message was generated.
+
+### V10 Package And User-Run Clock Evidence
+
+Private checkpoint `85fc1f4` prepares a separately identified 101-member V10
+package. Its only changed V9 members are the reviewed overnight loader and that
+loader's companion pin; original models, source guards, SQLite repair, risk and
+decision windows remain exact. Windows acknowledged the offline preparation
+request, but installation evidence is still pending at this checkpoint.
+Mac focused qualification passed 72 tests in 37.80 seconds; an overlapping
+related regression run passed 260 tests in 55.89 seconds. The repository-wide
+attempt stopped after 1,509 passes and the same three previously documented
+unrelated failures in 156.87 seconds. This is not a complete regression pass.
+
+The user subsequently ran the installed clock diagnostic manually and supplied
+its original JSON. The returned receipt preserves those bytes losslessly, and
+Mac independently checked hashes, strict JSON and exact integer time arithmetic.
+Both explicit-contract products supplied 32 callbacks over approximately
+1.64 seconds. Under the existing pinned UTC+9 interpretation, NQ lag was
+61.4627-147.1923 ms and MNQ lag 68.6527-135.4084 ms. All samples satisfy the
+unchanged freshness/backstep guards. Cleanup and both detach operations were
+acknowledged. This short sample does not reconstruct the earlier rejected tick,
+prove provider timestamp semantics, attest loaded memory or admit model input.
+
+One collector-only background recovery was requested, conditional on unchanged
+source/settings, no newer local collection stop and no conflicting owner. It
+must use the collector's own disable acknowledgment and safe retirement before
+restoring exact original settings once. No lock deletion, threshold change or
+automatic second retry is allowed. Actual recovery requires a returned receipt
+showing at least three minutes of durable, per-product progression without
+terminal failure. That receipt is still pending; the request is not execution.
+
+The user's stop on mouse/keyboard automation remains respected. No UI, compile,
+application restart, connection, clock, schedule, model, publisher, Telegram or
+order action is included in this recovery step. The expired same-day initializer
+remains unusable, genuine V92 volume context is still outstanding and V102 stays
+deferred. Prepared software and current short diagnostics are not end-to-end
+operational success.
