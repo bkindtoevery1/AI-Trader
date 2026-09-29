@@ -897,3 +897,19 @@ The subsequent repository-wide attempt stopped after 1,509 passes and the same
 three unrelated failures in 156.20 seconds: two historical broker dependency
 seals and the operational-goal wording assertion. Neither user changes nor old
 evidence were rewritten, and a complete repository pass is not claimed.
+
+Windows then independently verified and extracted the exact 98-member V9 payload
+and completed four offline checks: self-verification, launcher help, supervisor
+help and imports. Original V8 members differ only at the declared transaction
+implementation. All original ledgers and native source/settings remained intact.
+This completes Windows offline preparation, not actual model/publisher recovery.
+
+The clock diagnostic has not run: the UI tool returned a different foreground
+application even when the exact NinjaTrader window was selected. No clicks were
+sent to an unverified target. The user was asked only to foreground NinjaTrader's
+Control Center, not to restart, reconnect or change settings. Current clock skew
+is still unknown; a stopped time-sync service alone does not establish it. There
+are no current model/delivery workers or active native epoch in the returned
+receipt. The original same-day recovery remains expired, V92 context/calendar
+admission is unresolved, V102 stays deferred, and no Telegram test or order was
+sent. Software repair and restored real-time operation remain separate claims.
