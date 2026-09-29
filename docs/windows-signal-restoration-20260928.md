@@ -710,3 +710,44 @@ live wait. Qualified artifacts remain intact. No repeated lookup, synthetic
 qualification or new historical search substitutes for the missing native action.
 Resume on a genuinely new direct confirmation or material external evidence;
 native application, authentic context and real signal delivery remain unproven.
+
+## September 29: Native Applied, First Two Models Prioritized
+
+A new direct user confirmation resolved the previous native action-time blocker.
+The exact reviewed collector replacement was installed and a new actual owner
+appeared before the planned compile input, so no redundant F5 or restart was
+performed. Mac independently verified the original metadata bytes, loaded-owner
+identity, unchanged settings and advancing explicit-contract NQ/MNQ streams.
+This supersedes the earlier native-blocked readiness assessment, not its history.
+
+Private checkpoints `06fe7cb` and `5d3ed53` introduce and record a separate
+observed-source policy for receipt-time shadow simulation. Formal provider
+callback binding and vendor timestamp guarantees remain unclaimed; original
+native flags remain false. The package explicitly replaces the admission API
+implementation while preserving the original fitted V63/V92 models, inference,
+sizing, costs, stops, decision windows and exact prior qualified archive. A
+separate owner supervisor retains a one-command reviewed context channel without
+restarting the inference owner when genuine volume context arrives later.
+
+Private checkpoint `92500b9` adds independent V63/V92 committed-event publishing,
+SSH transport and Mac-only Telegram delivery. Whole source-bound wrappers remain
+intact, each model has its own pinned identity, SQLite writer contention retries
+without advancing an unprocessed row, and uncertain Telegram sends require
+reconciliation. Korean messages distinguish NQ/MNQ, long/short, entry/full exit,
+quantity and conditional stop/target P&L. There are no broker orders or fabricated
+signals. Telegram credentials remain exclusively on the Mac.
+
+Focused verification: 512 source/package/owner/delivery tests plus 110 provenance
+tests passed. The full repository attempt was stopped after 2,574 passes and
+three unrelated failures in 438.95 seconds: two old research seals expect the
+historical broker source bytes, and one assertion expects account wording in
+the operational-priority goal. Existing user edits and historical seals were
+not rewritten to turn those assertions green. This is not a complete full-suite
+pass, nor a model profitability result.
+
+The Mac bot identity was confirmed without sending a message, and its new relay
+is running with an empty separate inbox. Windows model-owner and signal-sidecar
+execution requests were dispatched; actual operation and end-to-end delivery
+still require returned evidence. Genuine V92 prior20 volume context is not yet
+admitted. The latest user explicitly prioritizes completing V63 and V92 before
+any V102 addition. No new model fitting or historical outcome trials occurred.
