@@ -1021,3 +1021,21 @@ financial evidence is permitted. Genuine prior20 context remains outstanding,
 and its installed acquisition host is explicit-UI-start only. These constraints
 must be resolved before promising next-day V63/V92 signals; raw recovery alone
 is not that promise.
+
+### V10 Windows Offline Verification Completed
+
+The returned Windows receipt confirms independent verification of the exact
+101-member V10 archive and both retained bases, followed by new private
+extraction. All four actual checks passed on Python 3.14.3 / SQLite 3.50.4:
+self-verification, launcher help, supervisor help and imports. Mac compared
+the reported manifest, substitutions and imported module hashes against its
+original archive. No service, owner or real database was constructed.
+
+A subsequent native check showed the same recovered epoch at durable batch
+22,348, NQ sequence 31,900 and MNQ sequence 130,536. Both products advanced,
+and no terminal or failure marker was observed. This follow-up verified a
+bounded committed tail through the durable anchor, not the whole growing
+epoch. Original source/settings, older payloads and all 73 retained old files
+were preserved. There was no additional collector restart, UI, model, message,
+order or schedule action. Next-session startup and genuine V92 prior20 context
+still separate this successful offline installation from operational signals.
