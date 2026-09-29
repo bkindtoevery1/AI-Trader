@@ -842,3 +842,42 @@ restriction remain separate; V102 stays deferred.
 The complete V4-family regression subsequently passed all 2,900 tests in 652.97
 seconds. The repository-wide historical failures remain separately disclosed;
 neither result is a live model or Telegram delivery claim.
+
+### V8 Commit Failure And V9 SQLite Repair
+
+Returned Windows evidence supersedes V8's pending status. The actual owner
+advanced 802 records and 132 state revisions over a three-minute observation,
+then exited at SQLite COMMIT after the real publisher started. Its last committed
+state remained fault=null; that stale field did not prove process liveness.
+Neither model attempted inference, and outbox/delivery/ACK counts stayed zero.
+The failed ledger, original logs and previous recovery lineage were preserved.
+Only the owned idle publisher and sender were stopped, without a model restart.
+
+The historical exception lacks a SQLite error code, so its exact cause is not
+retrospectively declared proven. A separate Windows reproduction did establish
+the implementation defect at the same COMMIT: DELETE-journal BEGIN IMMEDIATE
+allows a concurrent reader, while zero-timeout COMMIT immediately rejects its
+read lock. Private checkpoint `e355a6a` changes transaction acquisition only:
+BEGIN EXCLUSIVE with a 250-ms SQLite busy setting before any transition, then
+zero wait again before the unchanged final freshness/deadline guard and COMMIT.
+There is no model/commit retry, partial outbox commit, weakened risk rule or refit.
+The existing publisher already retries BUSY without advancing an unprocessed row.
+
+Actual Windows qualification: seven synthetic storage tests passed on Python
+3.14.3 / SQLite 3.50.4 with no package installation or real-ledger SQLite access.
+Original contention, repaired lock behavior, persistent-contention rejection,
+guard-expiry rollback, idempotence and conflicting CAS were checked. Mac repair,
+recovery, diagnostics and package tests: 141 passed in 13.24 seconds. These are
+software correctness tests, not model-performance or operational proof.
+
+The versioned V9 package preserves the V8 sharing repair and all prior members
+except the declared transaction implementation. New diagnostics preserve safe
+SQLite codes. A narrowly bound initializer retains the stopped V8 and embedded
+failed V7 lineage, not a cleared financial history. However, Windows coordination
+hit its account usage limit, no direct inbound command path was established, and
+the original same-day pre09 recovery window expired before deployment. No V9
+owner was started, and the empty obsolete Mac relay was stopped. The repair is
+prepared, not live-accepted. A current-session start must be independently
+established after host control returns; backdating or silently reusing next-day
+receipts is forbidden. V92 context/calendar admission is still unresolved and
+V102 remains deferred. No signal, Telegram test or broker/Sim order was sent.
