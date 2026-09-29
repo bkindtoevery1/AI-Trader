@@ -927,3 +927,29 @@ No new target image, probe start or callback samples resulted. UI automation
 remains paused until the user resumes it; background goal continuation does not
 override that stop. The collector's precise time-failure cause and original
 V63/V92 live execution remain unresolved, with no claim of signal delivery.
+
+### Overnight Metadata Binding Candidate
+
+An independent source audit found a second startup incompatibility: V92 volume
+metadata required capture to begin after midnight of the operational date,
+rejecting an otherwise matching previous-evening V4 epoch. Private checkpoint
+`fef47c1` adds a separate V2 loader candidate with the normal previous-date
+18:00 ET capture boundary. Observation still belongs to the actual operational
+date. Existing source, explicit-contract, calendar, prior20, chronology, restore
+and no-order checks remain intact; same-day metadata output stays byte-identical.
+DST boundaries are independently constructed, and closed/short live calendars
+remain rejected. Frozen V1 and deployed V9 were not edited.
+
+Final new tests: 39 passed in 18.49 seconds. The earlier overlapping focused run
+passed 241 cases in 177.07 seconds. An isolated scratch copy of the verified V9
+payload with the declared candidate overlay accepted invented overnight input,
+restored exact metadata and reached original V63 and V92 inference attempts.
+This is code compatibility, not native operation or strategy-performance evidence.
+The repository-wide attempt again stopped after 1,509 passes and the same three
+historical failures, in 155.95 seconds. No complete suite pass is claimed.
+
+The new loader is not deployed: a separately reviewed package and companion-pin
+update are still needed. It does not resolve the collector's unclassified
+freshness rejection, bypass the missed pre09 start, resume user-stopped UI
+automation, or provide real volume context. Models, stops, costs and decision
+windows were not retuned; no historical trial, order or message was generated.
