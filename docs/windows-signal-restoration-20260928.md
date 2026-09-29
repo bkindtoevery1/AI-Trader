@@ -1069,3 +1069,29 @@ but its daytime23h epoch cannot cover tomorrow's full model window. A genuine
 off-window source epoch and genuine same-day V92 prior20 remain necessary.
 The user stop on UI automation is respected. No model, Telegram/test message,
 broker/simulator order, secret transfer or schedule change occurred in this step.
+
+### V11 Windows And Regression Results
+
+The returned receipt now proves the offline preparation completed: exact
+107-member archive/bases verified, new private extraction, and four successful
+Windows checks on Python3.14.3/SQLite3.50.4. Mac independently compared the
+receipt hash, request hash, original archive/manifest, reported model/overlay
+and imported-module hashes, and embedded original durable marker. It explicitly
+acknowledged reading both V10 and V11 reports to the Windows coordinator.
+
+The15:33:57Z snapshot showed continued collection in the same epoch: durable
+batch79,768, NQ sequence123,380 and MNQ sequence491,046, with a fresh heartbeat
+and no terminal/failure. The check covered a bounded1MiB/366-record committed
+tail, not an independent full-epoch replay. Earlier payloads and73 retained
+native/live files were unchanged. No extra collector reset or model start ran.
+
+Related V4 regression:3,280 passed in767.75 seconds. The whole-repository attempt
+stopped at three preexisting failures after1,509 passes: two old research seals
+expect a historical broker hash, and one expects old account wording in the
+current operational-priority goal. Neither user changes nor historical seals
+were rewritten. A complete whole-repository pass is not claimed.
+
+V11 is deployment code, not a new strategy. The original V63/V92 models still
+require a genuine correctly timed next-session source and actual-date V92
+prior20 before their full live shadow route can be proved. No Telegram signal
+or trading success is inferred from these offline and collection results.
