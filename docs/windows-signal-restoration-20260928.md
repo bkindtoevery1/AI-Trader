@@ -1,5 +1,31 @@
 # Windows Signal Restoration: September 28
 
+## September 30 Stopped Checkpoint Verified
+
+Private checkpoint `98586ce` records the completed isolated-copy audit. A held
+Windows read handle denied writes and deletion while original/copy/original
+hashes, size and native identity were checked. Only the copy was queried; no
+original SQLite connection or financial edit occurred. Its integrity check and
+exact checkpoint/runtime/owner queries passed. Mac separately validated the
+complete canonical saved state with the unchanged original service validator.
+
+The saved V63 paper position remains OPEN with no committed exit. Both V92
+paper books are flat, without pending risk, halt, source gap or trailing breach.
+These are verified saved states, not current account status or running-model
+evidence. No retrospective exit or realized PnL was manufactured.
+
+A final copy-metadata formatting error in the inspection script is retained in
+the original error receipt. A separate copy-only identity/hash verification
+resolved that check without repeating SQL or reopening the original. Full
+history and source-chain verification remain separate from this point audit.
+
+Implementation continues on interruption-aware carry and full-chain forensic
+verification. Review caught a draft history problem: a clean day between two
+interrupted days must preserve both unresolved records while adding only the
+genuinely settled day's totals. The draft is being corrected, not deployed.
+No model restart, source rearm, order or Telegram delivery occurred in this
+audit. Prior settled and unresolved financial history remain preserved.
+
 ## September 30 Incremental Retry And Source Termination
 
 Private checkpoint `7746063` replaces whole-reader reconstruction on a proven
