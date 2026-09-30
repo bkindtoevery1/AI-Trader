@@ -1,5 +1,37 @@
 # Windows Signal Restoration: September 28
 
+## September 30 Pre-Model Recovery
+
+The connection recovered, but its automatic successor stopped on the existing
+timestamp freshness guard before accepting any ticks. This was not the
+connection-loss reason admitted by V13. The full retired journal remains
+unchanged, and the cause of that historical clock rejection is still unknown.
+
+A subsequent genuine native diagnostic captured 32 callbacks per product.
+All 64 satisfied the unchanged V4 time bounds. One controlled collector-only
+disable/restore then created a new epoch, with both products advancing across
+two subsequent bounded-tail observations. No native restart, compilation,
+connection-setting change, second rearm or model launch occurred. The original
+fault, settings, prior journals and ledgers were retained.
+
+V14 adds a narrow pre-model recovery branch requiring that complete zero-tick
+history and the original diagnostic, bound to the same native owner and clock
+context. A separate Mac review preserves all four original Windows receipts;
+it does not insert assertions into them. New-epoch health, raw-reader, clock,
+financial-history and model checks remain unchanged. It neither proves the
+historical fault cause nor grants a general fault reset.
+
+Final verification passed 332 source/runtime checks and 120 package checks,
+including 22 original-model parity cases. The independently reproduced package
+preserves every other inherited V13 payload. Private checkpoint: `5c2bead`.
+These are software checks, not profitability evidence or a full-suite pass.
+
+Windows offline deployment and exact source-evidence linking are in progress.
+Original V63/V92 inference, signal publication and Telegram delivery are still
+unverified. V92 history acquisition remains separate and must not gate V63.
+No orders or test notifications were sent. Trading-account status remains
+unknown and is not inferred from price-feed connectivity.
+
 ## September 30 Reconnect Compatibility
 
 The intended V12 startup did not occur. Its fresh prestart check found the
