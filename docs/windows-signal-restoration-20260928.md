@@ -1,5 +1,28 @@
 # Windows Signal Restoration: September 28
 
+## September 30 Native Volume Failure Isolated
+
+The pre-acquisition check at 12:32 UTC verified the same eight original workers,
+an advancing source/ledger and ACTIVE phase without a fault. Exact request
+metadata was retained and acquisition directories were empty. After 13:00 UTC,
+the first Start input failed in the UI tool before confirmed delivery. Fresh
+Idle/no-intent evidence allowed an explicit screenshot-backed input recovery.
+
+One actual native Start then failed with `HOST_FAILED_METADATA`, before the
+acquisition intent or provider request. No volume result or context was produced.
+The input failure and native failure remain distinct preserved evidence; no
+automatic native retry or deletion occurred. Private checkpoint: `99cd853`.
+
+Two read-only standalone production-source diagnostics subsequently passed the
+actual directory preflight, metadata reads, JSON parsers, current-day clock and
+canonical plan binding on Windows. Source hashes stayed unchanged. The apparent
+double path separators were nested output escaping, not an input defect.
+This narrows the investigation but does not reproduce or explain the native
+failure. Native type/dependency/context equivalence remains unproven; changing
+valid request bytes or ACLs would be speculative. Existing source and model
+workers are preserved while retained native evidence is inspected. No F5,
+restart, guard relaxation, historical model search or order was performed.
+
 ## September 30 V92 Request Metadata Installed
 
 Mac verified the previously unrecorded completed Windows staging receipt,
