@@ -1,5 +1,42 @@
 # Windows Signal Restoration: September 28
 
+## September 30 Correction And V12
+
+The earlier references to an ongoing blanket user stop were an incorrect
+assistant inference, not current authority. They are explicitly retracted.
+Restoration continues; genuinely new user interruptions and the no-order
+boundary still apply. Historical snapshots below are retained, not current
+process-state assertions.
+
+A genuine controlled collector rotation is now evidenced, with advancing NQ
+and MNQ sequences and two bounded fresh-tail observations. V11 nevertheless
+rejected it because its observed-source parser accepted only the original
+application-installation receipt. V12 adds a separate strict reviewed-rotation
+branch preserving the original receipt bytes, native owner, assembly, settings,
+genesis, retirement and exact clock evidence. It does not pretend a second
+installation occurred or assert a full upstream-completeness audit.
+
+The bootstrap permits only the specific source-policy transition alongside
+the existing SQLite repair. The new 113-member archive preserves every other
+inherited payload member, including original V63/V92 models, raw reader and
+collector, risk, costs and decision times. Independent review found three
+binding/boundary defects, all corrected with regression coverage; rereview
+found no new actionable issue. Local implementation checkpoint: `2ad8ce1`.
+
+Mac qualification passed 293 focused cases and 157 prior-branch regressions,
+including unchanged packaged model inference on invented fixtures and expired
+source rejection. The complete repository run is ongoing, not claimed green.
+These are software checks, not market performance or actual Windows inference.
+
+The Mac-only Telegram relay now runs with the V12 runtime identity and separate
+preserved state. It has zero delivery events and no test message was sent.
+Windows received the exact package and genuine source-evidence request; its
+new admission and actual target-date startup remain unverified. V92 native
+history setup remains incomplete and must not independently block V63 startup.
+Original actual-clock admission still applies; no future date is simulated.
+This is an operational compatibility repair, not a new fitted trading model,
+strategy promotion, end-to-end success or profitability claim.
+
 ## Outcome
 
 Native diagnostic collection succeeded: 32 actual callbacks each from explicit
