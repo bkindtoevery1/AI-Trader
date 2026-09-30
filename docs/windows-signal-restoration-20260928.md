@@ -1,5 +1,28 @@
 # Windows Signal Restoration: September 28
 
+## September 30 Native Replacement Verified
+
+The supported screenshot path recovered the bounded UI preflight. The exact
+diagnostic source then replaced only the existing collector file. A new native
+owner, assembly identity and epoch appeared without F5 or process restart.
+Two original committed observations showed both NQ and MNQ advancing. Other
+AddOns, source settings, the old source fault and original financial predecessor
+were retained. This is installation evidence, not a claim of continuous health.
+
+Mac independently verified the original application and no-economics receipt
+hashes and ran the complete V6 validators on their original embedded bytes.
+Separate source and capacity packets now bind that actual installation. A V15
+startup request was dispatched and the Windows task was confirmed active.
+It requires current native health and real pre09 initialization while preserving
+the original stopped nontrading financial history. Missing V92 prior20 context
+does not block V63. Completed installation and offline preparation must not be
+repeated. Private evidence checkpoint: `2d30b4e`.
+
+Outcome: the UI/install blocker is resolved; actual model startup, sustained
+cursor progress and Telegram delivery remain unverified. No runtime code,
+strategy, timing guard, order setting or schedule changed in this checkpoint.
+The near-real-time batching design remains a proposal, not a deployed fix.
+
 ## September 30 V15 Windows Verification Completed
 
 The returned Windows evidence now verifies all 133 files against the exact Mac
