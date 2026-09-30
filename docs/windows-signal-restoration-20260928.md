@@ -1,5 +1,31 @@
 # Windows Signal Restoration: September 28
 
+## September 30 Reconnect Compatibility
+
+The intended V12 startup did not occur. Its fresh prestart check found the
+previously healthy collector epoch had terminated on a price-connection loss.
+No model ledger or launcher was started, and the old terminal remains intact.
+That source event alone does not establish the status of a trading account.
+
+The V12 source policy accepted only an operator-disabled retirement. V13 adds
+the specific connection-loss retirement reason, requiring exact agreement with
+the preserved raw terminal. A recovered epoch still requires the same owner,
+unchanged settings, a Connected startup and fresh advancing source evidence.
+No reader, native collector, model, clock, cost or risk threshold was changed.
+All other inherited payload members remain byte-identical.
+
+Verification passed 198 new focused tests, 252 predecessor regressions and 117
+packaging tests, including original-model numerical parity and fixture-based
+inference. Independent review found no actionable issue. Private checkpoint:
+`35229f8`. These checks do not establish live recovery or trading performance;
+the earlier incomplete broad-suite result remains unchanged.
+
+V92's three reviewed request metadata files are now installed at the actual
+native paths with their private ACLs and hashes verified. Historical volume
+acquisition has not run. Windows V13 installation and genuine source recovery
+are requested; original V63 startup must not wait for V92 history or an account
+trading-permission flag. There are no new orders or test notifications.
+
 ## September 30 Verified Preparation
 
 This checkpoint supersedes the preparation status below, not the preserved
