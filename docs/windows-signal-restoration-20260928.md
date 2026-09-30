@@ -1,5 +1,33 @@
 # Windows Signal Restoration: September 28
 
+## September 30 Contention Recovery Candidate
+
+Private checkpoint `87f4879` adds a software-only successor for the confirmed
+SQLite failure. Only an initial exclusive-lock BUSY, before any transition or
+commit callback, may yield. Retry verifies the committed financial checkpoint
+and preserves the already-observed source hash, cursor and file identities.
+It rechecks current-time, source and execution deadlines; no economic history
+or fitted model is reset. Diagnostic reads must not block the live writer.
+
+Independent review rejected the first candidate because reconstruction could
+forget observed source anchors. The revision rejects rollback, segment
+replacement, rehashed uncommitted tails and unchecked-anchor early returns.
+Final software tests: store suite 22 passed; 35 isolated recovery/parity cases
+plus two parent checks passed; related existing regression 266 passed. Counts
+overlap and are not a full-repository or Windows qualification claim.
+
+This candidate has not been deployed. The previously verified model remains
+stopped with unresolved paper risk; this step contains no new Windows liveness
+observation, restart, fabricated exit, real order or Telegram success. Actual
+source-scan performance, launcher contention and interrupted-session lineage
+still require qualification. No new strategy trials ran.
+
+Near-real-time batching remains a proposal. Model polling already uses one
+second, and the identified failure is lock contention rather than a measured
+CPU bottleneck. Changing batch size alone does not repair it. Capture, scheduled
+model decisions, fast risk checks and asynchronous delivery need separate
+latency measurement before changing their timing policy.
+
 ## September 30 Genuine V63 Entry And Sender Repair
 
 The unchanged V63 model executed its real-data inference at 14:00 UTC and
