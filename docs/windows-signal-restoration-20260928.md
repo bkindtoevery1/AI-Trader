@@ -30,6 +30,14 @@ logged, so their count cannot establish consecutive failures or signal latency.
 No orders, artificial signals, restarts, source rearming or timing relaxation
 occurred. A bounded read-only follow-up was requested; healthy workers stay up.
 
+That follow-up subsequently verified the same eight redirector/worker process
+records in two observations. The source advanced another 85 batches, the ledger
+77 batches and the model state 13 revisions, with no fault, terminal marker or
+time-rejection witness. Both original outputs and both native durable records
+were hash-checked. The coordinator task finished while the runtime continued.
+V92 history acquisition remains gated to its existing actual-time boundary;
+V63 still waits independently for its decision window. Checkpoint: `7509e8d`.
+
 ## September 30 Mac V15 Delivery Ready
 
 The Mac-only relay now binds the exact V15 runtime and is running in send/watch
