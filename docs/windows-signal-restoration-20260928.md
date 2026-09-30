@@ -1,5 +1,33 @@
 # Windows Signal Restoration: September 28
 
+## September 30 Rejection Witness Candidate
+
+Implemented a versioned, metadata-only native candidate that preserves the
+first rejected callback's raw and normalized clocks, its product-specific
+high-water witness, receipt timing and queue depth. Publication is bounded to
+one 4KiB sidecar with reserved scratch storage and exact terminal/durable/owner
+bindings. It carries no price, volume, credentials or operational authority.
+The original collector, fitted models, clock limits and financial rules remain
+unchanged. A revision-specific structural provenance verifier accompanies it.
+
+Independent review found an overbroad retirement-isolation claim. The revised
+harness now exercises both successful and failed publication after a genuine
+five-second stall while the supervisor keeps polling. The original raw fault
+must stay intact; separate timeout evidence and the recovery latch remain.
+Storage latency is not bounded, and the lease cannot be released prematurely.
+The injection hook is absent from production builds.
+
+Revised Mac focused checks passed 404 tests with one explicit Windows-execution
+skip. Separately, the existing V4 regression suite passed 3,132 tests. The
+17-case C# harness still requires actual Windows compilation and execution;
+these are software checks, not strategy results or a full-repository pass.
+Private implementation checkpoint: `993c2af`.
+
+No live source replacement, rearm, model start or Telegram test followed this
+change. The old V14 package cannot admit the new revision. Revised offline
+qualification and coherent installation/admission/bootstrap packaging remain
+unfinished; an earlier candidate's result cannot qualify revised bytes.
+
 ## September 30 Timestamp Failure Audit
 
 V14 passed Windows offline deployment and historical source admission, but
