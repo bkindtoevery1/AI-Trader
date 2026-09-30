@@ -1,5 +1,36 @@
 # Windows Signal Restoration: September 28
 
+## September 30 V15 Runtime Prepared
+
+The original-model runtime now has a coherent native-revision path: V6 source
+admission, V5 later-date bootstrap, V9 launcher/owner and a reproducible V15
+overlay. It preserves all inherited model/inference bytes and the original
+stopped nontrading financial predecessor. The separate native-install branch
+retains the failed source epoch instead of granting a general fault reset.
+Missing V92 volume history still must not block V63. Time, risk and signal-age
+limits are unchanged; the proposed near-real-time architecture is not included.
+
+Parent verification passed 251 source-policy tests, 81 bootstrap/launcher/owner
+tests and 127 package tests. Persistent integration uses the actual revised
+policy/verifier in an isolated package-alias layout with synthetic observations;
+those are software checks, not real installation or strategy evidence. Independent
+review found no remaining package/interface issue. The 133-member archive was
+reproduced identically. Private implementation checkpoint: `72653fb`.
+
+Broader related regression then passed 4,612 tests across 81 modules in 955.97
+seconds, with one explicit Windows C# execution skip on Mac. The same final
+C# source and 17-case harness separately passed on Windows as recorded below.
+The four new bootstrap/launcher/owner/package modules passed another 208 tests.
+These counts do not imply whole-repository success or trading profitability.
+
+Windows package preparation is in progress. Native replacement has not happened:
+the final UI preflight could not obtain an accessibility tree. Earlier bounded
+observations showed no enabled strategy, no open position and only terminal
+visible orders, but they are not treated as a current comprehensive broker audit.
+Only native reload is held; offline preparation continues and a documented fresh
+visual observation path is being checked. No account failure or disconnected
+feed is inferred. Original-model startup and Telegram delivery remain unproved.
+
 ## September 30 Windows Qualification Passed
 
 The revised source now has actual Windows evidence: C# 5 compilation, all 17
