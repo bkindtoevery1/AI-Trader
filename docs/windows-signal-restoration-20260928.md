@@ -1,5 +1,26 @@
 # Windows Signal Restoration: September 28
 
+## September 30 Windows Qualification Passed
+
+The revised source now has actual Windows evidence: C# 5 compilation, all 17
+synthetic diagnostic cases, and a separate compile against installed NinjaTrader
+libraries passed. Mac verified the returned receipt and all 18 enclosed original
+outputs. All three executions exited zero without retry or timeout. An unused
+event warning in the frozen fake SDK adapter is retained; the actual-reference
+compile emitted no diagnostics. The initial attempt had stopped in its wrapper
+before any compiler ran because a diagnostic path failed the wrapper's length
+check. A shorter private child-only temporary path resolved that preparation
+issue without changing the source, compiler settings, ACLs or OS configuration.
+
+These results qualify the software candidate, not live operation or trading
+performance. A bounded exact-source installation request has now been sent.
+The new admission/bootstrap package must preserve the original failed source
+epoch and the original stopped nontrading ledger, rather than fabricate an
+empty predecessor or reinterpret a source fault as healthy. Original V63/V92
+models, timing and risk rules remain unchanged. V63 must not wait for missing
+V92 volume history. Installation, model inference and Telegram signal delivery
+remain unverified at this checkpoint; no orders or test signals were sent.
+
 ## September 30 Rejection Witness Candidate
 
 Implemented a versioned, metadata-only native candidate that preserves the
