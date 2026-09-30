@@ -1871,3 +1871,48 @@ A bounded read-only Windows follow-up is checking native readiness, the existing
 disable/enable recovery route and required input paths before any rearm. No F5,
 restart, model activation, historical search, schedule or order change was made
 in this checkpoint. The original unresolved paper outcome remains UNKNOWN.
+
+### Startup Preparation Tools Qualified
+
+Private checkpoint `9d6e648` adds two external preparation helpers; `2e695fc`
+preserves the previous central-state formatting without changing parsed values.
+Neither changes the frozen package, fitted models or decision timing. The first
+captures bounded original startup evidence; the second consumes an externally
+reviewed request and prepares candidate inputs without granting startup authority.
+
+The need was demonstrated by a completed Windows readiness audit, not inferred
+from a finished coordination task. An earlier task had ended without completing
+its current-state inspection; the subsequent original receipt explicitly records
+that gap. The completed audit found no running model owner and an ended source
+epoch. It did not establish current provider health or account failure.
+
+Related capture and package regression passed 755 cases with 108 intentional
+child-only skips. The assembler separately passed ten outer cases and 28 isolated
+child cases. These are software checks with invented fixtures, not market results;
+counts overlap other scopes. Full repository regression subsequently completed:
+28,596 passed, 13 failed, 275 skipped, with 89 additional passing subtests.
+Both new helper modules passed their 40 outer cases. Ten failures compare
+historical dependency locks with the current broker source; three concern old
+active-goal wording, a missing historical temporary test artifact and a missing
+current-state progress key. No clean-baseline rerun established all thirteen as
+previously known, and no historical lock or unrelated code was rewritten to
+obtain a green result. The original JUnit is retained in private durable storage.
+
+Independent review caught a Windows path-versus-handle timestamp discrepancy;
+the external reader now preserves each API view's stability checks. Windows then
+verified the helper archive, both files, compilation, help entrypoints and actual
+isolated package imports. Two initial diagnostic probes incorrectly blocked a
+local hostname query during dependency import. Separate corrected probes passed,
+with those failures retained and no helper or package mutation.
+
+Windows static preparation is also complete: private directories, exact retained
+JSON evidence and a separately validated sender configuration. Existing SSH trust
+fields and original configuration remain unchanged. Mac checked the complete
+receipt and six embedded original blobs. No financial database was opened, no
+future approval was fabricated and no source or model was started.
+
+Actual activation, external review and model startup still require fresh evidence
+in the genuine eligible window. Telegram delivery remains unproved. The original
+interrupted outcome remains UNKNOWN. Near-real-time batching is a proposal, not
+an implemented change or a demonstrated remedy for the observed database
+contention and out-of-order source timestamp.
