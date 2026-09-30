@@ -1,5 +1,24 @@
 # Windows Signal Restoration: September 28
 
+## September 30 V92 Request Metadata Installed
+
+Mac verified the previously unrecorded completed Windows staging receipt,
+including four original JSON outputs, all four metadata file hashes and the
+original review bytes. Final native readback confirms three exact request files
+at their physical local paths with retained private current-owner permissions.
+The initial redirected-copy failure remains recorded separately from the
+successful native move/readback. Private evidence checkpoint: `198b3fb`.
+
+This resolves metadata installation, not historical-volume acquisition or model
+readiness. The request covers 20 eligible prior sessions and 6,000 expected
+minute-volume observations; no volume rows have been acquired by this step.
+The existing current-day 13:00 UTC acquisition boundary remains unchanged.
+A bounded read-only Windows check is in progress for the running workers,
+installed input hashes, loaded native host and acquisition-journal presence.
+The Mac relay process was confirmed live. No model, source, guard, schedule,
+order route or executable changed, and no full-regression rerun is claimed for
+this evidence-only update. Near-real-time batching remains a proposal.
+
 ## September 30 Actual Windows Runtime Started
 
 The original V63/V92 shadow runtime has now started on Windows, once, with the
