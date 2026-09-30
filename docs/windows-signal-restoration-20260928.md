@@ -1829,3 +1829,18 @@ Windows offline transfer/install/import and empty-queue preview checks have been
 requested and the coordinator is active. Actual fresh-source approval, model
 operation and Telegram delivery remain unverified. No source activation, orders,
 historical model trials or fabricated historical exits were performed.
+
+### Mac Receiver Started
+
+Private checkpoint `1cd3314` records installation of the exact new package on
+the Mac and 41 isolated verified project-module imports. A dedicated private
+empty inbox and a separate schema2 delivery ledger are now served by the pinned
+relay process. Its initial cycle contained no signals and stderr was empty.
+Credential loading stays deferred until an eligible verified wire arrives; no
+credential was copied or read and no test message was sent during startup.
+
+A launch-wrapper metadata field initially printed an argument flag instead of
+its value. The actual process command contained the correct pin, independently
+checked afterward, so no restart was needed. Existing processes and schedules
+were unchanged. Windows qualification is still running. This is receiver
+readiness, not evidence of Windows model operation or Telegram delivery.
