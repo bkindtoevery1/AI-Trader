@@ -1655,3 +1655,30 @@ V11 is deployment code, not a new strategy. The original V63/V92 models still
 require a genuine correctly timed next-session source and actual-date V92
 prior20 before their full live shadow route can be proved. No Telegram signal
 or trading success is inferred from these offline and collection results.
+
+### Interrupted History And Copy-Only Audits
+
+Private implementation `bf5b26b` adds an explicit UNKNOWN outcome for an
+interrupted paper entry, exact eligible V92 financial carry, stopped-chain
+verification and bounded integrity inventories of an isolated database copy.
+Unknown outcomes survive intervening clean days and are not counted as zero
+profit or as completed trades. Neither an audit nor a hypothetical exit can
+authorize live execution or overwrite the original financial record.
+
+Validation: 164 focused cases passed on the committed helper bytes. A related
+974-case regression also passed; the counts overlap. These are software tests,
+not model-performance, actual-epoch coverage, Windows recovery or a complete
+repository regression. Windows copy-only qualification was requested; its
+result is not yet established in this entry.
+
+Retrospective: keep analytical reads off the live exclusive-writer ledger.
+The retained original checkpoint was authenticated from a separate stopped
+copy. A capacity probe using invented complete-minute sessions also exposed a
+scaling defect: a clean history row occupied 329,112 bytes, so the current 1MiB
+registry cannot support twenty similar sessions. Compact references to retained
+immutable evidence are required, without deleting unresolved history.
+
+Persistent successor integration remains in progress. Original models, risks,
+timing, source guards, financial records and frozen deployment bytes remain
+unchanged. No operating restoration, signal delivery, promotion or order is
+claimed by this implementation record.
