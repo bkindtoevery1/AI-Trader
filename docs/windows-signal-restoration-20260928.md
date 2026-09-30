@@ -41,6 +41,22 @@ not advanced since 14:07:37 UTC. They are historical records, not proof of
 current processing. Bounded exit diagnosis was requested without restarting
 the model, forcing a close or resetting the preserved financial history.
 
+That diagnosis confirmed `SQLITE_BUSY` at the model's exclusive write
+transaction, followed by launcher exit 2 and supervisor exit. The assistant's
+broad read-only diagnostic overlapped the failure and is a strong likely
+trigger: a read transaction can block the exclusive writer on this journal
+mode. Sole lock-owner attribution was not retained. The earlier assumption
+that read-only diagnosis could not affect operation was incorrect. Long
+analytical live-ledger queries are now prohibited; saved ACTIVE state is not
+accepted as current liveness. Recovery must preserve the unresolved paper
+position and address noninterfering observation and transaction contention.
+
+The corrected sender subsequently passed actual Windows AST, isolated verified
+source import and local preview, with unchanged config and sync state. One
+expired entry was retained without transfer or fabricated ACK. A sender-only
+handoff was requested; model restart and end-to-end Telegram success are not
+claimed.
+
 V92 remains separately blocked at an unexplained native metadata failure.
 Static follow-up did not establish the actual failing native boundary, so
 neither valid metadata nor the healthy V63 runtime was changed speculatively.
