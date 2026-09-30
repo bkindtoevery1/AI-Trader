@@ -1707,3 +1707,30 @@ Compact per-transition evidence work is continuing to address the measured
 twenty-session capacity gap. A genuine later source epoch, explicit owner and
 bootstrap integration, V92 context acquisition, and versioned publisher/relay
 support remain required before operating recovery can be claimed.
+
+### Compact History And Stable Signal Identity
+
+Private candidate `f8627c6` separates immutable full transition evidence from a
+compact registry. Invented fixtures retain twenty complete 300-minute sessions
+plus two UNKNOWN outcomes in 23,584 registry bytes, without discarding the full
+proof records. Thirty-two transitions, including three UNKNOWN outcomes, use
+33,627 registry bytes and retain roughly 10MB of separate evidence. This does
+not qualify twenty real operating days or future ledger disk growth.
+
+The history suites passed 150 cases. A related four-file run passed 257 cases
+with an earlier signal candidate. The corrected signal protocol plus original
+delivery suite passed 112 cases. Counts overlap and are software evidence only.
+One schema-5 test fixture anticipates the subsequent persistent-service update;
+this candidate alone is not a standalone deployment or checkout-wide pass.
+
+Each future signal carries its event epoch's immutable history origin. It keeps
+the original product, direction, quantity, event and economics while disclosing
+prior unresolved V63 outcomes. Later sessions must not regenerate old signals
+using a different history head. Independent review caught and corrected duplicate
+unknown references and an ENTRY incorrectly accepting a delayed-EXIT warning.
+
+Full history validation took 5.563 seconds on the 32-transition fixture. Its
+integration therefore moves that work before fresh source polling and requires
+an authenticated immutable cache for the final atomic write. Store adoption,
+actual Windows startup and the new publisher/transport/relay route are still in
+progress. No new strategy trial, operating recovery or actual message is claimed.
