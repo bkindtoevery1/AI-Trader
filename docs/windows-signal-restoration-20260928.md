@@ -1734,3 +1734,33 @@ integration therefore moves that work before fresh source polling and requires
 an authenticated immutable cache for the final atomic write. Store adoption,
 actual Windows startup and the new publisher/transport/relay route are still in
 progress. No new strategy trial, operating recovery or actual message is claimed.
+
+### Persistent Compact History And Cache Correction
+
+Private implementation `31d4d64` completes the compact history adoption and the
+intermediate schema-5 fixture dependency. Prior immutable records, a new
+transition, its compact registry, fixed signal origin and checkpoint now commit
+atomically. Full historical validation runs before fresh source polling; the
+live commit uses the captured original bytes without repeating that derivation.
+
+The SQLite fixture retains twenty complete 300-minute CLEAN sessions and three
+UNKNOWN interruptions across 23 transitions, closing and reopening every epoch.
+Its registry occupies 24,591 bytes, with roughly 7.1MB of separate retained proof
+records. Prior origins and outbox rows are preserved. These are invented software
+fixtures, not real trading days, returns or live-ledger disk-growth evidence.
+
+Independent review found a race in caching a verified database version. A write
+after verification could be incorrectly blessed by a newly sampled version.
+Deterministic tests reproduced it; the fix retains the pre-read version, checks
+stability at the end, and clears the cache on failure. Reinspection found no
+additional actionable issue. The final related regression passed 134 cases with
+119 intentional child-only skips; its subprocess harnesses ran 65 service, 39
+runtime and 15 launcher cases successfully. Counts overlap other focused runs.
+This is not a full-repository or Windows operational qualification.
+
+The remaining integration connects the initialized successor to the actual
+launcher/owner and a publisher that reads only bounded committed event pages and
+their indexed epoch witnesses. Transport and Mac relay must accept the new wire
+together. Original model parameters and decision timing remain unchanged. No
+fresh Windows runtime, genuine delivery acknowledgement or Telegram recovery is
+claimed, and no historical strategy trials or orders were run.
