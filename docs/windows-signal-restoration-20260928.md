@@ -13,8 +13,20 @@ This resolves metadata installation, not historical-volume acquisition or model
 readiness. The request covers 20 eligible prior sessions and 6,000 expected
 minute-volume observations; no volume rows have been acquired by this step.
 The existing current-day 13:00 UTC acquisition boundary remains unchanged.
-A bounded read-only Windows check is in progress for the running workers,
-installed input hashes, loaded native host and acquisition-journal presence.
+A subsequent Windows check verified the same original running workers and
+advancing source/ledger cursors, with ACTIVE phase and no fault. All three native
+metadata hashes still match; acquisition journal, result and terminal directories
+were empty. The current source-reported assembly has matching file hash/MVID
+and contains the native host types; this alone is not live host-instance proof.
+
+A current UI check initially found an existing close-window confirmation. A
+fresh observation followed by one No click cancelled that pending closure.
+The existing V92 Prior Volume menu entry was then visibly confirmed and only
+the menu was closed. No acquisition was started and both the unresolved and
+resolved observations remain recorded. Private checkpoint: `c56068e`. The next
+step is the genuine native request after 13:00 UTC, followed by conversion and
+context attachment through the same owner, without delaying V63 for V92.
+
 The Mac relay process was confirmed live. No model, source, guard, schedule,
 order route or executable changed, and no full-regression rerun is claimed for
 this evidence-only update. Near-real-time batching remains a proposal.
