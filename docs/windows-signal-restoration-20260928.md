@@ -1,5 +1,35 @@
 # Windows Signal Restoration: September 28
 
+## September 30 Actual Windows Runtime Started
+
+The original V63/V92 shadow runtime has now started on Windows, once, with the
+reviewed source and preserved nontrading financial predecessor. Mac verified
+31 original output blobs, the full committed-state validator, both original
+model hashes, all 32 runtime code hashes against the exact archive, and the
+source, owner and checkpoint bindings. The real pre09 clock was retained; no
+historical inference was replayed and no financial history was reset.
+
+Seven successive observations showed the committed cursor advance by 1,459
+records and the model state by 118 revisions, with 1,056 additional NQ and 4,040
+additional MNQ sequence numbers. A later consistent ledger snapshot extended
+the observed interval to 229.875821 seconds and reported SQLite integrity OK,
+ACTIVE phase and no fault. Private evidence checkpoint: `685444e`.
+
+The real-ledger publisher and authenticated SSH sender also started. Mac's
+matching relay is ready. V63 remains WAITING_WINDOW and V92 has no prior20
+context yet; both have zero inference attempts at this premarket observation.
+There are no committed trade signals, signal acknowledgments or Telegram
+deliveries yet. Running processes and growing cursors are not profitable-model
+or end-to-end signal-delivery evidence.
+
+The original report checked the wrong witness filename. A separate immutable
+correction checked the actual time-rejection witness path and found no witness
+or failure file at that observation. Neither receipt was rewritten. Publisher
+SQLite busy retries remain visible; identical successful empty cycles are not
+logged, so their count cannot establish consecutive failures or signal latency.
+No orders, artificial signals, restarts, source rearming or timing relaxation
+occurred. A bounded read-only follow-up was requested; healthy workers stay up.
+
 ## September 30 Mac V15 Delivery Ready
 
 The Mac-only relay now binds the exact V15 runtime and is running in send/watch
