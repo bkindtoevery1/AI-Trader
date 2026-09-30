@@ -1,5 +1,46 @@
 # Windows Signal Restoration: September 28
 
+## September 30 Incremental Retry And Source Termination
+
+Private checkpoint `7746063` replaces whole-reader reconstruction on a proven
+pretransition lock conflict with a saved full verifier and bounded committed
+suffix verification. It retains the same reader, observed source anchors and
+file identities; committed model transitions are never repeated. Launcher V10
+retries pending recovery before preparation writes and retains one immutable
+control request until recovery clears. Models, clocks, costs and timing policy
+remain unchanged. Neither candidate is installed in the frozen Windows payload.
+
+Independent runtime and launcher review found no scoped safety blocker. Parent
+software results: 209 forensic/original-paper tests passed; six-file
+store/runtime/launcher regression had 71 passes and 54 intentional child-only
+skips, with 39 runtime and 15 launcher cases executed by isolated subprocess
+harnesses. Counts overlap. Cold reopen, noncycle write contention, deployment
+and interrupted financial lineage remain unqualified; no full-repository or
+actual performance claim follows.
+
+New Windows evidence changes the operational diagnosis: the native collector
+also terminated at 15:27 UTC after a 3.13-second event-time reversal exceeded
+its original two-second bound. Receipt lag remained inside the existing
+freshness limit. Original witness, durable marker and bounded terminal journal
+tail were authenticated. This is separate from the earlier SQLite model stop,
+not evidence of CPU overload, a failed trading account or provider causation.
+The source guard has not been loosened and no timestamps were rewritten.
+
+The prior V63 paper entry remains unresolved. A pure retrospective helper can
+calculate conditional rule-implied accounting only from a retained original
+intent and fully checked subsequent tick coverage. It never creates a live
+fill, committed exit, message or authority to resume. It has not been run on
+actual data. Stopped-ledger inspection uses a private consistent copy rather
+than analytical queries against the live writer; snapshot work is still pending.
+
+Recovery requires an explicit interruption-aware successor: preserve unknown
+V63 history without counting it as zero or settled, carry eligible V92 risk
+exactly, and bind a genuinely new admitted session. A hypothetical historical
+exit is not a prerequisite for declaring an unknown outcome. Existing clean
+parking and pre-model-failure paths cannot be misused for this post-entry case.
+No new research trials, orders, forced exit, secret transfer, source restart
+or Telegram delivery were performed by this change.
+
 ## September 30 Contention Recovery Candidate
 
 Private checkpoint `87f4879` adds a software-only successor for the confirmed
