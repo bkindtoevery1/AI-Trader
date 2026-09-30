@@ -1,5 +1,39 @@
 # Windows Signal Restoration: September 28
 
+## September 30 Verified Preparation
+
+This checkpoint supersedes the preparation status below, not the preserved
+historical failures. Windows verified the V12 archive and all 113 member pins,
+then passed genuine source admission and recheck. A local import harness used
+the wrong module attribute; correcting only that harness produced a clean exit,
+with 13 imported module hashes and the complete payload path set verified.
+Exact launcher and supervisor argument files are prepared, not yet executed.
+
+The native V92 data-folder mismatch is resolved. The packaged application's
+normal command path had redirected new AppData directories to its private
+cache, so NinjaTrader could not see them. After explicit user authorization,
+one ordinary Explorer move installed a newly prepared empty folder tree.
+Readback verified all five physical paths, current ownership, no reparse
+ancestors, and preservation of private ACLs. Existing folders and their ACLs,
+security settings, model bytes and schedules were unchanged. No manual user
+PowerShell step remains necessary. This is folder readiness, not acquisition.
+
+The broad regression run ended after 2,045.76 seconds with 13,047 passed,
+7 failed and 89 passed subtests. It was interrupted and is **not a full-suite
+pass**. Six historical evidence checks expect an older broker source hash;
+one checks old account-label wording in the operational goal. Neither file
+was changed by V12, and no historical seal was rewritten to make it pass.
+The 293 focused and 157 prior-branch passes remain separate software evidence.
+
+Original V63 startup is next at its actual target-date clock gate. Missing
+V92 prior-volume history does not block V63. Genuine V92 metadata review and
+history acquisition remain separate unfinished steps. The V12 Mac relay is
+running, but actual model inference, authenticated signal publication and
+Telegram delivery have not been demonstrated. No synthetic signal was sent.
+
+Private checkpoints: `bb04782`, `85125c1`, `d89daae`. This public summary contains
+no host addresses, user paths, credentials, account data or market payloads.
+
 ## September 30 Correction And V12
 
 The earlier references to an ongoing blanket user stop were an incorrect
