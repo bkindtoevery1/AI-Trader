@@ -1,5 +1,35 @@
 # Windows Signal Restoration: September 28
 
+## September 30 Timestamp Failure Audit
+
+V14 passed Windows offline deployment and historical source admission, but
+the separate fresh-start check found a genuine collector terminal. Neither
+original model started. The terminal reason is a per-product event timestamp
+more than two seconds behind its accepted high-water mark, not a demonstrated
+two-second computation time or a proven account failure.
+
+A read-only Windows scan verified 15,972 committed records and 51,097 accepted
+callbacks against the preserved terminal chain. The Mac verified the returned
+original output hashes and their summary consistency, not an independent replay
+of the entire raw journal. Accepted maximum event backsteps were 66ms for NQ
+and 101ms for MNQ. Both products had delayed arrivals of about seven seconds
+near termination. No selected connection transition appeared in the inspected
+log window, which does not prove uninterrupted connection health or the cause
+of delay. The rejected callback was never enqueued, so its product and exact
+timestamp remain unknown.
+
+The next implementation is an isolated first-fault timestamp witness candidate.
+Existing time bounds and frozen packages remain unchanged; this nonzero-tick
+fault is not eligible for V14's zero-tick recovery exception. No blind rearm,
+financial reset, model trial, order or test notification occurred.
+
+Short-batch minute inference is a proposed reliability design, not a deployed
+fix. The existing minute builder already uses a two-second event watermark;
+slower polling alone cannot fix rejection in the native callback. A two-to-five
+second waiting period is not established as sufficient by the new evidence.
+V92 can attach validated history later without replay, provided its consumer
+starts before the existing session boundary; missing history must not gate V63.
+
 ## September 30 Pre-Model Recovery
 
 The connection recovered, but its automatic successor stopped on the existing
