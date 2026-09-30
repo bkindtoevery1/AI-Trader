@@ -57,6 +57,16 @@ expired entry was retained without transfer or fabricated ACK. A sender-only
 handoff was requested; model restart and end-to-end Telegram success are not
 claimed.
 
+The sender-only handoff was verified at 15:15 UTC. After preserved identity
+precheck holds, only the fully authenticated old sender child was terminated;
+its original redirector exited naturally. Exactly one corrected sender started
+with the original config and ACK state. The first hash-verified output was IDLE
+with one expired entry retained and zero ACKs. No stale/test signal was sent,
+and the collector and publisher remained unchanged. Private checkpoint:
+`6f8fea8`. The model is still stopped; this is not full service recovery or
+Telegram-delivery evidence. Its unresolved paper position is not a completed
+profit/loss result or a model-validation failure.
+
 V92 remains separately blocked at an unexplained native metadata failure.
 Static follow-up did not establish the actual failing native boundary, so
 neither valid metadata nor the healthy V63 runtime was changed speculatively.
