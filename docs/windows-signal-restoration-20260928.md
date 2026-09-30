@@ -1,5 +1,22 @@
 # Windows Signal Restoration: September 28
 
+## September 30 Mac V15 Delivery Ready
+
+The Mac-only relay now binds the exact V15 runtime and is running in send/watch
+mode with a new private state database. Its first real inbox cycle completed
+with no errors, no pending messages and zero deliveries. The old relay exited
+normally after its exact process identity and empty inbox were checked; its
+database remained byte-identical and its logs were preserved. No test signal,
+credential transfer, source change, strategy change or schedule change occurred.
+The original focused signal-delivery tests passed. Private checkpoint: `4483266`.
+
+Windows was notified that the matching receiver is ready. A completed task had
+returned no execution evidence, so the continuation first inspected actual
+state rather than assuming a failed start or blindly retrying. It reported no
+V15 model process or live directory and preserved an unrelated existing sync
+process. The actual source admission and one model startup are in progress.
+Relay readiness alone does not establish model operation or Telegram delivery.
+
 ## September 30 Native Replacement Verified
 
 The supported screenshot path recovered the bounded UI preflight. The exact
