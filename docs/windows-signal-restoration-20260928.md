@@ -1,5 +1,26 @@
 # Windows Signal Restoration: September 28
 
+## September 30 V15 Windows Verification Completed
+
+The returned Windows evidence now verifies all 133 files against the exact Mac
+archive. Four isolated checks passed: the packaged self-verifier, launcher and
+owner help, and imports with internal source/bootstrap/provenance pins. Mac
+verified all 12 enclosed original outputs, including their inner output hashes,
+the exact manifest and imported-module identities. No live service, model,
+publisher, sender, database or order was started by these checks.
+
+The first independent preparation check stopped before extraction because its
+inherited expanded-size bound was smaller than this package. A separate corrected
+checker required the exact 5,208,309 expanded bytes, independently matching the
+Mac archive. The original failed attempt is preserved; package and native
+thresholds were not changed. Equivalent UTC/local summary offsets were checked
+against original output instants rather than treated as rewritten market clocks.
+
+Native source replacement remains pending. A new supported screenshot-based
+inspection is in progress after the previous accessibility-tree failure. This
+does not justify rerunning completed package preparation or claiming that the
+original V63/V92 models or Telegram signal route are operating yet.
+
 ## September 30 V15 Runtime Prepared
 
 The original-model runtime now has a coherent native-revision path: V6 source
