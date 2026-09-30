@@ -1682,3 +1682,28 @@ Persistent successor integration remains in progress. Original models, risks,
 timing, source guards, financial records and frozen deployment bytes remain
 unchanged. No operating restoration, signal delivery, promotion or order is
 claimed by this implementation record.
+
+### Persistent Successor And Windows Inventory
+
+Private implementation `85c4f99` adds a dedicated successor ledger that stays
+INIT_REQUIRED until state, history references and checkpoint evidence commit
+atomically. Ordinary model cycles, reopen and clean carry preserve the original
+unknown V63 outcome and eligible V92 financial state. Original ledger and frozen
+runtime bytes are not migrated or overwritten.
+
+The parent eight-file regression passed 384 cases with 43 intentional child-only
+skips. Its subprocess harness reran those 43 isolated Service/Store/Controller
+cases, including actual implementation initialization, cycle and reopen on
+invented fixtures. This is not a full-repository or deployment qualification.
+
+Windows also completed the requested copy-only integrity inventory once in
+118.23 seconds, with exit zero and no retry. Original result bytes, checkpoint,
+table-inventory digest, frozen-module hashes and Windows write/delete exclusion
+were checked independently on Mac. No original database content or SQLite
+connection, model execution, historical price replay, message or order was
+needed. Integrity inventory is not semantic execution proof or a realized PnL.
+
+Compact per-transition evidence work is continuing to address the measured
+twenty-session capacity gap. A genuine later source epoch, explicit owner and
+bootstrap integration, V92 context acquisition, and versioned publisher/relay
+support remain required before operating recovery can be claimed.
