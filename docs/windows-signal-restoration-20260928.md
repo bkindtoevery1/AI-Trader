@@ -1790,3 +1790,42 @@ stopped predecessor. A successor bootstrap/launcher/owner package and matching
 sender/receiver/Mac relay integration remain required. This checkpoint does not
 claim Windows operation or Telegram delivery; it records implemented components,
 their test scope and the concrete remaining integration.
+
+### Successor Startup And Delivery Package
+
+Private implementation `fdf0e3a` connects the successor startup, source admission,
+schema2 delivery route and versioned package. A separately observed identity
+sidecar now supplies the missing startup identity reference without reopening or
+rehashing the stopped original ledger. Its original-byte export was withheld by
+a conservative redaction check; the observed hash and stability, not an invented
+export, are the evidence recorded.
+
+Interrupted startup retains the old unresolved paper trade as UNKNOWN in a
+distinct successor. Clean carry requires a genuinely parked predecessor; resume
+requires the exact committed same-day head. The original models and decision
+timing remain unchanged. Sender and relay use separate new ledgers while
+preserving stale-entry rejection, content-addressed publication, duplicate
+suppression and ambiguous-delivery holds. Telegram credentials remain Mac-only.
+
+Packaging caught a deployment-relative credential lookup defect before release.
+A small Mac-only adapter now uses the established private credential source
+without importing the research pipeline or copying secrets into the bundle.
+Independent review also caught two reporting defects: a one-shot retry returned
+success, and failure to record an already-sent notification could claim it was
+unsent. Both were corrected and tested, including durable claim/reopen behavior
+that does not send the same message twice.
+
+Final related regression: 725 passed, 108 intentional child-only skips. A separate
+18-case extracted-package integration covers source admission, owner review,
+successor initialization, processing without V92 context, exact resume, rejection
+boundaries and rollback when the original clock deadline passes during commit.
+Those tests use explicitly invented roots, not market evidence. Counts overlap
+other suites and are not a full-repository or Windows-host pass.
+
+The credential-free package preserves the exact previous base except three
+declared import aliases, with the historical validator retained separately.
+Independent package review found no concrete unsafe or broken packaging issue.
+Windows offline transfer/install/import and empty-queue preview checks have been
+requested and the coordinator is active. Actual fresh-source approval, model
+operation and Telegram delivery remain unverified. No source activation, orders,
+historical model trials or fabricated historical exits were performed.
