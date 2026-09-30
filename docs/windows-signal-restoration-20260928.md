@@ -1,5 +1,52 @@
 # Windows Signal Restoration: September 28
 
+## September 30 Genuine V63 Entry And Sender Repair
+
+The unchanged V63 model executed its real-data inference at 14:00 UTC and
+committed a paper entry at 14:02 UTC. Mac verified the original admission and
+entry against the unchanged complete event validator. The original publisher
+produced the authentic content-addressed wire. This is shadow operation, not a
+model-validation pass, profitable-model evidence or a broker order.
+
+The delivery failure was isolated to the Windows SSH argument boundary. A
+controlled empty-stdin no-op reproduced exit 255 with the original option
+vector; removing embedded quotes from the no-whitespace known-hosts option
+made the same no-op succeed. That does not establish remote atomic publication
+or Telegram delivery. No stale entry was resent as a current instruction.
+
+A separate sender-only V2 sidecar corrects exactly that option, reuses the
+original wire/config/ACK database, and keeps expired entries without fabricated
+ACKs while allowing genuine exits to progress. The V15 runtime, models,
+collector, publisher, financial history, deadlines and Mac relay are unchanged.
+The sidecar executes pinned source bytes from the original payload. Independent
+review found and resolved a cache/shadow-import gap before deployment.
+
+Final related delivery suite: 312 passed. Exact frozen-payload import and
+source/cache/shadow-package mutation checks passed. Independent static rereview
+found no remaining blocker. Broader V4 regression passed 3,592 tests with one
+Windows-only skip; it began before the final sender corrections and was
+followed by the final-byte related suite. Counts overlap; this is not a
+full-repository or end-to-end delivery claim. Private checkpoints: `fe14548`
+and `3948b8c`.
+
+Actual Windows preflight exposed a stable path-versus-handle ctime discrepancy
+before runtime import or sync-state access. The reader was corrected to retain
+full within-API change checks, preserve all shared identity fields, and require
+the original dependency hashes. Cross-API ctime is omitted only on Windows,
+matching the existing qualified reader. No production handoff has occurred.
+
+The same read-only check found the original model-owner and launcher processes
+absent at 14:45 UTC. The saved OPEN paper position and ACTIVE/no-fault state had
+not advanced since 14:07:37 UTC. They are historical records, not proof of
+current processing. Bounded exit diagnosis was requested without restarting
+the model, forcing a close or resetting the preserved financial history.
+
+V92 remains separately blocked at an unexplained native metadata failure.
+Static follow-up did not establish the actual failing native boundary, so
+neither valid metadata nor the healthy V63 runtime was changed speculatively.
+Near-real-time batching remains a proposal, not a timing-policy change or a
+workaround for this transport bug.
+
 ## September 30 Native Volume Failure Isolated
 
 The pre-acquisition check at 12:32 UTC verified the same eight original workers,
