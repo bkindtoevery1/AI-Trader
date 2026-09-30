@@ -1764,3 +1764,29 @@ their indexed epoch witnesses. Transport and Mac relay must accept the new wire
 together. Original model parameters and decision timing remain unchanged. No
 fresh Windows runtime, genuine delivery acknowledgement or Telegram recovery is
 claimed, and no historical strategy trials or orders were run.
+
+### Bounded Committed-Signal Publication
+
+Private implementation `366ae0f` adds the successor's local read-only publisher.
+It reads bounded committed event pages and their epoch-specific origin/runtime
+witnesses by indexed keys, without traversing the full history. Database locks
+are released before semantic validation and filesystem publication. Original
+events, economics and old signal identities remain unchanged after clean carry.
+
+Pre-deployment review removed a proposed four-contention shutdown limit. Each
+read attempt remains bounded, but continuous operation yields and retries typed
+SQLite contention or a precisely identified deadline. Corruption, byte limits,
+VM limits and unrelated interruptions remain fatal. This is cooperative control,
+not a guarantee of Windows latency or preemption of blocked operating-system I/O.
+
+The final related regression passed 177 cases with 61 intentional child-only
+skips; the isolated harness ran all 61 publisher cases. Tests exercise actual
+SQLite locking, interruption and rollback on invented ledgers, retry recovery,
+cursor retention, restart and stable old-epoch signals. Independent inspection
+found no additional blocker. No actual ledger, network, source or model was run.
+
+The actual startup chain still targets the old service signature and a different
+stopped predecessor. A successor bootstrap/launcher/owner package and matching
+sender/receiver/Mac relay integration remain required. This checkpoint does not
+claim Windows operation or Telegram delivery; it records implemented components,
+their test scope and the concrete remaining integration.
