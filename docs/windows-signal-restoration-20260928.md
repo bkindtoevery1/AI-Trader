@@ -1844,3 +1844,30 @@ its value. The actual process command contained the correct pin, independently
 checked afterward, so no restart was needed. Existing processes and schedules
 were unchanged. Windows qualification is still running. This is receiver
 readiness, not evidence of Windows model operation or Telegram delivery.
+
+### Windows Offline Qualification Completed
+
+Private checkpoint `bcd9341` records independently verified Windows installation
+of the exact successor package. The original receipt matches all 153 archive
+members, 126 compiled Python sources, 59 verified imports, both fitted models
+and eight pinned dependency versions. Six help-only entrypoints and an empty
+delivery-queue preview passed. No runtime file changed to obtain these results.
+
+One initial probe also imported an implementation filename that is not the
+deployed service entrypoint. It correctly rejected the nonhistorical alias. That
+failed probe is retained; a separate test of the intended deployed alias passed
+with the original historical validator. Offline installation is now evidenced,
+but native capture, actual model execution and Telegram delivery are not.
+
+Readiness review also corrected the next startup window. A fresh source must be
+on a genuinely later New York calendar date, and the consumer must initialize
+on that date before 09:00 ET. The earliest October 1 start is 04:00 UTC, or
+13:00 Korea. A previous budget-only estimate omitted that date constraint.
+Starting collection hours before the consumer could also exceed its unchanged
+initial backlog limit. Retained inputs should be prepared first, then a fresh
+source and consumer started together in the genuine eligible window.
+
+A bounded read-only Windows follow-up is checking native readiness, the existing
+disable/enable recovery route and required input paths before any rearm. No F5,
+restart, model activation, historical search, schedule or order change was made
+in this checkpoint. The original unresolved paper outcome remains UNKNOWN.
