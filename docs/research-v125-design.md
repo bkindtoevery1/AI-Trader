@@ -141,10 +141,41 @@ checkpoint did not rerun it or qualify a historical market execution.
 
 All fits above used invented data. Actual V125 market fits, bank construction,
 account replays and comparison charges are **zero**. Ledger remains **13,219**.
-The account adapter, finite runner, source/runtime admission, exclusive claim,
-actual complete market evaluation and separate saved-result audit remain to do.
+The finite runner, source/runtime admission, exclusive claim, actual complete
+market evaluation and separate completed-result audit remain to do.
 V124 remains the latest completed study and failed. A functioning pure predictor
 does not make the requested operational route or research goal complete.
+
+## Account Adapter And Alternate Selection Audit
+
+The new `nq_apex_local_distribution_replay_v125.py` translates only the arm-map
+and contrast names around the frozen V124 adapter. It retains four exact V124
+candidate control books without replaying them, and constructs four new books
+through unchanged V119 rules. Caller authentication, rather than an arm label,
+establishes which completed controls and learned masses may enter. No ancestor
+globals, costs, quantity choice, account rule or evaluation prefix is changed.
+Independent read-only review found no semantic blocker with this bounded reuse.
+The affected replay/account tests passed 128 distinct cases in 79.259 seconds,
+actual exit zero, without failures, errors or skips; JUnit SHA-256
+`8706bd68365ad14d43c8c1b1f883ec734d1db2a03d4abd8471fc4f791e89e182`.
+
+`audit_nq_apex_local_neighborhoods_v125.py` checks saved complete masses using
+the maximum of two order statistics: the 100th event distance and fifth-smallest
+per-date minimum distance. This differs from the production sorted-event scan.
+It checks all boundary ties, original date weights, exact integer targets,
+unsupported slots, radius and date concentration without fitting or calling
+production selection. Distance arithmetic and model validation remain shared;
+this is not independent numerical implementation or source authentication.
+
+The combined pipeline/audit test run passed 49 distinct cases in 17.162 seconds,
+actual exit zero, without failures, errors or skips. It includes all 126 invented
+evaluation dates and an empty date, with fit, production selection and scaler
+transform forbidden during the alternate audit. JUnit SHA-256
+`899ca6c6977ae8a1e126e1c4baa1bcd9d2b158fc3ee521523c3fab655e1aaf29`.
+The earlier standalone 35-case audit run overlaps this count. These and the
+previous 1,012-case checkpoint overlap; they are not cumulative unique tests.
+The finite runner is being integrated separately. None of these checks is a
+market trial, backtest pass, claim or authority to change operational models.
 
 ## Primary References
 

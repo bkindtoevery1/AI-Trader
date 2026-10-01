@@ -38,7 +38,11 @@ retaining original four-mode outcomes and quantity/risk rules. Training-only
 scaling, complete tie handling and source-prefix closure have focused evidence:
 1,012 affected cases passed, including 64 V125 cases. Zero V125 market fits,
 account replays or comparisons have been executed; the ledger stays 13,219.
-The retained-control account adapter and qualified market evaluation remain next.
+The retained-control account adapter is now implemented. Its affected account
+tests passed 128 cases. A separate 49-case pipeline/audit run checks complete
+saved neighborhood weights and diagnostics, including all 126 invented dates,
+without refitting. Counts overlap earlier checkpoints and are not strategy
+evidence. The finite runner and qualified market evaluation remain next.
 V124 remains the latest completed study and its failure is not superseded.
 
 The [October 1 signal checkpoint](signal-operation-20261001.md) separately
@@ -53,6 +57,12 @@ Start input produced no observed native intent, result or terminal. Provider
 acquisition and context admission remain unproved. No blind repeat Start or
 state reset was performed. These are operational facts, not research performance
 or promotion evidence. V63 and V92 recovery are separate from V124 research.
+
+At 14:27 UTC the Windows recovery-copy candidate and all eight original evidence
+blobs were verified. Source review supports a bounded diagnostic-copy attempt,
+conditional on current process/private-path checks and exact code pins. It is
+not proof that copying, model resume or delivery succeeded. Existing positions,
+unresolved deliveries and source state must not be reset to manufacture recovery.
 
 Native-source progress is not a fresh model decision or delivery. V92's issue is recent
 input coverage, not historical training length: October 1 needs the exact twenty
