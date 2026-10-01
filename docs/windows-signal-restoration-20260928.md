@@ -2018,3 +2018,31 @@ its original pre-action intent. This is not evidence of absent provider history.
 A new, native-visible local quarantine was requested without changing existing
 permissions or interrupting V63. Recovery is in progress; export and V92 feature
 admission are still unproved. No stale entry, artificial signal or order was sent.
+
+### Partial Cache Export And CLEAN Clock Regression
+
+The native-visible destination repair succeeded for the September-contract
+export. The December export, stable raw-file hashes and exact prior20 minute
+coverage remain unfinished; no V92 feature context is admitted. Remaining work
+continues without repeating the successful export or stopping V63.
+
+Private commit `0d35daf` also builds an isolated V19 reliability candidate. Actual
+extracted V18 reproduces a CLEAN carry failure with an advancing clock: the
+bootstrap seals a proof at preparation time, but Service recomputes it using a
+later check time. V19 keeps the original preparation time while retaining current
+freshness and commit guards. Tests verify successful carry, later processing,
+history/UNKNOWN/outbox preservation, exact resume, and rejection of wrong-time
+proofs or late commits. No model, sizing, financial or source behavior changes.
+
+The final combined package/publisher check passes 41 outer cases; separate
+retained history/bootstrap checks pass 66. Child-only skips are intentional,
+scopes overlap, and no full-repository or strategy pass is claimed. A default
+test interpreter initially lacked a dependency; the unchanged tests passed in
+the existing project runtime without installing or faking it. Separate static
+production review found no additional concrete defect.
+
+V19 is not deployed. External CLEAN authority and migration of a V18-bound
+ledger remain separate requirements, not implied by software tests. The active
+V18 signal path was left untouched. Central records now distinguish that latest
+operational evidence from the preserved older V15 failure, reducing the risk of
+mistaking a historical stop for an instruction to restart a healthy process.
