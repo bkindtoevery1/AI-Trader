@@ -19,12 +19,25 @@ completed. The cumulative development ledger is **13,217**, the holdout remains
 closed and there is no verified 50K pass. See the preserved
 [execution history](research-v123-execution.md).
 
+[V124](research-v124-design.md) now has a separate cost-directed partition
+learner and causal pipeline, verified by 951 affected synthetic tests. It retains
+all four outcome/decision modes and all account rules. No V124 market fit,
+replay, result or new comparison charge exists yet; V123 remains latest completed.
+
 The [October 1 signal checkpoint](signal-operation-20261001.md) separately
 confirms an advancing Windows model and running publisher/SSH/Mac relay chain.
 No new actual Telegram delivery was present at observation. V92's current-date
 metadata is now installed with native path/permission verification; provider
 acquisition and context remain pending. V63 delivery does not wait for that repair. These are operational
 facts, not research performance or promotion evidence.
+
+Latest read-only Windows check confirms retained process identities and advancing
+native source, not a fresh model decision or delivery. V92's issue is recent
+input coverage, not historical training length: October 1 needs the exact twenty
+eligible sessions September 2..30. Existing exports contain 4,020 of 6,000 required
+minute endpoints. The missing 1,980 must be genuinely backfilled and attached;
+older years do not replace them, and no twenty-new-session waiting period is
+required. This context is still unready, not an ordinary V92 HOLD decision.
 
 The sections below retain earlier checkpoints and are superseded by this dated
 summary where they describe a task as still pending.
