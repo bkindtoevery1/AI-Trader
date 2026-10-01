@@ -94,3 +94,15 @@ days. The model is not ready to infer; absence of a message is not a normal HOLD
 
 This summary excludes private paths, process identities, source records,
 credentials, account identifiers, runtime binaries and fitted artifacts.
+
+## Recovery Check Correction
+
+The bounded metadata qualification stopped before financial file access:
+path-based and open-file ctime values differed despite stable values within
+each API, matching other identity fields and an exact content hash. This does
+not prove a content change or account failure. The minimal correction compares
+full before/after identities within each API and non-ctime identity across APIs,
+without changing content hashes or database guards. Its 91 offline checks passed.
+The preserved evidence confirms actual r2 process/private-path qualification had
+not yet run; only that unfinished step is now proceeding. No successful model
+resume, fresh decision or Telegram delivery is established by these checks.

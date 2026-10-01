@@ -36,13 +36,20 @@ the pure estimator and causal three-prefix pipeline, not historical execution.
 The fixed label-blind neighborhood replaces shallow forest averaging while
 retaining original four-mode outcomes and quantity/risk rules. Training-only
 scaling, complete tie handling and source-prefix closure have focused evidence:
-1,012 affected cases passed, including 64 V125 cases. Zero V125 market fits,
-account replays or comparisons have been executed; the ledger stays 13,219.
+1,012 affected cases passed, including 64 V125 cases. At that checkpoint no V125
+market fits, account replays or comparisons had been executed.
 The retained-control account adapter is now implemented. Its affected account
 tests passed 128 cases. A separate 49-case pipeline/audit run checks complete
 saved neighborhood weights and diagnostics, including all 126 invented dates,
 without refitting. Counts overlap earlier checkpoints and are not strategy
-evidence. The finite runner and qualified market evaluation remain next.
+evidence. The finite runner is now implemented and its actual-input preflight
+passed: 181 source dates, three training prefixes and 126 scoring dates.
+Formal execution qualification passed 808 cases, zero failures/errors/skips,
+with unchanged source/runtime and two known constant-column numerical warnings.
+The sole market run was exclusively claimed at 14:53:54 UTC and its child entry
+was observed. Two comparisons are now reserved, bringing the total to 13,221
+regardless of this attempt's result. No partial market outcome is disclosed.
+Post-complete mass, choice and account-lifecycle verification remains required.
 V124 remains the latest completed study and its failure is not superseded.
 
 The [October 1 signal checkpoint](signal-operation-20261001.md) separately
@@ -63,6 +70,13 @@ blobs were verified. Source review supports a bounded diagnostic-copy attempt,
 conditional on current process/private-path checks and exact code pins. It is
 not proof that copying, model resume or delivery succeeded. Existing positions,
 unresolved deliveries and source state must not be reset to manufacture recovery.
+
+The first metadata check then rejected a stable difference between path-based
+and open-file timestamp observations before financial data access. The minimal
+correction preserves full same-API checks, cross-API file identity and exact
+content hashes. Its 91 offline checks passed and the exact source diff was
+verified. The first actual metadata qualification is still pending; offline
+success does not establish copying, resume or signal delivery.
 
 Native-source progress is not a fresh model decision or delivery. V92's issue is recent
 input coverage, not historical training length: October 1 needs the exact twenty
