@@ -1941,3 +1941,25 @@ liveness or actual Telegram delivery. No automated orders are enabled. Genuine
 available signals are the priority; there is no fabricated immediate signal or
 resending of expired entries. Collection startup and model judgment times remain
 distinct.
+
+### Actual Startup Failure And Minimal Clock Repair
+
+Windows subsequently captured genuine advancing data and completed input
+assembly, but model initialization failed. The caller reused a poll timestamp
+after a prior verification had advanced the reader's monotonic clock boundary.
+Its repeated commit guard had the same defect. This was a runtime bug, not an
+account failure, provider failure or trading-model result.
+
+Private commit `066bdd0` corrects the two caller arguments in immutable runtime
+V18. Original fitted models, source guards and economic rules remain unchanged.
+An increasing-clock test reproduces the old failure and verifies the corrected
+initialization plus subsequent processing. Negative tests retain stale-clock
+rejection and rollback on expired freshness. Earlier constant-clock tests missed
+this sequence; their passing counts were insufficient evidence of live startup.
+
+The matching Mac relay is running and Windows repair-backed recovery has been
+dispatched. Actual model liveness and message delivery remain unproved until
+returned runtime evidence. The interrupted UNKNOWN outcome and original failure
+files are retained. A separate CLEAN-session proof-clock defect is documented
+for follow-up; current INTERRUPTED startup does not use that mode. No automated
+orders are enabled and no new historical strategy trials were run.
