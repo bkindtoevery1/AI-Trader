@@ -3,27 +3,27 @@
 Publication checkpoint: 2026-10-01. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V123 Running, Outcomes Pending
+## Current Checkpoint: V123 Completed, PA Failed
 
 [V122 completed and failed](research-v122-results.md): all four PA scenarios
 abstained and closed for inactivity. Its two counted comparisons brought the
 historical total to 13,215. Neither this failure nor the earlier V121 failure is
 converted into a pass by the next experiment.
 
-[V123](research-v123-design.md) tests a fixed three-coordinate minute-volume and
-price-alignment extension. Actual-data preflight and 1,091 affected software
-tests passed. Its finite attempt started at 08:59:11 UTC on October 1, reserving
-two comparisons and bringing the cumulative development ledger to **13,217**.
-Three fixed fitted models and full conditional distributions have been published;
-account replay and full-result verification remain pending. No performance pass
-is claimed. See the [execution checkpoint](research-v123-execution.md). The
-181-date development source and 126 scored dates are unchanged; the sealed
-holdout remains closed.
+[V123 completed](research-v123-results.md) its three fixed fits and four new
+account books over 181 raw pairs and 126 scored dates. All 2,210 PA decisions had
+positive capacity but selected flat; every scenario closed for inactivity.
+The inherited numeric Evaluation passes are not new PA success. Market/process
+verification and separate saved-mass, quantity, ledger and lifecycle audits
+completed. The cumulative development ledger is **13,217**, the holdout remains
+closed and there is no verified 50K pass. See the preserved
+[execution history](research-v123-execution.md).
 
 The [October 1 signal checkpoint](signal-operation-20261001.md) separately
 confirms an advancing Windows model and running publisher/SSH/Mac relay chain.
-No new actual Telegram delivery was present at observation. V92 context remains
-unready; working V63 delivery does not wait for that repair. These are operational
+No new actual Telegram delivery was present at observation. V92's current-date
+metadata is now installed with native path/permission verification; provider
+acquisition and context remain pending. V63 delivery does not wait for that repair. These are operational
 facts, not research performance or promotion evidence.
 
 The sections below retain earlier checkpoints and are superseded by this dated

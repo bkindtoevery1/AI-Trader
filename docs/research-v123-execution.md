@@ -1,7 +1,8 @@
 # V123 Execution Checkpoint
 
-Checkpoint: 2026-10-01 09:03 UTC. The finite development experiment has started.
-This is not a completed result, independent validation or a trading instruction.
+Latest: the experiment completed and failed its PA gates. See the
+[full result and retrospective](research-v123-results.md). The 09:03 UTC running
+checkpoint below is retained as history, not the current execution state.
 
 ## Why This Experiment
 
@@ -46,3 +47,10 @@ The operational Windows V63 signal service remains separate. V123 has not replac
 it, generated operational signals, opened the holdout or enabled broker orders.
 Private market data, model weights, machine identifiers and credentials are not
 included in this public checkpoint.
+
+## Completion
+
+The market process exited zero at 10:35:02 UTC, followed by observed verification
+at 10:38:19 UTC and later saved-result audits. All four PA paths abstained and
+closed for inactivity. The two reserved comparisons remain charged. No market
+process from this experiment remains running, and it was not deployed.
