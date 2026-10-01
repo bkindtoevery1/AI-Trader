@@ -37,6 +37,20 @@ renewal units per journey. They are neither new learning benefits nor evidence
 of a quick or fee-adjusted pass. Relative to V119, baseline PA worsens by $135.96;
 stress improves by $68.50 only by avoiding its loss. Joint improvement fails.
 
+## Saved-Decision Failure Attribution
+
+Read-only decomposition of completed evidence found 769 distinct market
+opportunities across the 2,210 scenario decisions, not 2,210 independent samples.
+Every decision had capacity for five MNQ; the best positive quantity was one,
+but its worst-head certainty equivalent was always negative.
+
+The cost-only payoff head limited every decision. Its mean was negative in
+2,203 cases; in seven cases a positive mean was outweighed by the risk penalty.
+In baseline, 126 of 561 baseline-head CEs were positive but rejected by that
+cost head. The failure is the fitted distribution combined with the fixed
+worst-head rule, not capacity. This is not permission to remove the head after
+seeing results. No new fit, replay or counterfactual PnL was produced.
+
 ## Evidence And Lesson
 
 Observed market and postrun processes exited successfully with unchanged pins.
