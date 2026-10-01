@@ -2085,3 +2085,33 @@ Mac relay remains running with sending enabled, empty incoming JSON and empty
 stderr at the latest observation. No new authentic signal has arrived; no
 artificial example, stale entry, live order or Telegram delivery success is
 claimed. This separates actual operational evidence from readiness promises.
+
+### Stopped-Copy Continuity Audit
+
+Private commit `dc4db39` adds a separate read-only auditor for stopped schema-5
+CLEAN copies. The old scanner was schema-4-only. The candidate checks the exact
+original identity, PARKED checkpoint, full retained tables, compact history and
+signal origin without opening the original database as SQLite or constructing
+a writable store. UNKNOWN and historical delivery records remain unchanged;
+inspection grants no migration, restart, source or trading authority.
+
+Initial tests missed two issues. Independent review identified conflicting
+duplicate witness rows after primary-key removal and a final seal reread outside
+the deadline check. Four new regressions reproduced those false acceptances in
+both actual package environments. The fixes require original table constraints
+and a final clock check. Final extracted V18/V19 runs each pass 67 cases; combined
+related tests pass 52 outer cases with 75 intentional child-only skips. Scopes
+overlap, and no full-repository or strategy pass is claimed.
+
+An actual Windows unit verified complete binary reads and denied write/unlink/
+replacement attempts on invented files. It stopped because its harness expected
+one exact refusal code where Windows returned another refusal code. The original
+partial exit is retained, not declared a pass. A revised one-run check with a
+matched successful replacement after handle release is acknowledged and running.
+This is file-handle testing, not actual ledger migration or native model evidence.
+
+Separately, the historical UI download preflight found an inherited merged-
+contract policy, so no download or setting change was made. The existing native
+request-local DoNotMerge route is distinct and still needs its metadata failure
+resolved. Coverage remains 4,020/6,000 diagnostic endpoints; V92 is not admitted.
+The working signal path does not wait for these tests, and remains unchanged.
