@@ -94,10 +94,10 @@ even a favorable development result would not demonstrate generalization.
 The sealed 48-date holdout remains closed. Program fees and personal account
 cohort/compliance remain unverified.
 
-Current implementation is only the causal feature component and pure learner
-with invented-data software tests. Still required: authenticated minute-volume
-joins, full population/label bindings and maturity checks, exact retained
-control integration, continuous account adapter, a finite source-scoped runner,
+Current implementation includes the causal feature component, pure learner and
+development minute-volume content joins described below. Still required: full
+population/label bindings and maturity checks, exact retained control
+integration, continuous account adapter, a finite source-scoped market runner,
 trial claim, actual market fitting/replay and independent completed-result audit.
 Retain complete conditional masses for future mean/risk attribution rather than
 stripping the evidence and reconstructing it later.
@@ -117,3 +117,43 @@ Prior broker-source and central-goal assertion failures remain disclosed.
 
 No market outcome, verified pass, rollout, order, Telegram test, purchase,
 Windows restart, schedule change or secret transfer follows from this document.
+
+## Completed Source Join
+
+On 2026-10-01 the separate source-only runner completed with actual exit 0.
+All **5485 original events across 181 dates**, 2025-09-08 through 2026-06-12,
+received twelve coordinates without event filtering or imputation. Original
+nine-coordinate values are unchanged. The adapter validates the original
+300-minute source window, then matches each event's exact 21 completed anchor
+minutes by explicit NQ contract, OHLC ticks and interval-end nanoseconds.
+Source volumes must be native int/float, finite, nonnegative, integral and
+strictly below 2^53 before the frozen window validator converts them to float.
+Fractional or missing volume is rejected, not rounded or replaced.
+
+The complete original broad-opportunity hash and development snapshot match
+their retained structural receipt. Retained event/context identities, frozen
+research files, loader cache/policy and original numeric runtime are checked
+before/after the operation. Six unrelated application modules differ from old
+hashes; an execution guard forbids their use as well as fitting. The old
+all-application admission is not bypassed or declared restored. This artifact
+establishes only historical development feature content, not mature target
+admission, source closure for training, live arrival timing or generalization.
+Full-window validation is an offline integrity check, not future input to a
+decision or proof that all rows were available live.
+
+The private content receipt is `source-v1.json`, SHA-256
+`31be8d88d61115a0c1b5a378990d156c861454d049092f240e005c919eb30023`.
+Its full contexts hash is
+`48effdad02f2bfc13a99df9b9fe76e821957b1f02b6481e66bc63eec385a5b5a`.
+The parent rechecked all 5485 context self-hashes, count, date order and current
+runner/helper hashes after publication. The market-derived feature artifact
+is kept private and is not included in public documentation commits.
+
+Focused source/adapter tests: **59 passed in 1.61 seconds**. Final combined
+component/source/affected regression: **1011 passed in 9.23 seconds**, exit 0,
+including the V121 recovery guard. The parsed JUnit has no failures, errors or
+skips. This stage did not rerun the full repository suite; the earlier
+interrupted full-run failures remain disclosed. No market fit, account replay,
+comparison charge, label selection or live deployment occurred. Historical
+ledger remains 13215 and the sealed holdout remains closed. Next work is the
+complete mature-label/population binding, not another feature search.
