@@ -31,6 +31,16 @@ opening or live promotion followed. Qualification passed 1,203 cases. Full
 regression has 30,005 passes, 18 failures, 22 errors and 516 skips, not green.
 See [execution and test attribution](research-v124-execution.md).
 
+[V125 local joint distributions](research-v125-design.md) is implemented through
+the pure estimator and causal three-prefix pipeline, not historical execution.
+The fixed label-blind neighborhood replaces shallow forest averaging while
+retaining original four-mode outcomes and quantity/risk rules. Training-only
+scaling, complete tie handling and source-prefix closure have focused evidence:
+1,012 affected cases passed, including 64 V125 cases. Zero V125 market fits,
+account replays or comparisons have been executed; the ledger stays 13,219.
+The retained-control account adapter and qualified market evaluation remain next.
+V124 remains the latest completed study and its failure is not superseded.
+
 The [October 1 signal checkpoint](signal-operation-20261001.md) separately
 originally confirmed an advancing Windows model and running publisher/SSH/Mac
 relay chain. A later 11:53 UTC check found all original Windows signal workers
