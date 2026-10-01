@@ -1983,3 +1983,12 @@ retained publisher tests, 96 delivery/route checks and an exact-runtime import
 smoke passed. Independent review found no concrete blocker. Windows replacement
 was requested without native/model restart. Actual fresh-signal publication,
 SSH acknowledgement and Telegram delivery remain separate, unproved milestones.
+
+Subsequent Windows evidence verifies the replacement: the latest cumulative log
+shows 316 successful bounded polls and 64 recoveries after contention, with zero
+new signal publications. An OS-only observation confirms continued capture and
+model writes without a native/model/sender restart. Exact retired background
+processes were removed; current model and sender identities were preserved.
+The relay is enabled, but no authentic fresh signal has yet proved end-to-end
+Telegram delivery. Success here is restored, observable processing, not a claim
+of a trade, profit or passed model evaluation.
