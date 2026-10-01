@@ -2115,3 +2115,12 @@ contract policy, so no download or setting change was made. The existing native
 request-local DoNotMerge route is distinct and still needs its metadata failure
 resolved. Coverage remains 4,020/6,000 diagnostic endpoints; V92 is not admitted.
 The working signal path does not wait for these tests, and remains unchanged.
+
+The revised Windows unit subsequently passed. Mac verified its original script
+and output, exact binary payloads and file identities. While held, write/unlink/
+replacement are denied without modifying either file; a second reader works.
+After both handles close, the same replacement call on the same paths succeeds,
+followed by exact write/read/removal controls. The earlier partial failure is
+preserved. This closes the handle-unit task only; actual ledger migration and
+full Windows auditor qualification remain unproved. No model, signal, source or
+operational setting changed.
