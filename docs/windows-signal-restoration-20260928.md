@@ -2124,3 +2124,26 @@ followed by exact write/read/removal controls. The earlier partial failure is
 preserved. This closes the handle-unit task only; actual ledger migration and
 full Windows auditor qualification remain unproved. No model, signal, source or
 operational setting changed.
+
+### Immediate Signal Delivery And V92 Failure Attribution
+
+Private commit `10b298c` records the user's instruction to deliver authentic
+signals without an extra 13:00, approval, V92-data or candidate-test wait. The
+existing send-enabled Mac relay remains running. A newer bounded Windows OS/log
+summary reports nine unchanged processes, advancing capture/model I/O and 29
+additional successful empty publisher polls. No new publication was observed.
+The summary's byte hash was checked; raw capture was not attached, and the
+sender's retained IDLE line is not a fresh queue measurement or delivery proof.
+
+The same commit adds an isolated V92 diagnostic candidate for the unresolved
+native metadata failure. It distinguishes preflight, reads, parsers, clock and
+binding, reporting only fixed exception categories. A derivation check confirms
+that request ordering, provider and financial logic, guards and original other
+bundle members are unchanged. Sensitive exception text is never emitted.
+
+Related Mac regression passes 396 cases. Windows production-source compilation
+and original 16-case plus new 46-case synthetic harnesses are running in a new
+scratch directory, not NinjaTrader. The active V18 model and signal route were
+not replaced. This improves failure attribution; it does not establish the
+historical root cause, V92 admission, a strategy pass or actual Telegram delivery.
+No full-repository pass is claimed, and no live database or market file was read.
