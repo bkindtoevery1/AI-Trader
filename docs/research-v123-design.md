@@ -201,3 +201,38 @@ The full repository suite was not rerun. No market learner fit, account replay,
 new comparison charge, holdout access, signal-policy change or order occurred.
 Ledger remains 13215. Next is the three-forest/four-account integration and its
 finite claim, not additional data collection or a new feature-selection search.
+
+## Account Source And Pipeline
+
+The retained account source was published at 2026-10-01T06:37:32Z. Independent
+readback verified its full file SHA-256
+`ba96345185f523d776c549caa3e2a56dbfe24b9d1e023f6ae67afa1b29cdd358`,
+original prepared-source identity, six original models, 252 forecast envelopes,
+181-date projection and eight retained control books. Both control arms match
+the completed V119 status byte-for-byte under the original canonical encoder.
+Raw-pair metadata matches the original V102 lock; no raw tick payload was read
+by this restoration. The producer process's final exit was not retained after
+context transition; successful immutable publication and independent readback
+are the evidence, not an invented process exit code.
+
+The new pipeline validates all three original causal prefixes and all 126
+scoring-date query populations before fitting. It preserves original coordinates,
+unit targets, weighting, support rules and integer-cent distribution envelopes.
+It exposes exactly nine ordered fit-stage callbacks for three 64-tree forests.
+The replay adapter runs four unchanged V119 quantity-account variants against
+one authentic raw-pair pass, with a single declared V119 contrast and unchanged
+cost, breach and payout distinctions. These are implemented components, not
+completed market fits or replay results.
+
+Real-data no-fit integration exited 0 in session 74769: **181 source dates,
+three folds, 1335/2372/3391 training events, 126 query dates and 3747 queries**.
+The original prepared-source identity and exact control bytes matched; source,
+artifact and runtime pins were checked. Fitting and execution of the six
+drifted application modules were forbidden throughout the causal preflight.
+
+Combined source/pipeline/replay and affected component tests: **254 passed in
+274.69 seconds**, exit 0, with zero failures/errors/skips in the parsed JUnit.
+The full repository suite was not rerun. No new market fit, account replay,
+comparison charge, holdout opening, Windows deployment or order occurred.
+The historical ledger remains 13215. A finite claim and qualified execution
+runner are still required before the planned two-charge market experiment.
