@@ -2010,3 +2010,11 @@ and V92 context are still unverified. The requirement is twenty genuine prior
 complete sessions, not a wait for twenty new sessions. V63 and the enabled relay
 continue independently. This documentation-only checkpoint passes JSON and
 whitespace checks; it introduces no runtime change or new model result.
+
+The first export attempt subsequently reached the exact requested UI settings,
+but the native Save dialog could not find the destination. No data export or
+coverage result was produced. Private commit `aa0fcb5` preserves that failure and
+its original pre-action intent. This is not evidence of absent provider history.
+A new, native-visible local quarantine was requested without changing existing
+permissions or interrupting V63. Recovery is in progress; export and V92 feature
+admission are still unproved. No stale entry, artificial signal or order was sent.
