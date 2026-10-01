@@ -3,7 +3,7 @@
 Publication checkpoint: 2026-10-01. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V123 Prepared, No New Fit
+## Current Checkpoint: V123 Running, Outcomes Pending
 
 [V122 completed and failed](research-v122-results.md): all four PA scenarios
 abstained and closed for inactivity. Its two counted comparisons brought the
@@ -11,11 +11,14 @@ historical total to 13,215. Neither this failure nor the earlier V121 failure is
 converted into a pass by the next experiment.
 
 [V123](research-v123-design.md) tests a fixed three-coordinate minute-volume and
-price-alignment extension. Genuine development features, mature training
-populations and retained account controls have been prepared. Real-data no-fit
-integration covered 181 source dates and 126 scoring dates. The finite execution
-runner is being implemented; no V123 market fit, account replay or two-charge
-claim has yet occurred. The sealed holdout remains closed.
+price-alignment extension. Actual-data preflight and 1,091 affected software
+tests passed. Its finite attempt started at 08:59:11 UTC on October 1, reserving
+two comparisons and bringing the cumulative development ledger to **13,217**.
+Three fixed fitted models and full conditional distributions have been published;
+account replay and full-result verification remain pending. No performance pass
+is claimed. See the [execution checkpoint](research-v123-execution.md). The
+181-date development source and 126 scored dates are unchanged; the sealed
+holdout remains closed.
 
 The [October 1 signal checkpoint](signal-operation-20261001.md) separately
 confirms an advancing Windows model and running publisher/SSH/Mac relay chain.
