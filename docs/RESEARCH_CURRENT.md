@@ -1,9 +1,32 @@
 # Public Research Checkpoint
 
-Publication checkpoint: 2026-09-27. This is a curated public summary, not the
+Publication checkpoint: 2026-10-01. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V121 Completed, All PA Abstention
+## Current Checkpoint: V123 Prepared, No New Fit
+
+[V122 completed and failed](research-v122-results.md): all four PA scenarios
+abstained and closed for inactivity. Its two counted comparisons brought the
+historical total to 13,215. Neither this failure nor the earlier V121 failure is
+converted into a pass by the next experiment.
+
+[V123](research-v123-design.md) tests a fixed three-coordinate minute-volume and
+price-alignment extension. Genuine development features, mature training
+populations and retained account controls have been prepared. Real-data no-fit
+integration covered 181 source dates and 126 scoring dates. The finite execution
+runner is being implemented; no V123 market fit, account replay or two-charge
+claim has yet occurred. The sealed holdout remains closed.
+
+The [October 1 signal checkpoint](signal-operation-20261001.md) separately
+confirms an advancing Windows model and running publisher/SSH/Mac relay chain.
+No new actual Telegram delivery was present at observation. V92 context remains
+unready; working V63 delivery does not wait for that repair. These are operational
+facts, not research performance or promotion evidence.
+
+The sections below retain earlier checkpoints and are superseded by this dated
+summary where they describe a task as still pending.
+
+## Historical V121 Completion
 
 The sole V121 replay finished2026-09-27T13:28:09Z,exit0; postrun verification
 also exited0 and authenticated517971 recorded-account arithmetic checks.
@@ -39,7 +62,7 @@ PnL. Focused diagnostic tests passed 27 cases; its additive full regression is
 pending. The historical total stays 13,213 and the independent holdout stays
 closed. The failure is not converted into a pass or a relaxed cost assumption.
 
-## Next Development: V122 Triggered Market Entry
+## Historical V122 Implementation
 
 [V122's fixed design](research-v122-design.md) changes entry mechanics rather
 than relaxing costs. It waits for a causal quarter-stop price move, expires
