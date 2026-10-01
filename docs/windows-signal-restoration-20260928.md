@@ -2147,3 +2147,22 @@ scratch directory, not NinjaTrader. The active V18 model and signal route were
 not replaced. This improves failure attribution; it does not establish the
 historical root cause, V92 admission, a strategy pass or actual Telegram delivery.
 No full-repository pass is claimed, and no live database or market file was read.
+
+Private commit `022254a` closes actual Windows offline qualification. Recovered
+evidence first showed that the earlier coordinator task had only verified and
+extracted the archive: no compiler or harness had started. Its completion and an
+unrelated older file-handle result were not accepted as this candidate's tests.
+
+A continuation reused the exact staged files and completed three C#5 compilations
+and two harness executions, all exit zero: 16 retained cases and 46 new diagnostic
+cases passed. Mac verified all 16 original attachments, 21 archive members and
+11 compiler/reference pins, then checked actual case lines and compiler flags.
+Three summary timestamps differed only by omitted trailing fractional zeros;
+original execution bytes were preserved. The production library was compiled
+without test hooks and was not loaded into NinjaTrader.
+
+This is software qualification, not live V92 recovery. The native metadata cause
+and genuine prior20 data remain unresolved. A bounded OS-only comparison of
+selected actually exposed native code modules is requested; missing visibility
+will not be treated as a mismatch. Current V18 and automatic signal delivery
+remain untouched, with no installation, restart, provider retry or live SQL.
