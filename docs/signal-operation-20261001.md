@@ -51,10 +51,25 @@ collection, model execution, signal publication and actual delivery must remain
 separate claims. Observer timing failures must not automatically reset a healthy
 process or rewrite financial history.
 
-Preserve the running route, verify its first genuine delivery, and solve V92's
+Preserve the route state, verify its first genuine delivery, and solve V92's
 historical-volume input separately. Current-session liveness is not reboot
 recovery or unattended multi-day reliability. Model research continues on
 existing historical data without changing the active signal models.
+
+## Later Worker Loss
+
+The 11:53 UTC read-only check supersedes the earlier running-route observation.
+NinjaTrader and its fresh nonterminal native source remain live, but all eight
+original owner/model/publisher/sender processes are absent; a separate inventory
+found no replacement worker. The Mac relay alone cannot provide end-to-end
+operation. Empty error logs and a prior publisher retry do not establish the
+exit cause or precise time. No current signal delivery is proved.
+
+Supported same-day recovery was requested while preserving the existing source,
+financial state and unresolved delivery. No recovery result has been verified
+yet. Do not reset state, infer an unresolved position flat or replay stale entry
+notifications. This operational failure is distinct from V92's incomplete recent
+volume context and from the running V124 research experiment.
 
 This summary excludes private paths, process identities, source records,
 credentials, account identifiers, runtime binaries and fitted artifacts.

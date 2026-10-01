@@ -21,21 +21,27 @@ closed and there is no verified 50K pass. See the preserved
 
 [V124](research-v124-design.md) now has a separate cost-directed partition
 learner, causal pipeline, exact V123 control adapter and [finite runner](research-v124-runner.md).
-The initial integrated affected regression passed 1,197 cases, with six further
-direct saved-forest reconstruction/tamper tests passing. Read-only actual-source
-preflight passed; final named qualification and repository regression are running.
-All four outcome/decision modes and account rules remain. No V124 market fit,
-replay, result or new comparison charge exists yet; V123 remains latest completed.
+Final named qualification passed 1,203 cases with unchanged source/runtime and
+observed exit zero. The sole market attempt started at 11:42 UTC, reserving two
+comparisons for an active cumulative total of **13,219**. Its three fits completed;
+the original full raw replay is still running, without partial economic results.
+All four outcome/decision modes and account rules remain. Completed-only loss
+and abstention descriptions have 528 passing related software checks, not a
+market result. Repository regression is still running and is not green. V123
+remains the latest completed model; do not restart the V124 attempt.
 
 The [October 1 signal checkpoint](signal-operation-20261001.md) separately
-confirms an advancing Windows model and running publisher/SSH/Mac relay chain.
-No new actual Telegram delivery was present at observation. V92's current-date
+originally confirmed an advancing Windows model and running publisher/SSH/Mac
+relay chain. A later 11:53 UTC check found all original Windows signal workers
+absent despite a fresh native source, and a follow-up found no replacement
+worker. The Mac relay remains present but the end-to-end route is not verified
+operational. State-preserving recovery was requested, not confirmed. No new
+actual Telegram delivery was present at observation. V92's current-date
 metadata is now installed with native path/permission verification; provider
 acquisition and context remain pending. V63 delivery does not wait for that repair. These are operational
 facts, not research performance or promotion evidence.
 
-Latest read-only Windows check confirms retained process identities and advancing
-native source, not a fresh model decision or delivery. V92's issue is recent
+Native-source progress is not a fresh model decision or delivery. V92's issue is recent
 input coverage, not historical training length: October 1 needs the exact twenty
 eligible sessions September 2..30. Existing exports contain 4,020 of 6,000 required
 minute endpoints. The missing 1,980 must be genuinely backfilled and attached;
