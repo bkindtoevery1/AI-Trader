@@ -2046,3 +2046,19 @@ ledger remain separate requirements, not implied by software tests. The active
 V18 signal path was left untouched. Central records now distinguish that latest
 operational evidence from the preserved older V15 failure, reducing the risk of
 mistaking a historical stop for an instruction to restart a healthy process.
+
+Both original cache exports are now inspected. Private commit `a47a615` records
+3,840 of 6,000 required minute endpoints, twelve complete dates, two partial
+dates and six empty target dates in those files. No duplicates or off-grid rows
+were found. Original script/output hashes and exact integer file identities were
+verified. Query-date boundaries in the configured Korean timezone may explain
+part of the tail truncation, but not all gaps; separate narrow boundary exports
+are being checked without overwriting originals, downloading history or changing
+the active model. Cache gaps do not prove unavailable provider history.
+
+Fresh OS/log samples also confirm nine stable native/model/delivery processes,
+31 additional successful publisher polls and continuing capture/model I/O over
+approximately ten seconds. New signal publications remain zero. No financial
+database was inspected. A new-destination CLEAN continuity design is documented
+as code-only research: immutable old history, single-successor ownership and
+crash-safe fencing remain requirements, not implemented deployment evidence.
