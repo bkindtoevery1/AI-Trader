@@ -1916,3 +1916,28 @@ in the genuine eligible window. Telegram delivery remains unproved. The original
 interrupted outcome remains UNKNOWN. Near-real-time batching is a proposal, not
 an implemented change or a demonstrated remedy for the observed database
 contention and out-of-order source timestamp.
+
+### Session-Date Startup Correction
+
+The user correctly challenged the 13:00 Korea wait. It was not an exchange or
+account restriction: the startup code used New York calendar midnight instead
+of the regular futures session beginning the previous evening. Private commit
+`27ad5f4` adds a separate immutable V17 successor that corrects this bookkeeping.
+It preserves original fitted models, decision times, financial continuity and
+the interrupted UNKNOWN outcome. The prior midnight-based instructions above
+describe V16 and are superseded for V17, not a reason to keep waiting.
+
+New focused checks passed 93 cases; retained V16/helper checks passed 73.
+Isolated child preparation and night-start lifecycle checks passed separately.
+Independent source review found no additional concrete package/helper defect.
+No new full-suite pass is claimed, and repeating the full suite is not a
+precondition for the user's authorized paper-signal restoration.
+
+Mac has started the matching Telegram relay with no test message. Windows has
+been instructed to complete current-source startup, original-model execution and
+signal transport without another approval or midnight wait. At this checkpoint
+Windows execution is still in progress: a running relay is not proof of model
+liveness or actual Telegram delivery. No automated orders are enabled. Genuine
+available signals are the priority; there is no fabricated immediate signal or
+resending of expired entries. Collection startup and model judgment times remain
+distinct.
