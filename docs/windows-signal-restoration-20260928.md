@@ -1963,3 +1963,23 @@ returned runtime evidence. The interrupted UNKNOWN outcome and original failure
 files are retained. A separate CLEAN-session proof-clock defect is documented
 for follow-up; current INTERRUPTED startup does not use that mode. No automated
 orders are enabled and no new historical strategy trials were run.
+
+### Windows Processing Verified; Delivery Observation Corrected
+
+Returned Windows evidence now verifies V18 initialization and two advancing
+committed model cursors without a fault. A later OS-only observation confirms
+continued native capture and model-ledger writes. These are operational facts,
+not profitable strategy results or proof of a Telegram delivery. V92 still
+lacks its separate volume context; V63 processing does not wait for that context.
+
+The sender recovered from a native numerical-library allocation failure using
+child-local single-thread settings, without restarting the model. A second
+apparent failure was partly a logging gap: after BUSY, successful empty publisher
+polls were suppressed. Repeated retry lines did not prove a continuous lock.
+Private commit `8918ec2` adds an external logging-only publisher entrypoint with
+explicit recovery and bounded successful-read counters. The frozen reader,
+models, financial rules and wire bytes are unchanged. Eight new loop tests,
+retained publisher tests, 96 delivery/route checks and an exact-runtime import
+smoke passed. Independent review found no concrete blocker. Windows replacement
+was requested without native/model restart. Actual fresh-signal publication,
+SSH acknowledgement and Telegram delivery remain separate, unproved milestones.
