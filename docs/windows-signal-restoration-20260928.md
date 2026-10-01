@@ -2162,7 +2162,23 @@ original execution bytes were preserved. The production library was compiled
 without test hooks and was not loaded into NinjaTrader.
 
 This is software qualification, not live V92 recovery. The native metadata cause
-and genuine prior20 data remain unresolved. A bounded OS-only comparison of
-selected actually exposed native code modules is requested; missing visibility
-will not be treated as a mismatch. Current V18 and automatic signal delivery
+and genuine prior20 data remain unresolved. The bounded OS-only comparison is
+complete: none of the four selected managed modules was visible through that
+query, which proves neither absence nor mismatched binding. Current V18 and automatic signal delivery
 remain untouched, with no installation, restart, provider retry or live SQL.
+
+The 2026-10-01 04:51:01-04:51:11 UTC operational observation retained all nine
+process identities. Collector durable metadata advanced by 61 batches and 84,525
+segment bytes; that is not a tick count. Model OS CPU/I/O advanced, while the
+publisher completed 28 successful polls and recovered from six retries. Total
+publications remained zero and all four stderr files were empty. Original
+selected-output arithmetic and the receipt hash were verified on Mac. The old
+sender IDLE record was not treated as a fresh acknowledgment, and neither the
+exact current model-window state nor Telegram delivery was inferred.
+
+Private commit `32524de` also adds the [V121 payoff attribution diagnostic](research-v121-payoff-attribution.md).
+Its 242 related tests pass, but historical reconstruction stopped before
+forecasts because declared application dependencies changed. No economic
+attribution result, new fit, alternative policy, holdout access or account replay
+was produced. The code, incomplete attempts and recovery limitations are kept
+separate from the running signal route; no additional delivery gate was added.
