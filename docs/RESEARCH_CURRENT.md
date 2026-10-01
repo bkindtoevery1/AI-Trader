@@ -3,7 +3,7 @@
 Publication checkpoint: 2026-10-01. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V123 Completed, PA Failed
+## Current Checkpoint: V124 Completed, PA Failed
 
 [V122 completed and failed](research-v122-results.md): all four PA scenarios
 abstained and closed for inactivity. Its two counted comparisons brought the
@@ -19,27 +19,30 @@ completed. The cumulative development ledger is **13,217**, the holdout remains
 closed and there is no verified 50K pass. See the preserved
 [execution history](research-v123-execution.md).
 
-[V124](research-v124-design.md) now has a separate cost-directed partition
-learner, causal pipeline, exact V123 control adapter and [finite runner](research-v124-runner.md).
-Final named qualification passed 1,203 cases with unchanged source/runtime and
-observed exit zero. The sole market attempt started at 11:42 UTC, reserving two
-comparisons for an active cumulative total of **13,219**. Its three fits completed;
-the original full raw replay is still running, without partial economic results.
-All four outcome/decision modes and account rules remain. Completed-only loss
-and abstention descriptions have 528 passing related software checks, not a
-market result. Repository regression is still running and is not green. V123
-remains the latest completed model; do not restart the V124 attempt.
+[V124 completed and failed](research-v124-results.md). The sole 181-pair replay,
+no-fit verification and separate completed-result audit all finished. All four
+PA books made zero trades and closed for inactivity. Among 2,210 flat choices,
+cost-only limits 2,154 and combined stress limits 56; each limiting head already
+has a negative model-implied mean. Cost-only forecast MSE worsened 0.1354%.
+Changing the split objective alone did not resolve either target error or PA
+economics. Original four-mode costs, decisions and account rules remain intact.
+The cumulative total remains **13,219**; no retry, refit, head removal, holdout
+opening or live promotion followed. Qualification passed 1,203 cases. Full
+regression has 30,005 passes, 18 failures, 22 errors and 516 skips, not green.
+See [execution and test attribution](research-v124-execution.md).
 
 The [October 1 signal checkpoint](signal-operation-20261001.md) separately
 originally confirmed an advancing Windows model and running publisher/SSH/Mac
 relay chain. A later 11:53 UTC check found all original Windows signal workers
 absent despite a fresh native source, and a follow-up found no replacement
 worker. The Mac relay remains present but the end-to-end route is not verified
-operational. State-preserving recovery was requested, not confirmed. No new
-actual Telegram delivery was present at observation. V92's current-date
-metadata is now installed with native path/permission verification; provider
-acquisition and context remain pending. V63 delivery does not wait for that repair. These are operational
-facts, not research performance or promotion evidence.
+operational. A later receipt confirms recovery was not executed; the exact
+state-preserving path still required review. No new actual Telegram delivery is
+verified. V92's current-date metadata is installed, but its single 13:01 UTC
+Start input produced no observed native intent, result or terminal. Provider
+acquisition and context admission remain unproved. No blind repeat Start or
+state reset was performed. These are operational facts, not research performance
+or promotion evidence. V63 and V92 recovery are separate from V124 research.
 
 Native-source progress is not a fresh model decision or delivery. V92's issue is recent
 input coverage, not historical training length: October 1 needs the exact twenty

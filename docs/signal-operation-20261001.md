@@ -69,7 +69,28 @@ Supported same-day recovery was requested while preserving the existing source,
 financial state and unresolved delivery. No recovery result has been verified
 yet. Do not reset state, infer an unresolved position flat or replay stale entry
 notifications. This operational failure is distinct from V92's incomplete recent
-volume context and from the running V124 research experiment.
+volume context and from the separately completed V124 research experiment.
+
+## Recovery And V92 Input Status
+
+A 12:25 UTC receipt confirms that recovery was not executed: the exact selected
+runtime's same-day resume contract was still under review. Static review found
+an existing resume path, but a fresh authenticated committed checkpoint and
+the original process, source, financial and delivery identities remain required.
+An offline copy-caller candidate was requested; no completed recovery or new
+model signal is asserted. The coordination task later became unreadable through
+the API, which does not establish that Windows, NinjaTrader or its feed is off.
+
+At 13:01 UTC one V92 native Start input returned, after the original current-day
+clock and metadata preflight. A subsequent inventory found no acquisition
+intent, result or terminal. The unchanged previously displayed failure label
+does not prove a new failure cause. No automatic second attempt was made.
+
+Three years of old data do not satisfy this current input: the exact twenty
+eligible sessions for October 1 are September 2 through September 30. Existing
+exports cover 4,020 of the required 6,000 minute endpoints; 1,980 remain missing.
+Genuine backfill and attachment are needed, not twenty newly elapsed trading
+days. The model is not ready to infer; absence of a message is not a normal HOLD.
 
 This summary excludes private paths, process identities, source records,
 credentials, account identifiers, runtime binaries and fitted artifacts.
