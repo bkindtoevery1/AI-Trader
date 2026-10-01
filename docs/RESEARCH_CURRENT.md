@@ -20,8 +20,11 @@ closed and there is no verified 50K pass. See the preserved
 [execution history](research-v123-execution.md).
 
 [V124](research-v124-design.md) now has a separate cost-directed partition
-learner and causal pipeline, verified by 951 affected synthetic tests. It retains
-all four outcome/decision modes and all account rules. No V124 market fit,
+learner, causal pipeline, exact V123 control adapter and [finite runner](research-v124-runner.md).
+The initial integrated affected regression passed 1,197 cases, with six further
+direct saved-forest reconstruction/tamper tests passing. Read-only actual-source
+preflight passed; final named qualification and repository regression are running.
+All four outcome/decision modes and account rules remain. No V124 market fit,
 replay, result or new comparison charge exists yet; V123 remains latest completed.
 
 The [October 1 signal checkpoint](signal-operation-20261001.md) separately

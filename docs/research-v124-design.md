@@ -58,9 +58,15 @@ One success-fixture guard-scope gap was fixed and tested. Final affected
 regression: **951 passed**, no failures or skips, actual exit zero. This is
 synthetic software verification, not a full-repository pass or market evidence.
 
-Still required: exact retained-control account adapter, finite runner, genuine
-source/runtime qualification, exclusive claim, complete replay and independent
-completed-result audit. Do not mark the study backtested from this checkpoint.
+The exact retained-control account adapter and [finite runner](research-v124-runner.md)
+are now implemented. Initial integrated affected regression passed 1,197 cases;
+six subsequent direct saved-forest verification cases passed, including rejection
+of coherently rehashed mass tampering. Their first fixture attempt was blocked
+by the protected-path guard; only temporary fixture paths were corrected, not
+the guard or model. Actual read-only preflight restored the source and four
+completed V123 books with zero fits, replays or charges. Final qualification,
+exclusive claim, complete replay and separate completed-result audit remain
+pending at this checkpoint. Do not mark the study backtested from these tests.
 
 ## Primary References
 
