@@ -1992,3 +1992,21 @@ processes were removed; current model and sender identities were preserved.
 The relay is enabled, but no authentic fresh signal has yet proved end-to-end
 Telegram delivery. Success here is restored, observable processing, not a claim
 of a trade, profit or passed model evaluation.
+
+### V92 Existing-Data Acquisition Without Interrupting V63
+
+Private commit `1331ea0` records a verified Windows metadata inventory: existing
+minute-base files include both September and December NQ contracts. File names
+and counts do not establish the complete prior-session volume grid, and a
+September-contract file cannot substitute for required December-contract data.
+The earlier native acquisition error still has no attributable inner exception;
+it occurred before any provider request, so it is not proof of missing provider
+history. It has not been blindly retried.
+
+An existing-cache-only NinjaTrader UI export is now requested, without download,
+settings changes, compilation or restart. Its actual provenance must remain
+explicit; it is not the native provider-only acquisition DTO. Exported coverage
+and V92 context are still unverified. The requirement is twenty genuine prior
+complete sessions, not a wait for twenty new sessions. V63 and the enabled relay
+continue independently. This documentation-only checkpoint passes JSON and
+whitespace checks; it introduces no runtime change or new model result.
