@@ -2062,3 +2062,26 @@ approximately ten seconds. New signal publications remain zero. No financial
 database was inspected. A new-destination CLEAN continuity design is documented
 as code-only research: immutable old history, single-successor ownership and
 crash-safe fencing remain requirements, not implemented deployment evidence.
+
+### Boundary Recovery Without Delaying Signals
+
+Private commit `a028552` verifies the two narrow date-boundary checks. The
+September-contract export recovers exactly 180 genuine minute endpoints, raising
+the conditional prior20 diagnostic coverage to 4,020 of 6,000. Thirteen dates are
+complete, one remains partial and six remain absent in the inspected exports.
+The December boundary query produces no file; this is local cache absence, not
+proof of unavailable provider history. Original files remain unchanged, and no
+empty interval is turned into a zero-volume bar or the wrong contract.
+
+All four original attachments, the captured summary, exact integer file
+identities and added/missing endpoint grids were checked. Central strict-JSON,
+count-accounting and whitespace checks pass. This documentation-only checkpoint
+adds no runtime change, strategy result or full-suite claim. The next bounded
+request checks existing connection, entitlement and explicit-contract merge
+policy before any historical download; unknown prerequisites stop acquisition.
+
+The existing real-signal route does not wait for V92 data or V19 migration work.
+Mac relay remains running with sending enabled, empty incoming JSON and empty
+stderr at the latest observation. No new authentic signal has arrived; no
+artificial example, stale entry, live order or Telegram delivery success is
+claimed. This separates actual operational evidence from readiness promises.
