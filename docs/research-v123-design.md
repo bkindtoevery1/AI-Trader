@@ -94,10 +94,10 @@ even a favorable development result would not demonstrate generalization.
 The sealed 48-date holdout remains closed. Program fees and personal account
 cohort/compliance remain unverified.
 
-Current implementation includes the causal feature component, pure learner and
-development minute-volume content joins described below. Still required: full
-population/label bindings and maturity checks, exact retained control
-integration, continuous account adapter, a finite source-scoped market runner,
+Current implementation includes the causal feature component, pure learner,
+development minute-volume joins and mature population bindings described below.
+Still required: exact retained control integration, continuous account adapter,
+a finite source-scoped market runner,
 trial claim, actual market fitting/replay and independent completed-result audit.
 Retain complete conditional masses for future mean/risk attribution rather than
 stripping the evidence and reconstructing it later.
@@ -155,5 +155,49 @@ including the V121 recovery guard. The parsed JUnit has no failures, errors or
 skips. This stage did not rerun the full repository suite; the earlier
 interrupted full-run failures remain disclosed. No market fit, account replay,
 comparison charge, label selection or live deployment occurred. Historical
-ledger remains 13215 and the sealed holdout remains closed. Next work is the
-complete mature-label/population binding, not another feature search.
+ledger remains 13215 and the sealed holdout remains closed. That source stage
+left mature-label/population binding as the next task, completed below.
+
+## Completed Training Binding
+
+The source-only training runner completed at 2026-10-01T06:17:50Z, actual exit
+0. The three original plans exactly match their retained hashes: 45/87/129
+scheduled training dates, ten full-calendar purge sessions and 42 scoring dates
+per fold. Training populations contain **1335/2372/3391 events**, respectively,
+on 45/85/127 represented dates after the original support filters. Dates with
+no retained rows still remain in the scheduled calendar and purge calculation.
+
+Pinned V97 four-mode MNQ unit journals and pinned V102 plans were reused, not
+recomputed or retuned. The complete source journal file contains already-known
+development outcomes; only exact training-prefix labels enter each population.
+All original training event journals, including later-excluded events, pass
+strict resolution-before-cutoff checks before initial MNQ capacity and stop
+support filters. No scoring-specific NQ capacity filter enters training.
+The original V118 population hashes match all three retained admissions; both
+old pressure-arm exports in each fold match original nine coordinates, one-MNQ
+integer-cent targets, event/date order and date-equal weights exactly. Only the
+three fixed new feature coordinates differ from the original nine-input data.
+
+The runner reconstructs the original event source and checks full source,
+context, code, loader and numeric-runtime bindings before/after work. Each
+prepared numeric array has immutable byte backing. Caller-bound context/source
+hashes remain content authentication, not proof of live availability. No old
+all-application admission is declared restored, and raw ticks were not rescanned
+in this stage. The historical journal bytes and prior receipts remain the
+provenance evidence; account replay must still verify its own execution input.
+
+Private `populations-v1.json` SHA-256:
+`9a626d55bc6dffbdadf00859df99095f782b037017a298d5d47b57484fa21e0e`.
+Its complete populations hash is
+`88ade59c7f2cba3031104a7f02d0568c56a53d95431b8275de9330b51e78b798`.
+The parent reopened the artifact, reconstructed all three typed populations,
+validated their bindings/arrays and reconciled the original input hashes.
+Feature/target arrays remain private, not part of a public documentation push.
+
+Adapter checks: **34 passed in 5.23 seconds**. Runner binding checks initially
+passed 29 tests; final combined source/population/component/affected regression
+passed **837 tests in 23.01 seconds**, exit 0, with no failures/errors/skips.
+The full repository suite was not rerun. No market learner fit, account replay,
+new comparison charge, holdout access, signal-policy change or order occurred.
+Ledger remains 13215. Next is the three-forest/four-account integration and its
+finite claim, not additional data collection or a new feature-selection search.
