@@ -3,7 +3,31 @@
 Publication checkpoint: 2026-10-06. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V127 Session-Context Comparison
+## Current Checkpoint: V128 Matched Account Replay
+
+[V128 completed and was audited](research-v128-results.md). Its publicly recorded
+[design](research-v128-design.md) routes exact sealed V126/V127 forecasts into
+identical continuous accounts, without fitting, tuning or changing costs.
+All181raw pairs and126scoring dates reconciled, with four exact original controls
+and eight unchanged Evaluation prefixes. The sole child and supervisor exited0
+at04:17UTC; the saved-book audit also exited0 and verified three sealed files.
+
+Baseline PA net was-2303.14USD for V126 and-2323.26USD for V127; combined stress
+was-1908.50/-1892.50USD. All eight new PA scenarios lose money. Seven close under
+the modeled profit-qualified activity rule, one is unprofitable/right-censored,
+and none qualifies for payout. The matched primary contrast and full-route gates
+fail. Stop losses deplete headroom; this is not a zero-trade failure. Evaluation
+profits are inherited from the unchanged NQ policy and cannot offset PA losses
+on fresh capital. New forecasts act only after those late-April phase transitions.
+
+Three comparisons remain charged, total13,232. Final qualification passed138new
+and548affected-core tests. An earlier broad run was interrupted with25synthetic
+fixture failures, all repaired and covered by the final138passes; a complete
+green full-repository run is not claimed. All processes are terminal. The closed
+48-date holdout, operational policies, orders and Windows settings are unchanged.
+No independent validation or verified current Apex50K pass is claimed.
+
+## V127 Forecast-Stage Checkpoint
 
 [V127's fixed design](research-v127-design.md) adds three completed regular-hours
 session-context coordinates to the twelve local inputs. Its control is the
@@ -19,8 +43,9 @@ verified with bound process evidence. [Complete results](research-v127-results.m
 show mixed prediction changes: baseline/cost-only MSE worsened 1.17%/1.40%, while
 latency/stress improved 0.11%/0.57%. Overlapping selected-label means remain
 negative in cost-only and combined stress; they are not an account equity curve.
-Two comparisons remain charged, cumulative 13,229. A declared matched account
-adapter/replay is still required; economics are NOT_EVALUATED. No operational
+Two comparisons remained charged, cumulative 13,229. Account economics were
+NOT_EVALUATED at that checkpoint; V128 above now supplies the failed followup.
+No operational
 policy, order permission, independent-validation claim or holdout change follows.
 
 ## V125 And V126 Completed
