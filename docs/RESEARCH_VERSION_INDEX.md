@@ -109,4 +109,10 @@ execution. Status: NOT_FITTED, no market labels or new trial charges. A full
 causal state population, learner/objective and economic comparison remain to
 be frozen and executed; synthetic test passes are not model performance.
 
+Its subsequent [design](research-v137-design.md) and
+[training implementation](research-v137-implementation.md) add fixed state
+replicas, an eight-response HGB and a complete-prefix label adapter. 861
+focused/affected tests pass. Source-bound folds, dynamic account integration
+and immutable market runner remain; status is still NOT_MARKET_FITTED.
+
 Use the [research record template](research-record-template.md) and [research PR template](../.github/PULL_REQUEST_TEMPLATE/research.md). Distinguish local source commits from verified published commit SHAs and PRs. An unpublished local commit is not a GitHub backup; this index itself neither commits nor publishes evidence.
