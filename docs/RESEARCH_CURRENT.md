@@ -3,7 +3,30 @@
 Publication checkpoint: 2026-10-06. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V130 Whole-Route Accounts
+## Current Checkpoint: V131 Matched-History Forecasts
+
+[V131 completed and was audited](research-v131-results.md), following its
+[pre-execution design](research-v131-design.md). Twelve fixed Ridge/scaler
+pipelines compare recent history with436additional complete minute sessions.
+617development dates,126scored dates and3747matched events per product were
+retained. Actual child/supervisor/audit exits0; three sealed files and twelve
+saved models/prediction sets verified without refitting. All processes terminal.
+
+Long history reduces MSE only0.0103% for NQ and0.0123% for MNQ. All four overall
+MSE/MAE values remain worse than training-mean anchors. Folds1/2 improve but
+fold3 worsens. Positive overlapping gross labels are not account profits.
+Economic verdict remains NOT_EVALUATED; no account replay or deployment.
+No added forecast value is established for this fixed recipe, not a universal
+conclusion that older history cannot help other models.
+
+546focused+724affected tests passed, with24retained synthetic-fixture warnings;
+no market warnings or full-repository green claim. Three comparisons remain
+charged,total13,243.48sealed dates remain closed and reused development is not
+independent validation. No tuning, inversion, Windows setting, schedule, secret,
+order or purchase change. Research/Windows goals remain active; no new Windows
+operational evidence was obtained. See [data inventory](data-inventory-20261006.md).
+
+## V130 Whole-Route Accounts
 
 [V130 completed and was audited](research-v130-results.md) after its
 [design](research-v130-design.md) was published before execution. The sole replay
