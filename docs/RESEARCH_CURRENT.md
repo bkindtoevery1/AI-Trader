@@ -3,7 +3,31 @@
 Publication checkpoint: 2026-10-06. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V128 Matched Account Replay
+## Current Checkpoint: V129 Own-Product Forecasts
+
+[V129 completed and was audited](research-v129-results.md) after its
+[design](research-v129-design.md) was published before fitting. Nine new
+pipelines,36response fits and12scalers completed without market warnings.
+NQ two-part logistic and direct HGB forecasts are newly fitted; MNQ two-part is
+new while its HGB comparator is the exact sealed V126 output, not a refit.
+Actual child/supervisor/audit exits were0;128sealed files and saved arithmetic
+verified. All126scheduled dates remain; no process from this run is still live.
+
+Two-part baseline MSE improves3.70% for NQ and0.98% for MNQ against HGB, but remains
+worse than training-mean anchors. Its selected opportunity means are negative
+in all four modes for both products. These overlapping labels are NOT executable
+account PnL. No account replay, economic pass, independent validation or
+deployment is claimed. Five comparisons remain charged,total13,237.
+
+Qualification passed278focused+533affected cases,58overlapping (753unique), not
+a green full-repository run. No refit, inversion, favorable-fold selection,
+cost relaxation, operational change or holdout opening follows this result.
+The next separately declared account comparison must replace BOTH NQ Evaluation
+and MNQ PA forecasts, allow each recipe its own transition, and preserve sizing
+and costs. Historical metadata inventory remains approximately3years of minutes
+and1year of ticks; partial arrivals are not new complete sessions.
+
+## V128 Matched Account Replay
 
 [V128 completed and was audited](research-v128-results.md). Its publicly recorded
 [design](research-v128-design.md) routes exact sealed V126/V127 forecasts into
