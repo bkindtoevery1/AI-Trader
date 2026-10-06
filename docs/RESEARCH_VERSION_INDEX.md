@@ -77,6 +77,7 @@ For V1-V74, use the existing [research protocol and historical overview](NQ_APEX
 | V124 | Test cost-targeted partitions. | Failed: all PA choices flat. | [Results](research-v124-results.md) |
 | V125 | Replace shallow partitions with local joint analog outcomes. | Audited: activity recovered; baseline PA loss, no full-route pass. | [Results](research-v125-results.md) |
 | V126 | Compare three fixed direct net-payoff learning families. | Nine fits completed; all three forecast screens failed. No account replay or promotion. | [Design](research-v126-design.md), [results](research-v126-results.md) |
+| V127 | Test causal session-wide context beyond local price/minute-volume inputs. | Qualified; sole supervised forecast comparison started. No account result. | [Design](research-v127-design.md) |
 
 Latest [local data inventory](data-inventory-20261006.md) distinguishes complete
 paired sessions, partial arrivals, derived copies and sealed dates.

@@ -3,7 +3,21 @@
 Publication checkpoint: 2026-10-06. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V125 Audited, V126 Completed
+## Current Checkpoint: V127 Session-Context Comparison
+
+[V127's fixed design](research-v127-design.md) adds three completed regular-hours
+session-context coordinates to the twelve local inputs. Its control is the
+exact retained V126 HGB forecasts, not a refit. Source preflight passed; final
+affected qualification passed 1,104 cases with 24 retained V126 fixture warnings,
+exit 0 and unchanged source pins. Five concrete code-review findings were closed
+before execution. This is not a green repository-wide regression claim.
+
+The sole supervised process started October 6 at 02:14 UTC. Two comparisons
+are reserved, cumulative 13,229. No partial outcome is reported; account replay
+and economics are not evaluated at this forecast stage. No operational policy,
+order permission, independent-validation claim or sealed holdout change follows.
+
+## V125 And V126 Completed
 
 [V125 completed and audited](research-v125-results.md) after the user resumed
 research. Its original computation was not rerun. PA activity and observed
