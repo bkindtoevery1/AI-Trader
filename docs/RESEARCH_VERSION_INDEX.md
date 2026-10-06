@@ -94,6 +94,15 @@ paired sessions, partial arrivals, derived copies and sealed dates.
 
 ## New Records And Publication
 
+V138's [design](research-v138-design.md) and
+[component qualification](research-v138-implementation.md) implement direct
+learning of the unchanged cash-plus-headroom utility, training-only state means,
+four-score own-account decisions and a complete-forecast-before-scoring protocol.
+2,270 unique focused/affected tests and the revised source-only preflight passed.
+Status: NOT_MARKET_FITTED and NOT_RESERVED. Five comparisons are planned but
+uncharged; total 13,262 is unchanged. Whole-account replay and the immutable
+market execution supervisor/lock remain unfinished. This is not a model pass.
+
 V136's [supplemental tick audit and retrospective](research-v136-tick-audit.md)
 checks all321recorded candidate executions independently against their raw-tick
 prefixes. All39giveback exits match; the economic verdict remains failed. This

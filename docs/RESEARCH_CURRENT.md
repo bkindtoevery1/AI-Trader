@@ -3,7 +3,25 @@
 Publication checkpoint: 2026-10-06. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V136 Giveback Exit
+## Current Checkpoint: V138 Components
+
+[V138 components are qualified](research-v138-implementation.md), not market
+fitted or reserved. The [design](research-v138-design.md) tests direct estimation
+of the unchanged one-step utility against frozen V137 and state-only forecasts.
+The learner, purged source adapter, own-state account dispatcher and complete
+forecast-before-scoring protocol have 2,270 unique focused/affected passes.
+The actual source-only preflight restored 181 dates / 5,485 opportunities without
+fitting or replay. Whole-account replay, immutable supervision and the market
+execution lock remain required; no performance result or deployment is claimed.
+
+V137 remains the latest completed market study and
+[failed its full-route gate](research-v137-performance-audit.md#completed-market-run).
+Its artifacts and reservations are unchanged. The prior full-repository suite
+remains not green. Windows daily Mac archival is verified, but fresh collection
+and live model signals remain unverified. The full research/Windows goal remains
+active and incomplete; no orders, schedules or collector settings changed.
+
+## Previous Checkpoint: V136 Giveback Exit
 
 [V136 completed and was audited](research-v136-results.md), following its
 [pre-execution design](research-v136-design.md). One fixed 1R-armed half-peak
