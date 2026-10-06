@@ -194,3 +194,65 @@ unchanged six-pipeline/twelve-book saved-result audit. Do not rerun either
 execution on a timeout, claim market completion from these operational checks,
 or inspect partial financial outcomes. The full-repository regression remains
 active and is not claimed green.
+
+After source admission, all nine completed original paired-day payloads also
+matched the actual replacement's outputs: 13,656,172 bytes, without decoding
+targets or reusing files. The audit reverified all 257 loaded-source pins.
+Receipt `reports/nq_apex_v137_performance_envelope_20261007/actual-run-prefix-byte-audit.json`
+has SHA-256 `97ed4f8db55778834a8691195ff163b167f6ef0288cd17c028b88f3474078731`.
+At 18:12:08 UTC the same replacement process was live with 46 completed paired
+label days and zero fit-start, failure or seal artifacts. This is bounded
+implementation evidence, not whole-population equivalence or a model verdict.
+
+## Completed Broad Regression And Attribution
+
+The full-repository run completed with actual exit 1 after 7,428.621 seconds:
+37,558 cases, 36,972 passed, 18 failed, 22 errors and 546 skipped. Its JUnit
+SHA-256 is `938b0d3bd5bc9013f99450385a31c66d25314f46495855cc42cafc5ae145c2f3`.
+All 2,349 focused/affected case identities were present and passed inside this
+same broad run. Skips include deliberately isolated package subprocess tests,
+Torch-unavailable tests and Windows-only native execution; they are not passes.
+
+The 40 original nonpasses partition as follows:
+
+- V111 wrong-runtime group: five failures plus 22 setup errors. Its documented
+  dedicated V111 runtime rerun passed all 81 tests in 69.959 seconds, actual
+  exit zero, including all 27 previously nonpassing case identities. No package
+  was installed into or changed in the frozen V137 runtime.
+- Ten historical V75--V86 evidence checks: current broker bytes differ from
+  historical pins. These are genuine historical reproducibility gaps, not
+  permission to update expected hashes. The same drift already appears in the
+  original pre-optimization V137 claim's nonexecuted-application map; both
+  execution guards exclude those filenames. V137's 257 source pins remain
+  unchanged. This bounds attribution without restoring old source evidence.
+- One V88 evidence-retention gap: its pinned old test report was stored in a
+  temporary directory and is now missing. Hashing all 398 XML files retained
+  under reports found no exact replacement. No report was fabricated and the
+  disappearance time is unknown.
+- Two central-state readers assume older universal progress/result schemas and
+  comparison aliases. A real stale top-level research-pause narrative was
+  reconciled to the existing explicit October 6 resumption, without erasing
+  history. Its test then exposes a missing V123 count alias. No compatibility
+  progress records, results or new trial charges were invented to pass it.
+
+The independent read-only metadata review reconciles the modern V122--V137
+segment: 13,215 + 43 completed comparisons + four reserved + zero performance
+amendment comparisons = 13,262. This neither reconstructs all historical trials
+nor certifies global DSR. The old aggregate labelled new_market_model_trials
+must not be presented as the current number of fitted models.
+
+After the narrative-only correction, 274 frozen/fast runner cases still passed;
+the additional legacy state case remains failed on its older alias/schema.
+The original broad failure report is retained and there is still NO full-green
+claim. Attribution receipt
+`reports/nq_apex_v137_runner_integration_20261007/full-regression-attribution-final-v2.json`
+has SHA-256 `dfd3d2c820e863bfed4abfc445231a8f364873b615588ad042a7f751468b50d0`.
+The first diagnostic serialization attempt was refused before final publication
+because of integer mapping keys; its empty temporary file is retained outside
+market outputs. The corrected diagnostic used native string keys and did not
+change market execution, models, sources, historical locks or statistical gates.
+
+At 19:33:54 UTC the same fast execution remained live with 150 completed label
+days and zero started fits, failure or result seal. No financial outcome has
+been inspected. Completion remains unproven until every fit, book and saved
+result audit finishes.

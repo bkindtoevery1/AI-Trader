@@ -157,4 +157,14 @@ The new process is still in source admission; no financial results or model
 success exist at this checkpoint. All original evidence and sealed dates remain
 preserved, and the full-repository regression has not yet finished.
 
+The broad regression subsequently finished, not green: 36,972 passed, 18 failed,
+22 errors and 546 skipped. All 2,349 changed/affected case identities passed.
+The proper V111 runtime rerun passed 81 cases, resolving its 27 original
+nonpasses. Historical source-hash and retained-evidence gaps remain, alongside
+old central-state schema assumptions; none was waived to manufacture a pass.
+The stale paused-goal narrative was reconciled to the existing user resumption.
+Actual fast-run output also matched all nine original label files byte-for-byte.
+At the latest checkpoint 150 label days were complete, with no fits yet and no
+economic verdict. Source/audit records are preserved locally in `1ce2363f`.
+
 Use the [research record template](research-record-template.md) and [research PR template](../.github/PULL_REQUEST_TEMPLATE/research.md). Distinguish local source commits from verified published commit SHAs and PRs. An unpublished local commit is not a GitHub backup; this index itself neither commits nor publishes evidence.
