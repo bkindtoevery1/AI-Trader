@@ -208,3 +208,27 @@ success or newly completed archive payload was observed. Daily archival is
 operating, but it must not be described as proof of current tick collection,
 model execution or signal delivery. Windows must remain logged in and able
 to reach the Mac for its existing Interactive task to transfer data.
+
+## October 7 05:00 KST Recheck
+
+The fresh Windows receipt observed the enabled task at 05:00:27 KST. Its
+05:00 automatic run finished with exit zero, zero missed runs and a Ready
+state; the next timer was 05:30 KST. The completed pass retained all 159
+acknowledged snapshots / 20,903 source references / 11,986,423,924 referenced
+bytes. Pending, failed, unattempted, missing-root and overdue counts were zero.
+Seven current-UTC-day control/invalid-marker files, 5,709 bytes, remained
+deferred. No new snapshot or market-data payload was acknowledged.
+
+The Mac independently recounted the same 19,492 unique object files /
+10,968,966,386 bytes, 149 ordinary and ten conflict ready manifests, and zero
+partial files. Previous completion and full-payload audit hashes were unchanged;
+this recheck did not repeat the complete payload hash sweep. The fresh Windows
+receipt was hashed in full and matched its content-addressed filename:
+`030850df6cf75552a49b25ed1100d37b8f043089eb1f91e36836e1082b83f7ee`.
+
+Full-session raw-chunk mtimes still ended at October 5, 23:30 KST and
+predecision mtimes at 23:00 KST. The V4 journal metadata also remained
+unchanged. These observations confirm continued automatic backup, not fresh
+market collection or the current UI connection state. No schedule, UI,
+connection, collector, account, key or order setting was changed, and no
+duplicate archive task or historical CSV transfer was started.
