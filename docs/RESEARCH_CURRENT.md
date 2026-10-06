@@ -3,7 +3,32 @@
 Publication checkpoint: 2026-10-06. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V131 Matched-History Forecasts
+## Current Checkpoint: V132 Terminal Confirmation
+
+[V132 completed and was audited](research-v132-results.md) after its
+[design](research-v132-design.md) was published before account execution.
+Both fixed V131 history forecasts only veto frozen HGB nominations. No fit,
+inference, threshold search or new labels. All 181 raw pairs/402,041,614 ticks,
+126 scored dates and 16 account books finished; eight exact controls reconciled.
+Child/supervisor/separate audit exited 0 with source unchanged. Three sealed
+files and 32 direct phase totals verified. All required processes are terminal.
+
+Recent confirmation never passes Evaluation: baseline +77.20 USD and combined
+stress -1110 USD. Long baseline passes, then loses 1399.82 USD in 45 PA trades
+and closes under the activity rule; its other modes do not reach PA. Both
+full-route gates and all benefit gates fail. Long baseline PA is 3738.60 USD
+below HGB on unequal phase exposure. Other PA contrasts are null, not zero.
+No hard/MAE breach does not establish success. Program fees remain unpriced;
+no actual payout, current-account compliance or verified 50K pass is claimed.
+
+325 focused plus 563 affected tests passed; no full-repository green claim.
+Five comparisons remain charged, historical total 13,248. The 48 sealed dates
+remain closed; repeated development is not independent validation. No tuning,
+retry, Windows, order, schedule or operational-model change. Research/Windows
+goals remain active; no new Windows operating evidence. See the unchanged
+[data inventory](data-inventory-20261006.md).
+
+## V131 Matched-History Forecasts
 
 [V131 completed and was audited](research-v131-results.md), following its
 [pre-execution design](research-v131-design.md). Twelve fixed Ridge/scaler
