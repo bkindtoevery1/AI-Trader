@@ -184,3 +184,27 @@ These timestamps are not a market-content or completeness audit. Daily backup
 is operating, but continued fresh collection and live signals remain unproven.
 No UI, Connect, rearm, F5, login, collector, model, order or schedule changes
 were performed. This recheck changed documentation only, not executable code.
+
+## October 7 02:20 KST Recheck
+
+Windows was reachable and returned a fresh read-only receipt at
+2026-10-07T02:20:46+09:00. The existing enabled task had automatically run at
+02:00 KST with exit zero, zero missed runs, and its next timer at 02:30 KST.
+The completed pass retained 159 acknowledged snapshots and reported zero
+pending, failed, unattempted, missing-root or overdue items. No duplicate task,
+schedule change, manual bulk transfer or collector/UI action was performed.
+
+The Mac independently recounted 19,492 object files / 10,968,966,386 bytes,
+159 ready manifests and zero partial files. This was a filesystem recount,
+not a repeat payload hash sweep; the earlier complete-payload hash audit
+remains the byte-integrity evidence. The new Windows receipt was hashed in
+full and matched its content-addressed filename:
+`2672aa640d0c5fd10da4f13f50ae0a2352807cb6b6f36e0107e70f554dacaf40`.
+
+Seven files / 5,709 bytes remained deferred under the UTC-date rule. The
+latest full-session NQ/MNQ raw chunks still had October 5, 23:30 KST mtimes;
+the predecision chunks still had 23:00 KST mtimes. No fresh live-collection
+success or newly completed archive payload was observed. Daily archival is
+operating, but it must not be described as proof of current tick collection,
+model execution or signal delivery. Windows must remain logged in and able
+to reach the Mac for its existing Interactive task to transfer data.

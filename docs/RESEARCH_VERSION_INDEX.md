@@ -135,4 +135,17 @@ matched the first complete paired label day byte-for-byte in a separate probe.
 The optimization is NOT adopted: independent review findings need hardening;
 the original market process and frozen statistical design remain unchanged.
 
+The hardened performance checkpoint reproduces all bytes of the fixed first
+three paired label days (100 original opportunities). Its focused/affected
+suites pass 2,349 unique cases and its expanded source-only preflight passes.
+Local optional implementation is preserved in source commit `5221f108`.
+The [pre-fit performance envelope](research-v137-performance-envelope.md)
+preserves the same model, dates, fits, controls, costs and evaluation gates.
+It is NOT yet adopted: independent wrapper review, immutable intent, actual
+original pre-fit termination and a separate zero-charge reservation precede
+replacement execution. Full-repository regression is running with unattributed
+failure indicators; no full green or model success is claimed. Daily Windows
+archival also passed its automatic October 7 02:00 KST run, but fresh collection
+and live model signals remain unverified.
+
 Use the [research record template](research-record-template.md) and [research PR template](../.github/PULL_REQUEST_TEMPLATE/research.md). Distinguish local source commits from verified published commit SHAs and PRs. An unpublished local commit is not a GitHub backup; this index itself neither commits nor publishes evidence.
