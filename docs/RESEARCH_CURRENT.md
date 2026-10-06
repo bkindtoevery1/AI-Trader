@@ -1,9 +1,29 @@
 # Public Research Checkpoint
 
-Publication checkpoint: 2026-10-01. This is a curated public summary, not the
+Publication checkpoint: 2026-10-06. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V124 Completed, PA Failed
+## Current Checkpoint: V125 Audited, V126 Completed
+
+[V125 completed and audited](research-v125-results.md) after the user resumed
+research. Its original computation was not rerun. PA activity and observed
+survival recovered, but baseline net was-$220.58 and cost-only-$832. No payout
+or verified50K/full-route pass. Historical charges through this study:13221.
+
+[V126](research-v126-design.md) compares fixed ridge, histogram boosting and a
+small neural network using unchanged causal price/volume inputs and costs.
+This is a chronological126-date forecast screen, not an account simulation or
+deployment. [All nine fits completed](research-v126-results.md), and all three
+candidates failed the forecast screen. Baseline MSE worsened 1.34%, 2.87% and
+14.31% against the training-mean control; one MLP convergence warning is retained.
+There was no account replay, retry, refit or operational deployment. Six reserved
+comparisons bring the cumulative total to 13,227. The actual run and saved-result
+audit both exited 0; 32 sealed files and saved-summary arithmetic were verified.
+326 affected software tests passed; original repository-wide failures remain
+disclosed. The 48 sealed dates remain closed. See the
+[data inventory](data-inventory-20261006.md).
+
+## Earlier Checkpoints
 
 [V122 completed and failed](research-v122-results.md): all four PA scenarios
 abstained and closed for inactivity. Its two counted comparisons brought the

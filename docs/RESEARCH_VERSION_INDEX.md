@@ -69,6 +69,18 @@ For V1-V74, use the existing [research protocol and historical overview](NQ_APEX
 | V121 | Evaluate the same retained V120 forests without refitting, repairing only exact integer-cent representation binding. | FAILED_ALL_PA_ABSTENTION: both candidates made zero PA trades; economic contrasts and full-route gates fail. Replay and postrun exit0, no new fit/charge. | [Design](research-v121-design.md), [execution boundary](research-v121-execution.md), [results](research-v121-results.md), [abstention attribution](research-v121-abstention-audit.md) |
 | V122 | Test a fixed post-decision price trigger and delayed market entry with expiry, not reduced costs or assumed passive fills. | SOURCE/FITS/FOUR BOOKS/TWO AUDITORS IMPLEMENTED:1653 focused synthetic tests pass, exit0. Complete original-event census omission fixed and independently reviewed. Immutable runner and full frozen qualification remain; no market fit/replay or charge. | [Design](research-v122-design.md), [implementation and remaining work](research-v122-implementation.md) |
 
+## October 6 Follow-Up
+
+| Version | Reason | Status | Records |
+| --- | --- | --- | --- |
+| V123 | Add causal minute-volume context to joint outcome distributions. | Failed: all PA choices flat. | [Results](research-v123-results.md) |
+| V124 | Test cost-targeted partitions. | Failed: all PA choices flat. | [Results](research-v124-results.md) |
+| V125 | Replace shallow partitions with local joint analog outcomes. | Audited: activity recovered; baseline PA loss, no full-route pass. | [Results](research-v125-results.md) |
+| V126 | Compare three fixed direct net-payoff learning families. | Nine fits completed; all three forecast screens failed. No account replay or promotion. | [Design](research-v126-design.md), [results](research-v126-results.md) |
+
+Latest [local data inventory](data-inventory-20261006.md) distinguishes complete
+paired sessions, partial arrivals, derived copies and sealed dates.
+
 ## New Records And Publication
 
 Use the [research record template](research-record-template.md) and [research PR template](../.github/PULL_REQUEST_TEMPLATE/research.md). Distinguish local source commits from verified published commit SHAs and PRs. An unpublished local commit is not a GitHub backup; this index itself neither commits nor publishes evidence.
