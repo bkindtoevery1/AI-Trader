@@ -3,7 +3,32 @@
 Publication checkpoint: 2026-10-06. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V134 Opportunity History
+## Current Checkpoint: V135 Whole-Route Failure
+
+[V135 completed and was audited](research-v135-results.md), following its
+[pre-execution design](research-v135-design.md). Both frozen V134 product
+forecasts replace HGB on the unchanged NQ Evaluation/MNQ PA route. All181raw
+pairs/402,041,614ticks,126scored dates and12books completed, including eight
+exact control books. No fitting, inference, risk-policy or support change.
+
+No candidate mode passes Evaluation or enters PA. Baseline trading PnL is
++1254.90USD,cost+749,latency+398.60,and combined stress-48. All full-route and
+relative-benefit gates fail; PA contrasts stay null because exposure is absent.
+Risk-cap rejection232-295times leaves prolonged inactivity with only240.55-
+331.05USD final trailing-floor headroom. This is not a daily fill-count cap.
+Pooled forecast improvement did not transfer to executable account success;
+no hard breach alone is insufficient. Program fee prices remain unverified.
+
+Child and supervisor saved-result audit exited0/source unchanged; both processes
+are gone. Three sealed files, adapted forecasts and account summaries verified;
+24phase records/120numeric totals and1497daily cash/attempt sums reconciled.
+Shared-code consistency is not independent validation.720focused passes across
+three isolated suites plus655affected passes;actual runner preflight0. No full
+repository green claim or third separate CLI audit. Two comparisons remain
+charged,total13,256. No retry,retuning,holdout opening,Windows,schedule,order or
+operating-model change. Overall research/Windows goals remain active.
+
+## Previous Checkpoint: V134 Opportunity History
 
 [V134 completed and was audited](research-v134-results.md), following its
 [pre-execution design](research-v134-design.md). Six new own-product HGB

@@ -88,6 +88,7 @@ Latest [local data inventory](data-inventory-20261006.md) distinguishes complete
 paired sessions, partial arrivals, derived copies and sealed dates.
 
 | V134 | Add prior broad-opportunity count, side imbalance and opposite recency to fixed own-product HGB inputs. | Completed/audited six pipelines: modest pooled NQ prediction improvement, negative last fold; MNQ selected cost/stress labels worsen. Economics NOT_EVALUATED, no account replay or deployment. | [Design](research-v134-design.md), [results](research-v134-results.md) |
+| V135 | Replay both frozen V134 products through the unchanged whole account route against exact HGB controls. | Completed/audited181raw pairs and12books: no candidate Evaluation pass in any mode, no PA. Baseline+1254.90USD/stress-48USD; risk-cap rejection leaves prolonged inactivity. Full-route/benefit gates fail. | [Design](research-v135-design.md), [results](research-v135-results.md) |
 
 ## New Records And Publication
 
