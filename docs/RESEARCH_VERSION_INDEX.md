@@ -94,4 +94,13 @@ paired sessions, partial arrivals, derived copies and sealed dates.
 
 ## New Records And Publication
 
+V136's [supplemental tick audit and retrospective](research-v136-tick-audit.md)
+checks all321recorded candidate executions independently against their raw-tick
+prefixes. All39giveback exits match; the economic verdict remains failed. This
+does not independently verify the full account lifecycle or create a new trial.
+
+[Daily Windows archival](windows-daily-archive-20261006.md) now has verified
+backfill and a successful scheduled-task invocation. Raw backups and conflict
+preservation are not new qualified sessions or proof of live model operation.
+
 Use the [research record template](research-record-template.md) and [research PR template](../.github/PULL_REQUEST_TEMPLATE/research.md). Distinguish local source commits from verified published commit SHAs and PRs. An unpublished local commit is not a GitHub backup; this index itself neither commits nor publishes evidence.
