@@ -232,3 +232,39 @@ unchanged. These observations confirm continued automatic backup, not fresh
 market collection or the current UI connection state. No schedule, UI,
 connection, collector, account, key or order setting was changed, and no
 duplicate archive task or historical CSV transfer was started.
+
+## October 7 06:15 KST User-Requested Recheck
+
+Windows was reachable and returned a fresh configured-root inventory at
+2026-10-06T21:15:23.624420Z. All 159 source groups / 20,903 source references /
+11,986,423,924 referenced bytes matched existing valid acknowledgements.
+Eligible unacknowledged files and bytes, missing roots, invalid acknowledgements
+and overdue items were zero. This was a metadata inventory reconciliation,
+not a fresh hash sweep of the Windows source bodies.
+
+The existing enabled daily task automatically ran at 06:00 KST and exited zero.
+It was Ready with zero missed runs and a next timer of 06:30 KST. Its daily
+08:00 anchor, 30-minute repetition, two-minute delayed owner-logon trigger,
+StartWhenAvailable and network requirement were intact. No duplicate task,
+schedule repair, manual archive run or payload retransmission was necessary.
+Windows still needs an interactive logged-in owner and connectivity to the Mac.
+
+The Mac independently recounted and hashed all 19,492 stored objects again:
+10,968,966,386 unique bytes, zero content-address mismatches and command exit
+zero. There were 149 ordinary and ten conflict ready manifests, and no partial
+files. Prior completion-audit and full-manifest-audit hashes were unchanged.
+This recheck did not independently parse market rows or repeat full manifest
+semantic admission. The fresh Windows receipt was hashed in full and its
+content-addressed filename matched SHA256
+`720dcfe0e96c7c768d35060d40b269cb778c47c4777175061311d9b95e64b011`.
+
+Eight files / 5,733 bytes remained deferred under the UTC-date rule. The one
+additional 24-byte file was a full-session SESSION_ALREADY_INVALID marker,
+not a price payload. The other deferred files remained control/invalid records.
+The next UTC-day boundary is 09:00 KST; eligibility is not based on KST midnight.
+Latest full-session NQ/MNQ raw-chunk mtimes remained October 5, 23:30 KST, with
+predecision mtimes at 23:00 KST. No fresh collection, model execution or signal
+delivery was established. No UI, Connect, rearm, F5, login, account, key, order,
+source deletion or admission change was performed. Executable code was not
+changed; this was a live archive integrity and schedule check, not a new
+software-regression run.
