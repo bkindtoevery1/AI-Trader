@@ -3,7 +3,34 @@
 Publication checkpoint: 2026-10-06. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V132 Terminal Confirmation
+## Current Checkpoint: V133 All-MNQ Route
+
+[V133 completed and was audited](research-v133-results.md), following its
+[pre-execution design](research-v133-design.md). This is one fixed execution
+policy using unchanged own-product HGB forecasts with actual MNQ from Evaluation
+start, not a newly fitted estimator. All 181 raw pairs/402,041,614 ticks, 126
+scored dates and 12 account books finished; eight exact controls reconciled.
+Child/supervisor/separate audit exited 0 with source unchanged. Three sealed
+outputs and 24 direct phase PnL/trade/quantity totals verified. No process remains.
+
+Baseline passes Evaluation, then PA earns 1461.32 USD and survives the observed
+calendar with hypothetical payout eligibility. Combined stress loses 1436 USD
+in Evaluation and never reaches PA; latency PA later closes for activity.
+Full-route and benefit gates fail. Cost/stress retain only 45/33.50 USD of
+trailing-floor headroom after 176/172 risk-cap skips. Smaller contract units
+did not repair stressed capacity. Missing PA contrasts remain null, not zero;
+available contrasts have unequal phase exposure. No actual payout, priced
+program fees, current-cohort compliance or verified personal 50K pass.
+
+492 focused plus 624 affected tests passed, not a full-repository green claim.
+The initial read-only support-check mismatch was repaired before market replay
+without expanding forecast support. Two comparisons remain charged, total
+13,250. No fit, inference, threshold rescue, retry, Windows, order, schedule or
+operational-model change. Reused development is not independent validation;
+48 sealed holdout dates remain closed. Research/Windows goals remain active.
+See the unchanged [data inventory](data-inventory-20261006.md).
+
+## V132 Terminal Confirmation
 
 [V132 completed and was audited](research-v132-results.md) after its
 [design](research-v132-design.md) was published before account execution.
