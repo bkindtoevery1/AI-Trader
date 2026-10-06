@@ -103,4 +103,10 @@ does not independently verify the full account lifecycle or create a new trial.
 backfill and a successful scheduled-task invocation. Raw backups and conflict
 preservation are not new qualified sessions or proof of live model operation.
 
+V137 implements a [pure transition-label foundation](research-v137-transition-targets.md)
+that separates cash, trailing-floor and headroom changes under unchanged V136
+execution. Status: NOT_FITTED, no market labels or new trial charges. A full
+causal state population, learner/objective and economic comparison remain to
+be frozen and executed; synthetic test passes are not model performance.
+
 Use the [research record template](research-record-template.md) and [research PR template](../.github/PULL_REQUEST_TEMPLATE/research.md). Distinguish local source commits from verified published commit SHAs and PRs. An unpublished local commit is not a GitHub backup; this index itself neither commits nor publishes evidence.
