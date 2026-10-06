@@ -80,6 +80,7 @@ For V1-V74, use the existing [research protocol and historical overview](NQ_APEX
 | V127 | Test causal session-wide context beyond local price/minute-volume inputs. | Completed/audited: mixed forecast change; negative cost-only/stress selected-label means. Account economics not evaluated. | [Design](research-v127-design.md), [results](research-v127-results.md) |
 | V128 | Convert exact V126/V127 forecasts into matched continuous accounts, not overlapping-label profits. | Completed/audited; all eight PA books lose money, matched contrast and full-route gates fail. Seven activity closures, one unprofitable right-censored book. | [Design](research-v128-design.md), [results and attribution](research-v128-results.md) |
 | V129 | Extend sign/payoff learning to own-product NQ and MNQ, preparing forecasts for both account phases. | Completed/audited: nine pipelines; lower MSE than HGB but negative selected-label means. No account replay or economic pass. | [Design](research-v129-design.md), [results](research-v129-results.md) |
+| V130 | Replay both frozen V129 recipes through their own NQ Evaluation and MNQ PA paths. | Completed/audited: HGB baseline PA +2338.78USD with hypothetical payout, but combined stress never passes Evaluation. Two-part never reaches PA. Both full-route gates fail. | [Design](research-v130-design.md), [results](research-v130-results.md) |
 
 Latest [local data inventory](data-inventory-20261006.md) distinguishes complete
 paired sessions, partial arrivals, derived copies and sealed dates.

@@ -3,7 +3,33 @@
 Publication checkpoint: 2026-10-06. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V129 Own-Product Forecasts
+## Current Checkpoint: V130 Whole-Route Accounts
+
+[V130 completed and was audited](research-v130-results.md) after its
+[design](research-v130-design.md) was published before execution. The sole replay
+finished181raw pairs and126scored dates; eight new books and four exact original
+controls reconciled. Each frozen V129 recipe supplies its own NQ Evaluation and
+MNQ PA forecasts, with no fit or inference rerun. Supervisor/child/audit exited0;
+three sealed files, saved summaries and24direct phase totals verified. All
+required processes are terminal.
+
+HGB baseline passes Evaluation onDecember17 and earns2338.78USD in198PA trades,
+with modeled payout eligibility. But combined stress never passes Evaluation:
+it finishes+927USD, with210.50USD above its trailing floor and250risk-cap skips.
+Cost-only PA closes under profit-qualified activity despite+178USD. Two-part
+logistic loses money in Evaluation in every mode and never reaches PA. Both
+full-route gates fail. Absent PA comparisons are null, not zero-profit wins.
+Program fees remain unpriced; no actual payout or current-account pass claimed.
+
+Qualification passed293focused+445affected cases, not a green full-repository
+suite. Three charges remain,total13,240. The48sealed dates, operational models,
+Windows settings and orders are unchanged; reused development is not independent
+validation. The [longer-minute feasibility review](research-long-minute-training-feasibility-20261006.md)
+records436older complete pairs and V78-V84 precedents. A next study needs a
+distinct preregistered supervision/history hypothesis, not a blind more-data
+refit or favorable-mode selection. No follow-on fit was launched in this batch.
+
+## V129 Own-Product Forecasts
 
 [V129 completed and was audited](research-v129-results.md) after its
 [design](research-v129-design.md) was published before fitting. Nine new
