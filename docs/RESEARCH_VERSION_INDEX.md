@@ -121,4 +121,11 @@ original opportunities. Purged rows and causal both-phase account decisions are
 implemented. The raw-label/six-model/twelve-book runner and its economic audit
 remain pending; no market labels, fitted successor or economic pass is claimed.
 
+The October 7 KST execution-integration checkpoint supersedes those pending
+implementation items: the full label/six-model/twelve-book path and immutable
+supervisor are implemented. 2,298 unique focused/affected cases pass, including
+native synthetic fit/serialize/restore, and the real source-only preflight passes.
+Status remains QUALIFIED_NOT_MARKET_RUN: publish and reserve four comparisons
+before the single fixed execution. No performance or current-cohort pass exists.
+
 Use the [research record template](research-record-template.md) and [research PR template](../.github/PULL_REQUEST_TEMPLATE/research.md). Distinguish local source commits from verified published commit SHAs and PRs. An unpublished local commit is not a GitHub backup; this index itself neither commits nor publishes evidence.

@@ -1,8 +1,66 @@
-# V137 Training Components And Remaining Integration
+# V137 Training And Execution Integration
 
 October 6, 2026. Status: IMPLEMENTED_COMPONENTS_NOT_MARKET_FITTED. The
 [design](research-v137-design.md) specifies the proposed complete experiment;
 this record does not authorize or imply that its remaining stages ran.
+
+## Qualified Execution Integration
+
+October 6 UTC / October 7 KST. Status: QUALIFIED_NOT_MARKET_RUN. The complete
+day-scoped label cache, six-model training/restore path, twelve-book replay,
+economic audit and immutable supervised runner are implemented and tested.
+Market labels, market fits, replay and trial reservation were still zero at
+this checkpoint. The earlier component-stage statements below are dated history.
+
+New production modules are `nq_apex_transition_training_v137.py`,
+`nq_apex_transition_replay_v137.py`, `nq_apex_transition_economics_v137.py` and
+`run_nq_apex_transition_v137.py`. They preserve the complete original source,
+fixed purged prefixes, own-state prediction before entry, zero-capacity bypass,
+exact V136 controls and separate absolute-route/relative-contrast conclusions.
+Saved-model audit authenticates bytes, reconstructs all six training prefixes
+without refitting, recomputes all non-q0 raw forecasts and full grid diagnostics,
+then repeats journal/economic arithmetic without another raw/account replay.
+
+Parent verification completed three disjoint suites, all actual exits zero:
+
+| Suite | Cases | Seconds | Failure / Error / Skip |
+| --- | ---: | ---: | --- |
+| V137 core plus affected V134/V136/V132 | 2,155 | 564.067 | 0 / 0 / 0 |
+| Immutable runner and failure paths | 140 | 7.440 | 0 / 0 / 0 |
+| Real native fit/serialize/restore on invented data | 3 | 30.651 | 0 / 0 / 0 |
+
+The total is 2,298 unique tests, not a full-repository green claim. Earlier
+agent counts overlap and are not added. The native integration used 181
+invented dates / 543 original events, six real HGB pipelines and 60 native fits;
+restored predictions/diagnostics matched without refitting. Three scaler warnings
+were retained; scaler states and diagnostics remained finite. These are software
+checks, not market observations or strategy performance.
+
+Pre-execution corrections rejected boolean population schema versions, rejected
+explicit `native_fit=false` on native start records, separated profiler ownership
+around source-prefix reconstruction, and bound newly imported code after source
+admission while rejecting changes to existing pins. Independent bounded reviews
+found no remaining critical runner/training defect; they do not replace execution.
+
+Real source-only preflight exited zero after 214.987 seconds at
+2026-10-06T15:41:10Z: 181 source dates, 5,485 original opportunities, 126 scoring
+dates, no raw-pair scan, market fit, account replay or sealed-date access.
+All 24 V137 own pins matched after verification, all nine frozen V136 pins and
+the initial V137 transition-target bytes remained unchanged. Source binding:
+`333f16a9d173fbd4747f94f1f16b8fdd2769088d27967e38f04331ceccb8fc5d`.
+
+Private evidence is under `reports/nq_apex_v137_runner_integration_20261007/`:
+
+- `core-regression.xml`: `64c3a45709e2352f5795a7e4decacbdb3c0dce26b6e7c98aaa7c90af54cabe1e`.
+- `runner-regression.xml`: `0d20ec85967fa98faaadcf23f56c01dc037de5ceba31586565a39ceb603de53c`.
+- `native-training.xml`: `85988478dcd96732799d18cdacb20aebffc6bf597cd6ba345bf3296b4777e5e8`.
+- `source-preflight.json`: `f36c1b4c821976e7ef3b6d0a0f22b04a8ef03f0f054b6ce8480a1534b50dce0c`.
+
+Next: commit the tested source, publish the design, reserve exactly four
+comparisons (13,258 -> 13,262), and execute the single supervised attempt.
+Only a complete sealed result plus actual terminal and saved-result audit
+can establish execution completion; no financial outcome is claimed here.
+The 48 sealed dates remain closed and V63/V92 deployment is unchanged.
 
 ## Implemented
 

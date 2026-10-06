@@ -146,7 +146,13 @@ forecast is negative: bypass model nomination for that branch, resolve the
 original geometry/zero-size attempt and retain its original reason precedence.
 
 Report date-balanced cash/floor error against training-mean controls separately
-from executable PnL. Full-route success still requires baseline AND combined
+from executable PnL. The diagnostic comparator is each product/fold's global
+date/event/replica-weighted training target mean, exactly its fitted target
+scaler mean; it is not a state-conditional mean. Score the raw eight heads
+without floor projection. Empty or unsupported-only scoring dates remain in
+the calendar with null error values; averages give equal mass to each nonempty
+date. State replicas are never independent observations.
+Full-route success still requires baseline AND combined
 stress Evaluation pass, PA entry, observed PA survival, positive PA trading PnL,
 hypothetical payout eligibility and no hard/MAE breaches. Primary joint relative
 benefit requires positive PA dollar differences against both controls in both
@@ -159,3 +165,32 @@ pin the design and all dependencies, reserve the four comparisons, publish the
 design and issue one immutable supervised claim. Publish only complete results.
 No observed outcome permits retuning/retry, sealed-date access, Windows changes,
 orders or a declaration that synthetic tests are strategy evidence.
+
+## Immutable Execution
+
+The runner first creates a private claim binding the original source, runtime,
+code, complete calendar and four-comparison reservation. It scans the 181 raw
+pairs into day-scoped immutable label files, validates the original receipts,
+and retains every original event before product support filtering. Those
+private intermediates are not published model verdicts. They are shared across
+folds, but each fit reads only its own 45/87/129-date training prefix and obeys
+the existing purged maturity cutoff. Six saved pipelines contain 48 response
+estimators and 12 training-only scalers, with 132 start/completion journal events.
+
+Only after all six models are saved does the twelve-book replay begin. The
+second 181-pair scan reconciles the same raw receipts and reproduces all four
+V136 control books exactly. The complete result includes all 126 scoring dates,
+both primary contrasts and diagnostics, with no interim performance release.
+The 325 payload/evidence files receive one create-if-absent final seal. The
+unchanged V136 supervisor protocol supplies actual parent/child exit evidence
+under new V137 paths; process presence or a claim alone is not completion.
+
+A saved-result audit authenticates model bytes before deserialization,
+reconstructs every training prefix without fitting, checks fixed native model
+and scaler state, and recomputes every nonzero-capacity decision's raw forecasts
+and all diagnostic predictions. It repeats economic and journal arithmetic
+without raw-tick or account replay. Prefix reconstruction owns its admission
+profiler; it must not be nested inside the replay/audit profiler. This is
+reproduction under pinned code, not independent strategy validation or proof
+of current Apex cohort terms. Failures retain their artifacts and trial charge;
+there is no automatic retry, coefficient tuning or fallback winner selection.
