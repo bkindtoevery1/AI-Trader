@@ -268,3 +268,30 @@ delivery was established. No UI, Connect, rearm, F5, login, account, key, order,
 source deletion or admission change was performed. Executable code was not
 changed; this was a live archive integrity and schedule check, not a new
 software-regression run.
+
+## October 7 06:55 KST Recheck
+
+The Windows task automatically ran at 06:30 KST and exited zero. At 06:54 KST
+it was enabled and Ready, with zero missed runs and the next timer at 07:00.
+A fresh configured-root inventory matched all 159 acknowledged groups /
+20,903 source references / 11,986,423,924 referenced bytes. Eligible
+unacknowledged files and bytes, invalid acknowledgements, missing roots and
+overdue items were zero. No schedule repair, duplicate task, manual sender
+run or payload retransmission was needed.
+
+The Mac recounted 19,492 objects / 10,968,966,386 bytes, 149 ordinary and ten
+conflict ready manifests, and zero partial files. Prior full-payload and
+completion audit hashes were unchanged. This was a recount, not another
+complete payload hash sweep. The new Windows metadata receipt was hashed
+in full and matched its content-addressed filename:
+`249c946115135254f26cbaeef47ff3a9e47d7c8a4f8bc68ead2fa5a81ae34865`.
+
+Eight files / 5,733 bytes remained deferred until the UTC-date boundary:
+four invalid markers / 120 bytes and four prior failed-V4 control files /
+5,613 bytes. Full-session raw-chunk mtimes still ended at October 5, 23:30 KST;
+predecision mtimes at 23:00 KST. The latest V4 epoch metadata had not grown.
+These metadata observations do not prove current UI connection state, fresh
+price collection, model execution or Telegram delivery. Backups require the
+Windows owner to remain logged in and the Mac reachable. No UI, connection,
+collector, login, order, source, admission or schedule setting changed.
+No executable code changed, so no new regression-test pass is claimed.
