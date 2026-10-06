@@ -128,4 +128,11 @@ native synthetic fit/serialize/restore, and the real source-only preflight passe
 Status remains QUALIFIED_NOT_MARKET_RUN: publish and reserve four comparisons
 before the single fixed execution. No performance or current-cohort pass exists.
 
+Subsequently, four comparisons were reserved (total 13,262) and the sole
+supervised V137 execution started. It is still generating private labels, not
+completed or economically assessed. An [outcome-blind performance audit](research-v137-performance-audit.md)
+matched the first complete paired label day byte-for-byte in a separate probe.
+The optimization is NOT adopted: independent review findings need hardening;
+the original market process and frozen statistical design remain unchanged.
+
 Use the [research record template](research-record-template.md) and [research PR template](../.github/PULL_REQUEST_TEMPLATE/research.md). Distinguish local source commits from verified published commit SHAs and PRs. An unpublished local commit is not a GitHub backup; this index itself neither commits nor publishes evidence.
