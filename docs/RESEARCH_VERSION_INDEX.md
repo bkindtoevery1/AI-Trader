@@ -90,6 +90,8 @@ paired sessions, partial arrivals, derived copies and sealed dates.
 | V134 | Add prior broad-opportunity count, side imbalance and opposite recency to fixed own-product HGB inputs. | Completed/audited six pipelines: modest pooled NQ prediction improvement, negative last fold; MNQ selected cost/stress labels worsen. Economics NOT_EVALUATED, no account replay or deployment. | [Design](research-v134-design.md), [results](research-v134-results.md) |
 | V135 | Replay both frozen V134 products through the unchanged whole account route against exact HGB controls. | Completed/audited181raw pairs and12books: no candidate Evaluation pass in any mode, no PA. Baseline+1254.90USD/stress-48USD; risk-cap rejection leaves prolonged inactivity. Full-route/benefit gates fail. | [Design](research-v135-design.md), [results](research-v135-results.md) |
 
+| V136 | Test one fixed causal half-peak liquidation-net exit after 1R, preserving V134 forecasts and V135 route. | Completed/audited eight books: baseline/cost pass Evaluation but PA closes for inactivity; latency/stress never pass. Full-route and benefit gates fail. | [Design](research-v136-design.md), [results](research-v136-results.md) |
+
 ## New Records And Publication
 
 Use the [research record template](research-record-template.md) and [research PR template](../.github/PULL_REQUEST_TEMPLATE/research.md). Distinguish local source commits from verified published commit SHAs and PRs. An unpublished local commit is not a GitHub backup; this index itself neither commits nor publishes evidence.

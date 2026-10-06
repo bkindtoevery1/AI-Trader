@@ -3,7 +3,29 @@
 Publication checkpoint: 2026-10-06. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V135 Whole-Route Failure
+## Current Checkpoint: V136 Giveback Exit
+
+[V136 completed and was audited](research-v136-results.md), following its
+[pre-execution design](research-v136-design.md). One fixed 1R-armed half-peak
+liquidation-net exit changes no forecasts, sizing or original account guards.
+181 raw pairs / 402,041,614 ticks, 126 scored dates and eight books completed,
+including four exact V135 controls. No new fit, inference or label rebuild.
+
+Baseline and cost-only pass Evaluation at +3,273 / +3,483 USD, then enter PA.
+Their PA trading PnL is +686.62 / -1,129.50 USD, but both close for inactivity.
+Latency-only and stress finish Evaluation at +942.20 / +582 USD without passing.
+Full-route and benefit gates fail. A modeled baseline payout is not an actual
+payout or sustained PA survival. Unmatched PA contrasts remain null.
+
+Child and supervisor saved-result audit exited 0. Three sealed outputs,
+16 phase records / 80 numeric totals, 921 daily cash/attempt sums and nine
+frozen pins were verified. Saved metadata is not independent raw first-crossing
+proof. 502 focused and 1,093 affected passes, not a full-repository green claim.
+Two comparisons remain charged, total 13,258. All 48 holdout dates stay closed.
+No rerun, retuning, model deployment or order. The separate user-requested
+Windows archival work is operational progress, not strategy evidence.
+
+## Previous Checkpoint: V135 Whole-Route Failure
 
 [V135 completed and was audited](research-v135-results.md), following its
 [pre-execution design](research-v135-design.md). Both frozen V134 product
