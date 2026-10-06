@@ -12,10 +12,16 @@ affected qualification passed 1,104 cases with 24 retained V126 fixture warnings
 exit 0 and unchanged source pins. Five concrete code-review findings were closed
 before execution. This is not a green repository-wide regression claim.
 
-The sole supervised process started October 6 at 02:14 UTC. Two comparisons
-are reserved, cumulative 13,229. No partial outcome is reported; account replay
-and economics are not evaluated at this forecast stage. No operational policy,
-order permission, independent-validation claim or sealed holdout change follows.
+The sole supervised process completed October 6 at 02:17 UTC. Three pipelines,
+six scalers and twelve HGB heads completed without market warnings. Actual
+child/supervisor/audit exits were 0; 51 sealed files and saved arithmetic were
+verified with bound process evidence. [Complete results](research-v127-results.md)
+show mixed prediction changes: baseline/cost-only MSE worsened 1.17%/1.40%, while
+latency/stress improved 0.11%/0.57%. Overlapping selected-label means remain
+negative in cost-only and combined stress; they are not an account equity curve.
+Two comparisons remain charged, cumulative 13,229. A declared matched account
+adapter/replay is still required; economics are NOT_EVALUATED. No operational
+policy, order permission, independent-validation claim or holdout change follows.
 
 ## V125 And V126 Completed
 
