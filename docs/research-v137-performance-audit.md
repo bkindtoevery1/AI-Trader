@@ -256,3 +256,78 @@ At 19:33:54 UTC the same fast execution remained live with 150 completed label
 days and zero started fits, failure or result seal. No financial outcome has
 been inspected. Completion remains unproven until every fit, book and saved
 result audit finishes.
+
+## Completed Market Run
+
+The single performance-envelope run finished all 181 paired label days, six
+pipelines / 60 native fits and 12 account books. The child exited zero at
+20:33:38 UTC. The supervisor completed its saved-result audit and exited zero,
+observed at 20:41:34 UTC. There were no native-fit warnings. Its audit
+authenticated all 325 sealed payloads, six model records, 181 raw receipts and
+25,972 saved own-state queries, including exact equality to four V136 controls.
+The caller then rehashed the complete payload census and all 257 source pins.
+No additional fit, raw replay or account replay was performed during audit.
+
+The retained audit is `reports/nq_apex_transition_v137_fast_audit.json`,
+SHA-256 `8f18ac3532a440c0fadee839027e87ffa568fc44e420570238e3898d0394b647`.
+Status SHA-256 is
+`4bf467285a91081f3a69378f8be9d57affa7f300fc8bfc9028e63c47a2a11655`;
+result-seal SHA-256 is
+`014f023c5044ec9f9405be271d25073ee37fdaab5840c8c7cc1d29545461625a`.
+Execution success is NOT an economic or verified 50K pass.
+
+### Frozen Economic Results
+
+All amounts below are simulated trading PnL in USD after the modeled execution
+costs, BEFORE unpriced evaluation/renewal/activation program fees. Evaluation
+profits are not withdrawable PA profits. These are 126 scored historical
+sessions, not new independent evidence or actual payouts.
+
+| Arm | Mode | Trades | Evaluation Pass | PA PnL | End State |
+| --- | --- | ---: | --- | ---: | --- |
+| cash plus headroom | baseline | 1 | No | 0.00 | Evaluation censored |
+| cash plus headroom | cost only | 1 | No | 0.00 | Evaluation censored |
+| cash plus headroom | latency only | 1 | No | 0.00 | Evaluation censored |
+| cash plus headroom | stress | 1 | No | 0.00 | Evaluation censored |
+| cash only | baseline | 152 | Yes | 894.50 | PA survived observed window |
+| cash only | cost only | 123 | Yes | 100.00 | PA inactivity closure |
+| cash only | latency only | 128 | Yes | 759.32 | PA survived observed window |
+| cash only | stress | 114 | Yes | -670.00 | PA inactivity closure |
+| exact V136 control | baseline | 187 | Yes | 686.62 | PA inactivity closure |
+| exact V136 control | cost only | 77 | Yes | -1129.50 | PA inactivity closure |
+| exact V136 control | latency only | 38 | No | 0.00 | Evaluation censored |
+| exact V136 control | stress | 19 | No | 0.00 | Evaluation censored |
+
+The predeclared primary arm remains cash plus headroom. It made one trade in
+each mode and never reached PA; its Evaluation PnL was -148.10 / -167.00 /
+116.90 / -167.00 USD in the table's mode order. Both relative PA comparisons
+are unavailable because this candidate never reached PA, not zero-valued PA
+deltas. The economic-benefit gate and every arm's combined full-route gate
+are false. Cash-only baseline and latency paths reached hypothetical payout
+eligibility, but its stress PA lost money and closed for inactivity. It is
+not selected as a fallback winner or promoted to a live signal.
+
+### Failure Attribution
+
+The proximate primary-arm failure is nomination starvation, not missing input
+or a runtime abort. Baseline evaluated 3,682 eligible own-state queries, rejected
+3,680 and nominated two; only one became a trade. Stress nominated two of
+3,681 queries and likewise traded once. All primary-arm queries remained inside
+the specified numerical state grid. This localizes the issue to the combined
+score/nomination path; it does not prove that lowering its threshold is valid
+or isolate forecast error from a genuinely unattractive floor-cost tradeoff.
+Other arms traverse different account states and PA exposures.
+
+The cash-only diagnostic shows that Evaluation progress can improve while
+stress PA economics and survival still fail. Do not conflate a positive total
+Evaluation-plus-PA PnL with a profitable, sustainable PA. Any successor needs a
+separate declared hypothesis and trial accounting, not a post-result threshold
+change, same-run retry or a relabeling of the comparator as the winner.
+
+Both immutable reservations and all original supersession artifacts remain
+unchanged. Four scientific comparisons stay charged; the performance envelope
+adds zero, total 13,262. All 48 sealed dates remain closed. Program fees, current
+account-cohort compliance, independent validation and raw giveback first-crossing
+verification are still not established. Orders remain disabled. The earlier
+full-regression failures and their attribution are retained; completing the
+market study does not turn that software suite green.

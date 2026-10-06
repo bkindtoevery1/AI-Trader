@@ -157,6 +157,18 @@ The new process is still in source admission; no financial results or model
 success exist at this checkpoint. All original evidence and sealed dates remain
 preserved, and the full-repository regression has not yet finished.
 
+October 7 completion supersedes those running checkpoints: the one replacement
+and its supervisor audit both exited zero. All181paired days,6pipelines/60native
+fits,12books,325payloads and25972saved queries were verified. The primary
+cash-plus-headroom arm traded once per mode and never passed Evaluation.
+Cash-only passed modeled Evaluation but failed stress PA economics/survival;
+no fallback winner was selected. All combined full-route and economic-benefit
+gates failed. Read [completed results and attribution](research-v137-performance-audit.md#completed-market-run).
+The two reservations remain unchanged,total13262,48sealed dates closed. The
+previous broad-regression failures remain disclosed. Windows05:00KST automatic
+backup exited zero; this does not prove fresh prices or live model signals.
+
+
 The broad regression subsequently finished, not green: 36,972 passed, 18 failed,
 22 errors and 546 skipped. All 2,349 changed/affected case identities passed.
 The proper V111 runtime rerun passed 81 cases, resolving its 27 original
