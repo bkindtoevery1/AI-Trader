@@ -3,7 +3,20 @@
 Publication checkpoint: 2026-10-06. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V138 Components
+## Current Checkpoint: V138 Execution Qualification
+
+The [complete V138 execution path](research-v138-execution.md) is now qualified:
+four new raw-tick mode books, four exact saved V137 controls, a 36-native-fit
+journal, full-forecast-before-outcome supervision and saved own-state query audit.
+Independent review identified and verified a pre-fit correction: all outcomes
+and completed status publish together in one atomic seal, binding345 payloads.
+2,519 distinct affected tests passed; actual source preflight confirmed181dates,
+5,485opportunities and four exact controls without fitting or account replay.
+No market fit/reservation yet,total13262;48sealed dates remainclosed. The prior
+full-repository failures remain disclosed. Source is preserved privately in
+43ab8aa1; this public branch contains documentation only, not raw data/models.
+
+## Previous Checkpoint: V138 Components
 
 [V138 components are qualified](research-v138-implementation.md), not market
 fitted or reserved. The [design](research-v138-design.md) tests direct estimation

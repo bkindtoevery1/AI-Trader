@@ -1,5 +1,9 @@
 # V138 Component Qualification
 
+This is the earlier component checkpoint. See the subsequent
+[complete execution path](research-v138-execution.md) for the replay, journal,
+supervisor and current qualification work.
+
 Record date: October 7, 2026 KST / October 6 UTC.
 Stage: COMPONENTS_QUALIFIED_NOT_MARKET_FITTED.
 Economic verdict: NOT_EVALUATED. Market-run authorization: NOT_GRANTED.

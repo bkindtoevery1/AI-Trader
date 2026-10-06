@@ -188,4 +188,11 @@ Actual fast-run output also matched all nine original label files byte-for-byte.
 At the latest checkpoint 150 label days were complete, with no fits yet and no
 economic verdict. Source/audit records are preserved locally in `1ce2363f`.
 
+V138's [complete execution qualification](research-v138-execution.md) extends
+the component checkpoint:2,519affected cases and actual source preflight pass,
+four new account books against four exact saved V137 controls,36nativefits per
+planned attempt and one atomic complete-result publication. Market fits and
+reservation are still zero at this checkpoint,total13262;48sealed dates closed.
+This qualification is not an economic pass or a whole-repository green result.
+
 Use the [research record template](research-record-template.md) and [research PR template](../.github/PULL_REQUEST_TEMPLATE/research.md). Distinguish local source commits from verified published commit SHAs and PRs. An unpublished local commit is not a GitHub backup; this index itself neither commits nor publishes evidence.
