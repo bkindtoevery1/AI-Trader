@@ -2,8 +2,10 @@
 
 October 7 KST / October 6 UTC. This is an execution-performance investigation,
 not a new model, financial result, deployment or additional model comparison.
-The original supervised V137 run remains unchanged and active. No partial
-economic outcomes or sealed dates were opened.
+The original supervised V137 run was deliberately superseded before any fit
+after the qualification and publication recorded below. Its sources and all
+artifacts remain unchanged. No partial economic outcomes or sealed dates were
+opened; earlier live-state statements below are historical checkpoints.
 
 ## Prototype Evidence
 
@@ -160,3 +162,35 @@ claim that code or research artifacts were pushed to the public repository.
 The qualification receipt is
 `reports/nq_apex_v137_runner_integration_20261007/fast-qualification.json`,
 SHA-256 `64b8d85993aa81cda11971e3d700068e2d36fe98d7a19feb0fa90d54fe0e10b2`.
+
+## Deliberate Pre-Fit Supersession
+
+Independent static wrapper review found no concrete pre-adoption blocker.
+The parent separately authenticated the real qualification/source artifacts.
+Curated policy and evidence were published at
+`6ca82ca151020ce1a0cd53431c2cf67cf1929988`; the remote branch head was verified
+before immutable intent or interruption. Publication contains documentation,
+not private code ancestry, market data, fitted models or the central ledger.
+
+Immutable intent `8777973092984b701e6207dd3e0bfb7a1be1442ec379ba0ee9fbcb5c22b5c2ef`
+was published at 17:31:20 UTC. Exactly one SIGINT was sent to the original
+child at 17:32:01 UTC after rechecking its parent binding, unchanged 248 pins,
+strict nine-day label prefix and absence of any started fit. It terminated
+with native exit -2; its supervisor correctly exited 1 rather than claiming
+success. Its failure records KeyboardInterrupt, nine label days, zero completed
+pipelines/native fits and zero replay days. Parent terminal says sources
+unchanged, no observation error and no result seal. Both original PIDs are gone.
+
+All 16 original artifacts remain, including opaque label payloads, operational
+logs and actual termination evidence. A separate closed integrity reservation
+binds them, the unchanged original reservation, exact three-day proof and 33
+new pins. It adds zero comparisons, total 13,262 unchanged. This is not an
+economic failure, outcome-conditioned restart or fresh statistical trial.
+
+The one replacement execution started as session 7993, parent 95367 / child
+95385. At 17:33:52 UTC both processes were live in source admission, with no
+labels or fits yet. It must recompute all 181 paired days and complete the
+unchanged six-pipeline/twelve-book saved-result audit. Do not rerun either
+execution on a timeout, claim market completion from these operational checks,
+or inspect partial financial outcomes. The full-repository regression remains
+active and is not claimed green.

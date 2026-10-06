@@ -148,4 +148,13 @@ failure indicators; no full green or model success is claimed. Daily Windows
 archival also passed its automatic October 7 02:00 KST run, but fresh collection
 and live model signals remain unverified.
 
+After publication and independent review, the original attempt was deliberately
+interrupted before any fit, preserving its nine labels and actual SIGINT
+terminal. The separately reserved performance envelope adds zero comparisons
+and has started one supervised replacement execution of the same full study.
+This supersedes the preceding NOT_ADOPTED checkpoint, not its scientific plan.
+The new process is still in source admission; no financial results or model
+success exist at this checkpoint. All original evidence and sealed dates remain
+preserved, and the full-repository regression has not yet finished.
+
 Use the [research record template](research-record-template.md) and [research PR template](../.github/PULL_REQUEST_TEMPLATE/research.md). Distinguish local source commits from verified published commit SHAs and PRs. An unpublished local commit is not a GitHub backup; this index itself neither commits nor publishes evidence.
