@@ -84,9 +84,10 @@ For V1-V74, use the existing [research protocol and historical overview](NQ_APEX
 | V131 | Compare recent versus long-history fixed Ridge forecasts of own-product91-minute gross returns. | Completed/audited12pipelines: tiny aggregate MSE improvement from longer history; all overall MSE/MAE worse than training means. Economics NOT_EVALUATED; no account replay or deployment. | [Design](research-v131-design.md), [results](research-v131-results.md) |
 | V132 | Use both frozen V131 histories only to confirm or veto V130 HGB nominees, preserving account execution. | Completed/audited: 181 raw pairs, 16 books, eight exact controls. Recent never passes Evaluation; long baseline passes then loses 1399.82 USD in PA and closes for activity. Both full-route/benefit gates fail. | [Design](research-v132-design.md), [results](research-v132-results.md) |
 | V133 | Test unchanged own-product HGB forecasts with actual MNQ from Evaluation start, instead of NQ-to-MNQ routing. | Completed/audited: 181 raw pairs, 12 books, eight exact controls. Baseline PA +1461.32 USD, but stress Evaluation -1436 USD never reaches PA; latency PA closes for activity. Full-route and benefit gates fail. | [Design](research-v133-design.md), [results](research-v133-results.md) |
-
 Latest [local data inventory](data-inventory-20261006.md) distinguishes complete
 paired sessions, partial arrivals, derived copies and sealed dates.
+
+| V134 | Add prior broad-opportunity count, side imbalance and opposite recency to fixed own-product HGB inputs. | Completed/audited six pipelines: modest pooled NQ prediction improvement, negative last fold; MNQ selected cost/stress labels worsen. Economics NOT_EVALUATED, no account replay or deployment. | [Design](research-v134-design.md), [results](research-v134-results.md) |
 
 ## New Records And Publication
 

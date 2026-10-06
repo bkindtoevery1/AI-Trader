@@ -3,7 +3,31 @@
 Publication checkpoint: 2026-10-06. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V133 All-MNQ Route
+## Current Checkpoint: V134 Opportunity History
+
+[V134 completed and was audited](research-v134-results.md), following its
+[pre-execution design](research-v134-design.md). Six new own-product HGB
+pipelines add causal prior opportunity count, side imbalance and opposite
+recency to the frozen local inputs. All 24 response fits and 12 scaler fits
+completed without market warnings; 126 reused scored development dates and
+the original support were retained. The 48 sealed dates remain closed.
+
+NQ pooled MSE improves by 0.0525%-0.3476%, but cost MAE worsens and selected
+stress labels remain negative in the final fold. MNQ selected cost/stress
+labels worsen despite MSE improvements in three modes. These overlapping
+one-contract label means are not actual trades or account profits. Economics
+remains NOT_EVALUATED; no account replay or promotion occurred. The latest
+completed account test remains V133 below, not this forecast-only experiment.
+
+Child and supervisor saved-model audit exited 0, source unchanged.94 sealed
+files and six restored models verified; predictions and summaries recomputed
+with fits forbidden. Both processes are gone. This is shared-code consistency,
+not independent validation.204 focused plus629 affected tests passed, with32
+retained synthetic warnings; no full-repository green claim. Four comparisons
+remain charged,total13,254. No retuning,retry,Windows,schedule,order or operating
+model change. Overall research/Windows goals remain active.
+
+## Previous Checkpoint: V133 All-MNQ Route
 
 [V133 completed and was audited](research-v133-results.md), following its
 [pre-execution design](research-v133-design.md). This is one fixed execution
