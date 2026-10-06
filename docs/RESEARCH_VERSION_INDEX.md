@@ -115,4 +115,10 @@ replicas, an eight-response HGB and a complete-prefix label adapter. 861
 focused/affected tests pass. Source-bound folds, dynamic account integration
 and immutable market runner remain; status is still NOT_MARKET_FITTED.
 
+The later source/fold/account integration checkpoint passed 1,969 unique
+focused/affected tests and a real source-only preflight over 181 dates / 5,485
+original opportunities. Purged rows and causal both-phase account decisions are
+implemented. The raw-label/six-model/twelve-book runner and its economic audit
+remain pending; no market labels, fitted successor or economic pass is claimed.
+
 Use the [research record template](research-record-template.md) and [research PR template](../.github/PULL_REQUEST_TEMPLATE/research.md). Distinguish local source commits from verified published commit SHAs and PRs. An unpublished local commit is not a GitHub backup; this index itself neither commits nor publishes evidence.
