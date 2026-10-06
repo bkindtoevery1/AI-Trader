@@ -124,3 +124,63 @@ record-level native formats, market-date semantics or complete session coverage.
 Preliminary ad-hoc checks assumed day labels; they were corrected to allow
 descriptive epoch/contract labels and opaque native snapshots. No stored data,
 admission policy or trading rule changed in that diagnostic correction.
+
+## Latest Read-Only Recheck
+
+At 2026-10-06 23:20 KST, Windows reported that the existing daily task had run
+automatically at 23:00 KST and returned exit zero; its next timer was 23:30 KST.
+No schedule change or manual task start was needed. The 23:00 completed archive
+pass retained 159 acknowledged snapshots, with zero pending, failed, unattempted
+or overdue-attention items and no newly acknowledged snapshots. Queue figures
+describe that completed pass, not a new source inventory at 23:20.
+
+Seven current-date files totaling 5,709 bytes were deferred until rollover:
+three invalid markers and four metadata/control records from the failed V4
+epoch. This supersedes the earlier two-file deferred count; it is not evidence
+of fresh market ticks or a transfer failure. The separate legacy inspection
+queue still has 15 historical source-content warnings, not archive transport
+failures; they have not been waived. No UI, connection, login, collector,
+rearm, order or source-state changes were performed during this recheck.
+
+The Mac recounted 19,492 object files and 159 published ready manifests and
+verified the earlier completion-audit and full-payload-audit hashes unchanged.
+The fresh Windows receipt's complete-byte SHA256 is
+`8d132b5baad69e15cb884ad9e6e72f11d639bec4c8706da7bd38f32ef1bb2937`;
+its content-addressed filename uses the same private incoming directory and
+`windows-data.oct6-daily-archive-plan.<sha256>.json` convention above.
+
+## October 7 Midnight Recheck
+
+The existing Windows task automatically ran at 2026-10-07 00:00 KST and
+finished with exit zero. At 00:10 KST it remained enabled and Ready, with
+zero missed runs and the next run scheduled for 00:30 KST. Its daily anchor,
+30-minute repeat and delayed owner-logon trigger were unchanged. No manual
+transfer or duplicate schedule was necessary.
+
+A fresh Windows inventory at 2026-10-06T15:10:58Z matched all 159 acknowledged
+groups, 20,903 file references and 11,986,423,924 referenced bytes. Missing or
+invalid acknowledgements, missing roots, pending items and overdue items were
+all zero. The completed midnight pass also reported zero failures and zero
+new acknowledgements. This inventory did not rehash Windows source bodies.
+
+The Mac independently streamed and rehashed all 19,492 referenced objects,
+10,968,966,386 unique bytes, completing at 2026-10-06T15:10:30Z. All content
+hashes, manifest identities, sizes and raw-backup-only flags matched; 149
+ordinary and ten conflict snapshots were preserved, with zero partial files.
+The private local receipt is
+`reports/windows_daily_archive_20261006/mac_payload_recheck_20261006T151030Z.json`.
+The fresh Windows receipt SHA256 is
+`afe4c78d7dee41b11c582b26f9fd19fd4ae52078011700d2f5c6313f0dbcf6b7`.
+
+Seven files / 5,709 bytes remained deferred: three invalid markers and four
+failed-startup metadata/control files, not verified new prices. Archive
+eligibility uses UTC calendar dates, so Korean midnight does not release
+current-UTC-day files; the next UTC midnight is 09:00 KST. This supersedes
+any implication that the previous paragraph's rollover meant KST midnight.
+
+The latest full-session NQ/MNQ raw chunks had filesystem modification times
+of October 5, 23:30 KST; predecision chunks were last modified at 23:00 KST.
+These timestamps are not a market-content or completeness audit. Daily backup
+is operating, but continued fresh collection and live signals remain unproven.
+No UI, Connect, rearm, F5, login, collector, model, order or schedule changes
+were performed. This recheck changed documentation only, not executable code.
