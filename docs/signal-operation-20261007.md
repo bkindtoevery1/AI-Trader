@@ -1,5 +1,20 @@
 # Signal Operation: October 7
 
+## Superseding Failure
+
+The running observation below was valid at 08:36 UTC but was superseded at
+08:36:59 UTC: the source emitted a terminal event-time-backstep gap. The owner
+exited through its unchanged source checks. Its new downstream workers were
+stopped with an empty outbox; old and new state remain preserved. **Current
+model status is stopped, with no authentic signal or delivery.** This is a
+new source-time failure, not recurrence of the repaired directory-inode bug.
+Root-cause and prewindow recovery analysis are active. No timestamp relaxation,
+financial reset, blind retry or successful recovery is claimed.
+
+The V92 current-date metadata is now installed and hash-verified in the native
+host directory, not merely the application's virtualized view. Acquisition
+has not started; it is not made automatic by installation alone.
+
 The immediate priority is original V63/V92 shadow execution and delivery,
 not more historical model trials. Collection alone had been mistaken for
 operational readiness: the old V63 service had exited, and no V92 owner was

@@ -5,13 +5,14 @@ private central research ledger or an executable deployment authority.
 
 ## Current Operational Checkpoint
 
-The [October 7 signal-operation record](signal-operation-20261007.md) now
-confirms an actual Windows original-model process consuming current data,
-with separate publication, SSH synchronization and Mac notification processes
-running. A Windows file-identity compatibility failure was fixed without
-relaxing validation or altering models. Read-only bot/recipient checks passed.
-No actual model signal or Telegram delivery has occurred at this checkpoint.
-V63 awaits its original window; V92 still needs current prior20 volume input.
+The [October 7 signal-operation record](signal-operation-20261007.md) retains
+verified Windows model-process execution and the repaired file-identity bug,
+but a subsequent producer event-time-backstep gap stopped the owner at
+08:36:59 UTC. **Current model status is stopped.** Source recovery analysis is
+active; no timestamp relaxation, state reset or successful recovery is claimed.
+Read-only bot/recipient checks passed, but no actual model signal or Telegram
+delivery occurred. V92's current metadata is installed; volume acquisition
+and context attachment remain outstanding.
 
 The already authorized [V140r1 continuation](research-v140r1-progress.md)
 continues separately with no partial outcome release or new comparisons.
