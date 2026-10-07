@@ -1,6 +1,20 @@
 # Signal Operation: October 7
 
-## Stopped Inference Confirmed, Stale Restriction Identified
+## Stopped Inference Confirmed, Recovery Staged
+
+Correction after the fuller Windows response: the same automation also expressly
+covered genuine failures and prohibited arbitrary restart. The coordinator's
+initial healthy-owner-only interpretation was incomplete. The human complaint
+predates that heartbeat, so it does not establish a later release. The existing
+scoped clarification is unanswered. No install/restart was performed and the
+historical one-shot automation was not changed or repurposed.
+
+Windows has now fingerprinted the unchanged original stopped ledger and staged
+five owner/publisher/sender configuration files, whose original bytes were
+independently verified on Mac. Real source termination, new compiled identity,
+new-session admission and final reviewed owner startup remain absent. Proposed
+maintenance and evaluation times are conditional, not a schedule or delivery
+promise. Current collection and all historical records remain intact.
 
 At15:58 UTC Windows confirmed that the original model owner and its supervisor
 were absent, while the native collector, publisher and SSH sender remained
@@ -9,12 +23,11 @@ failure. Last transport logs still reported zero publications and acknowledgemen
 A separate current Mac read-only audit found zero deliveries and an empty inbox.
 This is an inference outage, not a functioning model choosing NO_TRADE.
 
-The supposed replacement restriction was traced to a scheduled prompt assuming
-that recovery had already succeeded. It was not established as a separate
-contemporaneous human prohibition. That premise no longer holds after the owner
-exit. The coordinator requested narrow recovery preparation under the existing
-user operating request, without claiming a new human approval or blindly
-restarting a healthy collector. Current collection and all old records stay intact.
+The restriction was traced to a scheduled prompt, not established as a separate
+contemporaneous hand-typed human prohibition. The coordinator initially
+requested narrow preparation based on its successful-recovery premise, but
+withdrew that incomplete interpretation after the additional failure clause was
+returned. Preparation is not authorization or successful recovery.
 
 Mac prepared a separate private state for the repaired runtime and completed one
 empty no-send receiver cycle with the exact existing loader. Credentials and
