@@ -3,7 +3,22 @@
 Publication checkpoint: 2026-10-07. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V138 Completed, Economic Failure
+## Current Development: V139 Components
+
+The [V139 design](research-v139-design.md) and
+[component qualification](research-v139-implementation.md) add paired NQ/MNQ
+minute basis/quantity context to the exact V134 inputs and fixed learner.
+All 1,517 affected tests pass, including 247 V139 cases. The prediction-only
+path was integrated with six models on invented data, not market observations.
+Four review gaps were fixed before market work. Local implementation checkpoint:
+`0e8f18ba`; private code and detailed evidence are not included in this branch.
+
+Status is COMPONENTS_QUALIFIED_NOT_MARKET_FITTED. Authentic source integration,
+the fixed V136 full account route and its supervised saved-result audit remain
+pending. Five comparisons are planned but unreserved; total remains13,267.
+No economic result, threshold rescue, operational deployment or model pass.
+
+## Latest Completed Study: V138 Economic Failure
 
 [V138 completed and was audited](research-v138-results.md), but failed its
 economic gates. The single child and supervisor exited zero: six pipelines /

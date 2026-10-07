@@ -4,6 +4,13 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+October 7 V139 development: the paired-minute information extension is
+COMPONENTS_QUALIFIED_NOT_MARKET_FITTED. Its fixed eighteen-input HGB and
+training-only prediction path pass1,517 affected tests, including247new cases.
+The full market-source/account/runner path remains pending; no economic result
+or new trial reservation. See [design](research-v139-design.md) and
+[qualification/remaining work](research-v139-implementation.md).
+
 October 7 update: V138 completed and was audited, but FAILED with zero trades
 in all four modes and no Evaluation/PA pass. Direct one-step utility did not
 resolve V137's nomination starvation. See [design](research-v138-design.md),
