@@ -5,6 +5,18 @@ private central research ledger or an executable deployment authority.
 
 ## Current Operational Checkpoint
 
+Latest confirmed state, October7 at15:58UTC: the collector remains fresh, but
+the model owner and supervisor have stopped following a durable-source time
+failure. Publisher/sync/relay presence is not proof of inference. **Actual
+delivered model signals remain zero.** Recovery files are staged, not active.
+The full follow-up restriction includes genuine-failure no-arbitrary-restart;
+the existing scoped clarification remains unanswered. No new approval, install,
+restart or scheduled recovery is claimed. See the latest
+[signal-operation record](signal-operation-20261007.md). This supersedes the
+earlier healthy-process observations below; no signal start time is guaranteed.
+
+### Earlier Health Observations
+
 At 12:10 UTC the same eight Windows processes remain present, source cursor
 112,206 and owner cursor 112,192, owner ACTIVE without fault and source nonterminal.
 Source and checkpoint ages are below 0.6 seconds. Signals and acknowledgements
@@ -31,6 +43,22 @@ with child/supervisor exit 0 and its no-fit saved-result audit, but failed the
 economic gate: baseline PA inactivity closure and no stressed Evaluation pass.
 All 48 holdout dates remain closed; no new comparisons or retuning followed.
 Only curated documentation is published; private model/data history is not.
+
+## Current Development: V142
+
+The bounded [V142 design](research-v142-design.md) changes only target
+coordinates from giveback cash to original stop-risk units and inverts with
+query risk. This is an outcome-informed ablation, not a new algorithm family;
+the earlier failed risk-normalized studies remain explicit counterevidence.
+[Pure learner and geometry components](research-v142-components.md) passed365
+affected tests. The actual-source probe exited1 at final report publication
+because its inline harness supplied a relative path to an absolute-path journal.
+No durable source qualification, V142 market fit, account replay, trial
+reservation or economic success is claimed. Nine comparisons are planned but
+unreserved; total remains13,284 and48 holdout dates stay closed. Publication
+repair and full model/forecast/account integration remain before any fitting.
+Private implementation checkpoint4c8ed52e; code/data ancestry is not published.
+This research does not restore Windows inference or authorize operational change.
 
 ## Latest Completed Study: V141
 

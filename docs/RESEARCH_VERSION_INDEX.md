@@ -4,7 +4,16 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
-Latest October 7 checkpoint: V140r1 completed and FAILED its full economic route;
+Latest October7 component checkpoint: [V142](research-v142-design.md) isolates
+stop-risk target coordinates on the unchanged V141 recipe. Its
+[components](research-v142-components.md) passed365 affected tests, but the
+actual-source probe failed at final relative-path report publication. There is
+no durable source qualification, fit, account result or reserved comparison.
+Complete integration remains pending; total stays13,284 and holdout stays closed.
+Windows recovery is staged only, not operational; see the
+[current checkpoint](RESEARCH_CURRENT.md) and [signal record](signal-operation-20261007.md).
+
+Earlier completed October7 checkpoint: V140r1 FAILED its full economic route;
 see [results and retrospective](research-v140r1-results.md). V141 tests a fixed,
 normalized-loss Ridge on the exact same mature inputs and giveback targets.
 Its [design](research-v141-design.md), [integration](research-v141-integration.md)
