@@ -213,4 +213,14 @@ planned attempt and one atomic complete-result publication. Market fits and
 reservation are still zero at this checkpoint,total13262;48sealed dates closed.
 This qualification is not an economic pass or a whole-repository green result.
 
+V140 now has a [matched unit-target execution path](research-v140-execution.md):
+unchanged V139 features and learner, new guard-free giveback labels, exact V139
+controls and four unchanged V136 account engines. Source/cache, training,
+matched scoring, immutable supervisor and no-fit audit are implemented. Status:
+TECHNICAL_FAILURE_BEFORE_LABELS after 1,322 affected tests and a real read-only
+source preflight missed envelope insertion-order compatibility. The separate
+[failure analysis and repair](research-v140-failure.md) preserves the original
+attempt and five charges, total13,277. No fits or account replay occurred;
+48 sealed holdout dates remain closed. No economic verdict is available.
+
 Use the [research record template](research-record-template.md) and [research PR template](../.github/PULL_REQUEST_TEMPLATE/research.md). Distinguish local source commits from verified published commit SHAs and PRs. An unpublished local commit is not a GitHub backup; this index itself neither commits nor publishes evidence.

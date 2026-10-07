@@ -5,8 +5,11 @@ diagnostic, account-replay and supervised-result path. The frozen design and
 V139 remain unchanged. This is outcome-informed historical development, not
 independent validation. Complete software qualification is finished and five
 comparisons were reserved before a single supervised market attempt started
-at 2026-10-07T05:42:41Z. Effective trials are now 13,277. The attempt is running;
-no complete economic result, strategy pass or Windows model start is claimed.
+at 2026-10-07T05:42:41Z. Effective trials are now 13,277. The attempt stopped
+at 05:50:23Z with a technical source-order error before any raw labels, fits
+or account replay. Both child and supervisor exited1; the failed attempt and
+five charges are preserved. No economic result, strategy failure/pass or
+Windows model start is inferred. See the [failure analysis](research-v140-failure.md).
 
 ## Source And Storage
 
@@ -92,11 +95,12 @@ runtime attribution; no whole-repository-green claim is made.
 
 ## Next Step
 
-Observe the existing supervised attempt and its actual terminal exit; never
-restart because observation timed out. Verify its single complete seal and
-no-fit audit before interpreting economics. Keep all 48 sealed holdout dates
-closed. An economic failure cannot trigger a repeat or threshold rescue.
-V139's failed full-route verdict remains unchanged.
+Qualify the separate integrity-only envelope-order adapter without modifying
+the original source pins or failed evidence. Its real-source preflight must
+reach the previously missed snapshot check without extracting labels or
+fitting. Any later market attempt needs explicit new output ownership and
+qualification; the original attempt cannot restart. All48 sealed holdout dates
+remain closed. V139's economic failure remains the latest complete verdict.
 
 Windows model startup remains a separate integration task. The bounded catch-up
 helper is implemented and tested but not installed or wired into a service.
