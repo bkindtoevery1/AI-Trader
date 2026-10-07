@@ -222,5 +222,11 @@ source preflight missed envelope insertion-order compatibility. The separate
 [failure analysis and repair](research-v140-failure.md) preserves the original
 attempt and five charges, total13,277. No fits or account replay occurred;
 48 sealed holdout dates remain closed. No economic verdict is available.
+The [V140r1 technical continuation](research-v140r1-progress.md) now has a
+separate qualified runner:1,402 affected tests plus two repaired disk-cache
+cases passed, and the real181-date preflight reached the repaired snapshot.
+One supervised continuation started at06:42:54 UTC on October7. It retains
+the same five comparisons and unchanged model design; no partial outcomes
+or completed economic verdict are available yet.
 
 Use the [research record template](research-record-template.md) and [research PR template](../.github/PULL_REQUEST_TEMPLATE/research.md). Distinguish local source commits from verified published commit SHAs and PRs. An unpublished local commit is not a GitHub backup; this index itself neither commits nor publishes evidence.
