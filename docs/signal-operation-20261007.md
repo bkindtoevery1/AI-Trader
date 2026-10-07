@@ -22,6 +22,11 @@ package hashes; this unnecessary ambiguity was corrected without a new user
 approval. Hash verification is allowed; inference and installation are not part
 of that check. A superseded intermediate archive was held before execution.
 
+The final Windows isolated check subsequently executed once at15:25 UTC and
+passed with exit0 and empty stderr. Mac verified the receipt and original output
+hashes. This establishes Windows code-import compatibility, not owner startup,
+source/ledger validation, inference, installation or a delivered signal.
+
 Actual operation remains incomplete: V92 storage installation and an eligible
 new source are still needed, and a specific Windows no-restart instruction
 conflicts with installation. One scoped clarification remains pending. The Mac
