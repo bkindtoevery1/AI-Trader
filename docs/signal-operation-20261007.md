@@ -2,6 +2,20 @@
 
 ## Stopped Inference Confirmed, Recovery Staged
 
+The17:44UTC Windows recheck independently confirms the same stopped owner and
+supervisor. Collection advanced by108,670 batches, while the actual V63, V92 NQ
+and V92 MNQ prediction counters are all0 for this source epoch. The persisted
+waiting/warming labels are not live-process or NO_TRADE evidence. The complete
+read-only receipt was received through the existing SSH route and authenticated
+on Mac. No new restart, installation, signal or order was performed.
+
+Mac separately repeated a narrow read-only check: its relay process exists,
+the inbox is empty, and received/outbox/delivery counts are0 with database
+changes0. The original failure did not record the numeric heartbeat age;
+therefore clock error versus processing delay cannot be determined from that
+message alone. The operational priority is restored inference and verified
+delivery, not a new market experiment or another test-count success claim.
+
 Correction after the fuller Windows response: the same automation also expressly
 covered genuine failures and prohibited arbitrary restart. The coordinator's
 initial healthy-owner-only interpretation was incomplete. The human complaint

@@ -5,10 +5,13 @@ private central research ledger or an executable deployment authority.
 
 ## Current Operational Checkpoint
 
-Latest confirmed state, October7 at15:58UTC: the collector remains fresh, but
+Latest confirmed Windows state, October7 at17:44UTC: the collector remains fresh, but
 the model owner and supervisor have stopped following a durable-source time
-failure. Publisher/sync/relay presence is not proof of inference. **Actual
-delivered model signals remain zero.** Recovery files are staged, not active.
+failure. V63, V92 NQ and V92 MNQ each have zero actual prediction attempts in
+this source epoch. Publisher/sync/relay presence is not proof of inference.
+**The current route has received and delivered zero model signals.** Recovery
+files are staged, not active. Restoring these existing models is the immediate
+operational priority; no additional market experiment was started in this check.
 The full follow-up restriction includes genuine-failure no-arbitrary-restart;
 the existing scoped clarification remains unanswered. No new approval, install,
 restart or scheduled recovery is claimed. See the latest
