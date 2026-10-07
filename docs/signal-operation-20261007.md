@@ -1,5 +1,23 @@
 # Signal Operation: October 7
 
+## Physical-Path Correction At 13:20 UTC
+
+The follow-up found the original zero-byte intent in a redirected Codex cache
+path. The earlier inventory had inspected a different UNC namespace. The exact
+installed physical-path check rejects the original file before any payload
+write. This is strong attribution, not a recovered exception stack. Preserve
+the partial claim; changing roots must not silently bypass its retry block.
+No usable native volume result exists. A minimal root-repair candidate is being
+prepared in isolated scratch, without restarting live collection or changing
+the model, risk state, time windows or path-integrity checks.
+
+At 13:20 the owner remained ACTIVE, source nonterminal, with no V63 model/paper
+halt. Its receipt callback is available independently of V92 context. Both
+products have 20 current minutes, preceding the required V63 13:30-13:59 UTC
+window. This supports normal predecision waiting, not completed inference.
+Publications and SSH acknowledgements remain zero. V63's original 23:00 KST
+decision remains conditional; V92 is still not operationally repaired.
+
 ## Current Failure At 13:07 UTC
 
 The 13:00 native-data attempt ran but failed at `HOST_FAILED_INTENT`, before
