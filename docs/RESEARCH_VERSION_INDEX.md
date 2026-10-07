@@ -4,13 +4,15 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
-October 7 V139 development: the complete paired-minute execution path is
-qualified, not market fitted. Source restoration, fixed V136 account replay,
-supervision and saved-result audit pass2,280 affected cases, including564V139.
-The actual source preflight restored181dates/5,485events without new features,
-fits or replay. Five comparisons remain unreserved,total13,267. See
-[design](research-v139-design.md), [components](research-v139-implementation.md)
-and [execution qualification](research-v139-execution.md).
+October7 V139 completed and was audited, but FAILED economically. Baseline
+Evaluation passes, then PA closes for inactivity; three stressed Evaluations
+never pass. Five comparisons remain charged,total13,272. See
+[design](research-v139-design.md), [execution](research-v139-execution.md) and
+[results/retrospective](research-v139-results.md). No rerun or promotion.
+
+The next [V140 design](research-v140-design.md) changes only the unit target to
+the actual giveback exit, retaining V139 inputs/learner and exact controls.
+Components are in development; no market labels, fits or trials are reserved.
 
 October 7 update: V138 completed and was audited, but FAILED with zero trades
 in all four modes and no Evaluation/PA pass. Direct one-step utility did not

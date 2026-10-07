@@ -3,7 +3,26 @@
 Publication checkpoint: 2026-10-07. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Development: V139 Execution Qualification
+## Current Development: V140 Target Alignment
+
+[V139 completed and was audited](research-v139-results.md), but FAILED the
+full economic route. Baseline Evaluation passes at+3,981.10USD, then PA+667.54USD
+closes for inactivity. The three stressed Evaluations never pass; combined
+stress loses1,405USD. Baseline PA is19.08USD below its exact control. Both
+full-route gates and the economic benefit gate are false; missing PA contrasts
+remain null. All94payloads and16own source pins were rehashed, with attempt,
+day and phase sums reconciled. No rerun, control refit or holdout opening.
+
+Five V139 comparisons stay charged,total13,272. Small forecast-error gains did
+not resolve cost/delay losses or the minimum-contract capacity stall. The next
+[V140 design](research-v140-design.md) freezes the V139 inputs and learner while
+changing only unit targets to the actual giveback exit. Components are in
+development, not market extracted/fitted. No V140 trial is yet reserved.
+Read the [Windows recovery record](windows-daily-archive-20261006.md): backup
+works but fresh collection/model/Telegram operation remains unverified. The
+full two-part goal stays active. Only curated documentation is published.
+
+## Previous Checkpoint: V139 Execution Qualification
 
 The [complete V139 execution path](research-v139-execution.md) is qualified,
 not market fitted. Authentic paired-minute source restoration, four fixed V136

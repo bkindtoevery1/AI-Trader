@@ -323,3 +323,117 @@ Collector price-chunk mtimes remained October 5, 23:30 KST (full-session) and
 23:00 (predecision). V4's latest mixed/control record remained October 6,
 22:02:53 KST. Fresh collection, model execution and Telegram delivery remain
 unverified. No executable code changed and no new test pass is claimed.
+
+## October 7 11:33 KST User-Requested Recheck
+
+Windows returned a fresh configured-root metadata/ACK reconciliation at
+2026-10-07T02:33:33.961914Z. The existing enabled task automatically ran at
+11:30:01 KST and finished at 11:30:20 with exit zero. It was Ready with zero
+missed runs and next execution at 12:00. The daily 08:00 anchor, 30-minute
+repetition, owner-specific logon plus two-minute trigger, Interactive principal,
+network requirement and StartWhenAvailable remained intact. No duplicate
+schedule or manual sender run was necessary.
+
+All 162 source groups / 20,911 file references / 11,986,429,657 referenced bytes
+matched existing transfer acknowledgements. Eligible unacknowledged, deferred,
+overdue, invalid-ACK and missing-root counts were zero. No source growth was
+detected relative to the 09:00 inventory. This covers configured archive roots,
+not every file on the Windows computer, and uses metadata/ACKs rather than new
+source-body hashing. Windows originals, including the historical CSVs described
+above, remain untouched.
+
+The Mac independently recounted 19,496 objects / 10,968,971,999 bytes,
+152 ordinary and ten conflict ready manifests, and zero partial files at
+02:32:03Z. The fresh 5,888-byte Windows receipt was read as a stable regular
+file, decoded as UTF-8 and hashed; SHA256
+`157bfc63544b4de9e5f09320f0540bcfcfa9e0257a01a507aded27b0ef9f8547`
+matches its content-addressed filename in the existing private incoming folder.
+No new complete payload hash sweep or market-row admission was performed.
+
+Full-session price-chunk mtimes still end at October 5, 23:30 KST; predecision
+at 23:00 KST. The most recent V4 mixed/control journal remains October 6,
+22:02:53 KST. These are file timestamps, not last-trade timestamps. Daily backup
+works, but fresh live collection, model execution and Telegram delivery remain
+unverified. No UI, Connect, rearm, F5, login, collector, model, order or schedule
+setting changed. This was an operational check and documentation update, not a
+software change; no new regression-test pass is claimed.
+
+## October 7 12:04 KST Recheck
+
+The existing 12:00:01 KST automatic run finished at 12:00:20 with exit zero.
+At 12:04 the task was enabled/Ready with zero missed runs and next execution
+at 12:30. Fresh configured-root metadata matched all 162 transfer ACKs:
+20,911 file references / 11,986,429,657 referenced bytes. Unacknowledged,
+deferred, failed, overdue, invalid-ACK and missing-root counts were zero.
+Neither inventory totals nor the 13 latest collector/native file series grew
+since 11:33. This is not evidence of fresh prices, model execution or signals.
+
+The Mac recounted 19,496 objects / 10,968,971,999 bytes, 152 ordinary plus ten
+conflict ready manifests, and zero partial files. The new metadata receipt's
+full SHA256 matched its content-addressed filename:
+`65a8504d2a22806909d4b0b49d19978f490809f57d74ddf4b19cb5cddddf1fdf`.
+No new payload hash sweep, manual transfer, monitor, schedule change, source
+deletion, UI action or collector restart was performed. The existing daily
+archive schedule already satisfies the requested recurring storage. Windows
+owner login and Mac connectivity remain required. No executable code changed.
+
+## October 7 12:36 KST Final User-Requested Check
+
+Windows returned a fresh read-only inventory at 03:36:02Z. The existing
+12:30:01 KST automatic invocation completed at 12:30:20 with exit zero.
+The task remained enabled/Ready, with zero missed runs and the next timer at
+13:00. Daily execution, 30-minute repetition and delayed owner-logon triggers
+were intact. No duplicate task, manual market-data transfer or schedule change
+was needed. All 162 groups / 20,911 source references / 11,986,429,657 referenced
+bytes had valid acknowledgements. Unacknowledged, deferred, failed, overdue,
+invalid-acknowledgement and missing-root counts were zero.
+
+The Mac independently recounted 19,496 unique objects / 10,968,971,999 bytes,
+152 ordinary and ten conflict ready manifests, and zero partial files.
+The new receipt was hashed in full and matched its content-addressed filename:
+`4e25473a4d57d1ab630959139031de4cef0a63e65414e0228ee15941afca9a86`.
+This was an inventory recount and receipt check, not a fresh full-payload hash
+sweep or market-data admission. Existing Windows originals remain retained.
+
+All 13 compared latest-file series were unchanged since 12:04. Full-session
+NQ/MNQ price-container mtimes still end at October 5, 23:30 KST. These are
+filesystem timestamps, not audited last-trade timestamps. Backup is working;
+fresh collection, model execution and Telegram delivery remain unverified.
+Windows must remain logged in and able to reach the Mac. No UI, login,
+Connect, F5, rearm, collector, model or order action was performed.
+
+## October 7 Collector Diagnosis
+
+A separate read-only diagnosis beginning at12:47:54KST examined relevant
+V3/V4 lifecycle/error evidence, current settings and disk-headroom conditions.
+The metadata-only receipt was delivered after the completed diagnosis; the
+checks were not repeated for delivery. Its full SHA256 matches its filename:
+`a0016c7d2cf6b9f737238facb3e3f548b99f2c7810e3f58a5fbc974bdd0cade4`.
+
+NinjaTrader PID13432 was running, with process start October6 at09:49:06KST.
+That proves neither a collecting writer nor the current feed connection.
+Current AddOn supervisor liveness and loaded-memory DLL binding remain unknown.
+No fresh lifecycle/recovery evidence was found in the relevant logs.
+
+V4 remains `enabled=false`. The settings hash matches the prior rollback after
+one bounded re-enable attempt ending in `startup_fresh_pair_timeout`; it is not
+a newly imposed pause in this diagnosis. Current free space is58,046,357,504
+bytes, while the configured startup calculation requires60,064,037,989 bytes:
+40GiB root budget minus4,360,471,451 owned bytes plus20GiB reserve. The deficit
+is2,017,680,485 bytes, so about2.1GB additional free space is a prerequisite.
+This current guard failure does not prove the cause of the earlier timeout.
+
+V3 settings remain enabled but its recorded failure is latched `startup_failed`.
+The startup catch retained only the simple type `IOException`, not message,
+stack, HResult or exact failing path. Neither the original failing physical
+path nor a historical disk-full cause can be established from that record.
+Logical and explicit MSIX-package views must not be conflated.
+
+The minimum first recovery step is to obtain the missing free space without
+deleting original market data or weakening the configured reserve. That step
+does not require F5, NinjaTrader UI or restart, but was not performed. Space
+alone is insufficient: connection/supervisor state and subsequent V4 activation
+still need verification. No blind rearm or claim of working model signals is
+authorized by this diagnosis. UI, login, settings, schedules, executables,
+source data, models and orders were unchanged; only the diagnostic receipt
+was written and delivered through the existing owned-Mac transport.

@@ -74,6 +74,14 @@ active and incomplete.
 
 ## Current Observation
 
+The implementation was committed privately asc27f0115 and curated execution
+documentation7be0ad23b8cc887199c1b8c8901bc8de8c941a9e was pushed and
+remote-head verified oncodex/research-records-v139. Following those checks,
+five comparisons were reserved before market context extraction/fitting.
+Effective trials are now13,272. This supersedes the unreserved qualification
+snapshot above without changing the design, source or test bytes. One economic
+execution is next; no result or model pass is claimed.
+
 The first affected regression, exec session26465, finished with exit1:
 2,279 passed and one failed. It imported the source before the final
 immutable-bars check; that regression artifact is preserved, not overwritten.
@@ -106,3 +114,25 @@ remain13,267.
 This checkpoint records software evidence, not strategy returns. The latest
 user-requested Windows daily archive check completed separately, with the
 12:30 KST automatic run successful and zero configured-root transfer backlog.
+
+## Completed Execution Checkpoint
+
+The single run began at03:46:06UTC in exec session2663, supervisor34119 and
+child34147. The child completed at03:59:12UTC and its terminal record reports
+exit0 with unchanged source. The supervisor's saved-result audit also exited0;
+both PIDs were absent at04:06:09UTC. Six models/36 native fits generated no
+market-fit warnings. All181 raw pairs and126 scored dates completed, with four
+new account books and four exact saved controls. The audit verified94 payloads
+and all three complete result sections, recomputing predictions and summaries
+without fitting or replaying accounts/raw tape.
+
+Result seal SHA256:
+`b9c51eb66aaad5d34e6625da5fe453ce6783e74b903bbb2ecea8c607ff5c26f3`.
+Terminal SHA256:
+`a727b08f1f28b4327128d78620f8d3735d0b067b162be76a47748c18df2f187d`.
+Process/audit evidence is retained in
+`reports/nq_apex_paired_minute_v139_audit.json`. Economic outcome sections have
+not yet been read for interpretation; this is completion, not a model pass.
+The next action is the full sealed economic/forecast assessment and retrospective,
+not another execution or outcome-dependent retuning. Five comparisons remain
+charged,total13,272. Holdout and orders remain closed; the full goal is active.
