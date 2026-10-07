@@ -11,7 +11,10 @@ Its [design](research-v141-design.md), [integration](research-v141-integration.m
 and [execution](research-v141-execution.md) are recorded. Complete-path checks
 passed 2,134 affected cases and the actual input preflight. Seven comparisons
 were reserved, total 13,284, before the sole supervised run began at 12:05 UTC.
-No completed V141 market outcome, independent validation or deployment is claimed.
+The attempt and no-fit audit completed; [results](research-v141-results.md) FAILED
+economically in all modes with no Evaluation pass or PA entry. Baseline trading
+PnL is -$1,646.10 and stress -$826.00 before unpriced program fees. No retuning,
+independent validation, holdout opening or deployment is claimed.
 
 Earlier October 7: V139 completed and was audited, but FAILED economically. Baseline
 Evaluation passes, then PA closes for inactivity; three stressed Evaluations

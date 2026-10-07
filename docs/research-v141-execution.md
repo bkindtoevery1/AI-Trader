@@ -1,5 +1,10 @@
 # V141 Supervised Execution
 
+Completion update: the sole attempt and supervisor audit exited zero, but the
+[economic result](research-v141-results.md) failed in every mode with no
+Evaluation pass. The pre-execution checkpoints below remain historical records;
+no restart, live deployment or holdout opening followed.
+
 Qualified and reserved checkpoint, October 7, 2026, before the V141 market fit.
 The fixed [design](research-v141-design.md) and qualified
 [components](research-v141-integration.md) remain unchanged. The runner joins

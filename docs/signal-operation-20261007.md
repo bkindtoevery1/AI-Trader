@@ -1,6 +1,17 @@
 # Signal Operation: October 7
 
-## Current Health At 11:24 UTC
+## Current Health At 12:10 UTC
+
+A single bounded read-only check confirms the same eight processes. Owner is
+ACTIVE without fault at cursor 112,192; source is nonterminal at 112,206.
+Source age is 0.317 seconds and checkpoint age is 0.578 seconds. All four stderr
+files remain empty. Publisher has 29,661 successful polls and zero publications;
+sync has zero pending and acknowledged signals. V63 remains WAITING_WINDOW /
+WAITING_ADMISSION, V92 context is absent with zero model-window bars, and the
+same 13:00 UTC one-shot remains ACTIVE. No restart or schedule change occurred.
+This remains process health, not first signal or Telegram delivery.
+
+## Earlier Health At 11:24 UTC
 
 The same eight PID/parent/creation identities remain present. Owner is ACTIVE
 without fault, source is nonterminal, source age 0.686 seconds and checkpoint

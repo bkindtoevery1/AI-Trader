@@ -5,9 +5,9 @@ private central research ledger or an executable deployment authority.
 
 ## Current Operational Checkpoint
 
-At 11:24 UTC the same eight Windows processes remain present, source cursor
-78,576 and owner cursor 78,571, owner ACTIVE without fault and source nonterminal.
-Source and checkpoint ages are below 0.7 seconds. Signals and acknowledgements
+At 12:10 UTC the same eight Windows processes remain present, source cursor
+112,206 and owner cursor 112,192, owner ACTIVE without fault and source nonterminal.
+Source and checkpoint ages are below 0.6 seconds. Signals and acknowledgements
 are still zero; V92 context remains unattached. The earlier
 in-turn wait was replaced by an existing same-thread one-shot follow-up for
 13:00 UTC / 22:00 KST. Mac has reconciled both receipts and requested no duplicate
@@ -32,7 +32,7 @@ economic gate: baseline PA inactivity closure and no stressed Evaluation pass.
 All 48 holdout dates remain closed; no new comparisons or retuning followed.
 Only curated documentation is published; private model/data history is not.
 
-## Current V141 Execution
+## Latest Completed Study: V141
 
 The [V141 integration checkpoint](research-v141-integration.md) now includes
 successful authentic V140r1 source restoration and exact mature-prefix target
@@ -45,8 +45,14 @@ The [complete execution path](research-v141-execution.md) is now implemented
 and qualified. Its actual no-fit preflight matched all six learning-input cells;
 2,134 distinct affected cases passed, including 119 focused runner/binding cases.
 Seven fixed comparisons were reserved before fitting, total 13,284. The sole
-supervised market attempt started at 12:05:29 UTC. No terminal, complete outcome,
-strategy pass or live deployment is claimed; partial outcomes stay closed.
+supervised attempt and no-fit audit completed with exit zero. The
+[completed economic result](research-v141-results.md) FAILED: baseline -$1,646.10,
+cost -$1,939.00, latency -$373.70 and stress -$826.00 before unpriced program fees.
+None passed Evaluation or entered PA; PA contrasts remain null. Forecast MSE
+improved over saved HGB but remained worse than the training mean in all modes.
+All 181 raw pairs, 126 scored dates, six pipelines and four new books completed.
+No process remains running, retuning was not performed and there is no promotion.
+Private completed-result checkpoint is `90872626`; detailed evidence remains local.
 Private implementation and reservation checkpoints are `e373ed36` and `4084f8b6`.
 Their ancestry, private code, raw data and detailed evidence are not published.
 Older component counts below are historical, not additional distinct tests.
