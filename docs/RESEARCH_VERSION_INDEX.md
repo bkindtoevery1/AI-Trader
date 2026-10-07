@@ -4,12 +4,15 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
-Latest October7 component checkpoint: [V142](research-v142-design.md) isolates
+Latest October7 integration checkpoint: [V142](research-v142-design.md) isolates
 stop-risk target coordinates on the unchanged V141 recipe. Its
-[components](research-v142-components.md) passed365 affected tests, but the
-actual-source probe failed at final relative-path report publication. There is
-no durable source qualification, fit, account result or reserved comparison.
-Complete integration remains pending; total stays13,284 and holdout stays closed.
+[components](research-v142-components.md) and [integration](research-v142-integration.md)
+now have1,271 distinct affected passes and a successful actual-source no-fit
+probe restoring six saved V141 models across181 original dates. The earlier
+publication/monitor harness failures are retained. The supervised market runner
+and complete saved-result audit still require qualification; there is no new
+market fit, account result or reserved comparison. Total stays13,284 and the
+holdout stays closed.
 Windows recovery is staged only, not operational; see the
 [current checkpoint](RESEARCH_CURRENT.md) and [signal record](signal-operation-20261007.md).
 

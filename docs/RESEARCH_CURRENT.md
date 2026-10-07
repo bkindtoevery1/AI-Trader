@@ -50,14 +50,22 @@ The bounded [V142 design](research-v142-design.md) changes only target
 coordinates from giveback cash to original stop-risk units and inverts with
 query risk. This is an outcome-informed ablation, not a new algorithm family;
 the earlier failed risk-normalized studies remain explicit counterevidence.
-[Pure learner and geometry components](research-v142-components.md) passed365
-affected tests. The actual-source probe exited1 at final report publication
-because its inline harness supplied a relative path to an absolute-path journal.
-No durable source qualification, V142 market fit, account replay, trial
-reservation or economic success is claimed. Nine comparisons are planned but
-unreserved; total remains13,284 and48 holdout dates stay closed. Publication
-repair and full model/forecast/account integration remain before any fitting.
-Private implementation checkpoint4c8ed52e; code/data ancestry is not published.
+[Pure learner and geometry components](research-v142-components.md) initially
+passed365 affected tests. The later [integration](research-v142-integration.md)
+connects six-model training, complete252-date forecast publication, immutable
+restoration, four-arm cash/R diagnostics and the unchanged four-mode account
+adapter. The corrected actual-source probe exited0:181 original dates,5,485
+events, six saved V141 models and exact mature learning inputs were verified
+without fitting. Two earlier harness failures remain recorded, not overwritten.
+The broader regression and appended account-wiring test reconcile1,271 distinct
+passes with actual exits0. Two peer findings were fixed and retested.
+
+No V142 market fit, account replay, trial reservation or economic success is
+claimed. The bounded supervised runner and complete saved-result audit remain
+to be qualified before the nine planned comparisons can be reserved. Total
+remains13,284 and48 holdout dates stay closed. Private integration checkpoint
+`1c14b960`; code/data ancestry is not published. These are software/source checks,
+not a green whole-repository run or a successful trading strategy.
 This research does not restore Windows inference or authorize operational change.
 
 ## Latest Completed Study: V141

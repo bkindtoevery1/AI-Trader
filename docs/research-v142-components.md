@@ -1,5 +1,8 @@
 # V142 Component Checkpoint
 
+Later work is recorded in the [integration checkpoint](research-v142-integration.md).
+The original component and failed-probe evidence below remains historical.
+
 October 7, 2026 UTC. This is an implementation checkpoint, not a completed
 market experiment, economic pass or operational deployment. The fixed
 [design](research-v142-design.md) follows the complete failed V141 result and
