@@ -490,3 +490,42 @@ two transitions and one unresolved item, not permission to reset finances.
 No model started. The next authorized bounded task prepares only current-epoch
 source-candidate metadata using the unchanged installed preparer. Candidates
 remain unadmitted pending independent review; no orders or raw payload transfer.
+
+## October 7 Current-Epoch Original Evidence Review
+
+The unchanged Windows preparer ran once with exit zero for the resumed epoch.
+Mac authenticated generation receipt
+`4d0a8e5b921e58e1c11fd3b98dff63e6d7d6d1284b71fea5d0066021b6dd4323`,
+including four exact UTF-8 metadata attachments. A subsequent narrowly scoped
+transfer delivered the original 20,492-byte activation and 33,843-byte envelope
+to the existing private quarantine. Transfer receipt
+`34e85fe71c8ab506c72726a6207bc23610a03b39490b97ebc75ae9ba8655f437`
+and both standalone files match their complete SHA256 pins. Their embedded
+startup price evidence is not published in Git or this document.
+
+Mac independently used the exact V21 packaged parser, not the older root-tools
+module. Its SHA256 is
+`a617bf6a7747d615147aae6c734bc402b9948ed26e7bb083a55cfffa9fbcc1c1`.
+All 169 manifest members and seven imported packaged modules were rehashed.
+Strict outer JSON parsing, stable regular non-symlink reads, all six candidate
+byte identities, settings/native/capacity bindings, and the pure
+`_later_application` / `_startup_activation` checks pass. Six original startup
+metadata blobs and two subsequent original records authenticate 13 NQ and
+15 MNQ startup ticks, with the old terminal fault and unresolved financial
+history retained. These bounded startup ticks are not a complete-session or
+current-feed-health test.
+
+The first ad hoc audit passed the parsers but failed in its output summary by
+using nonexistent `tick.contract` instead of `tick.product`. Only that reporting
+expression was corrected, and the complete audit reran with exit zero. No
+repository executable changed and no new regression-suite pass is claimed.
+The private metadata-only review receipt is
+`reports/nq_v4_source_review_20261007/current_epoch_structural_review.json`.
+
+This is structural verification, not source admission or permission to start
+models. The capacity draft explicitly still requires external review. The
+successor financial owner, current feed health, full journal and exact startup
+qualification remain unverified. The earlier date/age and 8MiB cold-reader
+incompatibilities remain to be implemented and tested. Preserve running
+capture and unresolved paper economics; do not rearm, invent a cursor, silently
+skip backlog or emit stale catch-up signals. Models and orders remain off.
