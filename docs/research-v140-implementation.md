@@ -59,10 +59,11 @@ Qualification: `reports/nq_apex_v140_component_qualification_20261007/qualificat
 
 ## Remaining Work
 
-The authenticated full-tape label extraction/source manifest, training-only
-six-model integration, equal-new-target diagnostics against exact V139 controls,
-four-book account replay, immutable execution journal/supervisor and saved-result
-audit are not yet complete. A component pin cannot substitute for any of them.
-Complete qualification and reserve the five comparisons before market labels,
-fits or replay. Effective trials remain13,272; all48 sealed dates remainclosed.
-No Windows/model deployment, order, schedule or spending change was made here.
+This is the earlier component checkpoint, superseded in implementation scope
+by [training](research-v140-training.md) and
+[execution integration](research-v140-execution.md). Those add the source/cache,
+six-model learner, matched diagnostics, four-book replay, supervisor and saved
+audit. Their complete qualification is required before reservation; this
+component pin cannot substitute for it. Effective trials remain13,272 and all48
+sealed dates remainclosed. No Windows/model deployment, order, schedule or
+spending change was made here.
