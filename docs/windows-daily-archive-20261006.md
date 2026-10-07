@@ -295,3 +295,31 @@ price collection, model execution or Telegram delivery. Backups require the
 Windows owner to remain logged in and the Mac reachable. No UI, connection,
 collector, login, order, source, admission or schedule setting changed.
 No executable code changed, so no new regression-test pass is claimed.
+
+## October 7 UTC Rollover
+
+The existing 09:00 KST scheduled invocation finished at 09:00:22 with exit
+zero. Its 09:04 snapshot was enabled/Ready, missed runs zero and next run
+09:30. A fresh 09:05 metadata/ACK reconciliation reported 162 acknowledged
+snapshots, 20,911 references / 11,986,429,657 referenced bytes, with zero
+eligible unacknowledged files, deferred files, overdue items or missing roots.
+No manual transfer, schedule repair or UI action was performed.
+
+All eight previously deferred control/invalid files became eligible at UTC
+midnight. Three new manifests reference 5,733 bytes; 120 bytes reused existing
+invalid-marker objects and only 5,613 payload bytes were newly transmitted.
+This is metadata rollover evidence, not fresh prices or a complete session.
+The Windows receipt SHA256 is
+`4e3649557e63c0f4995e61d06c9de24022b9b799e4f656a911d20264a5fc51a9`.
+
+The Mac independently hashed the three new manifests and all six distinct
+referenced objects, matching their content addresses. Ready markers retain
+RAW_BACKUP_ONLY_V1 and all four session/model/holdout/order permissions false.
+A recount found 19,496 objects / 10,968,971,999 bytes, 152 ordinary plus ten
+conflict ready manifests and zero partials. This is a targeted new-object hash
+check plus full inventory recount, not another full archive rehash or admission.
+
+Collector price-chunk mtimes remained October 5, 23:30 KST (full-session) and
+23:00 (predecision). V4's latest mixed/control record remained October 6,
+22:02:53 KST. Fresh collection, model execution and Telegram delivery remain
+unverified. No executable code changed and no new test pass is claimed.

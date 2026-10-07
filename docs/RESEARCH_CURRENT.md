@@ -1,9 +1,26 @@
 # Public Research Checkpoint
 
-Publication checkpoint: 2026-10-06. This is a curated public summary, not the
+Publication checkpoint: 2026-10-07. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: V138 Execution Qualification
+## Current Checkpoint: Execution And Daily Archive
+
+The one V138 execution has completed six pipelines / 36 native fits, published
+252 forecasts and replayed all 181 paired dates. Final saved-result verification
+is still running: no complete audited outcome or performance claim is available.
+The five planned comparisons were reserved before execution, total 13,267.
+No retry, retuning or sealed-holdout access has occurred. The pre-market
+qualification below remains a historical checkpoint, not the current run state.
+
+The existing 09:00 KST Windows archive task completed exit zero after UTC-date
+rollover. All eight deferred control files were archived; eligible/deferred
+backlog is zero. Mac now retains 162 snapshots / 19,496 unique objects /
+10,968,971,999 bytes. Three new manifests and six referenced objects were
+independently hashed. This is metadata backup success, not fresh price collection
+or working model signals. Read the [daily archive record](windows-daily-archive-20261006.md).
+The full research and Windows operation goal remains active and incomplete.
+
+## Previous Checkpoint: V138 Execution Qualification
 
 The [complete V138 execution path](research-v138-execution.md) is now qualified:
 four new raw-tick mode books, four exact saved V137 controls, a 36-native-fit
