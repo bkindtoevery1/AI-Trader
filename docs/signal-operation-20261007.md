@@ -1,5 +1,9 @@
 # Signal Operation: October 7
 
+The subsequent [offline timing probe](v4-poll-budget-performance-20261007.md)
+records measured Mac processing cost with unchanged deployment bytes. It does
+not supersede the latest Windows stopped-execution observation below.
+
 ## Latest Read-Only Observation: 20:42 UTC
 
 The source remains fresh (about0.440s), but both model owner and supervisor are
