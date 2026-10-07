@@ -1,5 +1,19 @@
 # Signal Operation: October 7
 
+## Latest Read-Only Observation: 20:42 UTC
+
+The source remains fresh (about0.440s), but both model owner and supervisor are
+absent. V63 and both V92 product counters still report zero actual predictions
+in this epoch. Waiting/warming checkpoint labels are not healthy inference.
+Mac independently confirmed its live relay, empty inbox and zero read-only
+input/outbox/delivery counts. This is a stopped execution path, not NO_TRADE.
+The completed Windows observation was retransmitted because task readers
+returned empty message bodies; its full-file hash was verified on Mac.
+No recovery, install, restart, Telegram test or market experiment occurred.
+Recovery remains staged, with source handoff, native-helper installation,
+eligible next-date admission and coordinated runtime/transport cutover pending.
+No signal start time or successful delivery is promised.
+
 ## Exact Failure Predicate Clarified
 
 A read-only audit of retained original manifests and source, followed by a
