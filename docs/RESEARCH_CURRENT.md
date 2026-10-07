@@ -8,14 +8,18 @@ private central research ledger or an executable deployment authority.
 The [October 7 signal-operation record](signal-operation-20261007.md) retains
 verified Windows model-process execution and the repaired file-identity bug,
 but a subsequent producer event-time-backstep gap stopped the owner at
-08:36:59 UTC. **Current model status is stopped.** Source recovery analysis is
-active; no timestamp relaxation, state reset or successful recovery is claimed.
+08:36:59 UTC. **Current model status is stopped pending the reviewed restart.**
+One unchanged-source rearm has since produced healthy quotes. Exact schema6
+history continuation passed 301 affected top-level software tests and was
+dispatched for one Windows startup; no successful model restart is yet claimed.
 Read-only bot/recipient checks passed, but no actual model signal or Telegram
 delivery occurred. V92's current metadata is installed; volume acquisition
 and context attachment remain outstanding.
 
-The already authorized [V140r1 continuation](research-v140r1-progress.md)
-continues separately with no partial outcome release or new comparisons.
+The authorized [V140r1 continuation](research-v140r1-progress.md) completed
+with child/supervisor exit 0 and its no-fit saved-result audit, but failed the
+economic gate: baseline PA inactivity closure and no stressed Evaluation pass.
+All 48 holdout dates remain closed; no new comparisons or retuning followed.
 Only curated documentation is published; private model/data history is not.
 
 ## Earlier Development: V140 Target Alignment

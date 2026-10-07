@@ -2,14 +2,35 @@
 
 ## Superseding Failure
 
+Update: one unchanged-source retirement/rearm subsequently produced more than
+60 seconds of healthy NQ/MNQ observations. Source settings, assembly and C#
+bytes remained unchanged; old terminal and financial state were preserved.
+This is source recovery, not recovery of model execution or delivery.
+
+The same-date predecision continuation now authenticates the exact final
+schema6 checkpoint and full bounded exported table inventory. It preserves the
+raw provider halt, financial history and UNKNOWNs, and proves the narrow
+source-latch restart with the unchanged halt function. A new distinct state
+destination prevents reuse or reset of either prior store. Original models,
+windows, sizing, stops and timestamp guards are unchanged.
+
+The final affected run passed 301 top-level software cases plus isolated child
+checks; exact Mac staged import passed. An earlier staging test correctly
+detected a concurrent source edit and was not qualified. The frozen replacement
+passed afterward. Private implementation commits: `ab663202`, `0c4ffcba`.
+One reviewed Windows startup was dispatched; returned process evidence is still
+pending at this checkpoint. No signal or Telegram delivery is claimed.
+
 The running observation below was valid at 08:36 UTC but was superseded at
 08:36:59 UTC: the source emitted a terminal event-time-backstep gap. The owner
 exited through its unchanged source checks. Its new downstream workers were
 stopped with an empty outbox; old and new state remain preserved. **Current
 model status is stopped, with no authentic signal or delivery.** This is a
 new source-time failure, not recurrence of the repaired directory-inode bug.
-Root-cause and prewindow recovery analysis are active. No timestamp relaxation,
-financial reset, blind retry or successful recovery is claimed.
+The source timestamp reversal was 3.331 seconds, while collector gate time was
+only 10.9 microseconds; identical timezone conversion did not introduce it.
+Provider versus native dispatch/host scheduling remains unresolved. No
+timestamp relaxation, financial reset or blind owner retry was performed.
 
 The V92 current-date metadata is now installed and hash-verified in the native
 host directory, not merely the application's virtualized view. Acquisition
@@ -41,7 +62,7 @@ notification relay was restarted with the matching runtime, and read-only
 bot/recipient preflights passed. No credentials were transferred to Windows.
 
 **Actual model signals published, transferred and delivered: zero at this
-checkpoint.** The process is running before its original decision window;
+historical checkpoint.** The process was running before its original window;
 this is not a claim of prediction, trade, account pass or profitable operation.
 V63 evaluates at 10:00:05-10:00:59 ET, with conditional entry from 10:02 ET.
 These are eligibility times, not a guaranteed signal or delivery promise.
