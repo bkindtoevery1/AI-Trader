@@ -58,6 +58,18 @@ Only curated documentation is published; private model/data history is not.
 
 ## Current Development: V142
 
+The [continuation training/account integration](research-continuation-execution-v1.md)
+now assembles all two-origin/four-mode rows and qualifies both products before
+fit. A new account uses the learner's raw continuation forecasts while keeping
+the original teacher predictions, risk, sizing, execution costs and lifecycle.
+All1,642 affected tests pass, including397 new synthetic cases and actual HGB
+fit/serialization/restore/account integration. This is not market performance.
+The25m50s run exposed expensive full-population generation and validation;
+bounded performance qualification and authenticated tape integration remain
+before a registered market run. No new market fit, replay, trial, holdout access
+or Windows recovery occurred. Private implementation `fc032d62`; only curated
+documentation is published. Historical trials remain13,293.
+
 The [reachable continuation population adapter](research-continuation-population-v1.md)
 now connects original account traces and action forks to learner rows without
 advancing the caller or leaking final-day counters. All 1,245 affected cases
