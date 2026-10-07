@@ -4,6 +4,18 @@ October 6, 2026. **Feasible as a distinct supervision/history comparison,
 not novel merely because it uses older minutes. No experiment run or reserved
 by this review.**
 
+## Superseded Experiment Status
+
+October 7 correction: the novelty statement below records the scope of this
+earlier review, not the current backlog. [V131](research-v131-results.md) has
+completed the matched recent/long-history own-product D-to-D+91-minute return
+comparison. [V132](research-v132-results.md) has completed the positive-return
+veto and whole-account replay. Neither established the required full-route
+benefit. Do not propose these as untried experiments based on this document.
+Changing the input count, regularization or base nomination model would be a
+narrow extension requiring a separate justification, not a new general idea.
+The historical review and metadata scope below remain unchanged.
+
 ## Scope
 
 Read existing research documentation, configuration, loader/source contracts,
