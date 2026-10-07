@@ -1,5 +1,32 @@
 # Signal Operation: October 7
 
+## Publisher And Receiver Version Alignment
+
+The next audit found that the new owner entrypoint did not expose the matching
+publisher. It now reuses the original committed-only publisher under the exact
+new runtime, with separate owner/publisher/check-only modes. Only the entrypoint
+changed in the eight-file candidate; model, runtime, bootstrap and wire bytes
+are unchanged. Windows independently confirmed that difference and passed one
+isolated import/code check with exit0 and empty stderr at15:39 UTC.
+
+The125 affected software tests passed. Final package tests passed50 cases,
+including six synthetic committed wires through the exact deployed relay's
+no-send preview. Another69 isolated V21 cases verify pin rejection, mixed-inbox
+failure, separate immutable state, message text, dedupe, ambiguous-send handling
+and unchanged freshness deadlines. These are not real signal deliveries or
+model-performance results. Full-repository regression was not performed.
+
+The active Mac receiver still trusts the old runtime. Both Windows SSH sender
+and Mac relay need new runtime-bound state during coordinated activation; the
+old records must remain intact. One read-only snapshot found no delivery claims
+and an empty inbox, but those must be rechecked at cutover. Old/new-runtime files
+cannot be mixed in this receiver, and old events must not be re-enveloped.
+
+No active process, receiver pin, account, schedule or credential was changed.
+Installation still awaits resolution of the specific Windows restart restriction
+and authentic stopped-ledger/new-source evidence. **No real delivered signal has
+been verified.** Code compatibility is no longer the same claim as activation.
+
 ## Startup Repair Packaged, No Delivery Yet
 
 The next-date recovery now has an explicit startup path. It authenticates the
