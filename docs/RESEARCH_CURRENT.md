@@ -5,7 +5,7 @@ private central research ledger or an executable deployment authority.
 
 ## Current Operational Checkpoint
 
-Latest confirmed Windows state, October7 at17:44UTC: the collector remains fresh, but
+Latest confirmed Windows state, October7 at20:42UTC: the collector remains fresh, but
 the model owner and supervisor have stopped following a durable-source time
 failure. V63, V92 NQ and V92 MNQ each have zero actual prediction attempts in
 this source epoch. Publisher/sync/relay presence is not proof of inference.
@@ -53,6 +53,12 @@ All 48 holdout dates remain closed; no new comparisons or retuning followed.
 Only curated documentation is published; private model/data history is not.
 
 ## Current Development: V142
+
+A [sequential trace component](research-sequential-trace-v1.md) now records
+action-dependent next decisions and complete accounting history under unchanged
+V137/V136 behavior. Its542 affected tests pass, including160 new synthetic
+cases. This is not a fitted value model, counterfactual action dataset or market
+result. No new trial or Windows operation occurred; total remains13,293.
 
 V142 is now COMPLETED AND AUDITED, but economically FAILED in all four modes.
 The [complete result](research-v142-results.md) reports baseline -$1,602.90 and
