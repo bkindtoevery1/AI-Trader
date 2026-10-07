@@ -16,11 +16,20 @@ day and phase sums reconciled. No rerun, control refit or holdout opening.
 Five V139 comparisons stay charged,total13,272. Small forecast-error gains did
 not resolve cost/delay losses or the minimum-contract capacity stall. The next
 [V140 design](research-v140-design.md) freezes the V139 inputs and learner while
-changing only unit targets to the actual giveback exit. Components are in
-development, not market extracted/fitted. No V140 trial is yet reserved.
-Read the [Windows recovery record](windows-daily-archive-20261006.md): backup
-works but fresh collection/model/Telegram operation remains unverified. The
-full two-part goal stays active. Only curated documentation is published.
+changing only unit targets to the actual giveback exit. The
+[label/population components](research-v140-implementation.md) passed637 affected
+tests,186 new; private implementation065e87b7. No market labels/fits or V140
+trial reservation exists. Full authenticated source/learner/account integration
+is still required; component tests are not strategy performance.
+
+Read the [Windows recovery record](windows-daily-archive-20261006.md): the user
+resolved disk space and resumed V4 capture. A bounded fresh NQ/MNQ durable pair
+is verified, with continued metadata growth. Model startup still needs current
+epoch/owner qualification and a bounded catch-up route: the old one-shot driver
+fixes the previous date and cannot admit the growing backlog. Preserve good
+capture and unresolved paper state, not reset them. No working V63/V92 inference
+or Telegram delivery is claimed. The full two-part goal remains active.
+Only curated documentation is published, not private code/data or a PR/merge.
 
 ## Previous Checkpoint: V139 Execution Qualification
 

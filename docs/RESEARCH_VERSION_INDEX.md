@@ -12,7 +12,8 @@ never pass. Five comparisons remain charged,total13,272. See
 
 The next [V140 design](research-v140-design.md) changes only the unit target to
 the actual giveback exit, retaining V139 inputs/learner and exact controls.
-Components are in development; no market labels, fits or trials are reserved.
+[Label/population components](research-v140-implementation.md) passed637 affected
+tests; no market labels, fits or trials are reserved. Full execution remains pending.
 
 October 7 update: V138 completed and was audited, but FAILED with zero trades
 in all four modes and no Evaluation/PA pass. Direct one-step utility did not

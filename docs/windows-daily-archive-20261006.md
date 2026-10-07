@@ -437,3 +437,56 @@ still need verification. No blind rearm or claim of working model signals is
 authorized by this diagnosis. UI, login, settings, schedules, executables,
 source data, models and orders were unchanged; only the diagnostic receipt
 was written and delivered through the existing owned-Mac transport.
+
+## October 7 Capture Resume Supersedes The Disk Blocker
+
+The Windows user freed disk space and explicitly requested collection resume in
+a separate completed task. Receipt5c2458f39c059f3e93d149d650d0e3a93f83b8151d7aa49f642f7aab3194f3e2
+records one V4 enable operation, without UI, source/DLL or schedule changes.
+At13:06:47KST a13.266-second bounded observation verified a fresh advancing
+durable pair: NQ sequence21 and MNQ sequence63, same December2026 contracts.
+The acknowledged journal reached23 records/40,314bytes, nonterminal/unpoisoned,
+with startup complete and no failure receipt. It was raw capture only, not a
+complete session or model-start claim. All original evidence was retained.
+
+Follow-up receiptcb8895aec43ba7e27e611e9db3b09f38e5d8424b2305fe3e82fe564d477129ee
+at13:21:37KST found165,328,228,352 free bytes, above even the conservative60GiB
+startup requirement. The old2,017,680,485-byte deficit is resolved; no further
+cleanup was performed or is required for that deficit. Disposable-file search
+was correctly skipped, not asserted to have found zero possible duplicates.
+Durable metadata advanced to batch3825/5,358,004bytes with no terminal/failure;
+this later check did not rehash the complete tick journal.
+
+Mac verified both received files against their full SHA256 filenames. These
+receipts supersede the earlier disabled/disk-deficit snapshot, not its historic
+truth. Complete source/build/owner, timestamp/provider and model-input admission
+are still unqualified; model_input_allowed=false,model_started=false. Neither
+V63/V92 inference nor Telegram delivery follows merely from collection success.
+The next read-only coordination task identifies existing admission evidence and
+the smallest necessary integration step while preserving the successful capture.
+
+## October 7 Model-Input Gap Audit
+
+Receipt1c6a52561b470f2d67692072d7fe7bb0487a0ff398b037f4e6d4f20d163185f1
+was delivered and fully hash-verified on Mac. Existing pure native structure
+checks pass for the resumed epoch. Sixteen policy anchors and seven targeted
+model/adapter/launcher files match current bytes. Several false source-guarantee
+flags are REQUIRED by the observation-only contract, not stale booleans to flip.
+This audit does not establish formal provider callback or loaded-memory proof.
+
+The concrete remaining integration gaps are current-epoch source/owner evidence,
+the missing exact external startup qualification, and an old one-shot startup
+route hard-coded to October6 with a capture-age bound under30seconds. The actual
+session is October7 and this valid capture is already older. At13:32:24KST the
+durable first segment reached8,542,024bytes, beyond the existing cold-reader's
+8MiB pending budget. Therefore changing an authority flag cannot start models.
+Do not restart good collection, invent a cursor or discard early ticks to fit
+that obsolete startup path. A bounded authenticated catch-up/current-day route
+needs implementation and review while retaining the original financial state.
+
+Pinned checkpoint/history decode succeeds; the retained paper database exists
+at389,500,928bytes but was not opened or rehashed. Its retained checkpoint has
+two transitions and one unresolved item, not permission to reset finances.
+No model started. The next authorized bounded task prepares only current-epoch
+source-candidate metadata using the unchanged installed preparer. Candidates
+remain unadmitted pending independent review; no orders or raw payload transfer.
