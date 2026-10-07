@@ -3,7 +3,21 @@
 Publication checkpoint: 2026-10-07. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Development: V140 Target Alignment
+## Current Operational Checkpoint
+
+The [October 7 signal-operation record](signal-operation-20261007.md) now
+confirms an actual Windows original-model process consuming current data,
+with separate publication, SSH synchronization and Mac notification processes
+running. A Windows file-identity compatibility failure was fixed without
+relaxing validation or altering models. Read-only bot/recipient checks passed.
+No actual model signal or Telegram delivery has occurred at this checkpoint.
+V63 awaits its original window; V92 still needs current prior20 volume input.
+
+The already authorized [V140r1 continuation](research-v140r1-progress.md)
+continues separately with no partial outcome release or new comparisons.
+Only curated documentation is published; private model/data history is not.
+
+## Earlier Development: V140 Target Alignment
 
 [V139 completed and was audited](research-v139-results.md), but FAILED the
 full economic route. Baseline Evaluation passes at+3,981.10USD, then PA+667.54USD
