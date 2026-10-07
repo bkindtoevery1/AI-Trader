@@ -1,5 +1,25 @@
 # Signal Operation: October 7
 
+## Recovery Is Tested, Not Yet Operating
+
+The actual failed checkpoint and all four retained transition records were
+verified without rewriting them. It contains30 paired minutes, no pending/open
+V92 exposure, no V63 intent, and one earlier unresolved outcome. A new next-date
+recovery component preserves cumulative money/risk and unresolved history while
+retaining the incomplete day as evidence. It does not backfill today's missed
+signal, count that day as complete, or reset financial state. Focused and durable
+storage tests pass; these are software checks, not investment performance tests.
+
+The poll-budget fix now has a separately hash-bound executable candidate that
+keeps the original packages intact. The operational startup still needs to be
+connected to the progressed-checkpoint recovery and authentic new source. Neither
+candidate packaging nor a passing test establishes live model operation.
+
+Windows did not perform the requested V92 storage installation because that
+task has a later specific restriction on replacement/restart. One clarification
+was requested for this bounded installation; no setting was overridden. No new
+signal, order, Telegram test message, ledger reset or schedule change was made.
+
 ## Model Owner Failed At The Open
 
 The later 13:43 UTC audit supersedes the readiness statements below. The model
