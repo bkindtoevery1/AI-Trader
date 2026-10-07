@@ -2,6 +2,13 @@
 
 ## Actual Recovered Operation
 
+Follow-up at 10:05 UTC: all same expected processes remain alive; the owner is
+ACTIVE without a fault and has consumed cursor 32,420 against fresh source
+cursor 32,427. Checkpoint age is 1.38 seconds; source age is 0.52 seconds. All
+reported stderr files are empty. Publisher and sync still report zero signals.
+The existing task's 13:00 UTC native-data gate wait remains active. There was no
+restart, rearm, new owner or operational code change during this observation.
+
 At 09:40:13 UTC on October 7, the single reviewed Windows startup returned
 ACTIVE state with no fault. Five health samples span 243.77 seconds; the source
 cursor advanced from 17,032 to 18,503 and subsequently 18,599. The current source

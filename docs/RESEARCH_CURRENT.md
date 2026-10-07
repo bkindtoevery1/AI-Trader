@@ -22,6 +22,30 @@ economic gate: baseline PA inactivity closure and no stressed Evaluation pass.
 All 48 holdout dates remain closed; no new comparisons or retuning followed.
 Only curated documentation is published; private model/data history is not.
 
+## New Failure Attribution And V141 Component
+
+The completed [V140r1 interpretation](research-v140r1-results.md) separates
+capacity from profitable-day activity. The baseline PA's failed 30-calendar-day
+window contained nine trade days but only one $50-net qualifying day under the
+frozen modeled rule. Of 200 stressed zero-capacity attempts, 179 required more
+reserve than the entire available headroom. No skipped trades are labeled as
+counterfactual wins, and no frozen economics or current-cohort claim changes.
+
+The [V141 design](research-v141-design.md) changes only the learner on the same
+giveback cash/features: fixed normalized-loss Ridge, no tuning. Its pure learner
+is implemented; independent normal equations, weight-scale and duplicate-data
+invariance tests pass. Combined affected checks for this component and the
+read-only attribution total 641 distinct cases, not model-performance evidence.
+There are zero new market fits and no new trial reservations; total stays 13,277.
+Complete source/forecast/account integration remains required before execution.
+Private implementation checkpoint: `43f4fa6b`; private source ancestry, models,
+raw data and detailed ledger artifacts are not published on this branch.
+
+Windows has also returned a 10:05 UTC read-only continuation witness: same
+processes alive, fresh source/checkpoint, no fault, native-gate wait active.
+Actual model signals and Telegram deliveries remain zero before the original
+window. The research component does not change either running live-paper model.
+
 ## Earlier Development: V140 Target Alignment
 
 [V139 completed and was audited](research-v139-results.md), but FAILED the
