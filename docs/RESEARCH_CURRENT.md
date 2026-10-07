@@ -61,6 +61,15 @@ supervisor exited0; the no-fit audit authenticated59 payloads and the completion
 record rehashed290 bound source files. No retry, tuning, promotion or holdout
 opening followed. This completion does not restore V63/V92 live inference.
 
+The later [event-matched attribution](research-v142-executability-attribution.md)
+joins every selected event in both arms and all four modes. Filled-event labels
+exactly match actual net PnL; the positive V142 aggregate is concentrated in
+unfilled events. Those overlapping labels are not counterfactual account profit.
+All380 affected cases pass, including a peer-found duplicate-calendar regression.
+No new model or comparison was created; historical capacity/utility failures
+remain counterevidence. Private implementation commit `46985f2f`; only this
+curated documentation is published, with no Windows recovery claim.
+
 The bounded [V142 design](research-v142-design.md) changes only target
 coordinates from giveback cash to original stop-risk units and inverts with
 query risk. This is an outcome-informed ablation, not a new algorithm family;

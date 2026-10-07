@@ -47,6 +47,11 @@ Scenario books are not independent samples and their executed paths differ.
 
 ## Failure Attribution
 
+The subsequent [event-matched partition](research-v142-executability-attribution.md)
+locates the discrepancy: all filled events match their stored unit-label PnL,
+while the positive V142 aggregate is concentrated in unfilled events. It does
+not simulate a changed risk policy or rescue this failed result.
+
 Each mode has 21 nominated attempts. In baseline, ten could not fit one contract
 inside the existing risk budget and two found the target already reached.
 The remaining nine fills produced four target exits totaling +$437.60 and five
