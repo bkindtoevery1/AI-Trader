@@ -1,12 +1,36 @@
 # Signal Operation: October 7
 
+## Current Wait And Health At 10:34 UTC
+
+The same eight expected processes remain present. Source and committed owner
+cursor are both 45,894, source nonterminal, owner ACTIVE without a fault, all
+four stderr files empty. Publisher has 11,029 successful polls; publications,
+pending signals and acknowledged transfers remain zero. V63 still waits for
+its original decision window. V92 has no current prior20 context or model bars.
+These are healthy process observations, not first inference or Telegram delivery.
+
+Windows reports that the earlier in-turn clock wait was replaced at 10:24 UTC
+by an existing same-thread, one-shot Codex follow-up for October 7, 13:00 UTC /
+22:00 KST. Both the change receipt and the 10:34 health receipt were rehashed
+on Mac. The clock.sleep is no longer active; task idle is intentional, not a
+collector-stop report. Mac initially queried the idle task before reading the
+change receipt, then reconciled it and explicitly requested no duplicate wait,
+request, schedule or restart. Availability, original pins and zero-prior-attempt
+checks are still required at the scheduled native-data retrieval step.
+
+V92 native completion, conversion and context attachment remain unfinished.
+V63's decision eligibility remains 23:00:05-23:00:59 KST, with conditional entry
+from 23:02 KST. These times do not guarantee a signal. No actual order, model
+condition change, risk reset or test Telegram message occurred in this update.
+
 ## Actual Recovered Operation
 
 Follow-up at 10:05 UTC: all same expected processes remain alive; the owner is
 ACTIVE without a fault and has consumed cursor 32,420 against fresh source
 cursor 32,427. Checkpoint age is 1.38 seconds; source age is 0.52 seconds. All
 reported stderr files are empty. Publisher and sync still report zero signals.
-The existing task's 13:00 UTC native-data gate wait remains active. There was no
+The existing task's 13:00 UTC native-data gate wait was active at that observation,
+before the replacement documented above. There was no
 restart, rearm, new owner or operational code change during this observation.
 
 At 09:40:13 UTC on October 7, the single reviewed Windows startup returned
