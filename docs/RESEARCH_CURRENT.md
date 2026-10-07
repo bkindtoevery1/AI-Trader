@@ -54,6 +54,18 @@ Only curated documentation is published; private model/data history is not.
 
 ## Current Development: V142
 
+The [reachable continuation population adapter](research-continuation-population-v1.md)
+now connects original account traces and action forks to learner rows without
+advancing the caller or leaking final-day counters. All 1,245 affected cases
+pass, including 129 new synthetic cases. Actual current-content restoration
+reconciled 181 dates and 5,485 original events; the two first-fold native
+teachers restored with matching runtime and metadata, without prediction.
+A proposed 32-anchor, ten-date-horizon student schedule places its full embargo
+after label maturity and leaves 75 development scoring dates. It is not yet
+registered or run. No market pair, fit, new trial, holdout access or Windows
+recovery is claimed. Private implementation `38ac883b`; only documentation is
+published. Historical trials remain 13,293.
+
 The [continuation learner and causal support audit](research-continuation-learner-v1.md)
 implement a 31-feature, four-head HGB API and fixed-continuation action forks.
 Neither original roll-in alone supports both products in the audited causal
