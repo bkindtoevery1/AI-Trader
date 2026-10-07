@@ -54,6 +54,17 @@ Only curated documentation is published; private model/data history is not.
 
 ## Current Development: V142
 
+The [continuation learner and causal support audit](research-continuation-learner-v1.md)
+implement a 31-feature, four-head HGB API and fixed-continuation action forks.
+Neither original roll-in alone supports both products in the audited causal
+prefix; their union supplies 32 NQ and 21 MNQ nonempty dates before new-pair
+admission. Each mode keeps its own state rows and date/event/state weighting.
+All 1,116 affected cases pass, including 130 new synthetic cases. Actual sklearn
+fits use synthetic data only; no market fit, replay, new trial, holdout access,
+V143 experiment or Windows recovery is claimed. Private implementation
+`6a29b408`; only documentation is published. Source/state authentication and a
+preregistered student chronology/horizon remain. Trials stay 13,293.
+
 The [same-state action fork component](research-action-forks-v1.md) now compares
 one ABSTAIN/ATTEMPT intervention followed by the original policy on each path's
 own account state. Forecasts are preserved truthfully; costs, execution and
