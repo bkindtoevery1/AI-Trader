@@ -64,10 +64,14 @@ The broader regression and appended account-wiring test reconcile1,271 distinct
 passes with actual exits0. Two peer findings were fixed and retested.
 
 No V142 market fit, account replay, trial reservation or economic success is
-claimed. The bounded supervised runner and complete saved-result audit remain
-to be qualified before the nine planned comparisons can be reserved. Total
-remains13,284 and48 holdout dates stay closed. Private integration checkpoint
-`1c14b960`; code/data ancestry is not published. These are software/source checks,
+claimed. The [bounded runner and saved-result audit](research-v142-execution.md)
+are implemented;246 final focused cases passed in separate author and parent
+invocations. Original-event lineage, causal omissions, rolling cash and skip
+precedence were corrected after review. Actual full-wrapper source preflight
+and complete-path qualification remain pending before the nine planned
+comparisons can be reserved. Total remains13,284 and48 holdout dates stay closed.
+Private implementation checkpoint `bbca805f`; code/data ancestry is not published.
+These are software/source checks,
 not a green whole-repository run or a successful trading strategy.
 This research does not restore Windows inference or authorize operational change.
 
