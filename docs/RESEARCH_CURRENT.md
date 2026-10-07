@@ -3,14 +3,23 @@
 Publication checkpoint: 2026-10-07. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Checkpoint: Execution And Daily Archive
+## Current Checkpoint: V138 Completed, Economic Failure
 
-The one V138 execution has completed six pipelines / 36 native fits, published
-252 forecasts and replayed all 181 paired dates. Final saved-result verification
-is still running: no complete audited outcome or performance claim is available.
-The five planned comparisons were reserved before execution, total 13,267.
-No retry, retuning or sealed-holdout access has occurred. The pre-market
-qualification below remains a historical checkpoint, not the current run state.
+[V138 completed and was audited](research-v138-results.md), but failed its
+economic gates. The single child and supervisor exited zero: six pipelines /
+36 native fits, 252 forecasts, 181 raw pairs and all 126 scored dates. The audit
+verified 345 payloads, three complete result sections and 14,832 own-state
+queries. No required process remains live and no rerun is pending.
+
+All four candidate books make 3,708 queries but nominate and trade zero times.
+Every planned quantity is one NQ, with zero capacity bypasses or out-of-grid
+states. The four positive-head counts 25/1/5/1 never intersect. No Evaluation
+pass or PA occurs; full-route and benefit gates fail. Zero trading PnL excludes
+unpriced program fees. This repeats nomination starvation, not a data failure.
+NQ MSE is 0.464% lower than separate raw regression but 0.701% above state mean;
+MNQ is 0.056% and 2.860% worse respectively. No threshold rescue or winner
+selection was performed. The five comparisons remain charged, total 13,267;
+48 sealed dates remain closed. Prior broad software failures remain disclosed.
 
 The existing 09:00 KST Windows archive task completed exit zero after UTC-date
 rollover. All eight deferred control files were archived; eligible/deferred

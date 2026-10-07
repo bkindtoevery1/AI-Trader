@@ -4,6 +4,13 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+October 7 update: V138 completed and was audited, but FAILED with zero trades
+in all four modes and no Evaluation/PA pass. Direct one-step utility did not
+resolve V137's nomination starvation. See [design](research-v138-design.md),
+[execution qualification](research-v138-execution.md) and
+[results/retrospective](research-v138-results.md). Five comparisons remain
+charged, total13,267; no threshold rescue, holdout opening or promotion.
+
 - Rationales below summarize the linked contemporaneous designs, not newly inferred causes of failure. Status descriptions summarize documented results, not newly computed metrics.
 - Completed execution, passing software regression, and successful ledger reconciliation are not model passes. Numerical Evaluation, PA economics, survival, and payout are separate outcomes.
 - Repeated historical development is not independent validation, even with chronological splits and purges. Sealed holdout data remain excluded.
