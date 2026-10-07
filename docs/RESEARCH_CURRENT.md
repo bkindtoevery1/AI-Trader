@@ -5,16 +5,16 @@ private central research ledger or an executable deployment authority.
 
 ## Current Operational Checkpoint
 
-The [October 7 signal-operation record](signal-operation-20261007.md) retains
-verified Windows model-process execution and the repaired file-identity bug,
-but a subsequent producer event-time-backstep gap stopped the owner at
-08:36:59 UTC. **Current model status is stopped pending the reviewed restart.**
-One unchanged-source rearm has since produced healthy quotes. Exact schema6
-history continuation passed 301 affected top-level software tests and was
-dispatched for one Windows startup; no successful model restart is yet claimed.
-Read-only bot/recipient checks passed, but no actual model signal or Telegram
-delivery occurred. V92's current metadata is installed; volume acquisition
-and context attachment remain outstanding.
+The [October 7 signal-operation record](signal-operation-20261007.md) now
+includes actual recovered Windows operation at 09:40 UTC: five health samples
+span more than four minutes with advancing source consumption, ACTIVE state
+and no fault. The signal publisher and SSH synchronizer are running; the Mac
+relay is alive. **Actual published, transferred and delivered model signals
+remain zero.** V63 is waiting for its unchanged 10:00 ET decision window;
+V92 still needs native volume acquisition, validated conversion and attachment.
+The prior source-time failure remains recorded, not declared permanently fixed.
+Same-date schema6 continuation passed 301 affected top-level software cases;
+neither those tests nor process recovery establishes profitable operation.
 
 The authorized [V140r1 continuation](research-v140r1-progress.md) completed
 with child/supervisor exit 0 and its no-fit saved-result audit, but failed the

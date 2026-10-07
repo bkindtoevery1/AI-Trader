@@ -1,6 +1,34 @@
 # Signal Operation: October 7
 
-## Superseding Failure
+## Actual Recovered Operation
+
+At 09:40:13 UTC on October 7, the single reviewed Windows startup returned
+ACTIVE state with no fault. Five health samples span 243.77 seconds; the source
+cursor advanced from 17,032 to 18,503 and subsequently 18,599. The current source
+was nonterminal with a fresh durable receipt. The continuation registry has
+four transitions and retains its one unresolved UNKNOWN; no money, trailing
+state or settled history was reset.
+
+The original signal publisher and SSH synchronizer are running. The publisher
+completed 201 polls and 55 bounded SQLite contention retries with zero
+publications. Synchronization has zero acknowledged or pending signals. The
+Mac relay is alive with an empty genuine queue and unchanged runtime binding.
+**Actual model signals published, transferred and delivered: zero.**
+
+V63 remains WAITING_ADMISSION / WAITING_WINDOW. Its original October 7 decision
+window is 23:00:05-23:00:59 KST, with conditional entry from 23:02 KST. These
+are eligibility times, not a promise of a trade. V92's current prior20 context
+is not attached. Native retrieval is not eligible before 22:00 KST; the existing
+Windows task confirmed its active interruptible wait at 09:42 UTC, without
+creating a new OS schedule. Native completion, conversion and attachment remain
+required. This is research-only shadow operation, not a validated live strategy.
+
+No additional source or owner restart was requested after this receipt. The
+earlier event-time failure below remains unresolved at its upstream cause;
+four minutes of recovered operation does not establish indefinite stability,
+next-day recovery or successful first delivery.
+
+## Prior Failure And Reviewed Recovery
 
 Update: one unchanged-source retirement/rearm subsequently produced more than
 60 seconds of healthy NQ/MNQ observations. Source settings, assembly and C#
@@ -18,14 +46,14 @@ The final affected run passed 301 top-level software cases plus isolated child
 checks; exact Mac staged import passed. An earlier staging test correctly
 detected a concurrent source edit and was not qualified. The frozen replacement
 passed afterward. Private implementation commits: `ab663202`, `0c4ffcba`.
-One reviewed Windows startup was dispatched; returned process evidence is still
-pending at this checkpoint. No signal or Telegram delivery is claimed.
+One reviewed Windows startup was dispatched and subsequently returned the
+successful process evidence above. No signal or Telegram delivery is claimed.
 
 The running observation below was valid at 08:36 UTC but was superseded at
 08:36:59 UTC: the source emitted a terminal event-time-backstep gap. The owner
 exited through its unchanged source checks. Its new downstream workers were
-stopped with an empty outbox; old and new state remain preserved. **Current
-model status is stopped, with no authentic signal or delivery.** This is a
+stopped with an empty outbox; old and new state remain preserved. **At that
+earlier checkpoint, model execution was stopped without a signal or delivery.** This is a
 new source-time failure, not recurrence of the repaired directory-inode bug.
 The source timestamp reversal was 3.331 seconds, while collector gate time was
 only 10.9 microseconds; identical timezone conversion did not introduce it.
