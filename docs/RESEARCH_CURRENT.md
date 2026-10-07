@@ -54,6 +54,13 @@ Only curated documentation is published; private model/data history is not.
 
 ## Current Development: V142
 
+V142 is now COMPLETED AND AUDITED, but economically FAILED in all four modes.
+The [complete result](research-v142-results.md) reports baseline -$1,602.90 and
+combined stress -$1,120.00. None passed Evaluation or reached PA. Child and
+supervisor exited0; the no-fit audit authenticated59 payloads and the completion
+record rehashed290 bound source files. No retry, tuning, promotion or holdout
+opening followed. This completion does not restore V63/V92 live inference.
+
 The bounded [V142 design](research-v142-design.md) changes only target
 coordinates from giveback cash to original stop-risk units and inverts with
 query risk. This is an outcome-informed ablation, not a new algorithm family;
@@ -68,25 +75,23 @@ without fitting. Two earlier harness failures remain recorded, not overwritten.
 The broader regression and appended account-wiring test reconcile1,271 distinct
 passes with actual exits0. Two peer findings were fixed and retested.
 
-No V142 market fit, account replay, trial reservation or economic success is
-claimed. The [bounded runner and saved-result audit](research-v142-execution.md)
-are implemented;246 final focused cases passed in separate author and parent
+The [bounded runner and saved-result audit](research-v142-execution.md)
+were implemented before fitting;246 final focused cases passed in separate author and parent
 invocations. Original-event lineage, causal omissions, rolling cash and skip
 precedence were corrected after review. The actual full-wrapper source
 preflight now exits0 with19 own/290 loaded pins and six actual input cells.
 Final affected regression exits0 with1,517 distinct cases including the246
 focused cases. After complete-path qualification, all19 own/290 loaded pins and
-the numerical runtime were rechecked unchanged. Nine comparisons are now
-reserved before the first market fit, raising total13,284 to13,293. The one
-market experiment has not started at this reservation checkpoint;48 holdout
-dates stay closed. Next research action is that supervised experiment, not
-another repeat of completed qualification. Private reservation `dae8ffed`;
-code/data ancestry is not published.
-These are software/source checks,
-not a green whole-repository run or a successful trading strategy.
+the numerical runtime were rechecked unchanged. Nine comparisons were
+reserved before the first market fit, raising total13,284 to13,293. Private
+reservation `dae8ffed` and public reservation `c20c04f3` preceded the single
+19:20:23 UTC execution. The child exited0 at19:46:28; supervisor audit exit0
+was observed by20:03:02 UTC. Both processes are gone; do not restart this run.
+All48 holdout dates stay closed. Private code/data ancestry is not published.
+Passing software/source checks is not a successful trading strategy.
 This research does not restore Windows inference or authorize operational change.
 
-## Latest Completed Study: V141
+## Earlier Completed Study: V141
 
 The [V141 integration checkpoint](research-v141-integration.md) now includes
 successful authentic V140r1 source restoration and exact mature-prefix target

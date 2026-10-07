@@ -1,12 +1,11 @@
 # V142 Execution Implementation Checkpoint
 
-October7,2026 UTC. This is a software checkpoint, not an executed market study
-or a restored real-time signal service. The unchanged outcome-informed
-[design](research-v142-design.md) and original holdout boundary remain in force.
-Latest update: actual full-wrapper source preflight and final affected tests
-have passed. After complete pre-market qualification, nine comparisons are
-reserved before the first fit. No market fit or economic result exists at this
-reservation checkpoint.
+October7,2026 UTC. The sole supervised market run and its complete no-fit audit
+have now exited0. V142 nevertheless FAILED the economic gate in all four modes;
+see the [complete results and retrospective](research-v142-results.md).
+The qualification and reservation sections below are historical checkpoints.
+The unchanged outcome-informed design and closed holdout remain in force.
+This research completion is not a restored real-time signal service.
 
 ## Implemented
 
@@ -14,8 +13,7 @@ The single-attempt supervisor connects the authenticated source adapter, six
 fixed risk-unit Ridge fits, complete252 product/date forecast publication,
 four-arm diagnostics and unchanged four-mode account replay. A complete
 qualification and nine-comparison reservation are required before market fits.
-The reservation is now complete; V142 market execution has not started at this
-checkpoint.
+The pre-fit reservation was complete before the sole market attempt began.
 
 The saved-result auditor restores models without refitting, reconstructs all
 forecasts and diagnostics, authenticates the saved controls, and validates
