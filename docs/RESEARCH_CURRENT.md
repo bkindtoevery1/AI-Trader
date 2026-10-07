@@ -54,6 +54,15 @@ Only curated documentation is published; private model/data history is not.
 
 ## Current Development: V142
 
+The [same-state action fork component](research-action-forks-v1.md) now compares
+one ABSTAIN/ATTEMPT intervention followed by the original policy on each path's
+own account state. Forecasts are preserved truthfully; costs, execution and
+lifecycle are unchanged. All986 affected tests pass, including206new synthetic
+cases, after correcting normal Python deepcopy-cache initialization in the
+test baseline. This is not an optimal Q function, fitted strategy, market pair
+or Windows recovery. Private implementation `f5b52fd7`; only documentation is
+published. Historical trials remain13,293 and all48sealed dates stay closed.
+
 The [fixed-session continuation targets](research-sequential-targets-v1.md)
 now separate actual trading returns from account resets/withdrawals and retain
 unfinished horizons as null rather than zero. An independent test exposed a
