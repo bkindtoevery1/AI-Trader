@@ -3,7 +3,25 @@
 Publication checkpoint: 2026-10-07. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
-## Current Development: V139 Components
+## Current Development: V139 Execution Qualification
+
+The [complete V139 execution path](research-v139-execution.md) is qualified,
+not market fitted. Authentic paired-minute source restoration, four fixed V136
+account books, immutable six-model journaling, supervised atomic publication
+and no-fit saved-result audit are implemented in private commitc27f0115.
+2,280 unique affected tests passed, including564V139 cases;67warnings remain
+recorded. Actual source-only preflight passed for181dates/5,485opportunities,
+with no new market features, fits or replay. All261 preflight pins and259
+predecessor pins match. This does not claim the whole repository suite is green.
+
+Five comparisons are planned but not reserved,total13,267. The frozen design,
+48sealed dates, original account controls, thresholds, costs and sizing remain
+unchanged. Qualification/publication precedes reservation and one supervised
+economic run. There is no model pass, live deployment, order or partial outcome.
+Only curated documentation is published; private source, raw data, fitted
+artifacts and detailed ledgers remain local. No PR or merge is claimed.
+
+## Previous Checkpoint: V139 Components
 
 The [V139 design](research-v139-design.md) and
 [component qualification](research-v139-implementation.md) add paired NQ/MNQ

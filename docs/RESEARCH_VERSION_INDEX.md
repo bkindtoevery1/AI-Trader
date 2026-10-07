@@ -4,12 +4,13 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
-October 7 V139 development: the paired-minute information extension is
-COMPONENTS_QUALIFIED_NOT_MARKET_FITTED. Its fixed eighteen-input HGB and
-training-only prediction path pass1,517 affected tests, including247new cases.
-The full market-source/account/runner path remains pending; no economic result
-or new trial reservation. See [design](research-v139-design.md) and
-[qualification/remaining work](research-v139-implementation.md).
+October 7 V139 development: the complete paired-minute execution path is
+qualified, not market fitted. Source restoration, fixed V136 account replay,
+supervision and saved-result audit pass2,280 affected cases, including564V139.
+The actual source preflight restored181dates/5,485events without new features,
+fits or replay. Five comparisons remain unreserved,total13,267. See
+[design](research-v139-design.md), [components](research-v139-implementation.md)
+and [execution qualification](research-v139-execution.md).
 
 October 7 update: V138 completed and was audited, but FAILED with zero trades
 in all four modes and no Evaluation/PA pass. Direct one-step utility did not
