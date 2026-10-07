@@ -1,5 +1,25 @@
 # Signal Operation: October 7
 
+## Exact Failure Predicate Clarified
+
+A read-only audit of retained original manifests and source, followed by a
+parent rehash, establishes that the recorded commit-boundary exception means
+the ORIGINAL polled receipt had computed wall-clock age of at least5s. Its
+generic wording also mentions future time, but a future receipt is rejected
+earlier by a different admission error; observations on this path cannot
+decrease. The newer source-tail probe occurs after the failing predicate.
+
+This is not a measurement of exact latency or proof of its cause. A forward
+clock jump, processing/I/O/scheduling cost and historical producer stalls
+remain unproven. Fresh later producer metadata does not refresh an older poll.
+The existing candidate yields before a new transaction at4s and re-polls while
+keeping the5s freshness checks and model deadlines. In-flight expiry remains
+fatal and gains numeric diagnostics. No permanent-recovery claim follows.
+
+Windows received this interpretation without an execution request or new
+approval. No repeated measurement, install, restart or signal was requested.
+This source-control-flow evidence does not refresh the last Windows observation.
+
 ## Stopped Inference Confirmed, Recovery Staged
 
 The17:44UTC Windows recheck independently confirms the same stopped owner and

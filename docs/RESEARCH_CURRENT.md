@@ -17,6 +17,11 @@ the existing scoped clarification remains unanswered. No new approval, install,
 restart or scheduled recovery is claimed. See the latest
 [signal-operation record](signal-operation-20261007.md). This supersedes the
 earlier healthy-process observations below; no signal start time is guaranteed.
+Read-only inspection of the authenticated original code narrows the exact
+failure to computed wall-clock age of at least5s for the original polled
+receipt. A future receipt fails earlier with a different error. Actual elapsed
+latency and its clock/I/O/scheduling/source cause are still unknown. This
+interpretation was sent to Windows without an execution request or new approval.
 
 ### Earlier Health Observations
 
@@ -67,10 +72,14 @@ No V142 market fit, account replay, trial reservation or economic success is
 claimed. The [bounded runner and saved-result audit](research-v142-execution.md)
 are implemented;246 final focused cases passed in separate author and parent
 invocations. Original-event lineage, causal omissions, rolling cash and skip
-precedence were corrected after review. Actual full-wrapper source preflight
-and complete-path qualification remain pending before the nine planned
-comparisons can be reserved. Total remains13,284 and48 holdout dates stay closed.
-Private implementation checkpoint `bbca805f`; code/data ancestry is not published.
+precedence were corrected after review. The actual full-wrapper source
+preflight now exits0 with19 own/290 loaded pins and six actual input cells.
+Final affected regression exits0 with1,517 distinct cases including the246
+focused cases. Complete-path qualification is retained; the nine planned
+comparisons remain unreserved and no market run has started. Total remains
+13,284 and48 holdout dates stay closed. Next research action is the planned
+single experiment after reservation, not another repeat of completed software
+qualification. Private checkpoint `af31eb0b`; code/data ancestry is not published.
 These are software/source checks,
 not a green whole-repository run or a successful trading strategy.
 This research does not restore Windows inference or authorize operational change.

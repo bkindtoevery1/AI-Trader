@@ -3,6 +3,9 @@
 October7,2026 UTC. This is a software checkpoint, not an executed market study
 or a restored real-time signal service. The unchanged outcome-informed
 [design](research-v142-design.md) and original holdout boundary remain in force.
+Latest update: actual full-wrapper source preflight and final affected tests
+have passed. Complete pre-market qualification is now retained. No comparison
+reservation, market fit or economic result exists yet.
 
 ## Implemented
 
@@ -40,9 +43,22 @@ run took71.94 seconds. A separate earlier454-case component/predecessor regressi
 also exited0. All16 previous integration pins were rechecked unchanged.
 Invented test inputs are software evidence only, not strategy evidence.
 
-The new full-wrapper actual-source no-fit preflight and complete execution
-qualification are still pending. The earlier source probe supports only its
-original component scope. Effective trials remain13,284, reserved comparisons0,
+The earlier source probe supported only its original component scope. The new
+actual full-wrapper preflight now completed once with parent/child exits0 and
+empty stderr. It authenticates19 own files,290 loaded source files,181 retained
+dates,5,485 original events,126 scoring dates and six learning-input cells.
+Final21-module affected regression passed1,517 distinct cases with exit0 in
+1,142.60 seconds, including the246 focused cases, not adding them again.
+The62 scaler warnings came from invented constant-column fixtures.
+
+Immutable qualification SHA-256 is
+`cbee1f315cc42979ad58a394bb7617a52be7bfed15fafb52527e96756b0e7fbe`.
+It binds the actual process evidence, final tests and current source. No
+production code changed during this qualification turn. The next research
+action is the already-designed one-shot experiment after its nine-comparison
+pre-fit reservation, not repeating completed qualification.
+
+Effective trials remain13,284, reserved comparisons0,
 new market fits0, new account replays0, and48 holdout dates remain closed.
 No full-repository-green, economic pass, Windows recovery, signal delivery or
 order claim is made. Existing V63/V92 operational recovery takes priority over
