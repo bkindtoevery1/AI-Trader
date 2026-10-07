@@ -1,5 +1,30 @@
 # Signal Operation: October 7
 
+## Stopped Inference Confirmed, Stale Restriction Identified
+
+At15:58 UTC Windows confirmed that the original model owner and its supervisor
+were absent, while the native collector, publisher and SSH sender remained
+present. Collector metadata was fresh; the owner retained its commit-boundary
+failure. Last transport logs still reported zero publications and acknowledgements.
+A separate current Mac read-only audit found zero deliveries and an empty inbox.
+This is an inference outage, not a functioning model choosing NO_TRADE.
+
+The supposed replacement restriction was traced to a scheduled prompt assuming
+that recovery had already succeeded. It was not established as a separate
+contemporaneous human prohibition. That premise no longer holds after the owner
+exit. The coordinator requested narrow recovery preparation under the existing
+user operating request, without claiming a new human approval or blindly
+restarting a healthy collector. Current collection and all old records stay intact.
+
+Mac prepared a separate private state for the repaired runtime and completed one
+empty no-send receiver cycle with the exact existing loader. Credentials and
+Telegram were not called. The live receiver still uses the old version until
+Windows sender and both sides' records can be reconciled for coordinated cutover.
+Actual installation, restarted inference and delivered signals remain unverified.
+The failure and the earlier approval misclassification are preserved rather than
+replacing them with a success claim. No new software or model-performance test
+result is claimed by this operational preparation.
+
 ## Publisher And Receiver Version Alignment
 
 The next audit found that the new owner entrypoint did not expose the matching
