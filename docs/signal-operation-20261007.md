@@ -1,5 +1,36 @@
 # Signal Operation: October 7
 
+## Startup Repair Packaged, No Delivery Yet
+
+The next-date recovery now has an explicit startup path. It authenticates the
+unchanged stopped ledger using bounded read-only streaming, preserves cumulative
+risk and unresolved history, verifies the real source terminal, and initializes
+only a genuinely new eligible session. The original models and decision windows
+are unchanged. Independent review also caught and fixed oversized corrupt-cell
+allocation before deployment. The old ledger is not reset, copied or replayed.
+
+Verification:373 affected software tests passed before that final memory-bound
+correction; the final reader/startup/package suite passed101 tests. These tests
+use invented fixtures and are neither market-performance evidence nor a Windows
+operational canary. Full-repository regression was not run for this repair.
+
+The earlier Windows import check had never executed because its overlay path
+was unresolved. That original path and its hashes are now confirmed. The final
+code-only package was fully verified and extracted. Its isolated import check
+was held because the coordinator's wording also forbade reading model bytes for
+package hashes; this unnecessary ambiguity was corrected without a new user
+approval. Hash verification is allowed; inference and installation are not part
+of that check. A superseded intermediate archive was held before execution.
+
+Actual operation remains incomplete: V92 storage installation and an eligible
+new source are still needed, and a specific Windows no-restart instruction
+conflicts with installation. One scoped clarification remains pending. The Mac
+relay process is alive but its inbox is empty; no new delivered model signal has
+been established. The missed original V63 decision will not be backdated.
+
+Retrospective: a running collector, passing test, downloaded package or completed
+coordination message must never be reported as a working signal pipeline.
+
 ## Recovery Is Tested, Not Yet Operating
 
 The actual failed checkpoint and all four retained transition records were
