@@ -75,11 +75,13 @@ invocations. Original-event lineage, causal omissions, rolling cash and skip
 precedence were corrected after review. The actual full-wrapper source
 preflight now exits0 with19 own/290 loaded pins and six actual input cells.
 Final affected regression exits0 with1,517 distinct cases including the246
-focused cases. Complete-path qualification is retained; the nine planned
-comparisons remain unreserved and no market run has started. Total remains
-13,284 and48 holdout dates stay closed. Next research action is the planned
-single experiment after reservation, not another repeat of completed software
-qualification. Private checkpoint `af31eb0b`; code/data ancestry is not published.
+focused cases. After complete-path qualification, all19 own/290 loaded pins and
+the numerical runtime were rechecked unchanged. Nine comparisons are now
+reserved before the first market fit, raising total13,284 to13,293. The one
+market experiment has not started at this reservation checkpoint;48 holdout
+dates stay closed. Next research action is that supervised experiment, not
+another repeat of completed qualification. Private reservation `dae8ffed`;
+code/data ancestry is not published.
 These are software/source checks,
 not a green whole-repository run or a successful trading strategy.
 This research does not restore Windows inference or authorize operational change.

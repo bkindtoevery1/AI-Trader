@@ -4,8 +4,9 @@ October7,2026 UTC. This is a software checkpoint, not an executed market study
 or a restored real-time signal service. The unchanged outcome-informed
 [design](research-v142-design.md) and original holdout boundary remain in force.
 Latest update: actual full-wrapper source preflight and final affected tests
-have passed. Complete pre-market qualification is now retained. No comparison
-reservation, market fit or economic result exists yet.
+have passed. After complete pre-market qualification, nine comparisons are
+reserved before the first fit. No market fit or economic result exists at this
+reservation checkpoint.
 
 ## Implemented
 
@@ -13,7 +14,8 @@ The single-attempt supervisor connects the authenticated source adapter, six
 fixed risk-unit Ridge fits, complete252 product/date forecast publication,
 four-arm diagnostics and unchanged four-mode account replay. A complete
 qualification and nine-comparison reservation are required before market fits.
-No such reservation or V142 market execution has occurred.
+The reservation is now complete; V142 market execution has not started at this
+checkpoint.
 
 The saved-result auditor restores models without refitting, reconstructs all
 forecasts and diagnostics, authenticates the saved controls, and validates
@@ -58,7 +60,10 @@ production code changed during this qualification turn. The next research
 action is the already-designed one-shot experiment after its nine-comparison
 pre-fit reservation, not repeating completed qualification.
 
-Effective trials remain13,284, reserved comparisons0,
+After the immutable qualification, the unchanged implementation and numerical
+runtime were rechecked and the closed pre-fit reservation was committed. The
+comparison charge remains if the single attempt fails; no automatic retry is
+authorized. Effective trials are13,293, reserved new comparisons9,
 new market fits0, new account replays0, and48 holdout dates remain closed.
 No full-repository-green, economic pass, Windows recovery, signal delivery or
 order claim is made. Existing V63/V92 operational recovery takes priority over
