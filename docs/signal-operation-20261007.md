@@ -4,7 +4,28 @@ The subsequent [offline timing probe](v4-poll-budget-performance-20261007.md)
 records measured Mac processing cost with unchanged deployment bytes. It does
 not supersede the latest Windows stopped-execution observation below.
 
-## Latest Read-Only Observation: 20:42 UTC
+## Latest Read-Only Observation: 23:20 UTC
+
+Collection metadata advanced to batch682,172 and was about0.348s old, but both
+model owner and supervisor remain absent. Actual V63 combined, V92 NQ and V92
+MNQ prediction counters are all0. The23:21 database check found zero owner and
+sync-delivery outbox/delivery records, with zero changes and unchanged file
+identity, size and modification time. These are actual read-only record counts,
+not old logged summaries. No signal or acknowledgement timestamp exists.
+
+Mac independently observed its relay process and read inputs0/outbox0/delivery0
+with total_changes0 at23:22UTC. No Telegram request occurred. Windows sent the
+existing observations through the established metadata route after cross-host
+message readers again returned empty bodies; Mac verified the full receipt.
+This does not authenticate raw price quality or establish model-input admission.
+
+The original runtime failure and separate V92 prior-volume storage prerequisite
+remain unresolved. No new restart/install approval was verified. There was no
+installation, source handoff, restart, signal, order or schedule change. The
+prepared recovery still needs operational application; more research tests do
+not restore it. Private operational checkpoint: `d1117f59`.
+
+## Earlier Read-Only Observation: 20:42 UTC
 
 The source remains fresh (about0.440s), but both model owner and supervisor are
 absent. V63 and both V92 product counters still report zero actual predictions

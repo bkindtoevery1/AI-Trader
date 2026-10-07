@@ -5,7 +5,7 @@ private central research ledger or an executable deployment authority.
 
 ## Current Operational Checkpoint
 
-Latest confirmed Windows state, October7 at20:42UTC: the collector remains fresh, but
+Latest confirmed Windows state, October7 at23:20UTC: the collector remains fresh, but
 the model owner and supervisor have stopped following a durable-source time
 failure. V63, V92 NQ and V92 MNQ each have zero actual prediction attempts in
 this source epoch. Publisher/sync/relay presence is not proof of inference.
@@ -22,6 +22,10 @@ failure to computed wall-clock age of at least5s for the original polled
 receipt. A future receipt fails earlier with a different error. Actual elapsed
 latency and its clock/I/O/scheduling/source cause are still unknown. This
 interpretation was sent to Windows without an execution request or new approval.
+The23:21 read checked actual Windows owner and sync-delivery database records,
+not only retained logs: both had zero queued/delivery records and no changes.
+Mac independently found inputs0/outbox0/delivery0 in a read-only transaction
+at23:22UTC. Private operational checkpoint `d1117f59`; no recovery is claimed.
 
 ### Earlier Health Observations
 
