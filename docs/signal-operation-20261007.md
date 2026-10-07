@@ -1,5 +1,27 @@
 # Signal Operation: October 7
 
+## Model Owner Failed At The Open
+
+The later 13:43 UTC audit supersedes the readiness statements below. The model
+owner exited around 13:30 UTC with a stale-or-future durable-heartbeat check;
+the collector continued, but inference did not. V63 was halted with zero
+attempts and zero required paired minutes. V92 still lacked its native historical
+volume input. These are operational failures, not HOLD or NO_TRADE. No delivered
+model signal is established, and today's original V63 window has now passed.
+
+A narrow pretransaction poll-budget repair has passed focused software tests:
+it retains the committed cursor and rereads only the remaining suffix before
+starting another aging transaction. In-flight deadlines remain unchanged.
+The current immutable deployment does not yet contain this repair. Recovery
+also needs to preserve the progressed schema6 ledger; old preopen initializers
+must not erase its history. Thus neither a passing test nor a running collector
+is being reported as completed operation.
+
+The separate V92 local-storage cutover candidate passed 26 native Windows
+filesystem tests and retains the original partial claim. It is not installed
+and has not acquired the missing history. No orders, fake signal, test Telegram
+message, risk reset or model-window change was made.
+
 ## Physical-Path Correction At 13:20 UTC
 
 The follow-up found the original zero-byte intent in a redirected Codex cache
