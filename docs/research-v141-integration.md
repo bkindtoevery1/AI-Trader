@@ -71,14 +71,16 @@ fourteen source/design/test files, both final JUnit artifacts and the actual
 source preflight. Its status explicitly forbids treating it as complete market-
 execution qualification.
 
-The complete supervised execution runner, atomic complete-result seal and
-no-fit final-result audit are not yet implemented for V141. Component storage
-and synthetic integration do not substitute for that qualification. No seven-
-comparison reservation or market experiment may start based only on this note.
-Effective trials remain 13,277; eventual separately qualified reservation would
-make 13,284. Live V63/V92 code, schedules, model parameters and order prohibition
+The [execution checkpoint](research-v141-execution.md) now records the implemented
+supervised runner, atomic complete-result seal, no-fit final audit and successful
+actual learning-input preflight. Its broader affected regression subsequently
+passed 2,134 distinct cases and complete-path qualification is recorded in that
+execution note. The separately qualified seven-comparison reservation now makes
+effective trials 13,284. Component storage and synthetic integration alone did
+not authorize that reservation. Live V63/V92 code, schedules, model parameters and order prohibition
 are unchanged by this research work. Software tests are not strategy profits.
 
-Private implementation checkpoint: `da7f316f`. This public branch contains only
+Private component checkpoint: `da7f316f`; supervised implementation and
+reservation checkpoints: `e373ed36`, `4084f8b6`. This public branch contains only
 curated documentation, not private source ancestry, model/data files or detailed
 ledger artifacts. No PR or merge is claimed.

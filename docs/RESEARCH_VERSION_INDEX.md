@@ -4,7 +4,16 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
-October7 V139 completed and was audited, but FAILED economically. Baseline
+Latest October 7 checkpoint: V140r1 completed and FAILED its full economic route;
+see [results and retrospective](research-v140r1-results.md). V141 tests a fixed,
+normalized-loss Ridge on the exact same mature inputs and giveback targets.
+Its [design](research-v141-design.md), [integration](research-v141-integration.md)
+and [execution](research-v141-execution.md) are recorded. Complete-path checks
+passed 2,134 affected cases and the actual input preflight. Seven comparisons
+were reserved, total 13,284, before the sole supervised run began at 12:05 UTC.
+No completed V141 market outcome, independent validation or deployment is claimed.
+
+Earlier October 7: V139 completed and was audited, but FAILED economically. Baseline
 Evaluation passes, then PA closes for inactivity; three stressed Evaluations
 never pass. Five comparisons remain charged,total13,272. See
 [design](research-v139-design.md), [execution](research-v139-execution.md) and

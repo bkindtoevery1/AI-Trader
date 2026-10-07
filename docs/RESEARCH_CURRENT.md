@@ -5,9 +5,10 @@ private central research ledger or an executable deployment authority.
 
 ## Current Operational Checkpoint
 
-At 10:34 UTC the same eight Windows processes remain present, source and owner
-cursor 45,894, owner ACTIVE without fault and source nonterminal. Signals and
-acknowledgements are still zero; V92 context remains unattached. The earlier
+At 11:24 UTC the same eight Windows processes remain present, source cursor
+78,576 and owner cursor 78,571, owner ACTIVE without fault and source nonterminal.
+Source and checkpoint ages are below 0.7 seconds. Signals and acknowledgements
+are still zero; V92 context remains unattached. The earlier
 in-turn wait was replaced by an existing same-thread one-shot follow-up for
 13:00 UTC / 22:00 KST. Mac has reconciled both receipts and requested no duplicate
 start or schedule. Task idle alone must not be mistaken for stopped collection.
@@ -31,7 +32,7 @@ economic gate: baseline PA inactivity closure and no stressed Evaluation pass.
 All 48 holdout dates remain closed; no new comparisons or retuning followed.
 Only curated documentation is published; private model/data history is not.
 
-## New Failure Attribution And V141 Component
+## Current V141 Execution
 
 The [V141 integration checkpoint](research-v141-integration.md) now includes
 successful authentic V140r1 source restoration and exact mature-prefix target
@@ -40,12 +41,15 @@ diagnostic, immutable-journal and unchanged account-adapter components are
 implemented. Independent review's coefficient-mutation gap was corrected before
 market observation: exact fitted state is checked through serialization and
 each prediction, including a serialized roundtrip before publication.
-The complete supervised runner and final-result audit remain pending. There is
-no new reservation, live deployment or claimed strategy result. Older component
-checks below remain historical records, not the final integrated qualification.
-Final integrated checks passed 693 V141 and 1,281 predecessor cases. Private
-implementation checkpoint: `da7f316f`; operational wait reconciliation: `82cf03bb`.
-Neither private commit's ancestry nor raw evidence is published on this branch.
+The [complete execution path](research-v141-execution.md) is now implemented
+and qualified. Its actual no-fit preflight matched all six learning-input cells;
+2,134 distinct affected cases passed, including 119 focused runner/binding cases.
+Seven fixed comparisons were reserved before fitting, total 13,284. The sole
+supervised market attempt started at 12:05:29 UTC. No terminal, complete outcome,
+strategy pass or live deployment is claimed; partial outcomes stay closed.
+Private implementation and reservation checkpoints are `e373ed36` and `4084f8b6`.
+Their ancestry, private code, raw data and detailed evidence are not published.
+Older component counts below are historical, not additional distinct tests.
 
 The completed [V140r1 interpretation](research-v140r1-results.md) separates
 capacity from profitable-day activity. The baseline PA's failed 30-calendar-day
@@ -59,8 +63,9 @@ giveback cash/features: fixed normalized-loss Ridge, no tuning. Its pure learner
 is implemented; independent normal equations, weight-scale and duplicate-data
 invariance tests pass. Combined affected checks for this component and the
 read-only attribution total 641 distinct cases, not model-performance evidence.
-There are zero new market fits and no new trial reservations; total stays 13,277.
-Complete source/forecast/account integration remains required before execution.
+At that earlier component checkpoint there were no market fits or trial
+reservations, total 13,277. The completed integration and actual supervised
+attempt above supersede its pending-execution status, not its original evidence.
 Private implementation checkpoint: `43f4fa6b`; private source ancestry, models,
 raw data and detailed ledger artifacts are not published on this branch.
 

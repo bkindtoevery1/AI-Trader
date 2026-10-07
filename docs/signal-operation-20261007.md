@@ -1,6 +1,20 @@
 # Signal Operation: October 7
 
-## Current Wait And Health At 10:34 UTC
+## Current Health At 11:24 UTC
+
+The same eight PID/parent/creation identities remain present. Owner is ACTIVE
+without fault, source is nonterminal, source age 0.686 seconds and checkpoint
+age 0.647 seconds. Source cursor is 78,576 and owner cursor is 78,571. All four
+stderr files remain empty; publisher has 20,646 successful polls but zero
+publications. Sync has zero pending and acknowledged signals. V63 waits for
+its unchanged window; V92 context is absent and its model-window bar count is
+zero. The existing 13:00 UTC one-shot remains ACTIVE, not duplicated.
+
+This is continuation evidence, not a model signal or Telegram receipt. The Mac
+relay was separately confirmed alive at 12:06 UTC. No source restart, native
+request, model change, risk reset, order or test message was made by these checks.
+
+## Earlier Wait And Health At 10:34 UTC
 
 The same eight expected processes remain present. Source and committed owner
 cursor are both 45,894, source nonterminal, owner ACTIVE without a fault, all
