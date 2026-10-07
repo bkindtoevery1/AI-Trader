@@ -1,6 +1,29 @@
 # Signal Operation: October 7
 
-## Current Health At 12:10 UTC
+## Current Failure At 13:07 UTC
+
+The 13:00 native-data attempt ran but failed at `HOST_FAILED_INTENT`, before
+any usable native intent, terminal or volume result was available. The failure
+receipt was independently hash-verified on Mac. V92's historical volume context
+is still missing. This is a technical input failure, not a model `NO_TRADE`.
+The UI automation error did not prove that Start was undelivered; no blind
+retry, source restart, account reset or guard relaxation followed.
+
+At 13:07 the same eight processes remained alive, owner ACTIVE without fault,
+source nonterminal and model-window bars 14. Publisher had zero publications
+after 40,809 successful polls; synchronization had zero acknowledgements.
+The Mac relay subsequently remained alive with sending enabled and an empty
+inbox. **Actual delivered model signals remain unverified, with zero published.**
+
+The installed host reports the failed phase but suppresses its detailed
+exception. A bounded Windows diagnosis is in progress; neither a permissions
+cause nor a fix is established. V63's original decision path is independent of
+V92's missing context. V63 eligibility remains 23:00:05-23:00:59 KST; V92's
+90-minute warm-up ends no earlier than 23:30 KST, conditional on full input and
+unchanged checks. The 22:00 retrieval gate was not a promised signal time.
+No order, model change, artificial signal or test Telegram message was sent.
+
+## Earlier Health At 12:10 UTC
 
 A single bounded read-only check confirms the same eight processes. Owner is
 ACTIVE without fault at cursor 112,192; source is nonterminal at 112,206.
