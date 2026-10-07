@@ -54,6 +54,15 @@ Only curated documentation is published; private model/data history is not.
 
 ## Current Development: V142
 
+The [fixed-session continuation targets](research-sequential-targets-v1.md)
+now separate actual trading returns from account resets/withdrawals and retain
+unfinished horizons as null rather than zero. An independent test exposed a
+float-cutoff type defect, now fixed; the parent affected run passes780 distinct
+cases, including238new synthetic cases. This is not a fitted model or market
+result. A63-session target is not supported by the first45-date survivor
+population, and actual action alternatives are still missing. No new trials,
+holdout access or Windows recovery occurred. Private implementation: `fb71cbe1`.
+
 A [sequential trace component](research-sequential-trace-v1.md) now records
 action-dependent next decisions and complete accounting history under unchanged
 V137/V136 behavior. Its542 affected tests pass, including160 new synthetic
