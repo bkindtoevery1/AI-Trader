@@ -1,6 +1,6 @@
 # Public Research Checkpoint
 
-Publication checkpoint: 2026-10-07. This is a curated public summary, not the
+Publication checkpoint: 2026-10-08. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
 ## Current Operational Checkpoint
@@ -57,6 +57,19 @@ All 48 holdout dates remain closed; no new comparisons or retuning followed.
 Only curated documentation is published; private model/data history is not.
 
 ## Current Development: V142
+
+The [actual continuation tape connection](research-continuation-tape-v1.md)
+now verifies original raw/window receipts across a contiguous horizon. The
+fixed first ten dates, December 3-16, 2025, supplied 13,681,635 actual RTH ticks.
+Source restoration took 178.315 seconds; the tape/copy probe took 48.867 seconds
+with a 3.857 GiB whole-process high-water RSS. It exercised 42 session copies
+and 40 first-event windows, not a complete fork or model-training run. All 799
+affected tests pass, including 24 new cases; initial failures are retained and
+exact predecessor namespace assertions remain. No new market prediction, label,
+fit, account replay, trial, holdout access or Windows recovery occurred.
+Private implementation `0f0ff77d`; only curated documentation is published.
+Effective historical comparisons remain 13,293. Registered market execution
+and complete learned-account evaluation remain outstanding.
 
 The [continuation training/account integration](research-continuation-execution-v1.md)
 now assembles all two-origin/four-mode rows and qualifies both products before
