@@ -4,6 +4,17 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+October 12: Mac-only research resumed; Windows connections and live-system
+changes are excluded by the latest user scope. [V144 design](research-v144-public-cpi.md)
+adds causal public BLS CPI level and release age to the retained V134 features.
+Six pipelines completed on 126 scored sessions. [Results](research-v144-results.md):
+baseline forecast MSE improves 1.248% NQ and 0.616% MNQ, but MNQ stress worsens.
+This is not account profit, an Apex pass or a promoted model. Only 3/5/7 macro
+releases are exposed in the respective training folds. Four comparisons remain
+charged, total 13,298. All 757 affected tests pass; full regression is not green.
+The design's pending execution paragraph is the frozen pre-fit snapshot;
+the results document is the completed-state authority.
+
 Latest October7 integration checkpoint: [V142](research-v142-design.md) isolates
 stop-risk target coordinates on the unchanged V141 recipe. Its
 [components](research-v142-components.md) and [integration](research-v142-integration.md)
