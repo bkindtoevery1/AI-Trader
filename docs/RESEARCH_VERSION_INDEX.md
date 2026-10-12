@@ -4,6 +4,13 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+October12: [V143 complete reader and fresh replay](research-v143-complete-population-replay.md)
+qualifies full-population admission plumbing and the75-date own-state replay
+components with790 distinct related passing tests. Actual market data remain
+16/256 cells; no student fit or model pass. Final full attempt retains three
+known failures. The separate complete pre-fit stage is not implemented/admitted.
+Earlier fixture failures and the costly full synthetic test are recorded.
+
 October12: the [next V143 continuation batch](research-v143-accelerated-collection.md#eight-cell-append-and-second-anchor-audited)
 completed eight more cells and passed an independent saved-data audit.
 The external cursor now reconciles16/256 cells over TWO anchors, not16 dates.
