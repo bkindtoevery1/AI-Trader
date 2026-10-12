@@ -4,6 +4,13 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+Latest October12: [V143 continuation integration](research-v143-accelerated-collection.md)
+adopts the actual-qualified copy path only for bounded offline collection.
+Related tests pass1,499 unique cases, including real-adapter synthetic parity.
+The exact seed and external resume cursor are preserved. The frozen first
+append is pending; progress1/256, no fit or promotion. The target stays256
+complete cells. Mac research only.
+
 Latest October12: [detached V143 history copies](research-v143-history-acceleration.md)
 have exact complete synthetic parity and1,450 related passing tests. A source-
 bound [first-cell equivalence protocol](research-v143-history-probe-protocol.md)
