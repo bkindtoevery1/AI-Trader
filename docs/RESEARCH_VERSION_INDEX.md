@@ -4,6 +4,14 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+Later October12: the [optional V143 copy adapter](research-v143-copy-acceleration.md)
+passed1010 affected cases and produced exact full synthetic-cell bytes in all
+six timing runs. Median time decreased11.3%, but no market speedup is proven
+and the adapter is NOT_ADOPTED. A sparse profile identifies account/history
+copying as the larger remaining synthetic cost. The fresh full-suite attempt
+has1179 passes,3 previously documented failures and1 skip, not full green.
+Market progress stays1/256 cells; no labels/fits/trials were added. Mac only.
+
 October12: [V143 reviewed recovery](research-v143-reviewed-recovery.md) produced
 [one complete audited training cell](research-v143-recovery-first-cell.md),
 27 action pairs over ten source sessions, with actual producer/audit exit0.
