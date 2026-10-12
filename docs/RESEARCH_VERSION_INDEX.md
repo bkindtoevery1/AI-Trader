@@ -7,8 +7,10 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 Latest October12: [detached V143 history copies](research-v143-history-acceleration.md)
 have exact complete synthetic parity and1,450 related passing tests. A source-
 bound [first-cell equivalence protocol](research-v143-history-probe-protocol.md)
-is frozen before actual execution; no new labels, student fits or trials.
-The actual result is pending and the adapter is not adopted. Mac research only.
+completed with external exit0 and exact1,319,221-byte actual-cell equality.
+Observed calculation37.39min versus45.24min, not a controlled speedup guarantee.
+No new labels/fits/trials; scientific progress1/256. General adapter adoption
+is still false pending bounded integration. Mac research only.
 
 Later October12: the [optional V143 copy adapter](research-v143-copy-acceleration.md)
 passed1010 affected cases and produced exact full synthetic-cell bytes in all

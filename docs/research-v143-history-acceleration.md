@@ -76,8 +76,8 @@ Final JUnit SHA-256:
 ## Actual First-Cell Probe
 
 The metadata-only procedure is frozen separately in
-research-v143-history-probe-protocol.md. At this checkpoint the actual probe
-has not run. A separate review reproduced two missing final RSS checks;
+research-v143-history-probe-protocol.md. The pre-execution checkpoint was
+committed at26ee71a4 before the actual probe. A separate review reproduced two missing final RSS checks;
 both were fixed before any market calculation. The new probe/recovery run
 passes235 cases, actual exit0/session84477 in6.709 seconds, no failures/errors/
 skips. Together with the affected run this is1,450 disjoint passing cases,
@@ -92,3 +92,41 @@ tape receipt, preserve the original first-day account and exact query count,
 and finish with external exit0 under the unchanged 8 GiB memory guard.
 No later cells, student fit, economic pass or adapter adoption are inferred
 from synthetic software tests.
+
+## Completed Actual Comparison
+
+The sole probe finished at07:18:31UTC, actual exit0/session5307/PID55010.
+The retained app command record is exec-d2c8ac42-96b8-48a3-80d0-d8f39049d963,
+status completed, duration2,448,886ms. This is external terminal evidence,
+not a success flag inferred only from the child's JSON. The process is absent.
+A separate saved-metadata/source audit exited0; command record
+exec-0d2183de-521d-4f92-8d7d-40db0888b972. All original250 source bindings,
+extended source pins, numeric runtime, original interruption, seven recovery
+files and the central admission remain unchanged.
+
+Every row, pair record, successor account and original raw/window receipt in
+the complete ten-session first cell is byte-identical:1,319,221 canonical bytes,
+SHA-256 fb6adf8cbc0d8b87b55501f07bd5eb7314f2cc4a90d142486e0dee6dcff16c77.
+The original first roll-in day and13,968 NQ/zero MNQ teacher-query count agree.
+The adapter actually ran:16,226 detached history copies,165,644,486 dicts,
+147,972,267 lists;2,160 window hits,67 misses,70 evictions,zero fallback.
+
+Calculation time was2,243.675537s (37.39min), compared with the earlier original
+2,714.562703s (45.24min):17.35% lower observed elapsed time. Different processes
+and uncontrolled machine load mean this is not a controlled speedup estimate
+or a guarantee for later cells. Peak process RSS4,801,773,568 bytes (4.472GiB)
+stayed below8GiB; earlier original4,898,029,568 bytes. No general memory-saving
+claim follows from these two high-water measurements.
+
+Only metadata was published in the new probe root, no new market labels:
+attempt.json SHA-256 fb1272cc4062c8f0a4657c54204d39822902e1b5446da82a9100bee7b19eb4da;
+completion.json SHA-256 adc2e92d650d818afaf10a02c2999dea5b98cafdb56b75a63fb77e278ccac203.
+There is no failure or incomplete temporary artifact. Original scientific
+progress remains1/256 cells,0 student fits and0 scored V143 account replays.
+No new comparison charge, prospective observation, holdout access or promotion.
+
+The narrow actual first-cell qualification is now COMPLETE. Broad adapter
+adoption is still false. Next integrate the qualified path into a bounded
+continuation collector without replacing the original prefix, then complete
+the remaining255 cells before the unchanged support/fit/75-date account gates.
+Do not spend another trial or rerun this cell merely to improve its timing.
