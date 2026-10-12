@@ -4,6 +4,14 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+October12: [V143 necessary-support census](research-v143-support-census.md)
+qualifies a rejection-only diagnostic with573 unique related passing tests.
+It does not replace full counterfactual collection or authorize fitting.
+The actual32-anchor census and independent audit exited0. NQ32dates and MNQ21dates
+meet necessary support in every mode; this does not authorize fitting or prove
+profitability. Full paired-label progress8/256; next bounded cells8-15.
+Full-suite attempt retains the three known failures. Mac research only.
+
 October12: [V143 post-collection journal](research-v143-postcollection-journal.md)
 adds native fit sequencing and authenticated all-input model restoration.
 436 unique related synthetic tests pass; full attempt retains three known
@@ -14,9 +22,9 @@ Latest October12: [V143 continuation integration](research-v143-accelerated-coll
 adopts the actual-qualified copy path only for bounded offline collection.
 Related tests pass1,499 unique cases, including real-adapter synthetic parity.
 The first appended cost-mode cell completed with external exit0; both saved
-cells and original first-day controls pass the read-only audit. Progress2/256,
-no fit or promotion. The verified external cursor permits the next six ordered
-cells; the target stays256 complete cells. Mac research only.
+cells and original first-day controls pass the read-only audit. The next six-cell
+batch also completed; all eight cells match original roll-ins and the external
+cursor is8/256. No fit or promotion; target stays256 complete cells. Mac only.
 
 Latest October12: [detached V143 history copies](research-v143-history-acceleration.md)
 have exact complete synthetic parity and1,450 related passing tests. A source-

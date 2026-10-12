@@ -124,3 +124,40 @@ student fit, account-scored replay, new trial charge or model pass. Next append
 the next six ordered cells to complete the first eight-cell anchor block,
 then continue checked batches toward all 256 and the unchanged fit/economic
 gates. Do not re-run the two accepted cells or retune from partial targets.
+
+## Six-Cell Append And First Anchor Audited
+
+The next six ordered cells completed on October12 at13:01:40UTC. External
+command exec-9dedfd3a-dd05-44f3-9d26-d87d37ee07bd exited0 after15,098,331ms;
+session22181/PID83016 is terminal and the producer is absent. It was not restarted.
+Cell calculation times were2344.582,2334.163,2518.753,2588.126,2653.278 and
+2453.633 seconds. Final peak RSS6,243,581,952 bytes (5.815GiB), below8GiB.
+
+Each new cell retains the complete ten-session horizon. Their pair counts are
+28,27,32,32,32,32:183 additional NQ state samples, zero MNQ. Together with the
+prior54, this is237 state samples over ONE anchor's eight arm/mode conditions,
+not237 independent events, eight dates or completed student training.
+
+Read-only saved-data audit exec-5de4d86f-0278-4155-9202-fc24142ebfe1 exited0
+after176,136ms. All eight original complete-cell semantic checks pass, all eight
+first roll-in records match V137 exactly, all prior15 files remain unchanged,
+and all31 pre-terminal files are byte-identical before/after the audit.
+One earlier auxiliary audit invocation passed an account object where the
+existing validator requires its snapshot; it failed before auditing any cell.
+The corrected caller uses the original collector's snapshot call. No source,
+raw cell, validator or passing criterion was changed or evidence overwritten.
+
+The parent published external terminal runs/0002.terminal.json only after
+actualexit0 and the passing audit. Its SHA-256 is
+782a326deb342805459d661476e9d5b9d850af42573961234d0f3075054c4b20.
+The tail cell SHA-256 is
+ca990c989a3055f30dc91cabfc58af63806d3d1718fadb280cb4be4cef6b0492.
+The original checkpoint reconciles the complete32-file root to8 cells/3 batches
+before the parent advances the external cursor. Detailed private receipt:
+reports/nq_apex_continuation_accelerated_v143_20261012_batch0002.json,
+SHA-256 e41a33b58834e427c19df7e1c6ce11e04e217b3da3eb25e2233c9fd9115eab50.
+
+Progress8/256;248 full cells remain. No market student fit, scored account replay,
+new comparison, holdout opening or model pass. Before appending another expensive
+batch, run the separately frozen rejection-only32-anchor necessary-support
+census. It cannot authorize a partial fit or substitute for full collection.
