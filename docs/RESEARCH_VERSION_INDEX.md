@@ -4,6 +4,16 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+October 12: [V145 design](research-v145-design.md) and
+[results/retrospective](research-v145-results.md) complete the frozen V144 CPI
+whole-account comparison against V134. All 181 raw pairs and 12 books completed;
+eight controls match exactly. Candidate baseline -1211.30 USD and stress
+-1634.00 USD; all four modes fail Evaluation and never reach PA. Small forecast
+gains did not improve the account route. Two comparisons remain charged, total
+13,300; 283 affected tests and saved-result/arithmetic audits pass. Full-suite
+green, independent validation and promotion are not claimed. Mac research only;
+no Windows actions. The sealed holdout and interrupted V143 record are preserved.
+
 October 12: Mac-only research resumed; Windows connections and live-system
 changes are excluded by the latest user scope. [V144 design](research-v144-public-cpi.md)
 adds causal public BLS CPI level and release age to the retained V134 features.
