@@ -73,3 +73,54 @@ research-v143-accelerated-collection-protocol.md.
 Software-test counts are not model validations. Preserve total13,300
 comparisons, the sealed holdout and all costs, sizing, horizons and economic
 gates. No Windows, live collectors, schedules, Telegram, purchases or orders.
+
+## First Appended Cell Completed
+
+Pre-execution implementation/admission commit: 35fbf53a. The sole invocation
+requested one next cell and exited 0, tool session 38627 / PID 70773. External
+command record exec-d82ad8c1-601d-4192-a4c9-d363a6354627 is completed with exit 0
+and duration 2,474,433 ms. The producer is absent; no process was restarted.
+
+Cell 0001 is December 3, 2025 / cash_only / cost_only. It uses the complete
+original ten-session horizon and contains 27 action pairs, 27 NQ samples and
+zero MNQ samples. Cell calculation took 2,270.425024 seconds (37.84 minutes).
+Its teacher calls were 14,024 NQ / zero MNQ. Final process high-water RSS was
+4,702,633,984 bytes (4.380 GiB), below 8 GiB. This is a different cost-mode cell,
+so its elapsed time is not a paired speed comparison with the baseline cell.
+
+The qualified adapter ran with 16,280 history copies, 166,929,724 dict copies,
+149,250,747 list copies, 2,164 window hits, 61 misses, 58 evictions and zero
+fallback. Original-format cell/batch validation completed before publication.
+All seven imported seed hashes and all original roots remain unchanged.
+
+A separate read-only audit restored the original contexts, applied the original
+complete-cell validator to both saved cells and matched both first roll-in days
+exactly to the retained V137 baseline/cost-only account records. It exited 0,
+session 26971, command exec-cadd706e-8b7f-4b0e-aa74-1c194b4e18e3, 176,655 ms.
+No model fit, simulation rerun or partial economic outcome was exposed.
+
+One auxiliary audit display initially counted the nine table columns as rows.
+A separate exact-hash reconciliation corrected that metadata to 27 NQ / zero
+MNQ samples per cell, verifying equal lengths of all nine columns. Raw cells,
+the complete semantic checks and all source hashes were unchanged. Correction
+and terminal publication command exec-9b4bed01-ac38-4c4c-b5fc-a4b71940b954 exited 0;
+do not interpret the earlier diagnostic 9/9 as sample counts.
+
+After actual process exit and the saved-data audit, the parent published the
+external terminal receipt and advanced the central cursor to two cells/two
+batches. Checkpoint reconciliation command
+exec-e34d1114-6708-4d73-b946-6c2576a3de8c exited 0. The child did not advance it.
+No unknown, temporary or failure artifact is present.
+
+Key hashes:
+- cell 0001: d4a4e9037559a680efa8c03b84bc33ba36ad66a7c928c9d2073e1f36d62eca04
+- run completion: de94ed90ab5180bb19fc6aa1b5d0ab78f14f704977666ffddd7ddaaf9f217693
+- external terminal: 4ac01111e6c808f2d35919673add1e066cc0c7209e36422d9ed9f516fb997f56
+- integration: a69ad848b517829375f19140b69f2f82b3bff71350f4cc0126b74d0cf186b8c9
+
+Scientific progress is now **2/256 cells**, leaving 254. These are two cost
+modes at one anchor, not two independent dates or 54 executed trades. No V143
+student fit, account-scored replay, new trial charge or model pass. Next append
+the next six ordered cells to complete the first eight-cell anchor block,
+then continue checked batches toward all 256 and the unchanged fit/economic
+gates. Do not re-run the two accepted cells or retune from partial targets.

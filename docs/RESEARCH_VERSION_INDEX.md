@@ -7,9 +7,10 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 Latest October12: [V143 continuation integration](research-v143-accelerated-collection.md)
 adopts the actual-qualified copy path only for bounded offline collection.
 Related tests pass1,499 unique cases, including real-adapter synthetic parity.
-The exact seed and external resume cursor are preserved. The frozen first
-append is pending; progress1/256, no fit or promotion. The target stays256
-complete cells. Mac research only.
+The first appended cost-mode cell completed with external exit0; both saved
+cells and original first-day controls pass the read-only audit. Progress2/256,
+no fit or promotion. The verified external cursor permits the next six ordered
+cells; the target stays256 complete cells. Mac research only.
 
 Latest October12: [detached V143 history copies](research-v143-history-acceleration.md)
 have exact complete synthetic parity and1,450 related passing tests. A source-
