@@ -4,6 +4,12 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+October12: [V143 post-collection journal](research-v143-postcollection-journal.md)
+adds native fit sequencing and authenticated all-input model restoration.
+436 unique related synthetic tests pass; full attempt retains three known
+failures. Component only: no market fit, replay, model pass or new trial charge.
+Complete256-cell qualification and the fixed75-date stage remain required.
+
 Latest October12: [V143 continuation integration](research-v143-accelerated-collection.md)
 adopts the actual-qualified copy path only for bounded offline collection.
 Related tests pass1,499 unique cases, including real-adapter synthetic parity.
