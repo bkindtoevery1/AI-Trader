@@ -4,6 +4,12 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+October12: the [next V143 continuation batch](research-v143-accelerated-collection.md#eight-cell-append-and-second-anchor-audited)
+completed eight more cells and passed an independent saved-data audit.
+The external cursor now reconciles16/256 cells over TWO anchors, not16 dates.
+No student fit, account score, new comparison or model pass. Next cells16-23;
+all256 remain required before fitting. Mac research only, Windows untouched.
+
 October12: [V143 necessary-support census](research-v143-support-census.md)
 qualifies a rejection-only diagnostic with573 unique related passing tests.
 It does not replace full counterfactual collection or authorize fitting.

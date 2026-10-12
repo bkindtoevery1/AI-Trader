@@ -161,3 +161,41 @@ Progress8/256;248 full cells remain. No market student fit, scored account repla
 new comparison, holdout opening or model pass. Before appending another expensive
 batch, run the separately frozen rejection-only32-anchor necessary-support
 census. It cannot authorize a partial fit or substitute for full collection.
+
+## Eight-Cell Append And Second Anchor Audited
+
+After the necessary-support census passed its rejection-only check, the next
+eight ordered cells (8-15) ran under the SAME frozen collector and scientific
+protocol. All completed on October12 at18:41UTC. External command
+exec-9ae1e28f-abd3-44c7-accf-41e64a5a6492 exited0 after16,800,660ms (4h40m).
+Session43688/PID67289 is terminal and absent; no timeout restart occurred.
+
+Each new cell represents December4,2025 with its complete ten-session horizon.
+Cell calculation times are1938.796,2319.537,1835.091,1851.136,2171.205,
+2201.356,2113.274 and2162.279 seconds. Each has20 NQ state samples:160 added,
+zero MNQ samples at this anchor. The running future-horizon teacher counters
+end at75,693 NQ /2,562 MNQ; future model queries are NOT additional training
+samples. Peak process RSS6,354,534,400bytes (5.918GiB) remains below8GiB.
+
+Independent saved-data audit exec-39870bf6-d577-4fe7-9477-a43f7db15f5e exited0
+after191,653ms. It checked all16 original cell semantics, complete ten-session
+context bindings, every ordered start/hash link and all table column lengths.
+Each original roll-in history exactly matches the corresponding first TWO
+V137 account dates. The prior32-file prefix and every one of the52 pre-terminal
+files remain unchanged, as do the original source and qualified wrapper pins.
+
+Only then did the parent publish the external terminal, reconcile the original
+checkpoint and advance the central cursor to16cells/4batches/53files. The
+producer did not advance its own cursor. Private receipt:
+reports/nq_apex_continuation_accelerated_v143_20261012_batch0003.json,
+SHA-256 f7667445e17fbb44622f0ab01e6153f64744ad3ed925ba762b7a2c8ec3d8f168.
+Tail cell:9500ccc9b564b5d623c41127314c2ac40b03e3bfd144c231de1ebbc11fd34ec2.
+External terminal:8bd1340a5aded74de4c567e5a2d80afa27a0ca9ec9d212d567be6e71b2e4f76a.
+
+Progress16/256,240 cells remain. These are two anchors times eight arm/mode
+conditions, not16 independent trading dates or397 independent trades. No
+student fit, scored account replay, threshold change, model pass or new trial
+charge. Total comparisons remain13,300 and the sealed holdout remains closed.
+Next continue indices16-23, preserving the entire accepted prefix. Complete all
+256 and both products' unchanged support gates before fitting. No Windows,
+Telegram, live collector, schedule, purchase or order action occurred.
