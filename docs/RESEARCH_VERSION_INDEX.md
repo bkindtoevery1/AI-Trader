@@ -4,6 +4,16 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+October12: [V143 reviewed recovery](research-v143-reviewed-recovery.md) produced
+[one complete audited training cell](research-v143-recovery-first-cell.md),
+27 action pairs over ten source sessions, with actual producer/audit exit0.
+The original V137 roll-in day matches exactly. Progress1/256, no student fits,
+scored account replay or pass.1014 unique affected tests pass; full-suite green
+is not claimed. [Runtime attribution](research-v143-recovery-performance.md)
+records45-minute cell computation and an unadopted acceleration proposal.
+Original science, interrupted evidence, comparison count13,300 and holdout stay
+unchanged. Mac research only, no Windows action.
+
 October 12: [V145 design](research-v145-design.md) and
 [results/retrospective](research-v145-results.md) complete the frozen V144 CPI
 whole-account comparison against V134. All 181 raw pairs and 12 books completed;
