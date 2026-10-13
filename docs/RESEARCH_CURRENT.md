@@ -14,9 +14,13 @@ and authentication receipts are published, but no actual stage is admitted.
 The full-repository attempt retains three known failures and is not green.
 The eight-cell producer and independent saved-data audit subsequently exited0:
 accepted population is now32/256 over four anchor dates. All74 prior files are
-unchanged and the95-file checkpoint is reconciled. No required research command
-remains running at this checkpoint. No student fit, account score or model pass.
-Next original cells32-39 and all256 remain before actual stage admission.
+unchanged and the95-file checkpoint is reconciled. The next original eight
+cells32-39 are now running unchanged. No student fit, account score or model
+pass; all256 remain required before actual stage admission. A separately
+[qualified native copy prototype](research-v143-native-copy.md) passes809 related
+tests and exact complete synthetic output/C-handler census parity, but its
+observed4.16% median reduction is small and noisy under uncontrolled load.
+It is NOT_ADOPTED and does not change the active collector or scientific study.
 Historical count stays13,300, the sealed holdout closed, and financial gates
 unchanged. Software qualification is not financial performance evidence.
 

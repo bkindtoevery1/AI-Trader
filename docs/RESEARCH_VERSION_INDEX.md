@@ -4,6 +4,12 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+October13: [V143 optional native copy loops](research-v143-native-copy.md) pass809
+distinct related tests and exact complete synthetic output/native-call parity.
+The fixed six-run median improves only4.16% with uncontrolled variability, so
+the prototype is NOT_ADOPTED. Full attempt retains three known failures. No
+market fit, trial or collector change; original next8 cells continue from32/256.
+
 October13: [V143 fourth anchor audited](research-v143-accelerated-collection.md#eight-cell-append-and-fourth-anchor-audited)
 advances the externally accepted cursor24->32/256 after producer and saved-data
 audit exit0. All74 prior files are unchanged and all32 cells match the first four
