@@ -4,6 +4,12 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+October13: [V143 lifetime recovery](research-v143-lifetime-recovery.md) completes
+the previously failing cell32 under8GiB, then passes a separate33-cell original-
+context/roll-in audit. New cursor33/256; old99-file failure and95-file seed stay
+unchanged.1,555 related tests pass, including270 new cases.34 new NQ states are
+not independent trades; no fit, score, trial or Windows action. Next33-39.
+
 October13: [V143 complete accepted-cell window verification](research-v143-window-cell.md)
 matches11,610,675 complete semantic bytes and original teacher-call delta with
 producer/audit exit0.1,285 related tests pass, including202 new cases. Peak

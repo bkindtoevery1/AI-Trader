@@ -5,6 +5,19 @@ private central research ledger or an executable deployment authority.
 
 ## Current Operational Checkpoint
 
+October13 19:25UTC update: [lifetime recovery](research-v143-lifetime-recovery.md)
+completes the same previously failing cell32 at5,440,651,264-byte peak under the
+unchanged8GiB cap. Producer and separate original-context saved-data audit exit0;
+all33 retained/new cells match original semantics and corresponding roll-ins.
+Accepted33/256 in a new detached population; the old99-file failure and old
+cursor32 remain immutable.275 dependencies and95 seed files are unchanged.
+New34 NQ states/0 MNQ are not independent trades. Related1,555 tests pass with
+270 new cases included; the full attempt retains three known failures. No new
+fit, score, trial, Windows or live action. No required research process remains
+running at this checkpoint. Next original indices33-39; all256 still precede
+student fitting. Recovery of this cell is not a future-memory or financial-pass
+guarantee. The earlier unrecovered-state checkpoints below are historical.
+
 October13 17:42UTC update: [complete accepted-cell verification](research-v143-window-cell.md)
 passes with actual producer and separate audit exit0. All11,610,675 semantic
 bytes, original query counts,270 dependencies and99 reference files match.
