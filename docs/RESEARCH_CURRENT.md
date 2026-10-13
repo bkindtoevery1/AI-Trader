@@ -6,17 +6,17 @@ private central research ledger or an executable deployment authority.
 ## Current Operational Checkpoint
 
 October13 newest scope: Mac-only model research. Do not connect to Windows or
-resume the historical operational recovery described below. The qualified
-[V143 postcollection composition](research-v143-stage-composition.md) now links
-complete assembly, both-product fitting, artifact restoration,75-date fresh
-accounts and a fresh-model saved-state audit.1,082 distinct related tests pass;
-the full attempt retains three existing failures. The actual producer and saved
-audit both subsequently exited0: accepted population is now24/256 cells across
-three anchor dates. All53 prior files are unchanged; the74-file checkpoint is
-reconciled. No research process remains running at this checkpoint. Next bounded
-cells24-31 and full256 remain before student fitting. No account score, new
-comparison or model pass. Historical count remains13,300; the sealed
-holdout remains closed. Component qualification is not execution admission.
+resume the historical operational recovery described below. The executable
+[V143 one shot stage runner](research-v143-stage-runner.md) is qualified with535
+distinct affected tests, including66 runner cases. All283 dependencies and real
+read-only181-date source/two-teacher restoration verify. Canonical qualification
+and authentication receipts are published, but no actual stage is admitted.
+The full-repository attempt retains three known failures and is not green.
+Accepted population remains24/256 over three anchor dates; the next eight
+original cells24-31 are running. No student fit, account score or model pass.
+The complete256 population and external execution review remain mandatory.
+Historical count stays13,300, the sealed holdout closed, and financial gates
+unchanged. Software qualification is not financial performance evidence.
 
 ### Historical Operational Checkpoint
 

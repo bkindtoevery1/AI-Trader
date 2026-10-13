@@ -4,6 +4,13 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+October13: [V143 one shot stage runner](research-v143-stage-runner.md) connects
+the qualified learner/replay to a closed, externally admitted Mac CLI.535
+distinct affected tests pass; all283 dependencies and real181-date source/two-
+teacher restoration verify. Canonical receipts do not grant actual execution.
+Market progress24/256, next8 running; no fit, new trial or model pass. The full
+attempt retains three known failures. Frozen science and Mac-only scope remain.
+
 October13: [V143 third anchor audited](research-v143-accelerated-collection.md#eight-cell-append-and-third-anchor-audited)
 advances the externally accepted cursor16->24/256 after actual producer and
 independent saved-data audit exit0. All53 prior files are unchanged and all24
