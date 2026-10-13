@@ -4,6 +4,13 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+October13: [V143 fourth anchor audited](research-v143-accelerated-collection.md#eight-cell-append-and-fourth-anchor-audited)
+advances the externally accepted cursor24->32/256 after producer and saved-data
+audit exit0. All74 prior files are unchanged and all32 cells match the first four
+original roll-in dates.240 new NQ state samples are not independent trades.
+No student fit, economic score or new trial;224 cells remain. Next32-39, with
+unchanged science and the qualified one-shot runner reserved for all256. Mac only.
+
 October13: [V143 one shot stage runner](research-v143-stage-runner.md) connects
 the qualified learner/replay to a closed, externally admitted Mac CLI.535
 distinct affected tests pass; all283 dependencies and real181-date source/two-

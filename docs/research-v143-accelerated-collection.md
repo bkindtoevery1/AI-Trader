@@ -237,3 +237,49 @@ economic evaluation require the complete population and reviewed one-shot
 runner. No new model trial, partial outcome selection, gate change or account
 pass. Keep13,300 comparisons and the sealed holdout unchanged. Next append
 only indices24-31. No Windows, signals, orders, schedules or purchases occurred.
+
+## Eight-Cell Append And Fourth Anchor Audited
+
+The next original eight cells24-31 completed on October13 at14:13:57UTC.
+Producer exec-40633d06-9eb6-4131-b2f7-d86c22b3f0ca exited0 after29,477,269ms
+(8h11m17s), session85836/PID59495. No restart occurred; it is now absent.
+All cells cover December8,2025 and complete ten-session horizons. Native cell
+times are3466.389,3346.246,3290.475,3385.695,3875.710,3902.158,4016.310 and
+3977.563seconds. Peak RSS5,891,489,792bytes (5.487GiB), below8GiB.
+
+Each new cell contains30 NQ state samples,240 added and zero MNQ at this anchor.
+The future-horizon teacher counters end101,206NQ/14,129MNQ; those queries are
+not training samples. The four-anchor prefix has835 NQ state samples across
+arm/mode conditions, not835 independent trades. The earlier all32-anchor
+necessary-support census is unchanged and does not replace complete labels.
+
+Independent saved-data audit exec-ce599117-d4ad-4aa5-8579-16b621fc7a47 exited0
+after187,313ms. All32 saved cells pass the original semantic validator, complete
+ten-session context bindings, ordered start/hash links and column alignment.
+Every roll-in book exactly matches its first FOUR original V137 account dates.
+All74 prior files and all94 pre-terminal files remain unchanged. No label was
+regenerated and no model was fit. Original source/wrapper pins remain intact.
+
+After both actual exits, the parent published runs/0005.terminal.json and
+reconciled the original checkpoint to32cells/6batches/95files before advancing
+the central cursor. Tail cell SHA:
+a6560ea990b20969b7231489145111bb3f71cb405a36474a1128d969f26b3e65.
+External terminal SHA:
+2dcdefe1abeb7da97f4402808e30f71738fbd22baa0abb1de93f439907651f51.
+Private receipt reports/nq_apex_continuation_accelerated_v143_20261013_batch0005.json,
+SHA a940d7a610f17766352f9e99f3c7e8cf9f7ea8a3d68d3cc0daa9a6c05752b554.
+
+Progress32/256,12.5%, over four anchors;224 full cells remain. The separate
+one-shot stage runner passes535 distinct related tests and real read-only
+source/teacher authentication, but has no actual execution admission. The full
+repository attempt retains three known failures. No student fit, economic
+score, new trial or account pass. Keep13,300 comparisons, financial gates and
+the sealed holdout unchanged. Next original indices32-39. No Windows, signals,
+orders, schedules or purchases occurred. This bounded batch is complete, not
+the research goal or complete model evaluation.
+
+A final combined read-only probe initially used the263-file collector verifier
+after importing the20 qualified stage dependencies, and correctly rejected
+unbound loaded modules. Repeating that verification with the existing closed283
+extension verifier passed, as did the95-file checkpoint and actual partial32
+stage rejection. No frozen guard, source, labels or market calculation changed.

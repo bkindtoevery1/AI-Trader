@@ -12,9 +12,11 @@ distinct affected tests, including66 runner cases. All283 dependencies and real
 read-only181-date source/two-teacher restoration verify. Canonical qualification
 and authentication receipts are published, but no actual stage is admitted.
 The full-repository attempt retains three known failures and is not green.
-Accepted population remains24/256 over three anchor dates; the next eight
-original cells24-31 are running. No student fit, account score or model pass.
-The complete256 population and external execution review remain mandatory.
+The eight-cell producer and independent saved-data audit subsequently exited0:
+accepted population is now32/256 over four anchor dates. All74 prior files are
+unchanged and the95-file checkpoint is reconciled. No required research command
+remains running at this checkpoint. No student fit, account score or model pass.
+Next original cells32-39 and all256 remain before actual stage admission.
 Historical count stays13,300, the sealed holdout closed, and financial gates
 unchanged. Software qualification is not financial performance evidence.
 
