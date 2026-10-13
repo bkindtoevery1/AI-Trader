@@ -4,6 +4,13 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+October13: [V143 fifth anchor resource failure](research-v143-batch0006-memory-failure.md)
+retains32/256 accepted cells and all95 prior files. Batch0006 exited1 at the
+original8GiB guard on cell32, with no new result;99 failure artifacts remain.
+A read-only original ten-session source probe exited0 at4.662GiB peak without
+inference or replay. Exact failed-object attribution remains unknown. No retry,
+fit, model rejection or new trial. Bounded-memory recovery is not yet admitted.
+
 October13: [V143 optional native copy loops](research-v143-native-copy.md) pass809
 distinct related tests and exact complete synthetic output/native-call parity.
 The fixed six-run median improves only4.16% with uncontrolled variability, so

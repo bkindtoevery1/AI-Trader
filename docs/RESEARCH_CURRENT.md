@@ -14,9 +14,14 @@ and authentication receipts are published, but no actual stage is admitted.
 The full-repository attempt retains three known failures and is not green.
 The eight-cell producer and independent saved-data audit subsequently exited0:
 accepted population is now32/256 over four anchor dates. All74 prior files are
-unchanged and the95-file checkpoint is reconciled. The next original eight
-cells32-39 are now running unchanged. No student fit, account score or model
-pass; all256 remain required before actual stage admission. A separately
+unchanged and the95-file checkpoint is reconciled. The next original batch0006
+[failed at its first cell32](research-v143-batch0006-memory-failure.md) at the
+unchanged8GiB high-water guard, actual exit1. No new cell completed; the producer
+is absent and99 failure artifacts are preserved. A source-only ten-session
+read probe exited0 at4.662GiB peak without inference or replay. Exact failed
+allocation is not identified. Do not retry unchanged or relax the gates; a
+bounded-memory remedy and recovery are not yet admitted. No student fit,
+account score or model pass; all256 remain required. A separately
 [qualified native copy prototype](research-v143-native-copy.md) passes809 related
 tests and exact complete synthetic output/C-handler census parity, but its
 observed4.16% median reduction is small and noisy under uncontrolled load.
