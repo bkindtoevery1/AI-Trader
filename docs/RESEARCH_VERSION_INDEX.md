@@ -4,6 +4,13 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+October13: [V143 stage composition](research-v143-stage-composition.md) connects
+complete assembly, both-product native fitting, artifact restoration,75-date
+fresh-account replay and a second fresh-model saved-state prediction audit.
+1,082 distinct related tests pass; the full attempt retains three known errors.
+Component only, not actual fit admission. Actual16/256 accepted, next8 running;
+no new trial or model pass. Original science and Mac-only scope are unchanged.
+
 October12: [V143 complete reader and fresh replay](research-v143-complete-population-replay.md)
 qualifies full-population admission plumbing and the75-date own-state replay
 components with790 distinct related passing tests. Actual market data remain

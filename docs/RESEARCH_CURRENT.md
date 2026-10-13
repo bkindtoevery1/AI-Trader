@@ -5,6 +5,18 @@ private central research ledger or an executable deployment authority.
 
 ## Current Operational Checkpoint
 
+October13 newest scope: Mac-only model research. Do not connect to Windows or
+resume the historical operational recovery described below. The qualified
+[V143 postcollection composition](research-v143-stage-composition.md) now links
+complete assembly, both-product fitting, artifact restoration,75-date fresh
+accounts and a fresh-model saved-state audit.1,082 distinct related tests pass;
+the full attempt retains three existing failures. Actual accepted population
+is16/256 cells, with the next bounded8 running. No actual student fit, account
+score, new comparison or model pass. Historical count remains13,300; the sealed
+holdout remains closed. Component qualification is not execution admission.
+
+### Historical Operational Checkpoint
+
 Latest confirmed Windows state, October7 at23:20UTC: the collector remains fresh, but
 the model owner and supervisor have stopped following a durable-source time
 failure. V63, V92 NQ and V92 MNQ each have zero actual prediction attempts in
