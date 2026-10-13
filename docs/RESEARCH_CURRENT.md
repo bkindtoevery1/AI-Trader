@@ -5,6 +5,17 @@ private central research ledger or an executable deployment authority.
 
 ## Current Operational Checkpoint
 
+October13 17:42UTC update: [complete accepted-cell verification](research-v143-window-cell.md)
+passes with actual producer and separate audit exit0. All11,610,675 semantic
+bytes, original query counts,270 dependencies and99 reference files match.
+Related1,285 tests pass including202 new cases; the full attempt retains three
+known failures. Whole-process peak5,974,835,200 bytes did not decrease versus
+original5,891,489,792, so the synthetic copy saving is not a proven model memory
+fix. No collector recovery is admitted; failed cell32 and accepted32/256 remain
+untouched, with no new fits/trials or financial claims. No required research
+process remains running. Next qualify result-preserving temporary-object
+lifetime reduction. Windows and live actions remain excluded.
+
 October13 15:57UTC update: the [lower-memory window component](research-v143-window-memory.md)
 passes799 distinct related tests, including84 new cases. A fixed million-row
 synthetic copy probe reduces peak Python allocation85.3MB->0.425MB with exact

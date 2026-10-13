@@ -4,6 +4,12 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+October13: [V143 complete accepted-cell window verification](research-v143-window-cell.md)
+matches11,610,675 complete semantic bytes and original teacher-call delta with
+producer/audit exit0.1,285 related tests pass, including202 new cases. Peak
+process RSS did not decrease: whole-process resource fix remains unproven.
+No collector recovery or new labels/fits/trials;32/256 and99 failure files remain.
+
 October13: [V143 lower-memory cold window copies](research-v143-window-memory.md)
 pass799 related tests including84 new cases. Fixed synthetic copy allocation
 peak falls85.3MB->0.425MB with exact contents. The original ten-session window
