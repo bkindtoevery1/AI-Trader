@@ -4,6 +4,12 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+October13: [V143 third anchor audited](research-v143-accelerated-collection.md#eight-cell-append-and-third-anchor-audited)
+advances the externally accepted cursor16->24/256 after actual producer and
+independent saved-data audit exit0. All53 prior files are unchanged and all24
+cells match the original three-date roll-in paths. No fit, account score or
+new trial;232 cells remain. Next24-31 with unchanged science and Mac-only scope.
+
 October13: [V143 stage composition](research-v143-stage-composition.md) connects
 complete assembly, both-product native fitting, artifact restoration,75-date
 fresh-account replay and a second fresh-model saved-state prediction audit.

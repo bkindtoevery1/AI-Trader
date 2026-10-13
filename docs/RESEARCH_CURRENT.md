@@ -10,9 +10,12 @@ resume the historical operational recovery described below. The qualified
 [V143 postcollection composition](research-v143-stage-composition.md) now links
 complete assembly, both-product fitting, artifact restoration,75-date fresh
 accounts and a fresh-model saved-state audit.1,082 distinct related tests pass;
-the full attempt retains three existing failures. Actual accepted population
-is16/256 cells, with the next bounded8 running. No actual student fit, account
-score, new comparison or model pass. Historical count remains13,300; the sealed
+the full attempt retains three existing failures. The actual producer and saved
+audit both subsequently exited0: accepted population is now24/256 cells across
+three anchor dates. All53 prior files are unchanged; the74-file checkpoint is
+reconciled. No research process remains running at this checkpoint. Next bounded
+cells24-31 and full256 remain before student fitting. No account score, new
+comparison or model pass. Historical count remains13,300; the sealed
 holdout remains closed. Component qualification is not execution admission.
 
 ### Historical Operational Checkpoint

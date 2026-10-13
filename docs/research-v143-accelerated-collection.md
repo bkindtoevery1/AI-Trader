@@ -199,3 +199,41 @@ charge. Total comparisons remain13,300 and the sealed holdout remains closed.
 Next continue indices16-23, preserving the entire accepted prefix. Complete all
 256 and both products' unchanged support gates before fitting. No Windows,
 Telegram, live collector, schedule, purchase or order action occurred.
+
+## Eight-Cell Append And Third Anchor Audited
+
+The next original eight cells16-23 completed on October13 at05:52:35UTC.
+Producer exec-8cb922d6-b491-45cd-bc89-2ee34a3f5004 exited0 after23,436,862ms
+(6h30m37s), session56173/PID78802. It was not restarted and is now absent.
+This covers December5,2025 with all original ten-session horizons. Native cell
+times:2571.114,2537.458,2371.021,2365.188,3178.976,3207.300,3496.216 and
+3497.148seconds. Peak RSS5,561,679,872bytes (5.180GiB), below8GiB.
+
+The added NQ sample counts22,22,21,21,28,28,28,28 total198; no MNQ samples at
+this anchor. The future-horizon teacher counters end96,421NQ/3,268MNQ, which
+are not additional training samples. The accepted three-anchor prefix contains
+595 NQ state samples across arm/mode conditions, not595 independent trades.
+The earlier necessary-support census over ALL32anchors still remains separate.
+
+Independent saved-data audit exec-57381024-c89f-4bc0-aaaf-a8d116aee10a exited0
+after181,638ms. It checks all24 saved cells with the original semantic validator,
+complete ten-session contexts, ordered start/hash chains and aligned columns.
+All eight roll-in books match their first THREE original V137 account days.
+All53 accepted prior files and all73 pre-terminal files are unchanged; original
+250 source and13 wrapper pins remain valid. No labels were regenerated or fit.
+
+Only after those real exits did the parent publish runs/0004.terminal.json and
+reconcile the original checkpoint to24cells/5batches/74files before advancing
+the central cursor. Tail cell SHA:
+e2a079e32fb1c8d9ab1661f8554be8472a27efa9c3ef14b785923d01a90c4d65.
+External terminal SHA:
+269813c73eb2e23dd75ff13b4eac9c63b630189e6b393c843a6ca2ee8dd010ef.
+Private receipt reports/nq_apex_continuation_accelerated_v143_20261013_batch0004.json,
+SHA e3887e63abf397504933aed5f1d3a5914c5ed16dcdf10f717d3dabc10887938b.
+
+Progress24/256 over three anchors;232 full cells remain. The fit/restoration/
+replay component separately passes1,082 related tests, but actual fitting and
+economic evaluation require the complete population and reviewed one-shot
+runner. No new model trial, partial outcome selection, gate change or account
+pass. Keep13,300 comparisons and the sealed holdout unchanged. Next append
+only indices24-31. No Windows, signals, orders, schedules or purchases occurred.
