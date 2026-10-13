@@ -4,6 +4,13 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+October13: [V143 lower-memory cold window copies](research-v143-window-memory.md)
+pass799 related tests including84 new cases. Fixed synthetic copy allocation
+peak falls85.3MB->0.425MB with exact contents. The original ten-session window
+canary exits0 over20 windows/13,878,745 ticks without inference or replay.
+Component qualified, not collector adoption or a full-cell memory guarantee.
+Retain32/256 and all99 failure artifacts; next whole-cell equality before recovery.
+
 October13: [V143 fifth anchor resource failure](research-v143-batch0006-memory-failure.md)
 retains32/256 accepted cells and all95 prior files. Batch0006 exited1 at the
 original8GiB guard on cell32, with no new result;99 failure artifacts remain.

@@ -5,6 +5,15 @@ private central research ledger or an executable deployment authority.
 
 ## Current Operational Checkpoint
 
+October13 15:57UTC update: the [lower-memory window component](research-v143-window-memory.md)
+passes799 distinct related tests, including84 new cases. A fixed million-row
+synthetic copy probe reduces peak Python allocation85.3MB->0.425MB with exact
+contents. The original ten-session window canary exits0 on20 windows and
+13,878,745 ticks, zero inference/fit/replay. All267 dependencies and99 failure
+artifacts remain unchanged. This is component qualification, not collector
+adoption or a whole-cell memory guarantee; population remains32/256. Next is
+bounded full-cell equality before separate recovery. Windows stays excluded.
+
 October13 newest scope: Mac-only model research. Do not connect to Windows or
 resume the historical operational recovery described below. The executable
 [V143 one shot stage runner](research-v143-stage-runner.md) is qualified with535
