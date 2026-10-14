@@ -4,6 +4,12 @@ Documentation snapshot: 2026-09-27. This is a navigation aid, not a new evaluati
 
 ## Reading The Record
 
+October 14: [V143 fifth anchor](research-v143-lifetime-batch0007.md) completes
+seven unchanged cells and passes a separate 40-cell saved-data/context audit.
+Progress 40/256, five complete dates, peak 5.11 GiB under 8 GiB; all 275
+dependencies and accepted prefix preserved. New 238 NQ states are not independent
+trades. No fit, score, new trial or Windows action. Next original indices 40-47.
+
 October13: [V143 lifetime recovery](research-v143-lifetime-recovery.md) completes
 the previously failing cell32 under8GiB, then passes a separate33-cell original-
 context/roll-in audit. New cursor33/256; old99-file failure and95-file seed stay

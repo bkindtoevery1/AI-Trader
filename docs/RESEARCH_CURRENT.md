@@ -1,9 +1,26 @@
 # Public Research Checkpoint
 
-Publication checkpoint: 2026-10-08. This is a curated public summary, not the
+Publication checkpoint: 2026-10-14. This is a curated public summary, not the
 private central research ledger or an executable deployment authority.
 
 ## Current Operational Checkpoint
+
+### October 14 03:06 UTC: Fifth Anchor Verified, 40/256
+
+The unchanged seven-cell batch and separate 40-cell original-context audit both
+exited 0. All December 9 arm/mode conditions are complete: five anchors, 40/256
+cells, 216 remaining. New 238 NQ states / 0 MNQ are not independent trades.
+Peak 5,482,692,608 bytes stayed below 8 GiB over the 7h23m producer run.
+All 275 dependencies, 99 original failure files and 102 accepted prefix files
+remain unchanged; external terminal and the 121-file population reconcile the
+new cursor at 40. Preserve the old failed cursor 32. No research process remains
+running. Next original indices 40-47, December 10. No source-code change, refit,
+score, new trial, holdout or Windows action. Prior 1,555 related passes remain
+bound, not rerun; the prior full suite still has three known failures.
+Current V143 training anchors end January 23, labels February 5, scoring June 12.
+The October 14 08:40 KST Mac admission check has zero new joint sessions;
+upstream Windows capture is unverified, not proven stopped. See
+docs/research-v143-lifetime-batch0007.md. Earlier launch records are historical.
 
 October13 19:25UTC update: [lifetime recovery](research-v143-lifetime-recovery.md)
 completes the same previously failing cell32 at5,440,651,264-byte peak under the
